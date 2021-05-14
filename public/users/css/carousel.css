@@ -1,0 +1,18 @@
+.owl-carousel img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.static {
+    position: static;
+  }
+
+  .cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+
+
