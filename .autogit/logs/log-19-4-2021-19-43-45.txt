@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Wed May 19 2021 19:43:45 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/user/login_ecole.blade.php
+* resources/views/user/login_intervenant.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-19-4-2021-19-13-32.txt
+* app/Http/Controllers/Auth/FacebookEcoleController.php
+* public/uploads/photo/profil/19-05-2021.60a563faaa034.Laurent-LOUVION.jpg
+
+
+Deleted files:
+
+
+Renamed files:

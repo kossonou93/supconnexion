@@ -88,23 +88,24 @@
                         </a>
                     @endif
 				</div>
-
+				<!--
 				<div class="text-center p-t-57 p-b-20">
 					<span class="txt1">
 						Se connecter avec
 					</span>
 				</div>
-
+				-->
 				<div class="flex-c p-b-112">
-					<a href="{{ url('auth/facebook') }}" class="login100-social-item">
+					<!--<a href="#" class="login100-social-item">
 						<i class="fa fa-facebook-f"></i>
 					</a>
 
 					<a href="#" class="login100-social-item">
 						<img src="{{ asset('form/images/icons/icon-google.png') }}" alt="GOOGLE">
 					</a>
+					-->
 				</div>
-
+				
 				<div class="text-center" style="margin-top:-90px">
                     <a class="txt2 hov1" href="{{ route('ecole.register') }}">
 						Inscription
