@@ -24,7 +24,8 @@ Auth::routes();
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
 Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 //Route::get('/home', 'HomeController@index')->name('home');
-
+Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
+Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
 // Admin routes
 Route::prefix('admin')->group(function(){
     //Route::get('/form', 'Users\Admin\AdminController@form')->name('form');

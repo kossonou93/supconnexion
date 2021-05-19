@@ -26,7 +26,7 @@ class Intervenant extends Authenticatable implements MustVerifyEmail
     protected $guard = 'intervenant';
 
     protected $fillable = [
-        'name', 'email', 'email_verified_at', 'password', 'ville_id', 'phone', 'contact', 'commune_id', 'last_name', 'birth_day', 'fonction', 'sexe', 'photo', 'cv', 'linkdin', 'motivation', 'competence', 'experience_id', 'token', 'google_id'
+        'name', 'email', 'email_verified_at', 'password', 'ville_id', 'phone', 'contact', 'commune_id', 'last_name', 'birth_day', 'fonction', 'sexe', 'photo', 'cv', 'linkdin', 'motivation', 'competence', 'experience_id', 'token', 'google_id', 'facebook_id'
     ];
 
     protected $hidden = [

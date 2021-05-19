@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Wed May 19 2021 18:43:10 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* config/services.php
+* database/migrations/2020_11_19_083756_create_intervenants_table.php
+
+
+Created files:
+* .autogit/logs/log-19-4-2021-18-12-34.txt
+
+
+Deleted files:
+
+
+Renamed files:

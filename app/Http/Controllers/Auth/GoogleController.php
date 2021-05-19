@@ -56,7 +56,7 @@ class GoogleController extends Controller
                 //login($newUser);
                 //IntervenantLoginController::login($newUser);
      
-                return view('user.login_intervenant', compact('newUser'));
+                return redirect('/intervenant');
                 //redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
             }
     
