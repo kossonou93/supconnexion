@@ -96,7 +96,7 @@
 				</div>
 
 				<div class="flex-c p-b-112">
-					<a href="#" class="login100-social-item">
+					<a href="{{ url('auth/facebook') }}" class="login100-social-item">
 						<i class="fa fa-facebook-f"></i>
 					</a>
 
