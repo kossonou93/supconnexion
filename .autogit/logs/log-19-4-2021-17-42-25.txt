@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Wed May 19 2021 17:42:25 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/GoogleController.php
+
+
+Created files:
+* .autogit/logs/log-19-4-2021-17-12-10.txt
+* public/uploads/photo/profil/19-05-2021.60a54dc7875c0.Businessman_48px.png
+
+
+Deleted files:
+
+
+Renamed files:
