@@ -8,6 +8,7 @@ use Socialite;
 use Auth;
 use Exception;
 use App\Intervenant;
+use Illuminate\Support\Facades\Hash;
 
 class GoogleController extends Controller
 {
@@ -35,7 +36,8 @@ class GoogleController extends Controller
                     'name' => $user->name,
                     'email' => $user->email,
                     'google_id'=> $user->id,
-                    'password' => Hash::make($user->password)
+                    'password' => encrypt('Superman_test')
+                    //'password' => Hash::make($user->password),
                 ]);
     
                 Auth::login($newUser);
