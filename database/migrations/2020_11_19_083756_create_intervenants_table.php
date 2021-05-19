@@ -34,6 +34,7 @@ class CreateIntervenantsTable extends Migration
             $table->longText('competence')->nullable();
             $table->string('token');
             $table->string('google_id')->nullable();
+            $table->string('facebook_id')->nullable();
             $table->rememberToken();
             $table->timestamps();
 
