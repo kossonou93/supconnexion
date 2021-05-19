@@ -1,0 +1,47 @@
+-------------------- Auto-Git Log --------------------
+		Wed May 19 2021 10:44:01 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/EcoleRegisterController.php
+* app/Http/Controllers/Auth/IntervenantRegisterController.php
+* app/Http/Kernel.php
+* app/Intervenant.php
+* composer.json
+* composer.lock
+* config/app.php
+* config/filesystems.php
+* config/services.php
+* database/migrations/2020_10_07_084233_create_admins_table.php
+* database/migrations/2020_11_19_083756_create_intervenants_table.php
+* package-lock.json
+* package.json
+* public/users/css/style.css
+* resources/views/admin/part/footer.blade.php
+* resources/views/admin/user/ecole/detailsintervenant.blade.php
+* resources/views/admin/user/ecole/search.blade.php
+* resources/views/parts/footer.blade.php
+* resources/views/user/contact.blade.php
+* resources/views/user/inscription_intervenant.blade.php
+* routes/web.php
+* webpack.mix.js
+
+
+Created files:
+* .autogit/autogit.json
+* app/Http/Controllers/Auth/GoogleController.php
+* app/Http/Controllers/HomeController.php
+* app/Http/Controllers/Users/Ecole/PaiementController.php
+* app/Models/Transaction.php
+* config/sweetalert.php
+* database/migrations/2021_05_16_123209_create_transactions_table.php
+* public/vendor/sweetalert/sweetalert.all.js
+* resources/views/admin/user/ecole/paiement.blade.php
+* resources/views/auth/register.blade.php
+* resources/views/vendor/sweetalert/alert.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

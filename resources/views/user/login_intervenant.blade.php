@@ -99,7 +99,7 @@
 						<i class="fa fa-facebook-f"></i>
 					</a>
 
-					<a href="#" class="login100-social-item">
+					<a href="{{ url('auth/google') }}" class="login100-social-item">
 						<img src="{{ asset('form/images/icons/icon-google.png') }}" alt="GOOGLE">
 					</a>
 				</div>
