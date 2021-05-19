@@ -1,43 +1,7 @@
-<!--
-    <footer>
-        <div class="container">
-            <div class="footer_row row">
-                <div class="col-md-4 col-sm-8 footer_about">
-                    <h2>A PROPOS DE NOUS</h2>
-                    <img src="users/images/footer-logo.png" alt="">
-                    <ul class="socail_icon">
-                        <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-8 footer_about quick">
-                    <h2>NOS LIENS</h2>
-                    <ul class="quick_link">
-                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4 col-sm-8 footer_about">
-                    <h2>CONTACTEZ-NOUS</h2>
-                    <address>
-                        <ul class="my_address">
-                            <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>info@</a></li>
-                            <li><a href="#"><i class="fa fa-phone" aria-hidden="true"></i>+225</a></li>
-                            <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span></a></li>
-                        </ul>
-                    </address>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
--->
 <!-- Footer -->
 
 <!-- Footer -->
-
+@include('sweetalert::alert')
 <script src="{{ asset('admini/assets/js/core/jquery.3.2.1.min.js') }}"></script>
 <script>
     setTimeout(function(){

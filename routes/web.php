@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use RealRashid\SweetAlert\Facades\Alert;
+
+
 
 
 //Route::get('/', function () {
@@ -16,8 +19,10 @@ Route::resource('/contacts', 'ContactController');
 Route::get('/user/verify/{token}', 'MailController@verifyEmail')->name('user.verify');
 Route::get('/ecole/verify/{token}', 'MailController@verifyEmailEcole')->name('ecole.verify');
 
-Auth::routes(['verify' => true]);
+Auth::routes();
 
+Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
+Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
 //Route::get('/home', 'HomeController@index')->name('home');
 
 // Admin routes
@@ -70,6 +75,9 @@ Route::prefix('ecole')->group(function(){
     //Route::post('/search/intervenants/{post}', 'Users\Ecole\EcoleController@intervenant')->name('search.intervenant');
     Route::get('/intervenants', 'Users\Ecole\EcoleController@intervenants')->name('search.intervenants');
     Route::get('/intervenant/{post}', 'Users\Ecole\EcoleController@detailsintervenant')->name('details.intervenant');
+    Route::get('/paiements', 'Users\Ecole\PaiementController@index')->name('paiement.intervenants');
+    Route::get('/paiements/{post}', 'Users\Ecole\PaiementController@show')->name('paiement.intervenants.show');
+    Route::post('/paiements', 'Users\Ecole\PaiementController@store')->name('paiement.intervenants.store');
 });
 
 // Intervenant routes
@@ -92,3 +100,7 @@ Route::prefix('intervenant')->group(function(){
 
 Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

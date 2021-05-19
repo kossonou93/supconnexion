@@ -33,13 +33,13 @@
 												<li class="nav-item">
 													<a class="nav-link" data-toggle="tab" id="profile-tab" href="#profile" role="tab" aria-selected="false">
 													<i class="fas fa-graduation-cap"></i>
-													Diplômes & Expériences
+													Diplômes 
 													</a>
 												</li>
 												<li class="nav-item">
 													<a class="nav-link" data-toggle="tab" id="contact-tab" href="#contact" role="tab" aria-selected="false">
 													<i class="fas fa-school"></i>
-													Types d'écoles
+													Expériences
 													</a>
 												</li>
 											</ul>

@@ -1,5 +1,6 @@
 @include('parts/head')
 <body>
+
     <!-- Preloader -->
     <div class="loader_bg">
         <div class="loader"></div>
@@ -16,7 +17,7 @@
             </ol>
         </section>
         <!-- End Banner area -->
-
+        
         <!-- All contact Info -->
         <section class="all_contact_info">
             <div class="container">
@@ -35,7 +36,6 @@
 
                                         <div class="col-md-6">
                                             <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
-
                                             @error('name')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
@@ -96,6 +96,4 @@
             </div>
         </section>
         <!-- End All contact Info -->
-
-
  @include('parts/footer')

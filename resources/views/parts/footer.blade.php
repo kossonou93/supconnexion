@@ -32,7 +32,7 @@
     </div>
 </footer>
 <!-- End Footer Area -->
-
+@include('sweetalert::alert')
 <!-- jQuery JS -->
 <script src="{{ asset('users/OwlCarousel2-2.3.4/dist/owl.carousel.min.js') }}"></script>
 
@@ -43,7 +43,7 @@
 <script src="{{ asset('users/js/bootstrap.min.js') }}"></script>
 
 <script src="{{ asset('users/js/carousel.js') }}"></script>
-
+<script src="{{ asset('users/js/sweetalert.min.js') }}"></script>
 <script>
     setTimeout(function(){
         $('.loader_bg').fadeToggle();

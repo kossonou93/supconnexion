@@ -2062,24 +2062,24 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
   padding-top: 30px;
 }
 .all_contact_info .contact_row .send_message .contact_box .input_box {
-  border: 1px solid #dfe3e4;
+  border: 1px solid #000;
   border-radius: 0;
   box-shadow: none;
   outline: none;
   height: 50px;
   padding-left: 15px;
   width: 100%;
-  color: #d3dadf;
+  color: #000;
   margin-bottom: 20px;
 }
 .all_contact_info .contact_row .send_message .contact_box .input_box.placeholder {
-  color: #d3dadf;
+  color: #000;
 }
 .all_contact_info .contact_row .send_message .contact_box .input_box:-moz-placeholder {
-  color: #d3dadf;
+  color: #000;
 }
 .all_contact_info .contact_row .send_message .contact_box .input_box::-webkit-input-placeholder {
-  color: #d3dadf;
+  color: #000;
 }
 .all_contact_info .contact_row .send_message .contact_box textarea {
   height: 120px !important;
