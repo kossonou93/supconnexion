@@ -35,10 +35,11 @@ class GoogleController extends Controller
      
             if($finduser){
      
-                //Auth::login($finduser);
-                //Auth::guard('intervenant')->attempt(['email' => $finduser->email, 'password' => $finduser->password], $finduser->remember);
-                Auth::guard('intervenant')->attempt(['email' => $finduser->email, 'password' => $finduser->password]);
-                return view('user.login_intervenant', compact('finduser'));
+                //($finduser);
+                Auth::guard('intervenant')->login($finduser);
+                //Auth::guard('intervenant')->attempt(['email' => $finduser->email, 'password' => $finduser->password]);
+                return redirect('/intervenant');
+                //view('user.login_intervenant');
                 //redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
      
             }else{
