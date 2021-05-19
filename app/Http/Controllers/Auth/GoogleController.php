@@ -10,10 +10,16 @@ use Exception;
 use App\Intervenant;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
-use App\Http\Controllers\Auth\IntervenantLoginController;
+//use App\Http\Controllers\Auth\IntervenantLoginController;
 
 class GoogleController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest:intervenant')->except('logout');
+        //$this->middleware('auth:intervenant');
+    }
+
     public function redirectToGoogle()
     {
         return Socialite::driver('google')->redirect();
@@ -30,10 +36,11 @@ class GoogleController extends Controller
             if($finduser){
      
                 //Auth::login($finduser);
-                IntervenantLoginController::login($newUser);
+                //Auth::guard('intervenant')->attempt(['email' => $finduser->email, 'password' => $finduser->password], $finduser->remember);
     
                 //return redirect('/home');
-                return redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
+                return view('user.login_intervenant', compact('finduser'));
+                //redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
      
             }else{
                 $newUser = Intervenant::create([
@@ -44,11 +51,12 @@ class GoogleController extends Controller
                     'password' => Hash::make('Superman_test')
                     //'password' => Hash::make($user->password),
                 ]);
-    
+                //Auth::guard('intervenant')->attempt(['email' => $newUser->email, 'password' => $newUser->password], $newUser->remember);
                 //Auth::login($newUser);
-                IntervenantLoginController::login($newUser);
+                //IntervenantLoginController::login($newUser);
      
-                return redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
+                return view('user.login_intervenant', compact('newUser'));
+                //redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
             }
     
         } catch (Exception $e) {
