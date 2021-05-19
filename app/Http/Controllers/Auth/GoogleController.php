@@ -10,6 +10,7 @@ use Exception;
 use App\Intervenant;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
+use App\Http\Controllers\Auth\IntervenantLoginController;
 
 class GoogleController extends Controller
 {
@@ -28,7 +29,8 @@ class GoogleController extends Controller
      
             if($finduser){
      
-                Auth::login($finduser);
+                //Auth::login($finduser);
+                IntervenantLoginController::login($newUser);
     
                 //return redirect('/home');
                 return redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
@@ -39,11 +41,12 @@ class GoogleController extends Controller
                     'email' => $user->email,
                     'google_id'=> $user->id,
                     'email_verified_at'=> Carbon::now(),
-                    'password' => encrypt('Superman_test')
+                    'password' => Hash::make('Superman_test')
                     //'password' => Hash::make($user->password),
                 ]);
     
-                Auth::login($newUser);
+                //Auth::login($newUser);
+                IntervenantLoginController::login($newUser);
      
                 return redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
             }
