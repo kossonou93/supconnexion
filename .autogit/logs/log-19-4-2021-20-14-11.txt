@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Wed May 19 2021 20:14:11 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/user/login_ecole.blade.php
+
+
+Created files:
+* .autogit/logs/log-19-4-2021-19-43-45.txt
+
+
+Deleted files:
+* app/Http/Controllers/Auth/FacebookEcoleController.php
+
+
+Renamed files:
