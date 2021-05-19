@@ -101,6 +101,6 @@ Route::prefix('intervenant')->group(function(){
 Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');
 
 
-Auth::routes();
+//Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
