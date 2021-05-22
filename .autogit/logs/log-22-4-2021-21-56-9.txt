@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Sat May 22 2021 21:56:09 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/logs/log-22-4-2021-21-25-55.txt
+
+
+Deleted files:
+
+
+Renamed files:
