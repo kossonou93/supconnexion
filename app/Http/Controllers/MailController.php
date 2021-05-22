@@ -64,4 +64,19 @@ class MailController extends Controller
         
     }
     //*/
+
+    public function verifyPasswordIntervenant($token){
+        //var_dump($token);
+        $verifiedUser = Intervenant::where('token',$token)->first();
+        //var_dump($verifiedUser);
+        if (isset($verifiedUser)) {
+            $user = $verifiedUser;
+            return view('user.password_intervenant_modify', compact('user'));
+            //\redirect(route('intervenant.password.send'))->with('info','Modifiez maintenant votre mot de passe!');
+        } else {
+               
+            return \redirect('intervenant.password.send')->with('error','Erreur de confirmation veillez rééssayer ultérieurement!!');
+        }
+        
+    }
 }

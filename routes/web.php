@@ -91,6 +91,11 @@ Route::prefix('intervenant')->group(function(){
     Route::post('/login', 'Auth\IntervenantLoginController@login')->name('intervenant.login.submit');
     Route::get('/register', 'Auth\IntervenantRegisterController@showRegisterForm')->name('intervenant.register');
     Route::post('/register', 'Auth\IntervenantRegisterController@register')->name('intervenant.register.submit');
+    Route::post('/password', 'Auth\IntervenantPasswordController@show')->name('intervenant.password.submit');
+    Route::get('/password', 'Auth\IntervenantPasswordController@index')->name('intervenant.password');
+    Route::post('/password/send', 'Auth\IntervenantPasswordController@modifyPssword')->name('intervenant.password.send.submit');
+    Route::get('/password/send', 'Auth\IntervenantPasswordController@sendPassword')->name('intervenant.password.send');
+    Route::get('/verify/{token}', 'MailController@verifyPasswordIntervenant')->name('intervenant.verify.password');
     Route::put('/edit/{post}', 'Users\Intervenant\IntervenantController@update')->name('intervenant.update.submit');
     Route::put('/edit_discipline/{post}', 'Users\Intervenant\IntervenantController@updateDiscipline')->name('discipline.update.submit');
     Route::put('/edit_formation/{post}', 'Users\Intervenant\IntervenantController@updateFormation')->name('formation.update.submit');

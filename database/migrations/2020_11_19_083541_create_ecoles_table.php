@@ -22,6 +22,7 @@ class CreateEcolesTable extends Migration
             $table->string('address')->nullable();
             $table->string('phone')->nullable();
             $table->string('contact')->nullable();
+            $table->longText('logo')->nullable();
             $table->unsignedBigInteger('ville_id')->nullable();
             //$table->unsignedBigInteger('commune_id')->nullable();
             $table->unsignedBigInteger('pays_id')->nullable();

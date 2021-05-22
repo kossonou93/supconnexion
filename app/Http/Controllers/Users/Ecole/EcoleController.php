@@ -25,6 +25,7 @@ use App\Models\TypeExperience;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class EcoleController extends Controller
 {
@@ -73,16 +74,16 @@ class EcoleController extends Controller
         $ecole->address = $input['address'];
         $ecole->about = $input['about'];
         
-        /*if ($request->file('photo')) {
-            @unlink(public_path('uploads/photo/profil'.$ecole->photo));
-            $ecoleImage = $request->file('photo');
+        if ($request->file('logo')) {
+            @unlink(public_path('uploads/photo/logo'.$ecole->logo));
+            $ecoleImage = $request->file('logo');
             $ecoleName  = date('d-m-Y') . '.' . uniqid() . '.' . $ecoleImage->getClientOriginalName();
-            $ecolePath  = public_path('uploads/photo/profil');
+            $ecolePath  = public_path('uploads/photo/logo');
             $ecoleImage->move($ecolePath, $ecoleName);
-            $ecole->photo = $ecoleName;
+            $ecole->logo = $ecoleName;
         }
-        $ecole->linkdin = $input['linkdin'];
-        */
+        //$ecole->linkdin = $input['linkdin'];
+        
         $ecole->save();
         
         if ($request->horaires != []) {

@@ -34,9 +34,9 @@ class EcoleLoginController extends Controller
             $user = Ecole::where('email',$request->email)->first();
             if (($user->email_verified_at) == null) {
                 Auth::logout();
-                return \redirect('ecole.login')->with('message', 'Vérifiez votre adresse email pour continuer svp');
+                return redirect()->route('ecole.login')->with('message', 'Vérifiez votre adresse email pour continuer svp');
             } else {
-                return redirect()->intended(route('ecole.dashboard'));
+                return redirect()->route('ecole.dashboard');
             }
             
         }

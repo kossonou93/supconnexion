@@ -38,39 +38,101 @@
 											<div class="card-body">
                                                 <form action="{{ route('paiement.intervenants.store', ['post' => $offre]) }}" method="post" enctype="multipart/form-data">
 												@csrf
-												<div class="row mt-3">
+												<div class="row">
 													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Nom</label>
-															<input type="text" class="form-control" name="name" value="">
+														<h3>Information Intervenant</h3>
+														<div class="row mt-4">
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Nom</label>
+																	<input type="text" class="form-control" name="name" value="{{$ecole->name}}" disabled="disabled">
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Email</label>
+																	<input type="email" class="form-control" name="email" value="{{$ecole->email}}" disabled="disabled">
+																</div>
+															</div>
+														</div>
+														<div class="row mt-4">
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Adresse</label>
+																	<input type="text" class="form-control" value="{{$ecole->address}}" name="address" disabled="disabled">
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Pays</label>
+																	<input type="text" class="form-control" value="{{$pays->name}}" name="pays" disabled="disabled">
+																</div>
+															</div>
+														</div>
+														<div class="row mt-4">
+															<div class="col-md-1"></div>
+															<div class="col-md-10">
+																<div class="form-group form-group-default">
+																	<label>Téléphone</label>
+																	<input type="number" class="form-control" value="{{$ecole->phone}}" name="phone" disabled="disabled">
+																</div>
+															</div>
+															<div class="col-md-1"></div>
 														</div>
 													</div>
 													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Email</label>
-															<input type="email" class="form-control" name="email" value="" disabled="disabled">
+													<h3>Paiement</h3>
+														<div class="row mt-4">
+															<div class="col-md-12">
+																<table class="table mt-12">
+																	<thead>
+																		<tr>
+																			<th scope="col">PRODUIT</th>
+																			<th scope="col">TOTAL</th>
+																		</tr>
+																	</thead>
+																	<tbody>
+																		<tr>
+																			<td>Souscription à l'offre</td>
+																			<td>{{$offre}} €</td>
+																		</tr>
+																		<tr>
+																			<td>Total</td>
+																			<td>{{$offre}} €</td>
+																		</tr>
+																	</tbody>
+																</table>
+															</div>
 														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<div class="col-md-12">
-														<div class="form-group form-group-default">
-															<label>Adresse</label>
-															<input type="text" class="form-control" value="" name="address">
+														<br>
+														<h4>Sélectionnez type de paiement</h4>
+														<div class="row mt-4">
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Adresse</label>
+																	<input type="text" class="form-control" value="" name="address">
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Adresse</label>
+																	<input type="text" class="form-control" value="" name="address">
+																</div>
+															</div>
 														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Téléphone 1</label>
-															<input type="number" class="form-control" value="" name="phone" required>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Téléphone 2</label>
-															<input type="number" class="form-control" value="" name="contact">
+														<div class="row mt-4">
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Téléphone 1</label>
+																	<input type="number" class="form-control" value="" name="phone" required>
+																</div>
+															</div>
+															<div class="col-md-6">
+																<div class="form-group form-group-default">
+																	<label>Téléphone 2</label>
+																	<input type="number" class="form-control" value="" name="contact">
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>

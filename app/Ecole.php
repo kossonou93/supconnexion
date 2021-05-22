@@ -15,7 +15,7 @@ class Ecole extends Authenticatable
     protected $guard = 'ecole';
 
     protected $fillable = [
-        'name', 'email', 'email_verified_at', 'password', 'address', 'phone', 'contact', 'ville_id', 'pays_id', 'about'
+        'name', 'email', 'email_verified_at', 'password', 'address', 'phone', 'contact', 'logo', 'ville_id', 'pays_id', 'about'
     ];
 
     protected $hidden = [

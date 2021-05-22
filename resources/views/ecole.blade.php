@@ -119,6 +119,15 @@
 														</div>
 													</div>
 												</div>
+												<div class="row mt-3">
+													<div class="col-md-12">
+														<div class="form-group form-group-default">
+															<label for="exampleFormControlFile1">Logo</label>
+															<br>
+															<input type="file" name="logo" class="form-control-file" placeholder="{{ Auth::user()->logo }}" value="{{ Auth::user()->logo }}">
+														</div>
+													</div>
+												</div>
 												<div class="row mt-3 mb-1">
 													<div class="col-md-12">
 														<div class="form-group form-group-default">
@@ -239,8 +248,8 @@
 							<div class="card card-profile card-secondary">
 								<div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
 									<div class="profile-picture">
-										<div class="avatar avatar-xl">
-											<img src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
+										<div class="avatar avatar-xxl">
+											<img src="{{ asset('uploads/photo/logo/'.Auth::user()->logo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
 										</div>
 									</div>
 								</div>
@@ -278,7 +287,7 @@
 		</div>
 		
 		<!-- Custom template | don't include it in your project! -->
-		<div class="custom-template">
+		<!--<div class="custom-template">
 			<div class="title">Settings</div>
 			<div class="custom-content">
 				<div class="switcher">
@@ -306,7 +315,7 @@
 			<div class="custom-toggle">
 				<i class="flaticon-settings"></i>
 			</div>
-		</div>
+		</div>-->
 		<!-- End Custom template -->
 	</div>
 </div>

@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Transaction;
+use App\Ecole;
+use Auth;
+use App\Models\Pays;
 
 class PaiementController extends Controller
 {
@@ -21,20 +24,26 @@ class PaiementController extends Controller
 
     public function show($id)
     {
+        $ecole = Ecole::find(Auth::user()->id);
+        $pays = Pays::find($ecole->pays_id);
         $offre = $id;
         switch ($id) {
             case 1:
-                return view('admin.user.ecole.paiement', compact('offre'));
+                $offre = 10;
+                return view('admin.user.ecole.paiement', compact('offre', 'ecole', 'pays'));
                 break;
             case 2:
-                return view('admin.user.ecole.paiement', compact('offre'));
+                $offre = 15;
+                return view('admin.user.ecole.paiement', compact('offre', 'ecole', 'pays'));
                 break;
             case 3:
-                return view('admin.user.ecole.paiement', compact('offre'));
+                $offre = 20;
+                return view('admin.user.ecole.paiement', compact('offre', 'ecole', 'pays'));
                 break;
             
             default:
-                return view('admin.user.ecole.paiement', compact('offre'));
+                $offre = 10;
+                return view('admin.user.ecole.paiement', compact('offre', 'ecole', 'pays'));
                 break;
         }
         

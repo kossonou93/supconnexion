@@ -804,7 +804,7 @@
 									</div>
 									<div class="card-body" style="margin-top:10px">
 										<div class="user-profile text-center">
-											<div class="name">{{ Auth::user()->name }}</div>
+											<div class="name">{{ Auth::user()->last_name }} {{ Auth::user()->name }}</div>
 											<div class="job">{{ Auth::user()->fonction }}</div>
 											<div class="desc">{{ Auth::user()->about }}</div>
 											<div class="social-media">
