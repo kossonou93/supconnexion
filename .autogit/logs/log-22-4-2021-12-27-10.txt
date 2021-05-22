@@ -1,0 +1,33 @@
+-------------------- Auto-Git Log --------------------
+		Sat May 22 2021 12:27:10 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Ecole.php
+* app/Http/Controllers/Auth/EcoleLoginController.php
+* app/Http/Controllers/MailController.php
+* app/Http/Controllers/Users/Ecole/EcoleController.php
+* app/Http/Controllers/Users/Ecole/PaiementController.php
+* database/migrations/2020_11_19_083541_create_ecoles_table.php
+* resources/views/admin/user/ecole/paiement.blade.php
+* resources/views/admin/user/ecole/sidebar.blade.php
+* resources/views/ecole.blade.php
+* resources/views/intervenant.blade.php
+* resources/views/user/login_intervenant.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-19-4-2021-23-18-28.txt
+* app/Http/Controllers/Auth/IntervenantPasswordController.php
+* app/Mail/VerifyPasswordIntervenant.php
+* public/uploads/photo/logo/21-05-2021.60a797946d8ec.1564219765.jpg
+* resources/views/mail/intervenant-password.blade.php
+* resources/views/user/password_intervenant.blade.php
+* resources/views/user/password_intervenant_modify.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
