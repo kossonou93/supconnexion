@@ -93,6 +93,9 @@ Route::prefix('ecole')->group(function(){
     Route::get('/paiements', 'Users\Ecole\PaiementController@index')->name('paiement.intervenants');
     Route::get('/paiements/{post}', 'Users\Ecole\PaiementController@show')->name('paiement.intervenants.show');
     Route::post('/paiements', 'Users\Ecole\PaiementController@store')->name('paiement.intervenants.store');
+
+    Route::get('checkout','CheckoutController@checkout');
+    Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 });
 
 // Intervenant routes
