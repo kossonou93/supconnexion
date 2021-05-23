@@ -9,6 +9,8 @@ use App\Intervenant;
 use App\Mail\VerifyPasswordIntervenant;
 use Auth;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 class IntervenantPasswordController extends Controller
 {
@@ -46,16 +48,19 @@ class IntervenantPasswordController extends Controller
 
     public function modifyPassword(Request $request)
     {
-        $input = $request->all();
-
-        $validator = Validator::make($input, [
+        $this->validate($request, [
+            //'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            //'token' => Str::random(60),
         ]);
 
-        //$request['password'] = Hash::make($request->password);
+        $request['password'] = Hash::make($request->password);
         $inter = Intervenant::where('email', '=', $request->email)->first();
-        $inter->password = Hash::make($input['password']);
-        $inter->save();
+        var_dump($request->email);
+        //$user = Intervenant::find($inter->id);
+        //$request['password'] = Hash::make($request->password);
+        //$inter->password = Hash::make($input['password']);
+        $user->save();
         return \redirect(route('intervenant.login'))->with('success','Mot de passe modifié avec succès, connectez-vous maintenant');
     }
     
