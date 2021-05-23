@@ -59,8 +59,8 @@ class IntervenantPasswordController extends Controller
         var_dump($request->email);
         //$user = Intervenant::find($inter->id);
         //$request['password'] = Hash::make($request->password);
-        //$inter->password = Hash::make($input['password']);
-        $user->save();
+        $inter->password = $request['password'];
+        $inter->save();
         return \redirect(route('intervenant.login'))->with('success','Mot de passe modifié avec succès, connectez-vous maintenant');
     }
     

@@ -41,7 +41,7 @@
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20" data-validate="Entrez email">
-					<input id="email" type="email" class="input100 @error('email') is-invalid @enderror" type="text" placeholder="email" name="email" value="{{ $user->email }}" disabled="disabled">
+					<input type="email" class="form-control" name="email" value="{{ $user->email }}">
 					@error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
