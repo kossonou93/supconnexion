@@ -19,6 +19,13 @@ Route::get('/interv/password', 'Auth\IntervenantPasswordController@index')->name
 Route::put('/interv/password/send', 'Auth\IntervenantPasswordController@modifyPassword')->name('interv.password.send.submit');
 Route::get('/interv/password/send', 'Auth\IntervenantPasswordController@sendPassword')->name('interv.password.send');
 Route::get('/interv/verify/{token}', 'MailController@verifyPasswordIntervenant')->name('interv.verify.password');
+
+Route::post('/ecol/password', 'Auth\EcolePasswordController@show')->name('ecol.password.submit');
+Route::get('/ecol/password', 'Auth\EcolePasswordController@index')->name('ecol.password');
+Route::put('/ecol/password/send', 'Auth\EcolePasswordController@modifyPassword')->name('ecol.password.send.submit');
+Route::get('/ecol/password/send', 'Auth\EcolePasswordController@sendPassword')->name('ecol.password.send');
+Route::get('/ecol/verify/{token}', 'MailController@verifyPasswordEcole')->name('ecol.verify.password');
+
 //Route::get('/formlogin', 'HomeController@form')->name('form');
 Route::get('/user/verify/{token}', 'MailController@verifyEmail')->name('user.verify');
 Route::get('/ecole/verify/{token}', 'MailController@verifyEmailEcole')->name('ecole.verify');

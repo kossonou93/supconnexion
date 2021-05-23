@@ -79,4 +79,19 @@ class MailController extends Controller
         }
         
     }
+
+    public function verifyPasswordEcole($token){
+        //var_dump($token);
+        $verifiedUser = Ecole::where('remember_token',$token)->first();
+        //var_dump($verifiedUser);
+        if (isset($verifiedUser)) {
+            $user = $verifiedUser;
+            return view('user.password_ecole_modify', compact('user'));
+            //return \redirect(route('interv.password.send'))->with('info','Modifiez maintenant votre mot de passe!');
+        } else {
+               
+            return \redirect('ecol.password.send')->with('error','Erreur de confirmation veillez rééssayer ultérieurement!!');
+        }
+        
+    }
 }
