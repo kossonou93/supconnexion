@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sun May 23 2021 18:16:07 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* composer.json
+* composer.lock
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-23-4-2021-17-45-58.txt
+* app/Http/Controllers/CheckoutController.php
+* resources/views/admin/user/ecole/checkout/credit-card.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
