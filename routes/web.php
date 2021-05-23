@@ -16,7 +16,7 @@ Route::resource('/contacts', 'ContactController');
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
 Route::post('/interv/password', 'Auth\IntervenantPasswordController@show')->name('interv.password.submit');
 Route::get('/interv/password', 'Auth\IntervenantPasswordController@index')->name('interv.password');
-Route::post('/interv/password/send', 'Auth\IntervenantPasswordController@modifyPassword')->name('interv.password.send.submit');
+Route::put('/interv/password/send', 'Auth\IntervenantPasswordController@modifyPassword')->name('interv.password.send.submit');
 Route::get('/interv/password/send', 'Auth\IntervenantPasswordController@sendPassword')->name('interv.password.send');
 Route::get('/interv/verify/{token}', 'MailController@verifyPasswordIntervenant')->name('interv.verify.password');
 //Route::get('/formlogin', 'HomeController@form')->name('form');

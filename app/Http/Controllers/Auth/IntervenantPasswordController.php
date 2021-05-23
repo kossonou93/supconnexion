@@ -49,16 +49,11 @@ class IntervenantPasswordController extends Controller
     public function modifyPassword(Request $request)
     {
         $this->validate($request, [
-            //'email' => ['required', 'string', 'email', 'max:255'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            //'token' => Str::random(60),
         ]);
 
         $request['password'] = Hash::make($request->password);
         $inter = Intervenant::where('email', '=', $request->email)->first();
-        var_dump($request->email);
-        //$user = Intervenant::find($inter->id);
-        //$request['password'] = Hash::make($request->password);
         $inter->password = $request['password'];
         $inter->save();
         return \redirect(route('intervenant.login'))->with('success','Mot de passe modifié avec succès, connectez-vous maintenant');

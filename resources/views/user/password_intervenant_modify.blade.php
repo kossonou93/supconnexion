@@ -36,12 +36,13 @@
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30" style="opacity: 0.9;">
 			<form class="login100-form validate-form" method="POST" action="{{ route('interv.password.send.submit') }}">
                 {{csrf_field()}}
+				{{ method_field('PUT') }}
 				<span class="login100-form-title p-b-37">
 					Réinitialisé Mot de Passe
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20" data-validate="Entrez email">
-					<input type="email" class="form-control" name="email" value="{{ $user->email }}">
+					<input type="email" class="input100 @error('email') is-invalid @enderror" name="email" value="{{ $user->email }}">
 					@error('email')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{ $message }}</strong>
