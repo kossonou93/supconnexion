@@ -34,14 +34,16 @@ class EcoleLoginController extends Controller
             $user = Ecole::where('email',$request->email)->first();
             if (($user->email_verified_at) == null) {
                 Auth::logout();
-                return redirect()->route('ecole.login')->with('message', 'Vérifiez votre adresse email pour continuer svp');
+                return redirect()->route('ecole.login')->with('info', 'Vérifiez votre adresse email pour continuer svp');
             } else {
                 return redirect()->route('ecole.dashboard');
             }
             
+        } else {
+            return redirect()->route('ecole.login')->with('info', 'login ou mot de passe incorrect');
+            //redirect()->back()->withInput($request->only('email','remember'));
         }
 
         // if unsuccessful
-        return redirect()->back()->withInput($request->only('email','remember'));
     }
 }

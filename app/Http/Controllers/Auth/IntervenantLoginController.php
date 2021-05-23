@@ -40,9 +40,9 @@ class IntervenantLoginController extends Controller
             
             if (($user->email_verified_at) == null) {
                 Auth::logout();
-                return redirect()->route('intervenant.login')->with('message', 'Vérifiez votre adresse email pour continuer svp');
+                return redirect()->route('intervenant.login')->with('info', 'Vérifiez votre adresse email pour continuer svp');
             } else {
-                return redirect()->route('intervenant.dashboard')->with('message', 'Vous etes connecté!');
+                return redirect()->route('intervenant.dashboard')->with('info', 'login ou mot de passe incorrect');
             }
             //return \redirect('intervenant.dashboard')->with('success','Bienvenue sur votre profil, profitez des avantages de SupConnexion');
             
