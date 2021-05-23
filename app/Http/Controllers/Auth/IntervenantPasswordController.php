@@ -30,12 +30,12 @@ class IntervenantPasswordController extends Controller
 
         $inter = Intervenant::where('email', '=', $request->email)->first();
         if ($inter === null) {
-            return \redirect()->route('intervenant.password')->with('errors', 'Désolé, email non reconnu!');
+            return \redirect()->route('interv.password')->with('errors', 'Désolé, email non reconnu!');
         } else {
             $inter->remember_token = Str::random(60);
             $inter->save();
             Mail::to($inter->email)->send(new VerifyPasswordIntervenant($inter));
-            return \redirect()->route('intervenant.password')->with('success', 'Veuillez verifier votre mail pour continuer');
+            return \redirect()->route('interv.password')->with('success', 'Veuillez verifier votre mail pour continuer');
         }
     }
 

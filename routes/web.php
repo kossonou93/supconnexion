@@ -14,7 +14,11 @@ Route::get('/', 'Users\HomeController@index')->name('home');
 Route::resource('/contacts', 'ContactController');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
-
+Route::post('/interv/password', 'Auth\IntervenantPasswordController@show')->name('interv.password.submit');
+Route::get('/interv/password', 'Auth\IntervenantPasswordController@index')->name('interv.password');
+Route::post('/interv/password/send', 'Auth\IntervenantPasswordController@modifyPssword')->name('interv.password.send.submit');
+Route::get('/interv/password/send', 'Auth\IntervenantPasswordController@sendPassword')->name('interv.password.send');
+Route::get('/interv/verify/{token}', 'MailController@verifyPasswordIntervenant')->name('interv.verify.password');
 //Route::get('/formlogin', 'HomeController@form')->name('form');
 Route::get('/user/verify/{token}', 'MailController@verifyEmail')->name('user.verify');
 Route::get('/ecole/verify/{token}', 'MailController@verifyEmailEcole')->name('ecole.verify');
