@@ -20,6 +20,7 @@ class VerifyPasswordIntervenant extends Mailable
     public function __construct($inter)
     {
         $this->inter = $inter;
+        //var_dump($inter);
     }
 
     /**

@@ -7,9 +7,15 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Intervenant;
 use App\Mail\VerifyPasswordIntervenant;
+use Auth;
 
 class IntervenantPasswordController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('guest:intervenant');
+    }
+
     public function index()
     {
         return view('user.password_intervenant');

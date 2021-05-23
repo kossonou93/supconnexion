@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sun May 23 2021 09:58:35 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/MailController.php
+* resources/views/mail/ecole-email.blade.php
+* resources/views/mail/intervenant-password.blade.php
+* resources/views/mail/signup-email.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-23-4-2021-9-26-53.txt
+
+
+Deleted files:
+
+
+Renamed files:
