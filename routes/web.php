@@ -19,12 +19,6 @@ Route::resource('/contacts', 'ContactController');
 Route::get('/user/verify/{token}', 'MailController@verifyEmail')->name('user.verify');
 Route::get('/ecole/verify/{token}', 'MailController@verifyEmailEcole')->name('ecole.verify');
 
-Route::post('/intervenant/password', 'Auth\IntervenantPasswordController@show')->name('intervenant.password.submit');
-Route::get('/intervenant/password', 'Auth\IntervenantPasswordController@index')->name('intervenant.password');
-Route::post('/intervenant/password/send', 'Auth\IntervenantPasswordController@modifyPssword')->name('intervenant.password.send.submit');
-Route::get('/intervenant/password/send', 'Auth\IntervenantPasswordController@sendPassword')->name('intervenant.password.send');
-Route::get('/intervenant/verify/{token}', 'MailController@verifyPasswordIntervenant')->name('intervenant.verify.password');
-
 Auth::routes();
 
 Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');

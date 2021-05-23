@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Intervenant;
 use App\Mail\VerifyPasswordIntervenant;
 use Auth;
+use Illuminate\Support\Str;
 
 class IntervenantPasswordController extends Controller
 {
@@ -31,6 +32,8 @@ class IntervenantPasswordController extends Controller
         if ($inter === null) {
             return \redirect()->route('intervenant.password')->with('errors', 'Désolé, email non reconnu!');
         } else {
+            $inter->remember_token = Str::random(60);
+            $inter->save();
             Mail::to($inter->email)->send(new VerifyPasswordIntervenant($inter));
             return \redirect()->route('intervenant.password')->with('success', 'Veuillez verifier votre mail pour continuer');
         }
