@@ -10,15 +10,15 @@ use Illuminate\Queue\SerializesModels;
 class VerifyPasswordEcole extends Mailable
 {
     use Queueable, SerializesModels;
-
+    public $ecol;
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($ecol)
     {
-        //
+        $this->ecol = $ecol;
     }
 
     /**
@@ -28,6 +28,6 @@ class VerifyPasswordEcole extends Mailable
      */
     public function build()
     {
-        return $this->view('view.name');
+        return $this->view('mail.ecole-password');
     }
 }

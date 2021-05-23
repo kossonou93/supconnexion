@@ -37,15 +37,6 @@
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30" style="opacity: 0.9;">
 			<form class="login100-form validate-form" method="POST" action="{{ route('ecole.login.submit') }}">
                 @csrf
-				<div class="row">
-					<div class="col-sm-12 col-md-12">
-						@if ($message = Session::get('success'))
-							<div class="alert alert-success">
-								{{ $message }}
-							</div>
-						@endif
-					</div>
-				</div>
 				<span class="login100-form-title p-b-37">
 					Login Ecole
 				</span>
@@ -83,7 +74,7 @@
 						Connexion
 					</button>
                     @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('password.request') }}">
+                        <a class="btn btn-link" href="{{ route('ecol.password') }}">
                             {{ __('Mot de Passe oublié?') }}
                         </a>
                     @endif
@@ -120,7 +111,7 @@
 	
 
 	<div id="dropDownSelect1"></div>
-	
+	@include('sweetalert::alert')
 <!--===============================================================================================-->
 	<script src="{{ asset('form/vendor/jquery/jquery-3.2.1.min.js') }}"></script>
 <!--===============================================================================================-->

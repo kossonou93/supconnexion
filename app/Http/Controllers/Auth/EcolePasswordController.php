@@ -36,7 +36,7 @@ class EcolePasswordController extends Controller
         } else {
             $ecol->remember_token = Str::random(60);
             $ecol->save();
-            Mail::to($inter->email)->send(new VerifyPasswordEcole($inter));
+            Mail::to($ecol->email)->send(new VerifyPasswordEcole($ecol));
             return \redirect()->route('ecol.password')->with('success', 'Veuillez verifier votre mail pour continuer');
         }
     }
