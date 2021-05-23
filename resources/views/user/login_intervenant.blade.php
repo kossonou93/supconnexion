@@ -82,7 +82,7 @@
 						Connexion
 					</button>
                     @if (Route::has('password.request'))
-                        <a class="btn btn-link" href="{{ route('intervenant.password') }}">
+                        <a class="btn btn-link" href="{{ route('interv.password') }}">
                             {{ __('Mot de Passe oublié?') }}
                         </a>
                     @endif

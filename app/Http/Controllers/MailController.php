@@ -67,7 +67,7 @@ class MailController extends Controller
 
     public function verifyPasswordIntervenant($token){
         //var_dump($token);
-        $verifiedUser = Intervenant::where('token',$token)->first();
+        $verifiedUser = Intervenant::where('remember_token',$token)->first();
         //var_dump($verifiedUser);
         if (isset($verifiedUser)) {
             $user = $verifiedUser;
