@@ -34,7 +34,7 @@
     </div>
 	<div class="container-login100" style="background-image: url('{{ asset('users/images/teacher4.jpg') }}')">
 		<div class="wrap-login100 p-l-55 p-r-55 p-t-80 p-b-30" style="opacity: 0.9;">
-			<form class="login100-form validate-form" method="POST" action="{{ route('intervenant.password.send.submit') }}">
+			<form class="login100-form validate-form" method="POST" action="{{ route('interv.password.send.submit') }}">
                 {{csrf_field()}}
 				<span class="login100-form-title p-b-37">
 					Réinitialisé Mot de Passe

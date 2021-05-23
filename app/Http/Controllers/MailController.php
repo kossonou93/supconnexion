@@ -71,8 +71,8 @@ class MailController extends Controller
         //var_dump($verifiedUser);
         if (isset($verifiedUser)) {
             $user = $verifiedUser;
-            //return view('user.password_intervenant_modify', compact('user'));
-            return \redirect(route('interv.verify.password'))->with('info','Modifiez maintenant votre mot de passe!');
+            return view('user.password_intervenant_modify', compact('user'));
+            //return \redirect(route('interv.password.send'))->with('info','Modifiez maintenant votre mot de passe!');
         } else {
                
             return \redirect('interv.password.send')->with('error','Erreur de confirmation veillez rééssayer ultérieurement!!');
