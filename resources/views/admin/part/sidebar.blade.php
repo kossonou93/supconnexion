@@ -65,6 +65,27 @@
 							</div>
 						</li>
 						<li class="nav-item">
+							<a data-toggle="collapse" href="#inter">
+								<i class="fas fa-user"></i>
+								<p>Ecoles</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="inter">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="components/panels.html">
+											<span class="sub-item">Rechercher</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{route('admin.ecole.all')}}">
+											<span class="sub-item">Voir tous</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-book-open"></i>
 								<p>Disciplines</p>

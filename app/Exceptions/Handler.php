@@ -44,10 +44,16 @@ class Handler extends ExceptionHandler
 
         if ($request->is('ecole') || $request->is('ecole/*')) {
             return redirect()->guest(route('ecole.login'));
+            if ($exception instanceof \Illuminate\Session\TokenMismatchException) {
+                return redirect()->route('ecole.login');
+            }
         }
 
         if ($request->is('intervenant') || $request->is('intervenant/*')) {
             return redirect()->guest(route('intervenant.login'));
+            if ($exception instanceof \Illuminate\Session\TokenMismatchException) {
+                return redirect()->route('intervenant.login');
+            }
         }
 
         if ($request->is('vendor') || $request->is('vendor/*')) {
