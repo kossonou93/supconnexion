@@ -1,7 +1,7 @@
 <section class="top_header_area">
     <div class="container">
         <ul class="nav navbar-nav top_nav">
-            <li><a href="#"><i class="fa fa-envelope-o"></i>info@supconnexion.com</a></li>
+            <li><a href="#"><i class="fa fa-envelope-o"></i>contact@supconnexion.com</a></li>
             <li>
                 <a href="#">
                     <i class="fa fa-clock-o"></i>

@@ -14,8 +14,8 @@
             <div class="col-md-4 col-sm-8 footer_about quick">
                 <h2>NOS LIENS</h2>
                 <ul class="quick_link">
-                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                   <!-- <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>-->
                     <li><a href="{{route('admin.login')}}"><i class="fa fa-chevron-right"></i>Connexion</a></li>
                 </ul>
             </div>
@@ -24,7 +24,7 @@
                 <address>
                     <ul class="my_address">
                         <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>contact@supconnexion.com</a></li>
-                        <li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span></a></li>
+                        <!--<li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span></a></li>-->
                     </ul>
                 </address>
             </div>
