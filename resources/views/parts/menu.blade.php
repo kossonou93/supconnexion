@@ -65,10 +65,18 @@
                                 <li><a href="{{route('intervenant.login')}}">Connexion Intervenant</a></li>
                             </ul>
                         </li>
-                        <li class="dropdown submenu">
+                        
+                      <li class="dropdown submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">A Propos</a>
+                          	<ul class="dropdown-menu">
+                              <li><a href="#">Conditions générales de ventes</a></li>
+                              <li><a href="#">Charte utilisateurs</a></li>
+                              <li><a href="#">Protection des données</a></li>
+                              <li><a href="#">Alertes opportunités</a></li>
+                              <li><a href="{{route('contacts.index')}}">Contact</a></li>
+                            </ul>
                         </li>
-                        <li><a href="{{route('contacts.index')}}">Contact</a></li>
+                        <li><a href="#">Projets académiques</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>

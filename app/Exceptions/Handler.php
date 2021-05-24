@@ -37,6 +37,9 @@ class Handler extends ExceptionHandler
 
         if ($request->is('admin') || $request->is('admin/*')) {
             return redirect()->guest(route('admin.login'));
+            if ($exception instanceof \Illuminate\Session\TokenMismatchException) {
+                return redirect()->route('admin.login');
+            }
         }
 
         if ($request->is('ecole') || $request->is('ecole/*')) {
