@@ -50,6 +50,7 @@ Route::prefix('admin')->group(function(){
     Route::post('/register', 'Auth\AdminRegisterController@register')->name('admin.register.submit');
 
     Route::get('/intervenant-all', 'Users\Admin\AdminController@allIntervenants')->name('admin.intervenant.all');
+    Route::get('/ecole-all', 'Users\Admin\AdminController@allEcoles')->name('admin.ecole.all');
 
     Route::resource('/disciplines', 'Users\Admin\DisciplineController');
     Route::resource('/langues', 'Users\Admin\LangueController');

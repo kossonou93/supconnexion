@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Carousel;
 use App\Models\Partenaire;
 use App\Intervenant;
+use App\Ecole;
 //use Illuminate\Support\Facades\Validator;
 use Validator,Redirect,Response;
 
@@ -121,9 +122,15 @@ class AdminController extends Controller
   
   }
 
-  public function allIntervenants()
+    public function allIntervenants()
     {
         $intervenants = Intervenant::all();
         return view('admin.intervenant.all', compact('intervenants'));
+    }
+
+    public function allEcoles()
+    {
+        $ecoles = Ecole::all();
+        return view('admin.ecole.all', compact('ecoles'));
     }
 }
