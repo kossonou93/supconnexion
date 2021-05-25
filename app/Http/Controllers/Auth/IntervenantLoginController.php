@@ -45,7 +45,7 @@ class IntervenantLoginController extends Controller
             } else {
                 if(Auth::guard('intervenant')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
                 {
-                    return redirect()->route('intervenant.dashboard')->with('success', 'Vous etes connecté!');
+                    return redirect()->route('intervenant.dashboard')->with('success', 'Vous êtes connecté!');
                 }else {
                     return redirect()->route('intervenant.login')->with('info', "Email ou Mot de Passe incorrect!");
                 }
@@ -56,6 +56,12 @@ class IntervenantLoginController extends Controller
         return redirect()->back()->withInput($request->only('email','remember'));
         //}
         
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::guard('intervenant')->logout();
+        return redirect()->intended('/')->with('success', 'Vous êtes déconnecté!');
     }
     
 }

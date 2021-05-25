@@ -21,11 +21,11 @@
 						<ul class="nav">
 							<li>
 								<div class="dropdown-divider">
-									<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+									<form id="logout-form" action="{{ route('ecole-logout') }}" method="POST" class="d-none">
 										@csrf
 									</form>
 								</div>
-								<a class="dropdown-item" href="{{ route('logout') }}"
+								<a class="dropdown-item" href="{{ route('ecole-logout') }}"
 									onclick="event.preventDefault();
 												document.getElementById('logout-form').submit();">
 									{{ __('Se déconnecter') }}

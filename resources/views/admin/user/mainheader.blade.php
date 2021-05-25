@@ -52,11 +52,11 @@
 								
 								<li>
 									<div class="dropdown-divider">
-										<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+										<form id="logout-form" action="{{ route('intervenant-logout') }}" method="POST" class="d-none">
 											@csrf
 										</form>
 									</div>
-									<a class="dropdown-item" href="{{ route('logout') }}"
+									<a class="dropdown-item" href="{{ route('intervenant-logout') }}"
 										onclick="event.preventDefault();
 													document.getElementById('logout-form').submit();">
 										{{ __('Se déconnecter') }}

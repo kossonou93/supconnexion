@@ -28,22 +28,31 @@ class EcoleLoginController extends Controller
             'password' => 'required|min:8'
         ]);
         
-        // Attempt to log the user in
-        if(Auth::guard('ecole')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
-        {
-            $user = Ecole::where('email',$request->email)->first();
-            if (($user->email_verified_at) == null) {
-                Auth::logout();
-                return redirect()->route('ecole.login')->with('info', 'Vérifiez votre adresse email pour continuer svp');
-            } else {
-                return redirect()->route('ecole.dashboard');
-            }
-            
+        $user = Ecole::where('email',$request->email)->first();
+        if ($user === NULL) {
+            return redirect()->route('ecole.login')->with('info', "Cet email n'est pas enregistré!");
         } else {
-            return redirect()->route('ecole.login')->with('info', 'login ou mot de passe incorrect');
-            //redirect()->back()->withInput($request->only('email','remember'));
+            if ($user->email_verified_at === NULL) {
+                //Auth::logout();
+                //Mail::to($user->email)->send(new VerifyEmail($user));
+                return redirect()->route('ecole.login')->with('info', 'Vérifiez votre adresse email pour confirmer votre inscription');
+            } else {
+                if(Auth::guard('ecole')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
+                {
+                    return redirect()->route('ecole.dashboard')->with('success', 'Vous êtes connecté!');
+                }else {
+                    return redirect()->route('ecole.login')->with('info', "Email ou Mot de Passe incorrect!");
+                }
+            }
         }
+        
+        
+        return redirect()->back()->withInput($request->only('email','remember'));
+    }
 
-        // if unsuccessful
+    public function logout(Request $request)
+    {
+        Auth::guard('ecole')->logout();
+        return redirect()->intended('/')->with('success', 'Vous êtes déconnecté!');
     }
 }

@@ -7,7 +7,7 @@
 
 	<!-- Top Header_Area -->
 	@include('parts/menu')
-    <div class="row">
+   <!-- <div class="row">
         <div class="col-sm-12 col-md-12">
             @if ($message = Session::get('success'))
                 <div class="alert alert-success">
@@ -16,7 +16,7 @@
             @endif
         </div>
     </div>
-    <!-- Slider area -->
+     Slider area -->
     @include('parts/carousel')
 
     @include('parts/card')
