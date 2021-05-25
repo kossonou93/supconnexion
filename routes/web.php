@@ -115,6 +115,7 @@ Route::prefix('intervenant')->group(function(){
     Route::get('/temoignages', 'Users\Intervenant\IntervenantController@indexTemoignage')->name('temoignage.intervenant');
     Route::post('/temoignages', 'Users\Intervenant\IntervenantController@storeTemoignage')->name('temoignage.intervenant.submit');
     Route::resource('/offres', 'Users\Intervenant\OffreController');
+    Route::post('/logout', 'Auth\IntervenantLoginController@logout')->name('intervenant.logout');
 });
 
 Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');

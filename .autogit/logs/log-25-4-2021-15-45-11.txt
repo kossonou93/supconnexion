@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Tue May 25 2021 15:45:11 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/IntervenantLoginController.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-25-4-2021-15-15-2.txt
+
+
+Deleted files:
+
+
+Renamed files:
