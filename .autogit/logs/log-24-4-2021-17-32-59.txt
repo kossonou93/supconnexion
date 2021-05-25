@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon May 24 2021 17:32:59 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Exceptions/Handler.php
+* resources/views/admin/ecole/all.blade.php
+* resources/views/admin/part/sidebar.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-4-2021-17-2-50.txt
+
+
+Deleted files:
+
+
+Renamed files:

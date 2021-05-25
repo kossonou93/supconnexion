@@ -65,12 +65,12 @@
 							</div>
 						</li>
 						<li class="nav-item">
-							<a data-toggle="collapse" href="#inter">
+							<a data-toggle="collapse" href="#ecole">
 								<i class="fas fa-user"></i>
 								<p>Ecoles</p>
 								<span class="caret"></span>
 							</a>
-							<div class="collapse" id="inter">
+							<div class="collapse" id="ecole">
 								<ul class="nav nav-collapse">
 									<li>
 										<a href="components/panels.html">
