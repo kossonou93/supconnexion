@@ -32,23 +32,23 @@ class IntervenantLoginController extends Controller
             'password' => 'required|min:8'
         ]);
 
-        // Attempt to log the user in
-        if(Auth::guard('intervenant')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
-        {
-            $user = Intervenant::where('email',$request->email)->first();
-            //var_dump($user->email_verified_at);
-            
-            if (($user->email_verified_at) == null) {
-                Auth::logout();
+        $user = Intervenant::where('email',$request->email)->first();
+        if ($user->email === NULL) {
+            return redirect()->route('intervenant.login')->with('errors', 'login');
+        } else {
+            if ($user->email_verified_at === NULL) {
+                //Auth::logout();
+                Mail::to($inter->email)->send(new VerifyEmail($inter));
                 return redirect()->route('intervenant.login')->with('info', 'Vérifiez votre adresse email pour continuer svp');
             } else {
-                return redirect()->route('intervenant.dashboard')->with('info', 'login ou mot de passe incorrect');
+                if(Auth::guard('intervenant')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
+                {
+                    return redirect()->route('intervenant.dashboard')->with('info', 'login ou mot de passe incorrect');
+                }
             }
-            //return \redirect('intervenant.dashboard')->with('success','Bienvenue sur votre profil, profitez des avantages de SupConnexion');
-            
         }
-
-        // if unsuccessful
+        
+        
         return redirect()->back()->withInput($request->only('email','remember'));
         //}
         
