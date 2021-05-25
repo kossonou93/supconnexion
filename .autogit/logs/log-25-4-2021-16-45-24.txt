@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Tue May 25 2021 16:45:24 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/AdminLoginController.php
+* app/Http/Controllers/Auth/EcoleLoginController.php
+* app/Http/Controllers/Auth/IntervenantLoginController.php
+* resources/views/admin/user/ecole/sidebar.blade.php
+* resources/views/admin/user/mainheader.blade.php
+* resources/views/ecole.blade.php
+* resources/views/home.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-25-4-2021-16-15-18.txt
+
+
+Deleted files:
+
+
+Renamed files:
