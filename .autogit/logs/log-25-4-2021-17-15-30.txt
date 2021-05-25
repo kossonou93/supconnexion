@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Tue May 25 2021 17:15:30 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-25-4-2021-16-45-24.txt
+
+
+Deleted files:
+
+
+Renamed files:

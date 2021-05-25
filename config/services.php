@@ -33,13 +33,13 @@ return [
     'google' => [
         'client_id' => '1068963307786-h7i549ohre65s9a2d4eqrhe7ti5rp7dj.apps.googleusercontent.com',
         'client_secret' => 'VJ26zduqXZD69MlTQijGhtx6',
-        'redirect' => 'http://localhost:8000/auth/google/callback',
+        'redirect' => 'https://sup-connexion.com/auth/google/callback',
     ],
 
     'facebook' => [
         'client_id' => '308785224246818',
         'client_secret' => 'cd00dff506043097605bef082858aab6',
-        'redirect' => 'http://localhost:8000/auth/facebook/callback',
+        'redirect' => 'https://sup-connexion.com/auth/facebook/callback',
     ],
 
 ];
