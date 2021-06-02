@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 02 2021 13:25:54 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/ecole/detailsintervenant.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
