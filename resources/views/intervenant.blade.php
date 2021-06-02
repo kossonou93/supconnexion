@@ -422,7 +422,7 @@
 																		</a>
 																	</div>
 																	<div class="view-profile">
-																		<a href="#" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
+																		<a href="{{route('pdf')}}" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
 																	</div>
 																</div>
 															</div>

@@ -122,7 +122,4 @@ Route::prefix('intervenant')->group(function(){
 
 Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');
 
-
-//Auth::routes();
-
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/pdf', 'PdfController@index')->name('pdf');
