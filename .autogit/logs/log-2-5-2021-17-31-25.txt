@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 02 2021 17:31:25 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* bootstrap/app.php
+* composer.json
+* composer.lock
+* config/app.php
+
+
+Created files:
+* .autogit/logs/log-2-5-2021-17-0-51.txt
+
+
+Deleted files:
+
+
+Renamed files:
