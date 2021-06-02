@@ -297,14 +297,17 @@
                                                                                     <span class="btn-label just-icon"><i class="flaticon-linkedin"></i></span>
                                                                                 </a>
                                                                             </div>
-                                                                            <div class="col-md-2">
-                                                                                
-                                                                            </div>
+                                                                            <div class="col-md-2"></div>
                                                                             <div class="col-md-5 form-group form-group-default">
                                                                                 <h5>Voir CV</h5>
                                                                                 <a class="btn btn-info btn-linkedin btn-sm btn-link" href="{{ asset('uploads/cv/'.$intervenant->cv) }}"> 
                                                                                     <span class="btn-label just-icon"><i class="flaticon-file"></i></span>
                                                                                 </a>
+                                                                            </div>
+                                                                            <div class="col-md-12" style="margin-top:20px">
+                                                                                <div class="view-profile">
+                                                                                    <a href="#" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
