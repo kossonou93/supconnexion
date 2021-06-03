@@ -9,7 +9,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 //Route::get('/', function () {
  //   return view('home');
 //})->name('home');
-
+Route::get('laporan-pdf','PdfController@generatePDF');
 Route::get('/', 'Users\HomeController@index')->name('home');
 Route::resource('/contacts', 'ContactController');
 // Send mail

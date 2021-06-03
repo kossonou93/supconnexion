@@ -12,7 +12,7 @@ class PdfController extends Controller
     {
         $data = ['title' => 'Welcome to belajarphp.net'];
 
-        $pdf = PDF::loadView('intervenant', $data);
+        $pdf = PDF::loadView('user/contact', $data);
         return $pdf->download('laporan-pdf.pdf');
     }
 }
