@@ -104,6 +104,7 @@ Route::prefix('ecole')->group(function(){
 // Intervenant routes
 Route::prefix('intervenant')->group(function(){
     Route::get('/', 'Users\Intervenant\IntervenantController@index')->name('intervenant.dashboard');
+    Route::get('laporan-pdf','Users\Intervenant\IntervenantController@generatePDF');
     Route::get('/login', 'Auth\IntervenantLoginController@showLoginForm')->name('intervenant.login');
     Route::post('/login', 'Auth\IntervenantLoginController@login')->name('intervenant.login.submit');
     Route::get('/register', 'Auth\IntervenantRegisterController@showRegisterForm')->name('intervenant.register');
@@ -122,4 +123,3 @@ Route::prefix('intervenant')->group(function(){
 
 Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');
 
-Route::get('/pdf', 'PdfController@index')->name('pdf');

@@ -7,9 +7,12 @@ use PDF;
 
 class PdfController extends Controller
 {
-    public function index()
+    public function generatePDF()
+
     {
-        $pdf = PDF::loadView('intervenant');
-        return $pdf->download('monprofil.pdf');
+        $data = ['title' => 'Welcome to belajarphp.net'];
+
+        $pdf = PDF::loadView('intervenant', $data);
+        return $pdf->download('laporan-pdf.pdf');
     }
 }

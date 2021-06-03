@@ -61,9 +61,42 @@ class IntervenantController extends Controller
         $hors = $inter->horaires;
         $conts = $inter->contrats;
         $discips = $inter->disciplines;
-        //$forma = Intervenant::with('formations')->get();
-        //var_dump($forma);
         return view('intervenant', compact('disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
+    }
+
+    public function generatePDF()
+
+    {
+        $disciplines = Discipline::all();
+        $contrats = Contrat::all();
+        $inter = Intervenant::find(Auth::user()->id);
+        $disponibilites = Disponibilite::all();
+        $durees = Duree::all();
+        $formations = Formation::all();
+        $experiences = Experience::where('intervenant_id', Auth::user()->id)->get();
+        $interventions = Intervention::all();
+        $langues = Langue::all();
+        $modalites = Modalite::all();
+        $remunerations = Remuneration::all();
+        $responsabilites = Responsabilite::all();
+        $texperiences = TypeExperience::all();
+        $horaires = Horaire::all();
+        $diplomes = Diplome::where('intervenant_id', Auth::user()->id)->get();
+        $villes = Ville::all();
+        $pays = Pays::all();
+        $formas = $inter->formations;
+        $langs = $inter->langues;
+        $dispos = $inter->disponibilites;
+        $inters = $inter->interventions;
+        $durs = $inter->durees;
+        $remus = $inter->remunerations;
+        $texps = $inter->typeexperiences;
+        $hors = $inter->horaires;
+        $conts = $inter->contrats;
+        $discips = $inter->disciplines;
+
+        $pdf = PDF::loadView('intervenant', $disciplines, $conts, $discips, $langs, $remus, $responsabilites, $texps, $hors, $dispos, $inters, $durs, $modalites, $contrats, $disponibilites, $durees, $formations, $experiences, $interventions, $langues, $remunerations, $texperiences, $horaires,$diplomes, $villes, $pays, $formas);
+        return $pdf->download('laporan-pdf.pdf');
     }
 
     public function update(Request $request, $id)
