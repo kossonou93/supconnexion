@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Users\Intervenant;
+use PDF;
 use Auth;
 use App\Discipline;
 use App\Intervenant;
@@ -95,7 +96,35 @@ class IntervenantController extends Controller
         $conts = $inter->contrats;
         $discips = $inter->disciplines;
 
-        $pdf = PDF::loadView('intervenant', $disciplines, $conts, $discips, $langs, $remus, $responsabilites, $texps, $hors, $dispos, $inters, $durs, $modalites, $contrats, $disponibilites, $durees, $formations, $experiences, $interventions, $langues, $remunerations, $texperiences, $horaires,$diplomes, $villes, $pays, $formas);
+        $data = [
+            'disciplines' =>$disciplines,
+            'conts' =>$conts,
+            'discips' =>$discips,
+            'langs' =>$langs,
+            'remus' =>$remus,
+            'responsabilites' =>$responsabilites,
+            'texps' =>$texps,
+            'hors' =>$hors,
+            'dispos' =>$dispos,
+            'inters' =>$inters,
+            'durs' =>$durs,
+            'modalites' =>$modalites,
+            'contrats' =>$contrats,
+            'disponibilites' =>$disponibilites,
+            'durees' =>$durees,
+            'formations' =>$formations,
+            'experiences' =>$experiences,
+            'interventions' =>$interventions,
+            'langues' =>$langues,
+            'remunerations' =>$remunerations,
+            'texperiences' =>$texperiences,
+            'horaires' =>$horaires,
+            'diplomes' =>$diplomes,
+            'villes' =>$villes,
+            'pays' =>$pays,
+            'formas' => $formas
+        ];
+        $pdf = PDF::loadView('intervenant', compact('disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
         return $pdf->download('laporan-pdf.pdf');
     }
 

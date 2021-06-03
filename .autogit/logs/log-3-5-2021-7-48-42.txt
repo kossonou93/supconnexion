@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 03 2021 07:48:42 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/PdfController.php
+* app/Http/Controllers/Users/Intervenant/IntervenantController.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-3-5-2021-7-18-22.txt
+* resources/views/pdf.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
