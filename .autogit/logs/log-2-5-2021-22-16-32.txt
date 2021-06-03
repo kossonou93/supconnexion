@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 02 2021 22:16:32 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* bootstrap/app.php
+* config/app.php
+* resources/views/intervenant.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-2-5-2021-21-46-10.txt
+* app/Http/Controllers/PdfController.php
+* config/dompdf.php
+
+
+Deleted files:
+
+
+Renamed files:

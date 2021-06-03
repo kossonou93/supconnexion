@@ -7,6 +7,9 @@ use PDF;
 
 class PdfController extends Controller
 {
-    $pdf = PDF::loadView('pdf.invoice', $data);
-    return $pdf->download('invoice.pdf');
+    public function index()
+    {
+        $pdf = PDF::loadView('intervenant');
+        return $pdf->download('monprofil.pdf');
+    }
 }
