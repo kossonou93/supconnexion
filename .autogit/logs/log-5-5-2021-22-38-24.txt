@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jun 05 2021 22:38:24 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/intervenant/sidebar.blade.php
+
+
+Created files:
+* .autogit/logs/log-5-5-2021-22-8-5.txt
+
+
+Deleted files:
+* public/uploads/photo/logo/21-05-2021.60a797946d8ec.1564219765.jpg
+
+
+Renamed files:
