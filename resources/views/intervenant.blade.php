@@ -49,35 +49,35 @@
 									<div class="tab-content" id="myTabContent">
 										<div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
 											<div class="card-body" style="background-color: #DADBDD">
-												<br>
+												
 												<div class="row">
 													<div class="col-md-8">
 														<div class="card">
 															<div class="card-body">
-																<h4>Je renseigne mes informations personnelles</h4>
-																<br><br>
+																<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Je renseigne mes informations personnelles</h3>
+																<br>
 																<form action="{{ route('intervenant.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 																	{{ csrf_field() }}
 																	{{ method_field('PUT') }}
 																	<div class="row mt-3">
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default">
-																				<label for="validationTooltip01" class="form-label">Nom</label>
-																				<input type="text" class="form-control" name="name" placeholder="Nom" value="{{ Auth::user()->name }}">
+																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																				<label style='font-weight: bold; color:#ccc; font-family: "Comic Sans MS"'>Nom</label>
+																				<input type="text" style='font-weight: bold; color:blue; font-family: "Comic Sans MS"' class="form-control" name="name" placeholder="Nom" value="{{ Auth::user()->name }}">
 																			</div>
 																		</div>
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default">
-																				<label>Prénom</label>
-																				<input type="text" class="form-control" name="last_name" placeholder="Prénom" value="{{ Auth::user()->last_name }}">
+																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																				<label style='font-weight: bold; color:#ccc; font-family: "Comic Sans MS"'>Prénom</label>
+																				<input type="text" style='font-weight: bold; color:blue; font-family: "Comic Sans MS"' class="form-control" name="last_name" placeholder="Prénom" value="{{ Auth::user()->last_name }}">
 																			</div>
 																		</div>
 																	</div>
 																	<div class="row mt-3">
 																		<div class="col-md-12">
-																			<div class="form-group form-group-default">
-																				<label>Email</label>
-																				<input type="email" class="form-control" placeholder="Email" value="{{ Auth::user()->email }}" disabled="disabled" >
+																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																				<label style='font-weight: bold; color:#ccc; font-family: "Comic Sans MS"'>Email</label>
+																				<input type="email" style='font-weight: bold; color:blue; font-family: "Comic Sans MS"' class="form-control" placeholder="Email" value="{{ Auth::user()->email }}" disabled="disabled" >
 																			</div>
 																		</div>
 																	</div>
