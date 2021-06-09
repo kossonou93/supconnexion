@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 09 2021 12:00:27 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* public/admini/assets/css/style.css
+* resources/views/intervenant.blade.php
+* resources/views/parts/menu.blade.php
+
+
+Created files:
+* .autogit/logs/log-9-5-2021-10-31-40.txt
+
+
+Deleted files:
+
+
+Renamed files:

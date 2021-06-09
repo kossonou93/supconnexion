@@ -15,7 +15,7 @@
 			
 
 			<div class="main-panel">
-				<div class="content" style="background-color: #C3D9E0">
+				<div class="content" style="background-color: #CCC6AD">
 					<div class="page-inner">
 					
 						<div class="row">
@@ -33,7 +33,13 @@
 												<li class="nav-item">
 													<a class="nav-link" data-toggle="tab" id="profile-tab" href="#profile" role="tab" aria-selected="false">
 													<i class="fas fa-graduation-cap"></i>
-													Diplômes & Expériences
+													Diplômes
+													</a>
+												</li>
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" id="experience-tab" href="#experience" role="tab" aria-selected="false">
+													<i class="fas fa-graduation-cap"></i>
+													Expériences
 													</a>
 												</li>
 												<li class="nav-item">
@@ -48,7 +54,7 @@
 
 									<div class="tab-content" id="myTabContent">
 										<div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-											<div class="card-body" style="background-color: #6B1A6A">
+											<div class="card-body" style="background-color: #C0BFA9">
 												
 												<div class="row">
 													<div class="col-md-8">
@@ -439,347 +445,354 @@
 											</div>
 										</div>
 										<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-											<div class="card-body">
-												<div class="row mt-3">
-													<div class="col-sm-4">
-													</div>
-													<div class="col-sm-4"> 
-														<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
-															<i class="fa fa-plus"></i>
-															Ajouter Diplôme
-														</button>
-													</div>
-													<div class="col-sm-4">
-													</div>
-												</div>
-												<br>
-												<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
-													<div class="modal-dialog" role="document">
-														<div class="modal-content">
-															<div class="modal-header no-bd">
-																<h5 class="modal-title">
-																	<span class="fw-mediumbold">
-																		Nouveau
-																	</span> 
-																	<span class="fw-light">
-																		Diplome
-																	</span>
-																</h5>
-																<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-																	<span aria-hidden="true">&times;</span>
-																</button>
-															</div>
-															<form action="{{ route('diplomes.store') }}" method="post" enctype="multipart/form-data">
-																@csrf
-																<div class="modal-body">
-																	<div class="row">
-																		<div class="col-sm-12">
-																			<div class="form-group form-group-default">
-																				<label>Ecole</label>
-																				<input type="text" class="form-control" id="ecole" name="ecole" placeholder="Entrez le nom de l'école où vous avez obtenu votre diplome" required>
-																			</div>
-																			<div class="form-group form-group-default">
-																				<label>Grade</label>
-																				<select class="form-control" name="grade">
-																					<option>BAC</option>
-																					<option>BAC+1 </option>
-																					<option>BAC+2 </option>
-																					<option>BTS </option>
-																					<option>BAC+3 </option>
-																					<option>LICENCE </option>
-																					<option>BAC+4 </option>
-																					<option>BAC+5 </option>
-																					<option>MASTER </option>
-																					<option>BAC+6 </option>
-																					<option>BAC+7 </option>
-																					<option>DOCTORAT </option>
-																				</select>
-																			</div>
-																			<div class="form-group form-group-default">
-																				<label>Titre</label>
-																				<input type="text" class="form-control" name="titre" placeholder="Entrez le titre votre diplome" required>
-																			</div>
-																			<div class="form-group form-group-default" style="display:none">
-																				<label>Titre</label>
-																				<input type="text" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="Entrez le titre votre diplome">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="modal-footer no-bd">
-																	<button class="btn btn-primary">Ajouter</button>
-																	<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
-																</div>
-															</form>
+											<div class="card">
+												<div class="card-body">
+													<div class="row mt-3">
+														<div class="col-sm-4">
+														</div>
+														<div class="col-sm-4"> 
+															<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
+																<i class="fa fa-plus"></i>
+																Ajouter Diplôme
+															</button>
+														</div>
+														<div class="col-sm-4">
 														</div>
 													</div>
-												</div>
-												<div class="table-responsive">
-													<table id="basic-datatables" class="display table table-striped table-hover" >
-														<thead>
-															<tr>
-																<th>Diplome Num. </th>
-																<th>Ecole</th>
-																<th>Grade</th>
-																<th>titre</th>
-																<th>Editer</th>
-																<th>Supprimer</th>
-															</tr>
-														</thead>
-														<tbody>
-															<?php
-																$i=1;
-															?>
-															@foreach ( $diplomes as $diplome )
-																<tr>
-																	<td>
-																		<?php	
-																			echo $i;
-																			++$i;
-																		?>
-																	</td>		
-																	<td>{{ $diplome->ecole }}</td>
-																	<td>{{ $diplome->grade }}</td>
-																	<td>{{ $diplome->titre }}</td>
-																	<td>
-																		<div class="form-button-action">
-																			<a href="{{ route('diplomes.show',$diplome->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
-																				<i class="fa fa-edit"></i>
-																			</a>
+													<br>
+													<div class="modal fade" id="addRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+														<div class="modal-dialog" role="document">
+															<div class="modal-content">
+																<div class="modal-header no-bd">
+																	<h5 class="modal-title">
+																		<span class="fw-mediumbold">
+																			Nouveau
+																		</span> 
+																		<span class="fw-light">
+																			Diplome
+																		</span>
+																	</h5>
+																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																		<span aria-hidden="true">&times;</span>
+																	</button>
+																</div>
+																<form action="{{ route('diplomes.store') }}" method="post" enctype="multipart/form-data">
+																	@csrf
+																	<div class="modal-body">
+																		<div class="row">
+																			<div class="col-sm-12">
+																				<div class="form-group form-group-default">
+																					<label>Ecole</label>
+																					<input type="text" class="form-control" id="ecole" name="ecole" placeholder="Entrez le nom de l'école où vous avez obtenu votre diplome" required>
+																				</div>
+																				<div class="form-group form-group-default">
+																					<label>Grade</label>
+																					<select class="form-control" name="grade">
+																						<option>BAC</option>
+																						<option>BAC+1 </option>
+																						<option>BAC+2 </option>
+																						<option>BTS </option>
+																						<option>BAC+3 </option>
+																						<option>LICENCE </option>
+																						<option>BAC+4 </option>
+																						<option>BAC+5 </option>
+																						<option>MASTER </option>
+																						<option>BAC+6 </option>
+																						<option>BAC+7 </option>
+																						<option>DOCTORAT </option>
+																					</select>
+																				</div>
+																				<div class="form-group form-group-default">
+																					<label>Titre</label>
+																					<input type="text" class="form-control" name="titre" placeholder="Entrez le titre votre diplome" required>
+																				</div>
+																				<div class="form-group form-group-default" style="display:none">
+																					<label>Titre</label>
+																					<input type="text" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="Entrez le titre votre diplome">
+																				</div>
+																			</div>
 																		</div>
-																	</td>
-																	<td>
-																		<div class="form-button-action">
-																			<form action="{{ route('diplomes.destroy', $diplome->id)}}" method="post" style="display: inline-block">
-																				@csrf
-																				@method('DELETE')
-																				<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-																					<i class="fa fa-times"></i>
-																				</button>
-																			</form>
-																		</div>
-																	</td>
-																</tr>
-															@endforeach
-														</tbody>
-													</table>
-												</div>
-												<br><br><br>
-												<div class="row mt-3">
-													<div class="col-sm-4">
-													</div>
-													<div class="col-sm-4"> 
-														<button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target=".bd-example-modal-lg">
-															<i class="fa fa-plus"></i>
-															Ajouter Expérience
-														</button>
-													</div>
-													<div class="col-sm-4">
-													</div>
-												</div>
-												<br>
-												<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-													<div class="modal-dialog modal-lg">
-														<div class="modal-content">
-															<div class="modal-header no-bd">
-																<h5 class="modal-title">
-																	<span class="fw-mediumbold">Nouvelle</span> 
-																	<span class="fw-light">Expérience</span>
-																</h5>
-																<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-																	<span aria-hidden="true">&times;</span>
-																</button>
+																	</div>
+																	<div class="modal-footer no-bd">
+																		<button class="btn btn-primary">Ajouter</button>
+																		<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+																	</div>
+																</form>
 															</div>
-															<form action="{{ route('experience.submit') }}" method="post" enctype="multipart/form-data">
-																@csrf
-																<div class="modal-body">
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Intitulé de l'intervention</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="text" name="intitule" class="form-control" placeholder="" required>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Etablissement ou entreprise</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="text" name="etablissement" class="form-control" placeholder="" required>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Date de début d'intervention</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="date" name="debut" class="form-control" placeholder="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Date de fin d'intervention / en cours</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="date" name="fin" class="form-control" placeholder="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Courte description</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<textarea class="form-control" name="description" rows="3"></textarea>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Type d'intervention</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="text" name="type_intervention" class="form-control" placeholder="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Nombre d'heures d'intervention</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="number" name="heure_intervention" class="form-control" placeholder="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Modalités</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<select class="form-control" name="modalites[]" >
-																				@foreach ( $modalites as $modalite )
-																					<option
-																						
-																					>{{ $modalite->type }}</option>
-																				@endforeach 
-																				</select>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Niveau des étudiants ou des professionnels</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="text" name="niveau_participant" class="form-control" placeholder="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Niveau de responsabilité</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<select class="form-control" name="responsabilites[]" >
-																				@foreach ( $responsabilites as $responsabilite )
-																					<option
-																						
-																					>{{ $responsabilite->type }}</option>
-																				@endforeach 
-																				</select>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Nombre de participants à votre intervention</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="number" name="nombre_participant" class="form-control" placeholder="">
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">J'ai créé les supports de l'intervention</label>
-																		<div class="col-sm-2">
-																			<div class="md-form mt-0">
-																				<select class="form-control" name="support_intervention">
-																					<option>NON</option>
-																					<option>OUI</option>
-																				</select>
-																			</div>
-																		</div>
-																		<div class="col-sm-6">
-																			<div class="md-form mt-0">
-																			</div>
-																		</div>
-																	</div>				
-																	<div class="row mt-3">
-																		<label class="col-sm-4 col-form-label">Autres expériences notables</label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<textarea class="form-control" name="autre" placeholder="" rows="3"></textarea>
-																			</div>
-																		</div>
-																	</div>
-																	<div class="row mt-3" style="display:none">
-																		<label class="col-sm-4 col-form-label"></label>
-																		<div class="col-sm-8">
-																			<div class="md-form mt-0">
-																				<input type="text" name="intervenant_id" value="{{ Auth::user()->id }}" class="form-control" placeholder="">
-																			</div>
-																		</div>
-																	</div>
-																</div>
-																<div class="modal-footer no-bd">
-																	<button class="btn btn-primary">Valider</button>
-																	<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
-																</div>
-															</form>
 														</div>
 													</div>
-												</div>
-												<div class="table-responsive">
-													<table id="add-row" class="display table table-striped table-hover" >
-														<thead>
-															<tr>
-																<th>Expérience num. </th>
-																<th>Intitulé de l'intervention</th>
-																<th>Etablissement ou entreprise</th>
-																<th>Editer</th>
-																<th>Supprimer</th>
-															</tr>
-														</thead>
-														<tbody>
-															<?php
-																$i=1;
-															?>
-															@foreach ( $experiences as $experience )
+													<div class="table-responsive">
+														<table id="basic-datatables" class="display table table-striped table-hover" >
+															<thead>
 																<tr>
-																	<td>
-																		<?php
-																			echo $i;
-																			++$i;
-																		?>
-																	</td>		
-																	<td>{{ $experience->intitule }}</td>
-																	<td>{{ $experience->etablissement }}</td>
-																	<td>
-																		<div class="form-button-action">
-																			<a href="{{ route('experiences.show',$experience->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
-																				<i class="fa fa-edit"></i>
-																			</a>
-																		</div>
-																	</td>
-																	<td>
-																		<div class="form-button-action">
-																			<form action="{{ route('experiences.destroy', $experience->id)}}" method="post" style="display: inline-block">
-																				@csrf
-																				@method('DELETE')
-																				<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
-																					<i class="fa fa-times"></i>
-																				</button>
-																			</form>
-																		</div>
-																	</td>
+																	<th>Diplome Num. </th>
+																	<th>Ecole</th>
+																	<th>Grade</th>
+																	<th>titre</th>
+																	<th>Editer</th>
+																	<th>Supprimer</th>
 																</tr>
-															@endforeach
-														</tbody>
-													</table>
+															</thead>
+															<tbody>
+																<?php
+																	$i=1;
+																?>
+																@foreach ( $diplomes as $diplome )
+																	<tr>
+																		<td>
+																			<?php	
+																				echo $i;
+																				++$i;
+																			?>
+																		</td>		
+																		<td>{{ $diplome->ecole }}</td>
+																		<td>{{ $diplome->grade }}</td>
+																		<td>{{ $diplome->titre }}</td>
+																		<td>
+																			<div class="form-button-action">
+																				<a href="{{ route('diplomes.show',$diplome->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
+																					<i class="fa fa-edit"></i>
+																				</a>
+																			</div>
+																		</td>
+																		<td>
+																			<div class="form-button-action">
+																				<form action="{{ route('diplomes.destroy', $diplome->id)}}" method="post" style="display: inline-block">
+																					@csrf
+																					@method('DELETE')
+																					<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																						<i class="fa fa-times"></i>
+																					</button>
+																				</form>
+																			</div>
+																		</td>
+																	</tr>
+																@endforeach
+															</tbody>
+														</table>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
+											<div class="card">
+												<div class="card-body">
+													<div class="row mt-3">
+														<div class="col-sm-4">
+														</div>
+														<div class="col-sm-4"> 
+															<button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target=".bd-example-modal-lg">
+																<i class="fa fa-plus"></i>
+																Ajouter Expérience
+															</button>
+														</div>
+														<div class="col-sm-4">
+														</div>
+													</div>
+													<br>
+													<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+														<div class="modal-dialog modal-lg">
+															<div class="modal-content">
+																<div class="modal-header no-bd">
+																	<h5 class="modal-title">
+																		<span class="fw-mediumbold">Nouvelle</span> 
+																		<span class="fw-light">Expérience</span>
+																	</h5>
+																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+																		<span aria-hidden="true">&times;</span>
+																	</button>
+																</div>
+																<form action="{{ route('experience.submit') }}" method="post" enctype="multipart/form-data">
+																	@csrf
+																	<div class="modal-body">
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Intitulé de l'intervention</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="text" name="intitule" class="form-control" placeholder="" required>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Etablissement ou entreprise</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="text" name="etablissement" class="form-control" placeholder="" required>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Date de début d'intervention</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="date" name="debut" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Date de fin d'intervention / en cours</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="date" name="fin" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Courte description</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<textarea class="form-control" name="description" rows="3"></textarea>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Type d'intervention</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="text" name="type_intervention" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Nombre d'heures d'intervention</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="number" name="heure_intervention" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Modalités</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<select class="form-control" name="modalites[]" >
+																					@foreach ( $modalites as $modalite )
+																						<option
+																							
+																						>{{ $modalite->type }}</option>
+																					@endforeach 
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Niveau des étudiants ou des professionnels</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="text" name="niveau_participant" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Niveau de responsabilité</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<select class="form-control" name="responsabilites[]" >
+																					@foreach ( $responsabilites as $responsabilite )
+																						<option
+																							
+																						>{{ $responsabilite->type }}</option>
+																					@endforeach 
+																					</select>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Nombre de participants à votre intervention</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="number" name="nombre_participant" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">J'ai créé les supports de l'intervention</label>
+																			<div class="col-sm-2">
+																				<div class="md-form mt-0">
+																					<select class="form-control" name="support_intervention">
+																						<option>NON</option>
+																						<option>OUI</option>
+																					</select>
+																				</div>
+																			</div>
+																			<div class="col-sm-6">
+																				<div class="md-form mt-0">
+																				</div>
+																			</div>
+																		</div>				
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">Autres expériences notables</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<textarea class="form-control" name="autre" placeholder="" rows="3"></textarea>
+																				</div>
+																			</div>
+																		</div>
+																		<div class="row mt-3" style="display:none">
+																			<label class="col-sm-4 col-form-label"></label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<input type="text" name="intervenant_id" value="{{ Auth::user()->id }}" class="form-control" placeholder="">
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="modal-footer no-bd">
+																		<button class="btn btn-primary">Valider</button>
+																		<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+																	</div>
+																</form>
+															</div>
+														</div>
+													</div>
+													<div class="table-responsive">
+														<table id="add-row" class="display table table-striped table-hover" >
+															<thead>
+																<tr>
+																	<th>Expérience num. </th>
+																	<th>Intitulé de l'intervention</th>
+																	<th>Etablissement ou entreprise</th>
+																	<th>Editer</th>
+																	<th>Supprimer</th>
+																</tr>
+															</thead>
+															<tbody>
+																<?php
+																	$i=1;
+																?>
+																@foreach ( $experiences as $experience )
+																	<tr>
+																		<td>
+																			<?php
+																				echo $i;
+																				++$i;
+																			?>
+																		</td>		
+																		<td>{{ $experience->intitule }}</td>
+																		<td>{{ $experience->etablissement }}</td>
+																		<td>
+																			<div class="form-button-action">
+																				<a href="{{ route('experiences.show',$experience->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
+																					<i class="fa fa-edit"></i>
+																				</a>
+																			</div>
+																		</td>
+																		<td>
+																			<div class="form-button-action">
+																				<form action="{{ route('experiences.destroy', $experience->id)}}" method="post" style="display: inline-block">
+																					@csrf
+																					@method('DELETE')
+																					<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																						<i class="fa fa-times"></i>
+																					</button>
+																				</form>
+																			</div>
+																		</td>
+																	</tr>
+																@endforeach
+															</tbody>
+														</table>
+													</div>
 												</div>
 											</div>
 										</div>
