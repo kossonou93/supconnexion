@@ -42,3 +42,15 @@
         opacity: 0;
     }
 }
+
+label{
+    font-weight: bold;
+    color:#ccc;
+    font-family: "Comic Sans MS";
+}
+
+input{
+    font-weight: bold;
+    color:blue;
+    font-family: "Comic Sans MS";
+}
