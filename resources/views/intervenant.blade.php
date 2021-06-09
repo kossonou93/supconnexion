@@ -15,7 +15,7 @@
 			
 
 			<div class="main-panel">
-				<div class="content">
+				<div class="content" style="background-color: #C3D9E0">
 					<div class="page-inner">
 					
 						<div class="row">
@@ -48,7 +48,7 @@
 
 									<div class="tab-content" id="myTabContent">
 										<div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-											<div class="card-body" style="background-color: #DADBDD">
+											<div class="card-body" style="background-color: #6B1A6A">
 												
 												<div class="row">
 													<div class="col-md-8">
@@ -61,37 +61,37 @@
 																	{{ method_field('PUT') }}
 																	<div class="row mt-3">
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Nom</label>
-																				<input type="text" class="form-control" name="name" placeholder="Nom" value="{{ Auth::user()->name }}">
+																				<input type="text" class="form-control input" name="name" placeholder="Nom" value="{{ Auth::user()->name }}">
 																			</div>
 																		</div>
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Prénom</label>
-																				<input type="text" class="form-control" name="last_name" placeholder="Prénom" value="{{ Auth::user()->last_name }}">
+																				<input type="text" class="form-control input" name="last_name" placeholder="Prénom" value="{{ Auth::user()->last_name }}">
 																			</div>
 																		</div>
 																	</div>
 																	<div class="row mt-3">
 																		<div class="col-md-12">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Email</label>
-																				<input type="email" class="form-control" placeholder="Email" value="{{ Auth::user()->email }}" disabled="disabled" >
+																				<input type="email" class="form-control input" placeholder="Email" value="{{ Auth::user()->email }}" disabled="disabled" >
 																			</div>
 																		</div>
 																	</div>
 																	<div class="row mt-3">
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Date de Naissance</label>
-																				<input type="Date" class="form-control" name="birth_day" value="{{ Auth::user()->birth_day }}" placeholder="1980-01-01">
+																				<input type="Date" class="form-control input" name="birth_day" value="{{ Auth::user()->birth_day }}" placeholder="1980-01-01">
 																			</div>
 																		</div>
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Sexe</label>
-																				<select class="form-control" value="{{ Auth::user()->sexe }}" name="sexe">
+																				<select class="form-control input" value="{{ Auth::user()->sexe }}" name="sexe">
 																					<option>Masculin</option>
 																					<option>Feminin</option>
 																				</select>
@@ -100,23 +100,23 @@
 																	</div>
 																	<div class="row mt-3">
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Téléphone 1</label>
-																				<input type="number" value="{{ Auth::user()->phone }}" name="phone" placeholder="Phone" required>
+																				<input type="number" class="form-control input" value="{{ Auth::user()->phone }}" name="phone" placeholder="Phone" required>
 																			</div>
 																		</div>
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Téléphone 2</label>
-																				<input type="number" class="form-control" value="{{ Auth::user()->contact }}" name="contact" placeholder="Phone">
+																				<input type="number" class="form-control input" value="{{ Auth::user()->contact }}" name="contact" placeholder="Phone">
 																			</div>
 																		</div>
 																	</div>
 																	<div class="row mt-3">
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Pays</label>
-																				<select name="pays_id" class="form-control" value="{{ Auth::user()->pays_id }}">
+																				<select name="pays_id" class="form-control input" value="{{ Auth::user()->pays_id }}">
 																				@foreach ( $pays as $pay )
 																					<option value='{{ $pay->id }}' 
 																						@if (Auth::user()->pays_id == $pay->id)
@@ -130,9 +130,9 @@
 																		</div>
 																			
 																		<div class="col-md-6">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Ville de résidence</label>
-																				<select name="ville_id" class="form-control" value="{{ Auth::user()->ville_id }}">
+																				<select name="ville_id" class="form-control input" value="{{ Auth::user()->ville_id }}">
 																				@foreach ( $villes as $ville )
 																					<option value='{{ $ville->id }}' 
 																						@if (Auth::user()->ville_id == $ville->id)
@@ -148,56 +148,56 @@
 																		</div>
 																		<div class="row mt-3">
 																			<div class="col-md-6">
-																				<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																				<div class="form-group form-group-default bordr">
 																					<label>Insérez le lien vers votre profil LinkedIn</label>
-																					<input type="text" class="form-control" value="{{ Auth::user()->linkdin }}" name="linkdin" placeholder="Linkdin">
+																					<input type="text" class="form-control input" value="{{ Auth::user()->linkdin }}" name="linkdin" placeholder="Linkdin">
 																				</div>
 																			</div>
 																		
 																			<div class="col-md-6">
-																				<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																				<div class="form-group form-group-default bordr">
 																					<label>Ajoutez votre Curriculum Vitae, à jour</label>
-																					<input type="file" name="cv" class="form-control-file" value="{{ Auth::user()->cv }}">
+																					<input type="file" name="cv" class="form-control-file input" value="{{ Auth::user()->cv }}" placeholder="{{ Auth::user()->cv }}">
 																				</div>
 																			</div>
 																		</div>
 																		<div class="row mt-3">
 																			<div class="col-md-6">
-																				<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																				<div class="form-group form-group-default bordr" style="border-radius: 10px; border: 3px solid #ccc;">
 																					<a class="btn btn-primary" href="{{Auth::user()->linkdin}}" role="button">Visiter mon linkedin</a>
 																				</div>
 																			</div>
 																		
 																			<div class="col-md-6">
-																				<div class="form-group form-group-default">
+																				<div class="form-group form-group-default bordr">
 																					<a class="btn btn-primary" href="{{ route('downloadfile', 'uploads/cv/'.Auth::user()->cv) }}" role="button">Télécharger mon cv </a>
 																				</div>
 																			</div>
 																		</div>
 																	<div class="row mt-3">
 																		<div class="col-md-12">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr" style="border-radius: 10px; border: 3px solid #ccc;">
 																				<label for="exampleFormControlFile1">Photo de Profil</label>
 																				<br>
-																				<input type="file" name="photo" class="form-control-file" placeholder="{{ Auth::user()->photo }}" value="{{ Auth::user()->photo }}">
+																				<input type="file" name="photo" class="form-control-file input" placeholder="{{ Auth::user()->photo }}" value="{{ Auth::user()->photo }}">
 																			</div>
 																		</div>
 																	</div>
 																	<div class="row mt-3 mb-1">
 																		<div class="col-md-12">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Intitulé de votre poste actuel et votre entreprise (ex : Directeur financier chez Entreprise X)</label>
 																					<br>
-																				<input class="form-control" type="text" name="fonction" value="{{ Auth::user()->fonction }}">
+																				<input class="form-control input" type="text" name="fonction" value="{{ Auth::user()->fonction }}">
 																			</div>
 																		</div>
 																	</div>
 																	<div class="row mt-3 mb-1">
 																		<div class="col-md-12">
-																			<div class="form-group form-group-default" style="border-radius: 10px; border: 3px solid #ccc;">
+																			<div class="form-group form-group-default bordr">
 																				<label>Présentation brève de votre parcours et motivations</label>
 																					<br>
-																					<textarea class="form-control" name="motivation" placeholder="" rows="3" value="{{ Auth::user()->motivation }}">{{ Auth::user()->motivation }}</textarea>
+																					<textarea class="form-control input" name="motivation" placeholder="" rows="3" value="{{ Auth::user()->motivation }}">{{ Auth::user()->motivation }}</textarea>
 																			</div>
 																		</div>
 																	</div>

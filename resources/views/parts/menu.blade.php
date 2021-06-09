@@ -53,7 +53,7 @@
                         <li class="dropdown submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Inscription</a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{route('ecole.register')}}">Inscription Ecole</a></li>
+                                <li><a href="{{route('ecole.register')}}">Inscription Etablissement</a></li>
                                 <li><a href="{{route('intervenant.register')}}">Inscription Intervenant</a></li>
                             </ul>
                         </li>
@@ -61,7 +61,7 @@
                         <li class="dropdown submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Connexion</a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{route('ecole.login')}}">Connexion Ecole</a></li>
+                                <li><a href="{{route('ecole.login')}}">Connexion Etablissement</a></li>
                                 <li><a href="{{route('intervenant.login')}}">Connexion Intervenant</a></li>
                             </ul>
                         </li>
