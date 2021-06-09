@@ -62,7 +62,7 @@
 																	<div class="row mt-3">
 																		<div class="col-md-6">
 																			<div class="form-group form-group-default">
-																				<label>Nom</label>
+																				<label for="validationTooltip01" class="form-label">Nom</label>
 																				<input type="text" class="form-control" name="name" placeholder="Nom" value="{{ Auth::user()->name }}">
 																			</div>
 																		</div>
