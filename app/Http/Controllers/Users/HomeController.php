@@ -24,6 +24,8 @@ use App\Models\Temoignage;
 use App\Models\Actualite;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Annonce;
+use App\Ecole;
 
 class HomeController extends Controller
 {
@@ -49,8 +51,10 @@ class HomeController extends Controller
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
         $temoignages = Temoignage::all();
+        $annonces = Annonce::all();
+        $ecoles = Ecole::all();
         $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
-        return view('home', compact('intervenants', 'carousels', 'partenaires','temoignages', 'actualites'));
+        return view('home', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
     
