@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 10 2021 13:47:39 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Annonce.php
+* database/migrations/2021_02_06_161609_create_annonces_table.php
+* resources/views/admin/user/ecole/annonce/add.blade.php
+* resources/views/ecole.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-5-2021-13-17-18.txt
+
+
+Deleted files:
+
+
+Renamed files:
