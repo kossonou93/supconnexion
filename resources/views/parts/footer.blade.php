@@ -40,7 +40,7 @@
 
 <script src="{{ asset('users/annonce/js/jquery.min.js') }}"></script>
 <script src="{{ asset('users/annonce/js/popper.js') }}"></script>
-<script src="{{ asset('users/annonce/js/bootstrap.min.js') }}"></script>
+<!--<script src="{{ asset('users/annonce/js/bootstrap.min.js') }}"></script>-->
 <script src="{{ asset('users/annonce/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('users/annonce/js/main.js') }}"></script>
 
