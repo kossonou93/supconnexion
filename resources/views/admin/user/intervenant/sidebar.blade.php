@@ -35,9 +35,7 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<a href="{{ route('intervenant-logout') }}"
-						onclick="event.preventDefault();
-									document.getElementById('logout-form').submit();">
+					<a href="{{ route('intervenant-logout') }}">
 						<i class="flaticon-power"></i>
 						<p>Se déconnecter</p>
 					</a>

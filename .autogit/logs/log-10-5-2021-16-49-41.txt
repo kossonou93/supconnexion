@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 10 2021 16:49:41 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Ecole/AnnonceController.php
+* resources/views/admin/user/ecole/annonce/edit.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-5-2021-16-19-20.txt
+
+
+Deleted files:
+* public/uploads/image/annonce/10-06-2021.60c22b2e12da5.professeur.jpg
+* public/uploads/image/annonce/10-06-2021.60c22d196b4d3.professeur.jpg
+
+
+Renamed files:

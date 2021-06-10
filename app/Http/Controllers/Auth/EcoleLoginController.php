@@ -53,6 +53,6 @@ class EcoleLoginController extends Controller
     public function logout(Request $request)
     {
         Auth::guard('ecole')->logout();
-        return redirect()->intended('/')->with('success', 'Vous êtes déconnecté!');
+        return redirect()->route('home')->with('success', 'Vous êtes déconnecté!');
     }
 }

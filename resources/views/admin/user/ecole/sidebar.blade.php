@@ -70,9 +70,7 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a class="dropdown-item" href="{{ route('ecole-logout') }}"
-						onclick="event.preventDefault();
-									document.getElementById('logout-form').submit();">
+					<a href="{{ route('ecole-logout') }}">
 						<i class="flaticon-power"></i>
 						<p>Se déconnecter</p>
 					</a>
