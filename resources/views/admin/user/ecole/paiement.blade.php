@@ -36,112 +36,88 @@
 									<div class="tab-content">
 										<div class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
 											<div class="card-body">
-                                                <form action="{{ route('paiement.intervenants.store', ['post' => $offre]) }}" method="post" enctype="multipart/form-data">
-												@csrf
-												<div class="row">
-													<div class="col-md-6">
-														<h3>Information Intervenant</h3>
-														<div class="row mt-4">
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Nom</label>
-																	<input type="text" class="form-control" name="name" value="{{$ecole->name}}" disabled="disabled">
-																</div>
-															</div>
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Email</label>
-																	<input type="email" class="form-control" name="email" value="{{$ecole->email}}" disabled="disabled">
-																</div>
-															</div>
-														</div>
-														<div class="row mt-4">
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Adresse</label>
-																	<input type="text" class="form-control" value="{{$ecole->address}}" name="address" disabled="disabled">
-																</div>
-															</div>
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Pays</label>
-																	<input type="text" class="form-control" value="{{$pays->name}}" name="pays" disabled="disabled">
-																</div>
-															</div>
-														</div>
-														<div class="row mt-4">
-															<div class="col-md-1"></div>
-															<div class="col-md-10">
-																<div class="form-group form-group-default">
-																	<label>Téléphone</label>
-																	<input type="number" class="form-control" value="{{$ecole->phone}}" name="phone" disabled="disabled">
-																</div>
-															</div>
-															<div class="col-md-1"></div>
-														</div>
-													</div>
-													<div class="col-md-6">
-													<h3>Paiement</h3>
-														<div class="row mt-4">
-															<div class="col-md-12">
-																<table class="table mt-12">
-																	<thead>
-																		<tr>
-																			<th scope="col">PRODUIT</th>
-																			<th scope="col">TOTAL</th>
-																		</tr>
-																	</thead>
-																	<tbody>
-																		<tr>
-																			<td>Souscription à l'offre</td>
-																			<td>{{$offre}} €</td>
-																		</tr>
-																		<tr>
-																			<td>Total</td>
-																			<td>{{$offre}} €</td>
-																		</tr>
-																	</tbody>
-																</table>
-															</div>
-														</div>
-														<br>
-														<h4>Sélectionnez type de paiement</h4>
-														<div class="row mt-4">
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Adresse</label>
-																	<input type="text" class="form-control" value="" name="address">
-																</div>
-															</div>
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Adresse</label>
-																	<input type="text" class="form-control" value="" name="address">
-																</div>
-															</div>
-														</div>
-														<div class="row mt-4">
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Téléphone 1</label>
-																	<input type="number" class="form-control" value="" name="phone" required>
-																</div>
-															</div>
-															<div class="col-md-6">
-																<div class="form-group form-group-default">
-																	<label>Téléphone 2</label>
-																	<input type="number" class="form-control" value="" name="contact">
+                                                
+												
+												<div class="container-fluid">
+													<div class="row justify-content-center">
+														<div class="col-12 col-lg-11">
+															<div class="card card0 rounded-0">
+																<div class="row">
+																	<div class="col-md-5 d-md-block d-none p-0 box">
+																		<div class="card rounded-0 border-0 card1" id="bill">
+																			<h3 id="heading1">Formulaire de Paiement</h3>
+																			<div class="row">
+																				<div class="col-lg-5 col-4 mt-4">
+																					<h2 class="bill-head">Nom :</h2>
+																				</div>
+																				<div class="col-lg-7 col-8 mt-4">
+																					<h2 class="bill-head">{{$ecole->name}}</h2>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-lg-5 col-4 mt-4">
+																					<h4 class="bill-head">Email :</h4>
+																				</div>
+																				<div class="col-lg-7 col-8 mt-4">
+																					<h5 class="bill-head">{{$ecole->email}}</h5>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-lg-5 col-4 mt-4">
+																					<h2 class="bill-head">Téléphone :</h2>
+																				</div>
+																				<div class="col-lg-7 col-8 mt-4">
+																					<h2 class="bill-head">{{$ecole->phone}}</h2>
+																				</div>
+																			</div>
+																			<div class="row">
+																				<div class="col-lg-5 col-4 mt-4">
+																					<h2 class="bill-head">Adresse :</h2>
+																				</div>
+																				<div class="col-lg-7 col-8 mt-4">
+																					<h2 class="bill-head">{{$ecole->address}}</h2>
+																				</div>
+																			</div>
+																			<div class="row red-bg" style="margin-top: 100px;">
+																				<div class="col-lg-5 col-4 mt-4">
+																					<p class="bill-hed" style="font-size: 20px" id="total-label">Prix Total</p>
+																				</div>
+																				<div class="col-lg-7 col-8 mt-4">
+																					<h2 class="bill-head" style="font-size: 30px" id="total">{{$offre}} €</h2>
+																				</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="col-md-7 col-sm-12 p-0 box">
+																		<div class="card rounded-0 border-0 card2" id="paypage">
+																			<div class="form-card">
+																				<h2 id="heading2" class="text-danger">Méthode de Paiement</h2>
+																				<form action="{{ route('paiement.intervenants.store', ['post' => $offre]) }}" method="post" enctype="multipart/form-data">
+																					@csrf
+																					<div class="radio-group">
+																						<div class='radio' data-value="credit"><img src="https://i.imgur.com/28akQFX.jpg" width="200px" height="60px"></div>
+																						<div class='radio' data-value="paypal"><img src="https://i.imgur.com/5QFsx7K.jpg" width="200px" height="60px"></div> <br>
+																					</div> <label class="pay">Name on Card</label> <input type="text" name="holdername" placeholder="John Smith">
+																					<div class="row">
+																						<div class="col-8 col-md-6"> <label class="pay">Card Number</label> <input type="text" name="cardno" id="cr_no" placeholder="0000-0000-0000-0000" minlength="19" maxlength="19"> </div>
+																						<div class="col-4 col-md-6"> <label class="pay">CVV</label> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> </div>
+																					</div>
+																					<div class="row">
+																						<div class="col-md-12"> <label class="pay">Expiration Date</label> </div>
+																						<div class="col-md-12"> <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> </div>
+																					</div>
+																					<div class="row">
+																						<div class="col-md-6"> <input type="submit" value="EFFECTUER PAIEMENT &nbsp; &#xf178;" class="btn btn-info placeicon"> </div>
+																					</div>
+																				</form>
+																			</div>
+																		</div>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
 												</div>
-												<br><br><br>
-												<div class="text-right mt-3 mb-3">
-													<button class="btn btn-success">Valider</button>
-													<button class="btn btn-danger">Annuler</button>
-												</div>
-											</form>
 											</div>
 										</div>
 									</div>

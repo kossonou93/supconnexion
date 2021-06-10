@@ -26,7 +26,7 @@
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
 													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														OFFRES
+														ANNONCES
 													</a>
 												</li>
 											</ul>

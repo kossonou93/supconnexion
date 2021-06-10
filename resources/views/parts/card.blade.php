@@ -1,58 +1,48 @@
-    <section class="featured_works row" data-stellar-background-ratio="0.3">
-        <div class="container" style="margin-bottom: 50px">
+    <section class="our_team_area">
+        <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>Ecoles & Instituts de Formations</h2>
+                <h2>Annonces</h2>
             </div>
-             <div class="featured_gallery">
-                <div class="gallery_iner p0">
-                    <img src="{{ asset('users/images/gallery/temps.jpg') }}" alt="">
-                    <div class="gallery_hover">
-                        <h4>Gagnez du Temps</h4>
-                        <a href="#">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="gallery_iner p0">
-                    <img src="{{ asset('users/images/gallery/gl-3.jpg') }}" alt="">
-                    <div class="gallery_hover">
-                        <h4>Gagnez en Visibilité</h4>
-                        <a href="#">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="gallery_iner p0">
-                    <img src="{{ asset('users/images/gallery/expert.png') }}" alt="">
-                    <div class="gallery_hover">
-                        <h4>Trouvez des personnes qualifiées</h4>
-                        <a href="#">En savoir plus</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            
+            <div class="row team_row">
+                <div class="col-xs-11 col-md-12 col-centered wow fadeInUp" data-wow-delay="0.2s">
+                    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="15000">
+                        <div class="carousel-inner">
+                        @foreach ($intervenants as $intervenant)
+                            <div class="item {{ $loop->first ? 'active' : ''}}">
+                                <div class="carousel-col">
+                                    <div class="team_membar">
+                                    <img src="{{ asset('uploads/photo/profil/'.$intervenant->photo) }}" alt="">
+                                        <div class="team_content">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            </ul>
+                                            <a href="#" class="name">En savoir plus</a>
+                                            <h6>{{ $intervenant->fonction }}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        </div>
 
-        <div class="container">   
-            <div class="tittle wow fadeInUp">
-                <h2>Intervenants</h2>
-            </div>
-            <div class="featured_gallery">
-                <div class="gallery_iner p0">
-                    <img src="{{ asset('users/images/gallery/visibilite2.jpg') }}" alt="">
-                    <div class="gallery_hover">
-                        <h4>Gagnez en visibilité</h4>
-                        <a href="#">En savoir plus</a>
+                        <!-- Controls -->
+                        <div class="left carousel-control">
+                            <a href="#carousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </div>
+                        <div class="right carousel-control">
+                            <a href="#carousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="gallery_iner p0">
-                    <img src="{{ asset('users/images/gallery/experience2.jpg') }}" alt="">
-                    <div class="gallery_hover">
-                        <h4>Gagnez en expérience</h4>
-                        <a href="#">En savoir plus</a>
-                    </div>
-                </div>
-                <div class="gallery_iner p0">
-                    <img src="{{ asset('users/images/gallery/connecter3.jpg') }}" alt="">
-                    <div class="gallery_hover">
-                        <h4>Restez connecté</h4>
-                        <a href="#">En savoir plus</a>
-                    </div>
+
                 </div>
             </div>
         </div>

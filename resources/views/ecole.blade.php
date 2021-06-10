@@ -25,9 +25,9 @@
 			<div class="content">
 				<div class="page-inner">
 					<div class="row">
-						<div class="col-md-8">
+						<div class="col-md-12">
 							<div class="card card-with-nav">
-								<div class="card-header">
+								<div class="card-header bordr-card">
 									<div class="row row-nav-line">
 										<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 											<li class="nav-item">
@@ -47,164 +47,214 @@
 								</div>
 								<div class="tab-content" id="myTabContent">
 									<div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-										<div class="card-body">
-											<form action="{{ route('ecole.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
-												{{ csrf_field() }}
-												{{ method_field('PUT') }}
-												<div class="row mt-3">
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Nom</label>
-															<input type="text" class="form-control" name="name" value="{{ Auth::user()->name }}">
+										<div class="card bordr-card">
+											<div class="card-body">
+												<div class="row">
+													<div class="col-md-8">
+														<div class="card">
+															<div class="card-body">
+																<form action="{{ route('ecole.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
+																	{{ csrf_field() }}
+																	{{ method_field('PUT') }}
+																	<div class="row mt-3">
+																		<div class="col-md-6">
+																			<div class="form-group form-group-default bordr">
+																				<label>Nom</label>
+																				<input type="text" class="form-control input" name="name" value="{{ Auth::user()->name }}">
+																			</div>
+																		</div>
+																		<div class="col-md-6">
+																			<div class="form-group form-group-default bordr">
+																				<label>Email</label>
+																				<input type="email" class="form-control input" name="email" value="{{ Auth::user()->email }}" disabled="disabled">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3">
+																		<div class="col-md-6">
+																			<div class="form-group form-group-default bordr">
+																				<label>Pays</label>
+																				<select name="pays_id" class="form-control input" value="{{ Auth::user()->pays_id }}">
+																				@foreach ( $pays as $pay )
+																					<option value='{{ $pay->id }}' 
+																						@if (Auth::user()->pays_id == $pay->id)
+																							selected
+																						@endif
+																						>{{ $pay->name }}
+																					</option>
+																				@endforeach
+																				</select>
+																			</div>
+																		</div>
+																		<div class="col-md-6">
+																			<div class="form-group form-group-default bordr">
+																				<label>Ville</label>
+																				<select name="ville_id" class="form-control input" value="{{ Auth::user()->ville_id }}">
+																				@foreach ( $villes as $ville )
+																					<option value='{{ $ville->id }}' 
+																						@if (Auth::user()->ville_id == $ville->id)
+																							selected
+																						@endif
+																						>{{ $ville->name }}
+																					</option>
+																				@endforeach
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3">
+																		<div class="col-md-12">
+																			<div class="form-group form-group-default bordr">
+																				<label>Adresse</label>
+																				<input type="text" class="form-control input" value="{{ Auth::user()->address }}" name="address">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3">
+																		<div class="col-md-6">
+																			<div class="form-group form-group-default bordr">
+																				<label>Téléphone 1</label>
+																				<input type="number" class="form-control input" value="{{ Auth::user()->phone }}" name="phone" required>
+																			</div>
+																		</div>
+																		<div class="col-md-6">
+																			<div class="form-group form-group-default bordr">
+																				<label>Téléphone 2</label>
+																				<input type="number" class="form-control input" value="{{ Auth::user()->contact }}" name="contact">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3">
+																		<div class="col-md-12">
+																			<div class="form-group form-group-default bordr">
+																				<label for="exampleFormControlFile1">Logo</label>
+																				<br>
+																				<input type="file" name="logo" class="form-control-file input" placeholder="{{ Auth::user()->logo }}" value="{{ Auth::user()->logo }}">
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3 mb-1">
+																		<div class="col-md-12">
+																			<div class="form-group form-group-default bordr">
+																				<label>A propos de l'Ecole</label>
+																				<textarea class="form-control input" name="about" placeholder="" rows="3" value="{{ Auth::user()->about }}">{{ Auth::user()->about }}</textarea>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3">
+																		<label class="col-sm-7 col-form-label">Filières ou Formations</label>
+																		<div class="col-sm-5">
+																			<div class="md-form mt-0">
+																				<select id='testSelectc' name="disciplines[]" multiple class="form-control">
+																					@foreach ( $disciplines as $discipline )
+																						<option value='{{ $discipline->id }}'
+																							@foreach ( $discips as $discip )
+																								@if ($discipline->id == $discip->id)
+																									selected
+																								@endif
+																							@endforeach
+																						>{{ $discipline->name }}</option>
+																					@endforeach
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3">
+																		<label class="col-sm-7 col-form-label">Langues d'enseignement possibles</label>
+																		<div class="col-sm-5">
+																			<div class="md-form mt-0">
+																				<select id='testSelecta' name="langues[]" multiple class="form-control">
+																				@foreach ( $langues as $langue )
+																					<option value='{{ $langue->id }}'
+																						@foreach ( $langs as $lang )
+																							@if ($langue->id == $lang->id)
+																								selected
+																							@endif
+																						@endforeach
+																					>{{ $langue->name }}</option>
+																				@endforeach
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<div class="row mt-3">
+																		<label class="col-sm-7 col-form-label">Plages horaires souhaitées</label>
+																		<div class="col-sm-5">
+																			<div class="md-form mt-0">
+																				<select id='testSelectb' name="horaires[]" multiple class="form-control">
+																				@foreach ( $horaires as $horaire )
+																					<option value='{{ $horaire->id }}'
+																						@foreach ( $hors as $hor )
+																							@if ($horaire->id == $hor->id)
+																								selected
+																							@endif
+																						@endforeach
+																					>{{ $horaire->titre }}</option>
+																				@endforeach 
+																				</select>
+																			</div>
+																		</div>
+																	</div>
+																	<br><br><br>
+																	<div class="text-right mt-3 mb-3">
+																		<button class="btn btn-success btn-rounded">Valider</button>
+																		<button class="btn btn-danger btn-rounded">Annuler</button>
+																	</div>
+																</form>
+															</div>
 														</div>
 													</div>
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Email</label>
-															<input type="email" class="form-control" name="email" value="{{ Auth::user()->email }}" disabled="disabled">
+													<div class="col-md-4">
+														<div class="card card-profile card-secondary">
+															<div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
+																<div class="profile-picture">
+																	<div class="avatar avatar-xxl">
+																		<img src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
+																	</div>
+																</div>
+															</div>
+															<div class="card-body">
+																<div class="user-profile text-center">
+																	<div class="name">{{ Auth::user()->name }}</div>
+																	<div class="job">{{ Auth::user()->address }}</div>
+																	<div class="social-media">
+																		<a class="btn btn-info btn-linkedin btn-sm btn-link" href="{{ Auth::user()->linkdin }}"> 
+																			<span class="btn-label just-icon"><i class="flaticon-linkedin"></i> </span>
+																		</a>
+																		<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
+																			<span class="btn-label just-icon"><i class="flaticon-google-plus"></i> </span> 
+																		</a>
+																		<a class="btn btn-primary btn-sm btn-link" rel="publisher" href="#"> 
+																			<span class="btn-label just-icon"><i class="flaticon-facebook"></i> </span> 
+																		</a>
+																		<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
+																			<span class="btn-label just-icon"><i class="flaticon-dribbble"></i> </span> 
+																		</a>
+																	</div>
+																	<div class="view-profile">
+																		<a href="#" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
+																	</div>
+																</div>
+															</div>
+															<div class="card-footer">
+																<div class="row user-stats text-center">
+																	
+																</div>
+															</div>
 														</div>
 													</div>
 												</div>
-												<div class="row mt-3">
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Pays</label>
-															<select name="pays_id" class="form-control" value="{{ Auth::user()->pays_id }}">
-															@foreach ( $pays as $pay )
-																<option value='{{ $pay->id }}' 
-																	@if (Auth::user()->pays_id == $pay->id)
-																		selected
-																	@endif
-																	>{{ $pay->name }}
-																</option>
-															@endforeach
-															</select>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Ville</label>
-															<select name="ville_id" class="form-control" value="{{ Auth::user()->ville_id }}">
-															@foreach ( $villes as $ville )
-																<option value='{{ $ville->id }}' 
-																	@if (Auth::user()->ville_id == $ville->id)
-																		selected
-																	@endif
-																	>{{ $ville->name }}
-																</option>
-															@endforeach
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<div class="col-md-12">
-														<div class="form-group form-group-default">
-															<label>Adresse</label>
-															<input type="text" class="form-control" value="{{ Auth::user()->address }}" name="address">
-														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Téléphone 1</label>
-															<input type="number" class="form-control" value="{{ Auth::user()->phone }}" name="phone" required>
-														</div>
-													</div>
-													<div class="col-md-6">
-														<div class="form-group form-group-default">
-															<label>Téléphone 2</label>
-															<input type="number" class="form-control" value="{{ Auth::user()->contact }}" name="contact">
-														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<div class="col-md-12">
-														<div class="form-group form-group-default">
-															<label for="exampleFormControlFile1">Logo</label>
-															<br>
-															<input type="file" name="logo" class="form-control-file" placeholder="{{ Auth::user()->logo }}" value="{{ Auth::user()->logo }}">
-														</div>
-													</div>
-												</div>
-												<div class="row mt-3 mb-1">
-													<div class="col-md-12">
-														<div class="form-group form-group-default">
-															<label>A propos de l'Ecole</label>
-															<textarea class="form-control" name="about" placeholder="" rows="3" value="{{ Auth::user()->about }}">{{ Auth::user()->about }}</textarea>
-														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<label class="col-sm-7 col-form-label">Filières ou Formations</label>
-													<div class="col-sm-5">
-														<div class="md-form mt-0">
-															<select id='testSelectc' name="disciplines[]" multiple class="form-control">
-																@foreach ( $disciplines as $discipline )
-																	<option value='{{ $discipline->id }}'
-																		@foreach ( $discips as $discip )
-																			@if ($discipline->id == $discip->id)
-																				selected
-																			@endif
-																		@endforeach
-																	>{{ $discipline->name }}</option>
-																@endforeach
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<label class="col-sm-7 col-form-label">Langues d'enseignement possibles</label>
-													<div class="col-sm-5">
-														<div class="md-form mt-0">
-															<select id='testSelecta' name="langues[]" multiple class="form-control">
-															@foreach ( $langues as $langue )
-																<option value='{{ $langue->id }}'
-																	@foreach ( $langs as $lang )
-																		@if ($langue->id == $lang->id)
-																			selected
-																		@endif
-																	@endforeach
-																>{{ $langue->name }}</option>
-															@endforeach
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="row mt-3">
-													<label class="col-sm-7 col-form-label">Plages horaires souhaitées</label>
-													<div class="col-sm-5">
-														<div class="md-form mt-0">
-															<select id='testSelectb' name="horaires[]" multiple class="form-control">
-															@foreach ( $horaires as $horaire )
-																<option value='{{ $horaire->id }}'
-																	@foreach ( $hors as $hor )
-																		@if ($horaire->id == $hor->id)
-																			selected
-																		@endif
-																	@endforeach
-																>{{ $horaire->titre }}</option>
-															@endforeach 
-															</select>
-														</div>
-													</div>
-												</div>
-												<br><br><br>
-												<div class="text-right mt-3 mb-3">
-													<button class="btn btn-success">Valider</button>
-													<button class="btn btn-danger">Annuler</button>
-												</div>
-											</form>
+											</div>
 										</div>
 									</div>
 									<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-										<div class="card-body">
-										<br>
-										<h4>Sélectionnez les types d'écoles qui correspondent à la votre</h4>
-											<form action="{{ route('ecole.formation.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
-												{{ csrf_field() }}
-												{{ method_field('PUT') }}
+										<div class="card bordr-card">
+											<div class="card-body">
+												<br>
+												<h4>Sélectionnez les types d'écoles qui correspondent à la votre</h4>
+												<form action="{{ route('ecole.formation.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
+													{{ csrf_field() }}
+													{{ method_field('PUT') }}
 													<div class="card-body">
 														<div class="row mt-3">
 															<div class="col-sm-12">
@@ -220,66 +270,29 @@
 															</div>
 														</div>
 													</div>
-													<div class="card-footer">
-														
-													</div>
-											
-												<div class="row mt-3">
-													<div class="col-md-12">
-														<div class="card card-image" style="background-color: lightgrey">
-															<div class="text-white text-center rgba-stylish-strong py-1 px-4">
-																<div class="py-5">
-																	<h5 class="h5 orange-text">
-																		<button class="btn btn-success">Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																		<button class="btn btn-danger">Annuler</button>
-																	</h5>
+												
+													<div class="row mt-3">
+														<div class="col-md-12">
+															<div class="card card-image">
+																<div class="text-white text-center rgba-stylish-strong py-1 px-4">
+																	<div class="py-5">
+																		<h5 class="h5 orange-text">
+																			<button class="btn btn-success btn-rounded">Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																			<button class="btn btn-danger btn-rounded">Annuler</button>
+																		</h5>
+																	</div>
 																</div>
 															</div>
 														</div>
 													</div>
-												</div>
-											</form>
+												</form>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-4">
-							<div class="card card-profile card-secondary">
-								<div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
-									<div class="profile-picture">
-										<div class="avatar avatar-xxl">
-											<img src="{{ asset('uploads/photo/logo/'.Auth::user()->logo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
-										</div>
-									</div>
-								</div>
-								<div class="card-body">
-									<div class="user-profile text-center">
-										<div class="name">{{ Auth::user()->name }}</div>
-										<div class="job">{{ Auth::user()->address }}</div>
-										<div class="social-media">
-											<a class="btn btn-info btn-twitter btn-sm btn-link" href="#"> 
-												<span class="btn-label just-icon"><i class="flaticon-twitter"></i> </span>
-											</a>
-											<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
-												<span class="btn-label just-icon"><i class="flaticon-google-plus"></i> </span> 
-											</a>
-											<a class="btn btn-primary btn-sm btn-link" rel="publisher" href="#"> 
-												<span class="btn-label just-icon"><i class="flaticon-facebook"></i> </span> 
-											</a>
-											<a class="btn btn-danger btn-sm btn-link" rel="publisher" href="#"> 
-												<span class="btn-label just-icon"><i class="flaticon-dribbble"></i> </span> 
-											</a>
-										</div>
-									</div>
-								</div>
-								<div class="card-footer">
-									<div class="row user-stats text-center">
-										
-									</div>
-								</div>
-							</div>
-						</div>
+						
 					</div>
 				</div>
 			</div>

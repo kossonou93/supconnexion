@@ -114,7 +114,7 @@ class EcoleController extends Controller
             $ecole->formations()->sync(request('formations'));
         }
 
-        return redirect()->route('ecole.dashboard')->with('message', "Type d'école ajouté avec succès!");
+        return redirect()->route('ecole.dashboard')->with('success', "Type d'école ajouté avec succès!");
     }
 
     public function indexTemoignage()
@@ -140,6 +140,17 @@ class EcoleController extends Controller
     {
         $intervenants = Intervenant::all();
         return view('admin.user.ecole.search', compact('intervenants'));
+    }
+
+    public function choixpaiements()
+    {
+        //$intervenants = Intervenant::all();
+        return view('admin.user.ecole.choix_paiement');
+    }
+
+    public function choixannonces()
+    {
+        return view('admin.user.ecole.annonce.choix');
     }
 
     public function detailsintervenant($id)
@@ -174,6 +185,38 @@ class EcoleController extends Controller
         $discips = $intervenant->disciplines;
 
         return view('admin.user.ecole.detailsintervenant', compact('intervenant', 'disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
+    }
+
+    public function paiement()
+    {
+        return view('admin.user.ecole.annonce.paiement');
+    }
+
+    public function show($id)
+    {
+        $ecole = Ecole::find(Auth::user()->id);
+        $pays = Pays::find($ecole->pays_id);
+        $offre = $id;
+        switch ($id) {
+            case 1:
+                $offre = 10;
+                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays'));
+                break;
+            case 2:
+                $offre = 20;
+                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays'));
+                break;
+            case 3:
+                $offre = 30;
+                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays'));
+                break;
+            
+            default:
+                $offre = 10;
+                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays'));
+                break;
+        }
+        
     }
 
 }

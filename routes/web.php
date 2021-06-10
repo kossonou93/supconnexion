@@ -88,9 +88,13 @@ Route::prefix('ecole')->group(function(){
     Route::get('/temoignages', 'Users\Ecole\EcoleController@indexTemoignage')->name('temoignage.ecole');
     Route::post('/temoignages', 'Users\Ecole\EcoleController@storeTemoignage')->name('temoignage.ecole.submit');
     Route::resource('/annonces', 'Users\Ecole\AnnonceController');
+    Route::get('/choix_annonces', 'Users\Ecole\EcoleController@choixannonces')->name('choix.annonces');
+    Route::get('/annonce/paiements', 'Users\Ecole\EcoleController@paiement')->name('paiement.annonces');
+    Route::get('/annonce/paiements/{post}', 'Users\Ecole\EcoleController@show')->name('paiement.annonces.show');
     //Route::post('/search/intervenants/{post}', 'Users\Ecole\EcoleController@intervenant')->name('search.intervenant');
     Route::get('/intervenants', 'Users\Ecole\EcoleController@intervenants')->name('search.intervenants');
     Route::get('/intervenant/{post}', 'Users\Ecole\EcoleController@detailsintervenant')->name('details.intervenant');
+    Route::get('/choix_paiements', 'Users\Ecole\EcoleController@choixpaiements')->name('choix.paiements');
     Route::get('/paiements', 'Users\Ecole\PaiementController@index')->name('paiement.intervenants');
     Route::get('/paiements/{post}', 'Users\Ecole\PaiementController@show')->name('paiement.intervenants.show');
     Route::post('/paiements', 'Users\Ecole\PaiementController@store')->name('paiement.intervenants.store');

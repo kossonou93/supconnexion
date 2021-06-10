@@ -9,6 +9,7 @@
     }, 1500);
 </script>
 <script src="{{ asset('admini/assets/js/core/popper.min.js') }}"></script>
+<script src="{{ asset('admini/assets/js/paiement.js') }}"></script>
 <script src="{{ asset('admini/assets/js/core/bootstrap.min.js') }}"></script>
 
 <!-- jQuery UI -->

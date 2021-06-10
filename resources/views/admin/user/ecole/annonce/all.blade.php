@@ -26,7 +26,7 @@
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
 													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														OFFRES
+														MES ANNONCES
 													</a>
 												</li>
 											</ul>
@@ -93,6 +93,17 @@
 														@endforeach
 													</tbody>
 												</table>
+												<div class="row mt-3">
+													<div class="col-md-12">
+														<div class="text-white text-center rgba-stylish-strong py-1 px-4">
+															<ul class="specification-list">
+																<li>
+																	<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">Pour ajouter une annonce <a href="{{route('choix.annonces')}}" class="btn btn-danger btn-rounded">Cliquez-ici </a></h3>
+																</li>
+															</ul> 
+														</div>
+													</div>
+												</div>
 											</div>
 										</div>
 										

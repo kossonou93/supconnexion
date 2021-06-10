@@ -21,7 +21,7 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card card-with-nav">
-									<div class="card-header">
+									<div class="card-header bordr-card">
 										<div class="row row-nav-line">
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
@@ -54,7 +54,7 @@
 
 									<div class="tab-content" id="myTabContent">
 										<div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-											<div class="card" style="border-radius: 25px; border: 2px solid #73AD21;">
+											<div class="card bordr-card">
 												<div class="card-body">
 													<div class="row">
 														<div class="col-md-8">
@@ -431,7 +431,7 @@
 																			</a>
 																		</div>
 																		<div class="view-profile">
-																			<a href="{{route('pdf')}}" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
+																			<a href="#" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
 																		</div>
 																	</div>
 																</div>
@@ -444,7 +444,7 @@
 											</div>
 										</div>
 										<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-											<div class="card">
+											<div class="card bordr-card">
 												<div class="card-body">
 													<div class="row mt-3">
 														<div class="col-sm-4">
@@ -575,7 +575,7 @@
 											</div>
 										</div>
 										<div class="tab-pane fade" id="experience" role="tabpanel" aria-labelledby="experience-tab">
-											<div class="card">
+											<div class="card bordr-card">
 												<div class="card-body">
 													<div class="row mt-3">
 														<div class="col-sm-4">
@@ -797,13 +797,14 @@
 											</div>
 										</div>
 										<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-											<div class="card-body">
-											<br>
-											<h4>Je sélectionne les types d'écoles dans lesquelles je souhaite intervenir</h4>
-											
-												<form action="{{ route('formation.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
-													{{ csrf_field() }}
-													{{ method_field('PUT') }}
+											<div class="card bordr-card">
+												<div class="card-body">
+													<br>
+													<h4>Je sélectionne les types d'écoles dans lesquelles je souhaite intervenir</h4>
+												
+													<form action="{{ route('formation.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
+														{{ csrf_field() }}
+														{{ method_field('PUT') }}
 														<div class="card-body">
 															<div class="row mt-3">
 																<div class="col-sm-12">
@@ -823,21 +824,22 @@
 															
 														</div>
 												
-													<div class="row mt-3">
-														<div class="col-md-12">
-															<div class="card card-image" style="background-color: white">
-																<div class="text-white text-center rgba-stylish-strong py-1 px-4">
-																	<div class="py-5">
-																		<h5 class="h5 orange-text">
-																			<button class="btn btn-success">Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																			<button class="btn btn-danger">Annuler</button>
-																		</h5>
+														<div class="row mt-3">
+															<div class="col-md-12">
+																<div class="card card-image" style="background-color: white">
+																	<div class="text-white text-center rgba-stylish-strong py-1 px-4">
+																		<div class="py-5">
+																			<h5 class="h5 orange-text">
+																				<button class="btn btn-success btn-rounded">Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				<button class="btn btn-danger btn-rounded">Annuler</button>
+																			</h5>
+																		</div>
 																	</div>
 																</div>
 															</div>
 														</div>
-													</div>
-												</form>
+													</form>
+												</div>
 											</div>
 										</div>
 									</div>

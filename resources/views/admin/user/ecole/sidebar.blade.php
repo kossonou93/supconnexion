@@ -51,18 +51,18 @@
 				<li class="nav-item">
 					<a data-toggle="collapse" href="#annonce">
 						<i class="flaticon-present"></i>
-						<p>Nos Annonces</p>
+						<p>Mes Annonces</p>
 						<span class="caret"></span>
 					</a>
 					<div class="collapse" id="annonce">
 						<ul class="nav nav-collapse">
 							<li>
 								<a href="{{route('annonces.index')}}">
-									<span class="sub-item">Voir nos Annonces</span>
+									<span class="sub-item">Voir mes Annonces</span>
 								</a>
 							</li>
 							<li>
-								<a href="{{route('annonces.create')}}">
+								<a href="{{route('choix.annonces')}}">
 									<span class="sub-item">Ajouter une annonce</span>
 								</a>
 							</li>
@@ -70,16 +70,11 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<div class="dropdown-divider">
-						<form id="logout-form" action="{{ route('ecole-logout') }}" method="POST" class="d-none">
-							@csrf
-						</form>
-					</div>
 					<a class="dropdown-item" href="{{ route('ecole-logout') }}"
 						onclick="event.preventDefault();
 									document.getElementById('logout-form').submit();">
 						<i class="flaticon-power"></i>
-						{{ __('Se déconnecter') }}
+						<p>Se déconnecter</p>
 					</a>
 				</li>
 			</ul>

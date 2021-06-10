@@ -35,16 +35,11 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<div class="dropdown-divider">
-						<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-							@csrf
-						</form>
-					</div>
 					<a href="{{ route('intervenant-logout') }}"
 						onclick="event.preventDefault();
 									document.getElementById('logout-form').submit();">
 						<i class="flaticon-power"></i>
-						{{ __('Se déconnecter') }}
+						<p>Se déconnecter</p>
 					</a>
 				</li>
 			</ul>

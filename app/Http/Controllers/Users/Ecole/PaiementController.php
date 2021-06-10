@@ -33,11 +33,11 @@ class PaiementController extends Controller
                 return view('admin.user.ecole.paiement', compact('offre', 'ecole', 'pays'));
                 break;
             case 2:
-                $offre = 15;
+                $offre = 20;
                 return view('admin.user.ecole.paiement', compact('offre', 'ecole', 'pays'));
                 break;
             case 3:
-                $offre = 20;
+                $offre = 30;
                 return view('admin.user.ecole.paiement', compact('offre', 'ecole', 'pays'));
                 break;
             

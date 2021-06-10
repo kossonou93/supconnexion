@@ -34,4 +34,6 @@
 	<link rel="stylesheet" href="{{ asset('admini/assets/css/picker.css') }}">
 	<link rel="stylesheet" href="{{ asset('admini/assets/css/picker.min.css') }}">
 	<link rel="stylesheet" href="{{ asset('admini/assets/css/style.css') }}">
+	<link rel="stylesheet" href="{{ asset('admini/assets/css/pricing.css') }}">
+	<link rel="stylesheet" href="{{ asset('admini/assets/css/paiement.css') }}">
 </head>

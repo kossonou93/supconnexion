@@ -36,6 +36,14 @@
 <!-- jQuery JS -->
 <script src="{{ asset('users/OwlCarousel2-2.3.4/dist/owl.carousel.min.js') }}"></script>
 
+<script src="{{ asset('users/annonce/js/jquery.min.js') }}"></script>
+
+<script src="{{ asset('users/annonce/js/jquery.min.js') }}"></script>
+<script src="{{ asset('users/annonce/js/popper.js') }}"></script>
+<script src="{{ asset('users/annonce/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('users/annonce/js/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('users/annonce/js/main.js') }}"></script>
+
 <script src="{{ asset('users/js/jquery-3.5.1.min.js') }}"></script>
 
 <script src="{{ asset('users/js/jquery-1.12.0.min.js') }}"></script>
