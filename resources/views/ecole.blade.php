@@ -206,6 +206,7 @@
 															</div>
 														</div>
 													</div>
+
 													<div class="col-md-4">
 														<div class="card card-profile card-secondary">
 															<div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
@@ -215,10 +216,11 @@
 																	</div>
 																</div>
 															</div>
-															<div class="card-body">
+															<div class="card-body" style="margin-top:50px">
 																<div class="user-profile text-center">
 																	<div class="name">{{ Auth::user()->name }}</div>
 																	<div class="job">{{ Auth::user()->address }}</div>
+																	<div class="desc"></div>
 																	<div class="social-media">
 																		<a class="btn btn-info btn-linkedin btn-sm btn-link" href="{{ Auth::user()->linkdin }}"> 
 																			<span class="btn-label just-icon"><i class="flaticon-linkedin"></i> </span>
@@ -239,9 +241,6 @@
 																</div>
 															</div>
 															<div class="card-footer">
-																<div class="row user-stats text-center">
-																	
-																</div>
 															</div>
 														</div>
 													</div>

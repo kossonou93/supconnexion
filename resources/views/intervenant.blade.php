@@ -411,7 +411,7 @@
 																		</div>
 																	</div>
 																</div>
-																<div class="card-body" style="margin-top:30px">
+																<div class="card-body" style="margin-top:50px">
 																	<div class="user-profile text-center">
 																		<div class="name">{{ Auth::user()->last_name }} {{ Auth::user()->name }}</div>
 																		<div class="job">{{ Auth::user()->fonction }}</div>

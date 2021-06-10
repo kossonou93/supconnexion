@@ -25,15 +25,15 @@
                                 <img src="{{ asset('uploads/image/annonce/'.$annonce->image) }}" alt="">
                                 <div class="renovation_content">
                                     <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                                    <a class="tittle" href="#">{{ $annonce->intitule }}</a>
+                                    <a class="tittle" href="#">{{ Illuminate\Support\Str::limit($annonce->intitule, 30) }}</a>
                                     <div class="date_comment">
                                         <a href="#"><i class="fa fa-calendar" aria-hidden="true"></i>
                                             <?php
-                                                echo date("jS F, Y", strtotime(" $annonce->created_at "));
+                                                echo date("d F, Y", strtotime(" $annonce->created_at "));
                                             ?>
                                         </a>
                                     </div>
-                                    <p>{{ $annonce->description }}</p>
+                                    <p>{{ Illuminate\Support\Str::limit($annonce->description, 80) }}</p>
                                     <p class="ml-auto meta2 mb-0" style="margin-top: 20px">
                                         <a href="#" class="mr-2" style="font-family: 'Comic Sans MS'; font-weight: bold; color: #371F57;">
                                             @foreach ($ecoles as $ecole)
