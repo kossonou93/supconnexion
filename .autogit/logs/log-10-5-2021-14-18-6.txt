@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 10 2021 14:18:06 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/ecole/annonce/add.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-5-2021-13-47-39.txt
+
+
+Deleted files:
+
+
+Renamed files:

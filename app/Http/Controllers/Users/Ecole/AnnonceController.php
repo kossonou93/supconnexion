@@ -67,12 +67,20 @@ class AnnonceController extends Controller
             'langues' => 'required',
             'interventions' => 'required',
         ]);
-
+        if ($request->file('image')) {
+            @unlink(public_path('uploads/image/annonce'.$annonce->image));
+            $annonceImage = $request->file('image');
+            $annonceName  = date('d-m-Y') . '.' . uniqid() . '.' . $annonceImage->getClientOriginalName();
+            $annoncePath  = public_path('uploads/image/annonce');
+            $annonceImage->move($annoncePath, $annonceName);
+            $annonce->image = $annonceName;
+        }
         $annonce = new Annonce([
             'intitule' => $request->get('intitule'),
             'description' => $request->get('description'),
             'date_limite' => $request->get('date_limite'),
-            'ecole_id' => $request->get('ecole_id')
+            'ecole_id' => $request->get('ecole_id'),
+            'image' => $request->get('image'),
         ]);
 
         $annonce->save();
