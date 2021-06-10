@@ -59,7 +59,7 @@
                     @foreach ($annonces as $annonce)
                         <div class="item {{ $loop->first ? 'active' : ''}} e-border">
                             <div class="blog-entry">
-                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('users/annonce/images/image_1.jpg');">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('{{ asset('uploads/image/annonce/'.$annonce->image) }}');">
                                     <div class="meta-date text-center p-2">
                                         <span class="yr">
                                             <?php
@@ -70,8 +70,8 @@
                                     </div>
                                 </a>
                                 <div class="text border border-top-0 p-4 border-margin">
-                                    <h3 class="heading"><a href="#">{{ $annonce->intitule }}</a></h3>
-                                    <p>{{ $annonce->description }}</p>
+                                    <h3 class="heading"><a href="#">{{ Illuminate\Support\Str::limit($annonce->intitule, 30) }}</a></h3>
+                                    <p maxlength="100">{{ Illuminate\Support\Str::limit($annonce->description, 80) }}</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <p class="mb-0" style="margin-top: 10px"><a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">En savoir plus <span class="ion-ios-arrow-round-forward"></span></a></p>
                                         <p class="ml-auto meta2 mb-0" style="margin-top: 20px">

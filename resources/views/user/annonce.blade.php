@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row m0 blog_row">
                 <div class="col-sm-8 main_blog">
-                    <img src="images/blog/blog_hed-1.jpg" alt="">
+                    <img src="{{ asset('uploads/image/annonce/'.$annonce->image) }}" alt="">
                     <div class="col-xs-1 p0">
                        <div class="blog_date">
                            <a href="#">
