@@ -117,6 +117,7 @@
 
     .e-border{
         border: 1px solid #ccc;
+        border-radius: 10px;
     }
     .border-margin{
         text-align: center;

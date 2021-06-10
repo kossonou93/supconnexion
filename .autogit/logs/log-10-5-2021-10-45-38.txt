@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 10 2021 10:45:38 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* resources/views/parts/card.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-5-2021-10-15-20.txt
+
+
+Deleted files:
+
+
+Renamed files:
