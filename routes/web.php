@@ -11,6 +11,7 @@ use RealRashid\SweetAlert\Facades\Alert;
 //})->name('home');
 Route::get('laporan-pdf','PdfController@generatePDF');
 Route::get('/', 'Users\HomeController@index')->name('home');
+Route::get('/annonces', 'Users\HomeController@annonces')->name('annonces');
 Route::resource('/contacts', 'ContactController');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');

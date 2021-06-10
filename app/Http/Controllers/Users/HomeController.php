@@ -57,5 +57,17 @@ class HomeController extends Controller
         return view('home', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
+    public function annonces()
+    {
+        $intervenants = Intervenant::take(4)->get();
+        $carousels = Carousel::all();
+        $partenaires = Partenaire::all();
+        $temoignages = Temoignage::all();
+        $annonces = Annonce::all();
+        $ecoles = Ecole::all();
+        $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
+        return view('user.annonces', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
+    }
+
     
 }

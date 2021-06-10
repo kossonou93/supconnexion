@@ -72,7 +72,7 @@
                               <li><a href="#">Conditions générales de ventes</a></li>
                               <li><a href="#">Charte utilisateurs</a></li>
                               <li><a href="#">Protection des données</a></li>
-                              <li><a href="#">Alertes opportunités</a></li>
+                              <li><a href="{{route('annonces')}}">Alertes opportunités</a></li>
                               <li><a href="{{route('contacts.index')}}">Contact</a></li>
                             </ul>
                         </li>
