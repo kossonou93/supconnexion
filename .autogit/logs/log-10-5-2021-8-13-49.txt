@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 10 2021 08:13:49 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* public/users/annonce/css/style.css
+* resources/views/parts/card.blade.php
+* resources/views/parts/footer.blade.php
+
+
+Created files:
+* .autogit/logs/log-10-5-2021-7-43-43.txt
+
+
+Deleted files:
+
+
+Renamed files:
