@@ -53,6 +53,8 @@
 													<div class="col-md-8">
 														<div class="card">
 															<div class="card-body">
+																<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Renseignez les informations de votre établissament</h3>
+																<br>
 																<form action="{{ route('ecole.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 																	{{ csrf_field() }}
 																	{{ method_field('PUT') }}
@@ -251,7 +253,7 @@
 										<div class="card bordr-card">
 											<div class="card-body">
 												<br>
-												<h4>Sélectionnez les types d'écoles qui correspondent à la votre</h4>
+												<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Sélectionnez les types d'établissements qui correspondent à la votre</h3>
 												<form action="{{ route('ecole.formation.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 													{{ csrf_field() }}
 													{{ method_field('PUT') }}

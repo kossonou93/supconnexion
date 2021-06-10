@@ -60,7 +60,7 @@
 														<div class="col-md-8">
 															<div class="card">
 																<div class="card-body">
-																	<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Je renseigne mes informations personnelles</h3>
+																	<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Renseignez mes informations personnelles</h3>
 																	<br>
 																	<form action="{{ route('intervenant.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 																		{{ csrf_field() }}

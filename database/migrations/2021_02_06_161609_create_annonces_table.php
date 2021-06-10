@@ -15,10 +15,12 @@ class CreateAnnoncesTable extends Migration
     {
         Schema::create('annonces', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('intitule');
-            $table->string('description');
-            $table->date('date_limite');
+            $table->string('intitule')->nullable();
+            $table->string('description')->nullable();
+            $table->date('date_limite')->nullable();
             $table->unsignedBigInteger('ecole_id');
+            $table->date('date_limite')->nullable();
+            $table->longText('image')->nullable();
             $table->timestamps(); 
             
             $table->foreign('ecole_id')
