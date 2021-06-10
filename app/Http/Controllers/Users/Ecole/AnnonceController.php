@@ -160,10 +160,10 @@ class AnnonceController extends Controller
         $annonce->description = $input['description'];
         $annonce->date_limite = $input['date_limite'];
         $annonce->ecole_id = $input['ecole_id'];
-        if(\File::exists(public_path('uploads/image/annonce'.$annonce->image))){
-            \File::delete(public_path('uploads/image/annonce'.$annonce->image));
+        if(\File::exists(public_path('uploads/image/annonce/'.$annonce->image))){
+            \File::delete(public_path('uploads/image/annonce/'.$annonce->image));
         }else{
-            dd('File does not exists.');
+            //dd('uploads/image/annonce/'.$annonce->image);
         }
         $annonce->image = $input['image'];
 
@@ -205,10 +205,10 @@ class AnnonceController extends Controller
     public function destroy($id)
     {
         $annonce = Annonce::findOrFail($id);
-        if(\File::exists(public_path('uploads/image/annonce'.$annonce->image))){
-            \File::delete(public_path('uploads/image/annonce'.$annonce->image));
+        if(\File::exists(public_path('uploads/image/annonce/'.$annonce->image))){
+            \File::delete(public_path('uploads/image/annonce/'.$annonce->image));
         }else{
-            dd('File does not exists.');
+            //dd('File does not exists.');
         }
         $annonce->delete();
         //Storage::delete('uploads/image/annonce'.$annonce->image);
