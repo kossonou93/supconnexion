@@ -71,8 +71,9 @@ class HomeController extends Controller
 
     public function annonce($id)
     {
+        $ecoles = Ecole::all();
         $annonce = Annonce::find($id);
-        return view('user.annonce', compact('annonce'));
+        return view('user.annonce', compact('annonce', 'ecoles'));
     }
     
 }

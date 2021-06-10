@@ -63,7 +63,7 @@
                                     <div class="meta-date text-center p-2">
                                         <span class="yr">
                                             <?php
-                                                echo date("jS F, Y", strtotime(" $annonce->created_at "));
+                                                echo date("d F, Y", strtotime(" $annonce->created_at "));
                                             ?>
                                             
                                         </span>
