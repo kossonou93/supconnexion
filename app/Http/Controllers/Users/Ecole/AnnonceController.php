@@ -160,6 +160,21 @@ class AnnonceController extends Controller
         $annonce->description = $input['description'];
         $annonce->date_limite = $input['date_limite'];
         $annonce->ecole_id = $input['ecole_id'];
+        $annonce->image = $input['image'];
+
+        if ($request->file('image')) {
+            //@unlink(public_path('uploads/image/annonce'.$annonce->image));
+            if(\File::exists(public_path('uploads/image/annonce'.$annonce->image))){
+                \File::delete(public_path('uploads/image/annonce'.$annonce->image));
+            }else{
+                dd('File does not exists.');
+            }
+            $annonceImage = $request->file('image');
+            $annonceName  = date('d-m-Y') . '.' . uniqid() . '.' . $annonceImage->getClientOriginalName();
+            $annoncePath  = public_path('uploads/image/annonce');
+            $annonceImage->move($annoncePath, $annonceName);
+            $annonce->image = $annonceName;
+        }
 
         $annonce->save();
 
@@ -189,7 +204,11 @@ class AnnonceController extends Controller
     {
         $annonce = Annonce::findOrFail($id);
         $annonce->delete();
-        return redirect()->route('annonces.index')
-                        ->with('success', 'Annonce supprimée avec succès');
+        if(\File::exists(public_path('uploads/image/annonce'.$annonce->image))){
+            \File::delete(public_path('uploads/image/annonce'.$annonce->image));
+        }else{
+            dd('File does not exists.');
+        }
+        return redirect()->route('annonces.index')->with('success', 'Annonce supprimée avec succès');
     }
 }
