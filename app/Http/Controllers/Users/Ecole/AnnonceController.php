@@ -203,12 +203,13 @@ class AnnonceController extends Controller
     public function destroy($id)
     {
         $annonce = Annonce::findOrFail($id);
-        $annonce->delete();
         if(\File::exists(public_path('uploads/image/annonce'.$annonce->image))){
             \File::delete(public_path('uploads/image/annonce'.$annonce->image));
         }else{
-            //dd('File does not exists.');
+            dd('File does not exists.');
         }
+        $annonce->delete();
+        //Storage::delete('uploads/image/annonce'.$annonce->image);
         return redirect()->route('annonces.index')->with('success', 'Annonce supprimée avec succès');
     }
 }
