@@ -69,5 +69,10 @@ class HomeController extends Controller
         return view('user.annonces', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
+    public function annonce($id)
+    {
+        $annonce = Annonce::find($id);
+        return view('user.annonce', compact('annonce'));
+    }
     
 }

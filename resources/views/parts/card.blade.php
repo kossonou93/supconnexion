@@ -73,7 +73,7 @@
                                     <h3 class="heading"><a href="#">{{ $annonce->intitule }}</a></h3>
                                     <p>{{ $annonce->description }}</p>
                                     <div class="d-flex align-items-center mt-4">
-                                        <p class="mb-0" style="margin-top: 10px"><a href="#" class="btn btn-primary">En savoir plus <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="mb-0" style="margin-top: 10px"><a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">En savoir plus <span class="ion-ios-arrow-round-forward"></span></a></p>
                                         <p class="ml-auto meta2 mb-0" style="margin-top: 20px">
                                             <a href="#" class="mr-2" style="font-family: 'Comic Sans MS'; font-weight: bold; color: #371F57;">
                                                 @foreach ($ecoles as $ecole)
