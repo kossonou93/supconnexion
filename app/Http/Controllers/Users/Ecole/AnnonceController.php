@@ -167,7 +167,7 @@ class AnnonceController extends Controller
             if(\File::exists(public_path('uploads/image/annonce'.$annonce->image))){
                 \File::delete(public_path('uploads/image/annonce'.$annonce->image));
             }else{
-                dd('File does not exists.');
+            //    dd('File does not exists.');
             }
             $annonceImage = $request->file('image');
             $annonceName  = date('d-m-Y') . '.' . uniqid() . '.' . $annonceImage->getClientOriginalName();
@@ -207,7 +207,7 @@ class AnnonceController extends Controller
         if(\File::exists(public_path('uploads/image/annonce'.$annonce->image))){
             \File::delete(public_path('uploads/image/annonce'.$annonce->image));
         }else{
-            dd('File does not exists.');
+            //dd('File does not exists.');
         }
         return redirect()->route('annonces.index')->with('success', 'Annonce supprimée avec succès');
     }

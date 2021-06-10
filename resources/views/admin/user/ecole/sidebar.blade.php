@@ -70,7 +70,12 @@
 					</div>
 				</li>
 				<li class="nav-item">
-					<a href="{{ route('ecole-logout') }}">
+					<form id="logout-form" action="{{ route('ecole-logout') }}" method="POST" class="d-none">
+						@csrf
+					</form>
+					<a class="dropdown-item" href="#"
+						onclick="event.preventDefault();
+									document.getElementById('logout-form').submit();">
 						<i class="flaticon-power"></i>
 						<p>Se déconnecter</p>
 					</a>
