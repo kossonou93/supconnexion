@@ -59,7 +59,9 @@ class AnnonceController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
+        $input = $request->all();
+
+        $validator = Validator::make($input, [
             'intitule' => 'required',
             'description' => 'required',
             'date_limite' => 'required',
@@ -67,6 +69,14 @@ class AnnonceController extends Controller
             'langues' => 'required',
             'interventions' => 'required',
         ]);
+
+        $annonce = new Annonce();
+        $annonce->intitule = $input['intitule'];
+        $annonce->description = $input['description'];
+        $annonce->date_limite = $input['date_limite'];
+        $annonce->ecole_id = $input['ecole_id'];
+        $annonce->image = $input['image'];
+
         if ($request->file('image')) {
             @unlink(public_path('uploads/image/annonce'.$annonce->image));
             $annonceImage = $request->file('image');
@@ -75,13 +85,6 @@ class AnnonceController extends Controller
             $annonceImage->move($annoncePath, $annonceName);
             $annonce->image = $annonceName;
         }
-        $annonce = new Annonce([
-            'intitule' => $request->get('intitule'),
-            'description' => $request->get('description'),
-            'date_limite' => $request->get('date_limite'),
-            'ecole_id' => $request->get('ecole_id'),
-            'image' => $request->get('image'),
-        ]);
 
         $annonce->save();
 
