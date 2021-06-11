@@ -177,6 +177,7 @@ return [
         App\Providers\RouteServiceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        awssat\Visits\VisitsServiceProvider::class,
         //Yajra\Datatables\DatatablesServiceProvider::class,
 
     ],

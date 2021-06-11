@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 11 2021 11:02:24 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* composer.json
+* composer.lock
+
+
+Created files:
+* .autogit/logs/log-11-5-2021-10-32-10.txt
+
+
+Deleted files:
+
+
+Renamed files:
