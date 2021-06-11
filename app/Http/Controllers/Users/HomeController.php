@@ -53,8 +53,11 @@ class HomeController extends Controller
         $temoignages = Temoignage::all();
         $annonces = Annonce::all();
         $ecoles = Ecole::all();
+        $nbecole = $ecoles->count();
+        $nbannonce = $annonces->count();
+        $nbintervenant = $intervenants->count();
         $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
-        return view('home', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
+        return view('home', compact('nbecole', 'nbannonce', 'nbintervenant', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
     public function annonces()
