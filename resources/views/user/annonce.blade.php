@@ -52,21 +52,15 @@
                         <p>{{ $annonce->description }}</p>
                         <div class="tag">
                             <h4>Langue d'intervention</h4>
-                            <a href="#">PAINTING</a>
-                            <a href="#">CONSTRUCTION</a>
-                            <a href="#">PAINTING</a>
+                            @foreach ($langues as $langue)
+                                <a href="#">{{$langue->name}}</a>
+                            @endforeach
                         </div>
                         <div class="tag">
-                            <h4>Domaine(s) d'intervention pour le poste </h4>
-                            
-                            @foreach ($annonce->disciplines() as $discip)
-                                @foreach ($disciplines as $discipline)
-                                    @if ($discip == $discipline->id)
-                                        <a href="#">{{$discip}}</a>
-                                    @endif
-                                @endforeach 
-                            @endforeach
-                            
+                            <h4>Domaine(s) d'intervention pour le poste </h4>    
+                            @foreach ($disciplines as $discipline)
+                                <a href="#">{{$discipline->name}}</a>
+                            @endforeach 
                         </div>
                         <div class="tag">
                             <h4>Type(s) d'intervention</h4>
