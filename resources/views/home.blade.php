@@ -45,10 +45,10 @@
                     <h6>INTERVENANTS</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
-                    <i class="fa fa-eye" aria-hidden="true"></i>
-                    <span class="counter">125</span>
-                    <h6>VISITEURS</h6>
-                </div>
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    <span class="counter">{{$nbpartenaire}}</span>
+                    <h6>PARTENAIRES</h6>
+                </div>>
             </div>
         </div>
     </section>

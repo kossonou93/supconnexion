@@ -50,7 +50,12 @@
                             @endforeach
                         </a>
                         <p>{{ $annonce->description }}</p>
-                        
+                        <div class="tag">
+                            <h4>TAG</h4>
+                            <a href="#">PAINTING</a>
+                            <a href="#">CONSTRUCTION</a>
+                            <a href="#">PAINTING</a>
+                        </div>
                     </div>
                 </div>
             </div>

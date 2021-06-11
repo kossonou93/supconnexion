@@ -12,4 +12,8 @@ class Carousel extends Model
     protected $table = 'carousels';
 
     protected $fillable = ['photo', 'titre', 'soustitre', 'texte'];
+
+    //public function visits() {
+    ////    return visits($this);
+    //}
 }
