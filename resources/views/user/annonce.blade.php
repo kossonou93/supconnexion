@@ -51,22 +51,33 @@
                         </a>
                         <p>{{ $annonce->description }}</p>
                         <div class="tag">
-                            <h4>Langue d'intervention</h4>
+                            <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">Langue d'intervention</h4>
                             @foreach ($langues as $langue)
                                 <a href="#">{{$langue->name}}</a>
                             @endforeach
                         </div>
                         <div class="tag">
-                            <h4>Domaine(s) d'intervention pour le poste </h4>    
+                            <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">Domaine(s) d'intervention</h4>    
                             @foreach ($disciplines as $discipline)
                                 <a href="#">{{$discipline->name}}</a>
+                                <br><br>
                             @endforeach 
                         </div>
                         <div class="tag">
-                            <h4>Type(s) d'intervention</h4>
-                            <a href="#">PAINTING</a>
-                            <a href="#">CONSTRUCTION</a>
-                            <a href="#">PAINTING</a>
+                            <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">Type(s) d'intervention</h4>
+                            @foreach ($interventions as $intervention)
+                                <a href="#">{{$intervention->type}}</a>
+                                <br><br>
+                            @endforeach 
+                        </div>
+                        <div class="tag">
+                            <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">Date Limite</h4>
+                                <a href="#" style="font-family: 'Comic Sans MS'; font-weight: bold; color: red;">
+                                    <?php
+                                    echo date("d F Y", strtotime(" $annonce->date_limite "));
+                                ?>
+                                </a>
+                                <br>
                         </div>
                     </div>
                 </div>
