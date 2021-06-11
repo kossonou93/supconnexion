@@ -56,6 +56,8 @@ class HomeController extends Controller
         $nbecole = $ecoles->count();
         $nbannonce = $annonces->count();
         $nbintervenant = $intervenants->count();
+        //Carousel $carousel;
+        visists($carousels)->increment();
         $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
         return view('home', compact('nbecole', 'nbannonce', 'nbintervenant', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
