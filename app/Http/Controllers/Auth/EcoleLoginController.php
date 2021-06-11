@@ -12,7 +12,7 @@ class EcoleLoginController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('guest:ecole')->except('logout');
+        $this->middleware('guest:ecole')->except('logout', 'logoutEcole');
     }
 
     public function showLoginForm()
@@ -50,7 +50,7 @@ class EcoleLoginController extends Controller
         return redirect()->back()->withInput($request->only('email','remember'));
     }
 
-    public function logout(Request $request)
+    public function logoutEcole(Request $request)
     {
         Auth::guard('ecole')->logout();
         return redirect()->route('home')->with('success', 'Vous êtes déconnecté!');

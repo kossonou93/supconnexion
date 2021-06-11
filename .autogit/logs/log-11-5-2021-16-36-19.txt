@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 11 2021 16:36:19 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/ecole/annonce/add.blade.php
+* resources/views/admin/user/ecole/sidebar.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-11-5-2021-16-5-54.txt
+
+
+Deleted files:
+
+
+Renamed files:

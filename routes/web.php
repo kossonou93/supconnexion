@@ -100,7 +100,7 @@ Route::prefix('ecole')->group(function(){
     Route::get('checkout','CheckoutController@checkout');
     Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 
-    Route::post('/logout', 'Auth\EcoleLoginController@logout')->name('etablissement-deconnexion');
+    Route::get('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('ecole-logout');
 });
 
 // Intervenant routes
