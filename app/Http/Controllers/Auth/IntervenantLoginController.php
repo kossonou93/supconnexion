@@ -16,8 +16,7 @@ class IntervenantLoginController extends Controller
     //
     public function __construct()
     {
-        $this->middleware('guest:intervenant')->except('logout');
-        //$this->middleware('auth:intervenant');
+        $this->middleware('guest:intervenant')->except(['logout', 'logoutIntervenant']);
     }
 
     public function showLoginForm()
@@ -27,8 +26,6 @@ class IntervenantLoginController extends Controller
 
     public function login(Request $request)
     {
-        //if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
-            // Validate form data
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|min:8'
@@ -39,8 +36,6 @@ class IntervenantLoginController extends Controller
             return redirect()->route('intervenant.login')->with('info', "Cet email n'est pas enregistré!");
         } else {
             if ($user->email_verified_at === NULL) {
-                //Auth::logout();
-                //Mail::to($user->email)->send(new VerifyEmail($user));
                 return redirect()->route('intervenant.login')->with('info', 'Vérifiez votre adresse email pour confirmer votre inscription');
             } else {
                 if(Auth::guard('intervenant')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
@@ -52,13 +47,11 @@ class IntervenantLoginController extends Controller
             }
         }
         
-        
         return redirect()->back()->withInput($request->only('email','remember'));
-        //}
         
     }
 
-    public function logout(Request $request)
+    public function logoutIntervenant(Request $request)
     {
         Auth::guard('intervenant')->logout();
         return redirect()->route('home')->with('success', 'Vous êtes déconnecté!');

@@ -48,21 +48,7 @@
 									<img src="{{ asset('uploads/photo/profil/Placeholder.png') }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
 								</div>
 							</a>
-							<ul class="dropdown-menu dropdown-user animated fadeIn">
-								
-								<li>
-									<div class="dropdown-divider">
-										<form id="logout-form" action="{{ route('intervenant-logout') }}" method="POST" class="d-none">
-											@csrf
-										</form>
-									</div>
-									<a class="dropdown-item" href="{{ route('intervenant-logout') }}"
-										onclick="event.preventDefault();
-													document.getElementById('logout-form').submit();">
-										{{ __('Se déconnecter') }}
-									</a>
-								</li>
-							</ul>
+							
 						</li>
 						
 					</ul>

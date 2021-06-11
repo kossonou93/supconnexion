@@ -35,15 +35,15 @@
 					</a>
 				</li>
 				<li class="nav-item">
-					<form id="logout-form" action="{{ route('intervenant-logout') }}" method="POST" class="d-none">
-						@csrf
-					</form>
-					<a class="dropdown-item"href="#"
+					<a class="dropdown-item" href="{{ route('inter.logout') }}"
 						onclick="event.preventDefault();
 									document.getElementById('logout-form').submit();">
 						<i class="flaticon-power"></i>
 						<p>Se déconnecter</p>
 					</a>
+					<form id="logout-form" action="{{ route('inter.logout') }}" method="POST" class="d-none">
+						{{ csrf_field() }}
+					</form>
 				</li>
 			</ul>
 		</div>

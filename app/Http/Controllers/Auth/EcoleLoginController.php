@@ -9,10 +9,9 @@ use App\Ecole;
 
 class EcoleLoginController extends Controller
 {
-    //
     public function __construct()
     {
-        $this->middleware('guest:ecole')->except('logout', 'logoutEcole');
+        $this->middleware('guest:ecole')->except(['logout', 'logoutEcole']);
     }
 
     public function showLoginForm()
@@ -22,7 +21,6 @@ class EcoleLoginController extends Controller
 
     public function login(Request $request)
     {
-        // Validate form data
         $this->validate($request, [
             'email' => 'required|email',
             'password' => 'required|min:8'

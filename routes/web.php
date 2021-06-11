@@ -100,7 +100,7 @@ Route::prefix('ecole')->group(function(){
     Route::get('checkout','CheckoutController@checkout');
     Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 
-    Route::get('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('ecole-logout');
+    Route::post('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('eco.logout');
 });
 
 // Intervenant routes
@@ -120,7 +120,7 @@ Route::prefix('intervenant')->group(function(){
     Route::get('/temoignages', 'Users\Intervenant\IntervenantController@indexTemoignage')->name('temoignage.intervenant');
     Route::post('/temoignages', 'Users\Intervenant\IntervenantController@storeTemoignage')->name('temoignage.intervenant.submit');
     Route::resource('/offres', 'Users\Intervenant\OffreController');
-    Route::post('/logout', 'Auth\IntervenantLoginController@logout')->name('intervenant-logout');
+    Route::post('/logout', 'Auth\IntervenantLoginController@logoutIntervenant')->name('inter.logout');
 });
 
 Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');

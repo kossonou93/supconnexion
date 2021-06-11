@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 11 2021 17:06:36 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/EcoleLoginController.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-11-5-2021-16-36-19.txt
+
+
+Deleted files:
+
+
+Renamed files:
