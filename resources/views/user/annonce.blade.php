@@ -51,7 +51,25 @@
                         </a>
                         <p>{{ $annonce->description }}</p>
                         <div class="tag">
-                            <h4>TAG</h4>
+                            <h4>Langue d'intervention</h4>
+                            <a href="#">PAINTING</a>
+                            <a href="#">CONSTRUCTION</a>
+                            <a href="#">PAINTING</a>
+                        </div>
+                        <div class="tag">
+                            <h4>Domaine(s) d'intervention pour le poste </h4>
+                            
+                            @foreach ($annonce->disciplines() as $discip)
+                                @foreach ($disciplines as $discipline)
+                                    @if ($discip == $discipline->id)
+                                        <a href="#">{{$discip}}</a>
+                                    @endif
+                                @endforeach 
+                            @endforeach
+                            
+                        </div>
+                        <div class="tag">
+                            <h4>Type(s) d'intervention</h4>
                             <a href="#">PAINTING</a>
                             <a href="#">CONSTRUCTION</a>
                             <a href="#">PAINTING</a>

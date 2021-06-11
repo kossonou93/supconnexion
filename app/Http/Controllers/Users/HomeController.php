@@ -77,9 +77,12 @@ class HomeController extends Controller
 
     public function annonce($id)
     {
+        $disciplines = Discipline::all();
+        $interventions = Intervention::all();
+        $langues = Langue::all();
         $ecoles = Ecole::all();
         $annonce = Annonce::find($id);
-        return view('user.annonce', compact('annonce', 'ecoles'));
+        return view('user.annonce', compact('disciplines', 'langues', 'interventions', 'annonce', 'ecoles'));
     }
     
 }

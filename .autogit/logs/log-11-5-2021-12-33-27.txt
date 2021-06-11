@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 11 2021 12:33:27 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* app/Models/Carousel.php
+* resources/views/home.blade.php
+* resources/views/user/annonce.blade.php
+
+
+Created files:
+* .autogit/logs/log-11-5-2021-12-3-5.txt
+
+
+Deleted files:
+
+
+Renamed files:
