@@ -72,12 +72,23 @@
                         </div>
                         <div class="tag">
                             <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">Date Limite</h4>
-                                <a href="#" style="font-family: 'Comic Sans MS'; font-weight: bold; color: red;">
-                                    <?php
-                                    echo date("d F Y", strtotime(" $annonce->date_limite "));
-                                ?>
-                                </a>
-                                <br>
+                            <a href="#" style="font-family: 'Comic Sans MS'; font-weight: bold; color: red;">
+                                <?php
+                                echo date("d F Y", strtotime(" $annonce->date_limite "));
+                            ?>
+                            </a>
+                        </div>
+                        <div class="tag">
+                            <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">Dossier(s) de candidature</h4>
+                            <p style="font-family: 'Comic Sans MS'; font-weight: bold;">
+                                {{$annonce->dossier}}
+                            </p>
+                        </div>
+                        <div class="tag">
+                            <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">Adresse</h4>
+                            <p style="font-family: 'Comic Sans MS'; font-weight: bold; color: blue">
+                                {{$annonce->adresse}}
+                            </p>
                         </div>
                     </div>
                 </div>

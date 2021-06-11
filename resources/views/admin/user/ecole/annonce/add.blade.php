@@ -116,6 +116,22 @@
 															</div>
 														</div>
 													</div>
+													<div class="row mt-3">
+														<div class="col-md-8">
+															<div class="form-group form-group-default bordr">
+																<label>Dossier(s) de candidature *</label>
+																<textarea class="form-control input" name="dossier" placeholder="ajoutez le(s) dossier(s) de candidatures" rows="3" required></textarea></textarea>
+															</div>
+														</div>
+													</div>
+													<div class="row mt-3">
+														<div class="col-md-8">
+															<div class="form-group form-group-default bordr">
+																<label>Adresse *</label>
+																<input type="text" class="form-control input" name="adresse" placeholder="ajoutez votre email" required>
+															</div>
+														</div>
+													</div>
 													<br><br><br>
 													<div class="text-left mt-3 mb-3">
 														<button class="btn btn-success btn-rounded">Valider</button>

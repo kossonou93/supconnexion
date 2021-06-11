@@ -65,6 +65,8 @@ class AnnonceController extends Controller
             'intitule' => 'required',
             'description' => 'required',
             'date_limite' => 'required',
+            'dossier' => 'required',
+            'adresse' => 'required',
             'disciplines' => 'required',
             'langues' => 'required',
             'interventions' => 'required',
@@ -74,6 +76,8 @@ class AnnonceController extends Controller
         $annonce->intitule = $input['intitule'];
         $annonce->description = $input['description'];
         $annonce->date_limite = $input['date_limite'];
+        $annonce->dossier = $input['dossier'];
+        $annonce->adresse = $input['adresse'];
         $annonce->ecole_id = $input['ecole_id'];
         $annonce->image = $input['image'];
 
@@ -150,6 +154,8 @@ class AnnonceController extends Controller
             'intitule' => 'required',
             'description' => 'required',
             'date_limite' => 'required',
+            'dossier' => 'required',
+            'adresse' => 'required',
             'disciplines' => 'required',
             'langues' => 'required',
             'interventions' => 'required',
@@ -159,6 +165,8 @@ class AnnonceController extends Controller
         $annonce->intitule = $input['intitule'];
         $annonce->description = $input['description'];
         $annonce->date_limite = $input['date_limite'];
+        $annonce->dossier = $input['dossier'];
+        $annonce->adresse = $input['adresse'];
         $annonce->ecole_id = $input['ecole_id'];
         if(\File::exists(public_path('uploads/image/annonce/'.$annonce->image))){
             \File::delete(public_path('uploads/image/annonce/'.$annonce->image));
