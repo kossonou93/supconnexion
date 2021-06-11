@@ -40,11 +40,8 @@ Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback')
 Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
 Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
 
-//Route::get('auth/facebook/ecole', 'Auth\FacebookEcoleController@redirectToFacebook');
-//Route::get('auth/facebook/callback', 'Auth\FacebookEcoleController@handleFacebookCallback');
 // Admin routes
 Route::prefix('admin')->group(function(){
-    //Route::get('/form', 'Users\Admin\AdminController@form')->name('form');
     Route::get('/', 'Users\Admin\AdminController@index')->name('admin.dashboard');
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
@@ -93,7 +90,6 @@ Route::prefix('ecole')->group(function(){
     Route::get('/choix_annonces', 'Users\Ecole\EcoleController@choixannonces')->name('choix.annonces');
     Route::get('/annonce/paiements', 'Users\Ecole\EcoleController@paiement')->name('paiement.annonces');
     Route::get('/annonce/paiements/{post}', 'Users\Ecole\EcoleController@show')->name('paiement.annonces.show');
-    //Route::post('/search/intervenants/{post}', 'Users\Ecole\EcoleController@intervenant')->name('search.intervenant');
     Route::get('/intervenants', 'Users\Ecole\EcoleController@intervenants')->name('search.intervenants');
     Route::get('/intervenant/{post}', 'Users\Ecole\EcoleController@detailsintervenant')->name('details.intervenant');
     Route::get('/choix_paiements', 'Users\Ecole\EcoleController@choixpaiements')->name('choix.paiements');
@@ -104,7 +100,7 @@ Route::prefix('ecole')->group(function(){
     Route::get('checkout','CheckoutController@checkout');
     Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 
-    Route::post('/logout', 'Auth\IntervenantLoginController@logout')->name('ecole-logout');
+    Route::post('/logout', 'Auth\EcoleLoginController@logout')->name('etablissement-deconnexion');
 });
 
 // Intervenant routes

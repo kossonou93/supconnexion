@@ -128,7 +128,7 @@
 														<div class="col-md-8">
 															<div class="form-group form-group-default bordr">
 																<label>Adresse *</label>
-																<input type="text" class="form-control input" name="adresse" placeholder="ajoutez votre email" required>
+																<input type="text" class="form-control input" name="adresse" placeholder="ajoutez votre adresse email" required>
 															</div>
 														</div>
 													</div>
