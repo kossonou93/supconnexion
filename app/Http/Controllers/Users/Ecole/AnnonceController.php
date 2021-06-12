@@ -30,7 +30,7 @@ class AnnonceController extends Controller
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
         $langues = Langue::all();
-        $annonces = Annonce::all();
+        $annonces = Annonce::has('date_expiration', '>=', Carbon\Carbon::now());
         $ecole = Ecole::find(Auth::user()->id);
         $langs = $ecole->langues;
         $inters = $ecole->interventions;

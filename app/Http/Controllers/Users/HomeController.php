@@ -25,6 +25,7 @@ use App\Models\Actualite;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Annonce;
+use Carbon\Carbon;
 use App\Ecole;
 
 class HomeController extends Controller
@@ -51,7 +52,9 @@ class HomeController extends Controller
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
         $temoignages = Temoignage::all();
-        $annonces = Annonce::all();
+        $mytime = Carbon::now();
+        //dd($mytime);
+        $annonces = Annonce::where('date_expiration', '=<', $mytime);
         $ecoles = Ecole::all();
         $nbecole = $ecoles->count();
         $nbannonce = $annonces->count();
@@ -69,7 +72,7 @@ class HomeController extends Controller
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
         $temoignages = Temoignage::all();
-        $annonces = Annonce::all();
+        $annonces = Annonce::has('date_expiration', '>=', Carbon\Carbon::now());
         $ecoles = Ecole::all();
         $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
         return view('user.annonces', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
