@@ -101,12 +101,12 @@
 																					</div> <label class="pay">Numéro de Carte</label> <input type="text" name="holdername" placeholder="John Smith">
 																					<div class="row">
 																						<div class="col-8 col-md-6"> <label class="pay">Card Number</label> <input type="hidden" name="plan" value="" /> </div>
-																						<!--<div class="col-4 col-md-6"> <label class="pay">CVV</label> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> </div>-->
+																						<div class="col-4 col-md-6"> <label class="pay">CVV</label> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> </div>
 																					</div>
-																					<!--<div class="row">
+																					<div class="row">
 																						<div class="col-md-12"> <label class="pay">Expiration Date</label> </div>
 																						<div class="col-md-12"> <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> </div>
-																					</div>-->
+																					</div>
 																					<div class="row">
 																						<div class="col-md-6"><button id="card-button" class="btn btn-dark placeicon" type="submit" data-secret="{{ $intent }}"> EFFECTUER PAIEMENT </button></div>
 																					</div>
@@ -131,68 +131,69 @@
 		</div>
 	</div>
 	
-	<script>
-    // Custom styling can be passed to options when creating an Element.
-    // (Note that this demo uses a wider set of styles than the guide below.)
+	<script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Custom styling can be passed to options when creating an Element.
+        // (Note that this demo uses a wider set of styles than the guide below.)
 
-    var style = {
-        base: {
-            color: '#32325d',
-            lineHeight: '18px',
-            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-            fontSmoothing: 'antialiased',
-            fontSize: '16px',
-            '::placeholder': {
-                color: '#aab7c4'
+        var style = {
+            base: {
+                color: '#32325d',
+                lineHeight: '18px',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
             }
-        },
-        invalid: {
-            color: '#fa755a',
-            iconColor: '#fa755a'
-        }
-    };
-
-    const stripe = Stripe('{{ $stripe_key }}', { locale: 'en' }); // Create a Stripe client.
-    const elements = stripe.elements(); // Create an instance of Elements.
-    const cardElement = elements.create('card', { style: style }); // Create an instance of the card Element.
-    const cardButton = document.getElementById('card-button');
-    const clientSecret = cardButton.dataset.secret;
-
-    cardElement.mount('#card-element'); // Add an instance of the card Element into the `card-element` <div>.
-
-    // Handle real-time validation errors from the card Element.
-    cardElement.addEventListener('change', function(event) {
-        var displayError = document.getElementById('card-errors');
-        if (event.error) {
-            displayError.textContent = event.error.message;
-        } else {
-            displayError.textContent = '';
-        }
-    });
-
-    // Handle form submission.
-    var form = document.getElementById('payment-form');
-
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
-
-    stripe.handleCardPayment(clientSecret, cardElement, {
-            payment_method_data: {
-                //billing_details: { name: cardHolderName.value }
-            }
-        })
-        .then(function(result) {
-            console.log(result);
-            if (result.error) {
-                // Inform the user if there was an error.
-                var errorElement = document.getElementById('card-errors');
-                errorElement.textContent = result.error.message;
+        };
+    
+        const stripe = Stripe('{{ $stripe_key }}', { locale: 'en' }); // Create a Stripe client.
+        const elements = stripe.elements(); // Create an instance of Elements.
+        const cardElement = elements.create('card', { style: style }); // Create an instance of the card Element.
+        const cardButton = document.getElementById('card-button');
+        const clientSecret = cardButton.dataset.secret;
+    
+        cardElement.mount('#card-element'); // Add an instance of the card Element into the `card-element` <div>.
+    
+        // Handle real-time validation errors from the card Element.
+        cardElement.addEventListener('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
             } else {
-                console.log(result);
-                form.submit();
+                displayError.textContent = '';
             }
         });
-    });
-</script>
+    
+        // Handle form submission.
+        var form = document.getElementById('payment-form');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+        stripe.handleCardPayment(clientSecret, cardElement, {
+                payment_method_data: {
+                    //billing_details: { name: cardHolderName.value }
+                }
+            })
+            .then(function(result) {
+                console.log(result);
+                if (result.error) {
+                    // Inform the user if there was an error.
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    console.log(result);
+                    form.submit();
+                }
+            });
+        });
+    </script>
 <!--   Core JS Files   -->
 @include('admin/part/footer')
