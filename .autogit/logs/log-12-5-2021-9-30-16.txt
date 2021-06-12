@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jun 12 2021 09:30:16 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+
+
+Created files:
+* .autogit/logs/log-12-5-2021-8-29-35.txt
+
+
+Deleted files:
+
+
+Renamed files:
