@@ -14,6 +14,9 @@ Route::get('/', 'Users\HomeController@index')->name('home');
 Route::get('/annonces', 'Users\HomeController@annonces')->name('annonces');
 Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.details');
 Route::resource('/contacts', 'ContactController');
+
+Route::get('checkout','CheckoutController@checkout');
+    Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
 Route::post('/interv/password', 'Auth\IntervenantPasswordController@show')->name('interv.password.submit');
@@ -96,9 +99,6 @@ Route::prefix('ecole')->group(function(){
     Route::get('/paiements', 'Users\Ecole\PaiementController@index')->name('paiement.intervenants');
     Route::get('/paiements/{post}', 'Users\Ecole\PaiementController@show')->name('paiement.intervenants.show');
     Route::post('/paiements', 'Users\Ecole\PaiementController@store')->name('paiement.intervenants.store');
-
-    Route::get('checkout','CheckoutController@checkout');
-    Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 
     Route::post('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('eco.logout');
 });
