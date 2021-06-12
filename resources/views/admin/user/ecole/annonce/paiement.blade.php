@@ -1,5 +1,8 @@
 @include('admin/part/head')
 <body>
+	@php
+        $stripe_key = 'pk_test_25jwDLCJXdMgDWlc8JnE8ShD006Yp8Nvds';
+    @endphp
 <!--	<div class="contenu">-->
 		<div class="loader_bg">
 			<div class="loader"></div>
