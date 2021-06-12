@@ -11,6 +11,7 @@ use App\Ecole;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 use Auth;
+use Carbon\Carbon;
 
 class AnnonceController extends Controller
 {
@@ -30,7 +31,7 @@ class AnnonceController extends Controller
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
         $langues = Langue::all();
-        $annonces = Annonce::has('date_expiration', '>=', Carbon\Carbon::now());
+        $annonces = Annonce::where('date_expiration', '>=', Carbon::today()->toDateString())->get();
         $ecole = Ecole::find(Auth::user()->id);
         $langs = $ecole->langues;
         $inters = $ecole->interventions;
