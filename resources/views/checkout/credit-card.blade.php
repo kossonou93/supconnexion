@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--<!DOCTYPE html>
 <html lang="en">
 <head>
   <title>Stripe Payment</title>
@@ -8,49 +8,93 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
+</head>-->
+@include('admin/part/head')
 <body>
     @php
         $stripe_key = 'pk_test_25jwDLCJXdMgDWlc8JnE8ShD006Yp8Nvds';
     @endphp
-    <div class="container" style="margin-top:10%;margin-bottom:10%">
-        <div class="row justify-content-center">
-            <div class="col-md-12">
-                <div class="">
-                    <p>You will be charged rs 100</p>
-                </div>
-                <div class="card">
-                    <form action="{{route('checkout.credit-card')}}"  method="post" id="payment-form">
-                        @csrf                    
-                        <div class="form-group">
-                            <div class="card-header">
-                                <label for="card-element">
-                                    Enter your credit card information
-                                </label>
-                            </div>
-                            <div class="card-body">
-                                <div id="card-element">
-                                <!-- A Stripe Element will be inserted here. -->
-                                </div>
-                                <!-- Used to display form errors. -->
-                                <div id="card-errors" role="alert"></div>
-                                <input type="hidden" name="plan" value="" />
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                          <button
-                          id="card-button"
-                          class="btn btn-dark"
-                          type="submit"
-                          data-secret="{{ $intent }}"
-                        > Pay </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
+    <div class="loader_bg">
+        <div class="loader"></div>
     </div>
-    <script src="https://js.stripe.com/v3/"></script>
+    <div class="wrapper">
+
+        @include('admin/user/mainheader')
+
+					<!-- Sidebar -->
+		@include('admin/user/ecole/sidebar')
+
+            <div class="main-panel">
+				<div class="content">
+					<div class="page-inner">
+					@include('admin/user/menu1')
+						<div class="row">
+							<div class="col-md-12">
+								<div class="card card-with-nav">
+									<div class="card-header">
+										<div class="row row-nav-line">
+											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
+												<li class="nav-item">
+													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
+														PAIEMENT
+													</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="tab-content">
+										<div class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
+											
+											<div class="container" style="margin-top:10%;margin-bottom:10%">
+												<div class="row justify-content-center">
+													<div class="col-md-12">
+														<div class="">
+															<h2 id="heading2" class="text-danger">Méthode de Paiement</h2>
+														</div>
+														<div class="card">
+															<form action="{{route('checkout.credit-card')}}"  method="post" id="payment-form">
+																@csrf                    
+																<div class="form-group">
+																	<div class="card-header">
+																		<label for="card-element">
+																			Entrez les informations de votre carte de crédit
+																		</label>
+																	</div>
+																	<div class="card-body">
+																		<div id="card-element">
+																		<!-- A Stripe Element will be inserted here. -->
+																		</div>
+																		<!-- Used to display form errors. -->
+																		<div id="card-errors" role="alert"></div>
+																		<input type="hidden" name="plan" value="" />
+																	</div>
+																</div>
+																<div class="card-footer">
+																<button
+																id="card-button"
+																class="btn btn-dark"
+																type="submit"
+																data-secret="{{ $intent }}"
+																> EFFECTUER PAIEMENT </button>
+																</div>
+															</form>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://js.stripe.com/v3/"></script>
     <script>
         // Custom styling can be passed to options when creating an Element.
         // (Note that this demo uses a wider set of styles than the guide below.)
@@ -114,5 +158,5 @@
             });
         });
     </script>
-</body>
-</html>
+<!--   Core JS Files   -->
+@include('admin/part/footer')
