@@ -73,7 +73,7 @@ class HomeController extends Controller
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
         $temoignages = Temoignage::all();
-        $annonces = Annonce::has('date_expiration', '>=', Carbon\Carbon::now());
+        $annonces = Annonce::where('date_expiration', '>=', Carbon::today()->toDateString())->get();
         $ecoles = Ecole::all();
         $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
         return view('user.annonces', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
