@@ -11,7 +11,7 @@
 </head>
 <body>
     @php
-        $stripe_key = 'put your publishable key here';
+        $stripe_key = 'pk_test_25jwDLCJXdMgDWlc8JnE8ShD006Yp8Nvds';
     @endphp
     <div class="container" style="margin-top:10%;margin-bottom:10%">
         <div class="row justify-content-center">

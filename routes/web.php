@@ -16,7 +16,7 @@ Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.det
 Route::resource('/contacts', 'ContactController');
 
 Route::get('checkout','CheckoutController@checkout');
-    Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
+Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
 Route::post('/interv/password', 'Auth\IntervenantPasswordController@show')->name('interv.password.submit');
