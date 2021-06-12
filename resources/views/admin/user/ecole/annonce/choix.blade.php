@@ -55,7 +55,7 @@
                                                                         <li class="disable">15 Subdomains</li>-->
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('paiement.annonces.show',1)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.credit',1)}}">Souscrire</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -70,7 +70,7 @@
                                                                         <li>NB: Vous avez la possiblité de rénouveler votre offre</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('paiement.annonces.show',2)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.credit',2)}}">Souscrire</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -85,7 +85,7 @@
                                                                         <li>NB: Vous avez la possiblité de rénouveler votre offre</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('paiement.annonces.show',3)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.credit',3)}}">Souscrire</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
