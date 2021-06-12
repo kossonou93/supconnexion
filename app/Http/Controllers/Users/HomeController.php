@@ -52,9 +52,10 @@ class HomeController extends Controller
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
         $temoignages = Temoignage::all();
-        $mytime = Carbon::now();
+        $mytime = Carbon::now();//->toDateTimeString();
+        //$mytime = new \DateTime("now");
         //dd($mytime);
-        $annonces = Annonce::where('date_expiration', '=<', $mytime);
+        $annonces = Annonce::whereDate('date_expiration', '>', Carbon::today()->toDateString());
         $ecoles = Ecole::all();
         $nbecole = $ecoles->count();
         $nbannonce = $annonces->count();
