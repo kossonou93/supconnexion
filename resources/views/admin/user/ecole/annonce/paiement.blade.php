@@ -98,10 +98,13 @@
 																					<div class="radio-group">
 																						<div class='radio' data-value="credit"><img src="https://i.imgur.com/28akQFX.jpg" width="200px" height="60px"></div>
 																						<div class='radio' data-value="paypal"><img src="https://i.imgur.com/5QFsx7K.jpg" width="200px" height="60px"></div> <br>
-																					</div> <label class="pay">Numéro de Carte</label> <input type="text" name="holdername" placeholder="John Smith">
 																					<div class="row">
-																						<div class="col-8 col-md-6"> <label class="pay">Card Number</label> <input type="hidden" name="plan" value="" /> </div>
+																						<div class="col-8 col-md-6"> <label class="pay">Card Number</label> <input type="number" name="plan" minlength="12" maxlength="12" value="" placeholder="entrez numéro de carte" /> </div>
 																						<div class="col-4 col-md-6"> <label class="pay">CVV</label> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> </div>
+																					</div>
+																					<div class="row">
+																						<div class="col-md-12"> <label class="pay">Expiration Date</label> </div>
+																						<div class="col-md-12"> <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> </div>
 																					</div>
 																					<div class="row">
 																						<div class="col-md-12"> <label class="pay">Expiration Date</label> </div>
@@ -116,6 +119,43 @@
 																	</div>
 																</div>
 															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="container" style="margin-top:10%;margin-bottom:10%">
+												<div class="row justify-content-center">
+													<div class="col-md-12">
+														<div class="">
+															<p>Méthode de Paiement</p>
+														</div>
+														<div class="card">
+															<form action="{{route('checkout.credit-card')}}"  method="post" id="payment-form">
+																@csrf                    
+																<div class="form-group">
+																	<div class="card-header">
+																		<label for="card-element">
+																			Enter your credit card information
+																		</label>
+																	</div>
+																	<div class="card-body">
+																		<div id="card-element">
+																		<!-- A Stripe Element will be inserted here. -->
+																		</div>
+																		<!-- Used to display form errors. -->
+																		<div id="card-errors" role="alert"></div>
+																		<input type="hidden" name="plan" value="" />
+																	</div>
+																</div>
+																<div class="card-footer">
+																<button
+																id="card-button"
+																class="btn btn-dark"
+																type="submit"
+																data-secret="{{ $intent }}"
+																> Pay </button>
+																</div>
+															</form>
 														</div>
 													</div>
 												</div>

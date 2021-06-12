@@ -195,8 +195,11 @@ class EcoleController extends Controller
     public function show($id)
     {
         \Stripe\Stripe::setApiKey('sk_test_51Euv4QKIuiqzi53Po7l1ns7jKAsAsPZ9LWiqb1ZIhHBGh3IYea6Zf5frlb3dGXTuvUEYtlwukTw8DFJGtslkv0Pw00b1jq3EiP');
-        		
-		$amount = 100;
+
+        $ecole = Ecole::find(Auth::user()->id);
+        $pays = Pays::find($ecole->pays_id);
+        $offre = $id;
+        $amount = $offre;
 		$amount *= 100;
         $amount = (int) $amount;
         
@@ -208,10 +211,6 @@ class EcoleController extends Controller
 			'payment_method_types' => ['card'],
 		]);
 		$intent = $payment_intent->client_secret;
-
-        $ecole = Ecole::find(Auth::user()->id);
-        $pays = Pays::find($ecole->pays_id);
-        $offre = $id;
         switch ($id) {
             case 1:
                 $offre = 10;
