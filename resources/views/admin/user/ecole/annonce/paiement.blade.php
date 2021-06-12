@@ -153,7 +153,7 @@
 																class="btn btn-dark"
 																type="submit"
 																data-secret="{{ $intent }}"
-																> Pay </button>
+																> EFFECTUER PAIEMENT </button>
 																</div>
 															</form>
 														</div>

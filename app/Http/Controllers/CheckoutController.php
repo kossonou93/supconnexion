@@ -24,7 +24,7 @@ class CheckoutController extends Controller
 		]);
 		$intent = $payment_intent->client_secret;
 
-		return view('admin.user.ecole.paiement',compact('intent'));
+		return view('checkout.credit-card',compact('intent'));
 
     }
 
