@@ -199,7 +199,27 @@ class EcoleController extends Controller
         $ecole = Ecole::find(Auth::user()->id);
         $pays = Pays::find($ecole->pays_id);
         $offre = $id;
-        $amount = $offre;
+        
+        switch ($id) {
+            case 1:
+                $offre = 100;
+                break;
+            case 2:
+                $offre = 20;
+                //return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
+                break;
+            case 3:
+                $offre = 30;
+                //return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
+                break;
+            
+            default:
+                $offre = 10;
+                //return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
+                break;
+        }
+
+        $amount = 100;
 		$amount *= 100;
         $amount = (int) $amount;
         
@@ -211,25 +231,8 @@ class EcoleController extends Controller
 			'payment_method_types' => ['card'],
 		]);
 		$intent = $payment_intent->client_secret;
-        switch ($id) {
-            case 1:
-                $offre = 10;
-                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
-                break;
-            case 2:
-                $offre = 20;
-                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
-                break;
-            case 3:
-                $offre = 30;
-                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
-                break;
-            
-            default:
-                $offre = 10;
-                return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
-                break;
-        }
+
+        return view('admin.user.ecole.annonce.paiement', compact('offre', 'ecole', 'pays', 'intent'));
         
     }
 

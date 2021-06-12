@@ -127,7 +127,7 @@
 												<div class="row justify-content-center">
 													<div class="col-md-12">
 														<div class="">
-															<p>Méthode de Paiement</p>
+															<h2 id="heading2" class="text-danger">Méthode de Paiement</h2>
 														</div>
 														<div class="card">
 															<form action="{{route('checkout.credit-card')}}"  method="post" id="payment-form">
@@ -135,7 +135,7 @@
 																<div class="form-group">
 																	<div class="card-header">
 																		<label for="card-element">
-																			Enter your credit card information
+																			Entrez les informations de votre carte de crédit
 																		</label>
 																	</div>
 																	<div class="card-body">
