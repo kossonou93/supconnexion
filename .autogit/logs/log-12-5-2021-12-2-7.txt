@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jun 12 2021 12:02:07 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* resources/views/user/annonces.blade.php
+
+
+Created files:
+* .autogit/logs/log-12-5-2021-11-1-15.txt
+
+
+Deleted files:
+
+
+Renamed files:
