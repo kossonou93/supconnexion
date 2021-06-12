@@ -15,7 +15,7 @@ Route::get('/annonces', 'Users\HomeController@annonces')->name('annonces');
 Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.details');
 Route::resource('/contacts', 'ContactController');
 
-Route::get('checkout','CheckoutController@checkout');
+Route::get('checkout','CheckoutController@checkout')->name('checkout.credit');
 Route::post('checkout','CheckoutController@afterpayment')->name('checkout.credit-card');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');

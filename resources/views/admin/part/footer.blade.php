@@ -2,6 +2,8 @@
 
 <!-- Footer -->
 @include('sweetalert::alert')
+<script src="https://js.stripe.com/v3/"></script>
+
 <script src="{{ asset('admini/assets/js/core/jquery.3.2.1.min.js') }}"></script>
 <script>
     setTimeout(function(){
