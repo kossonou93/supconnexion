@@ -129,9 +129,9 @@
 																	<div class="row mt-3">
 																		<div class="col-md-12">
 																			<div class="form-group form-group-default bordr">
-																				<label for="exampleFormControlFile1">Logo</label>
+																				<label>Logo</label>
 																				<br>
-																				<input type="file" name="logo" class="form-control-file input" placeholder="{{ Auth::user()->logo }}" value="{{ Auth::user()->logo }}">
+																				<input id="logo" type="file" name="logo" class="form-control-file" placeholder="{{ Auth::user()->logo }}" value="{{ Auth::user()->logo }}"><span for="logo" class="form-control-file input">{{ Auth::user()->logo }}</span>
 																			</div>
 																		</div>
 																	</div>
@@ -212,7 +212,7 @@
 															<div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
 																<div class="profile-picture">
 																	<div class="avatar avatar-xxl">
-																		<img src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
+																		<img src="{{ asset('uploads/photo/logo/'.Auth::user()->logo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
 																	</div>
 																</div>
 															</div>

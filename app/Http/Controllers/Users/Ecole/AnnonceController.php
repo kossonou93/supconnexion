@@ -220,6 +220,7 @@ class AnnonceController extends Controller
             //dd('File does not exists.');
         //}
         $annonce = Annonce::find($id);
+        $annonce->date_expiration = new \DateTime('-1 day');
         $annonce->affiche = false;
         $annonce->save();
 

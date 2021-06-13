@@ -75,7 +75,7 @@ class EcoleController extends Controller
         $ecole->about = $input['about'];
         
         if ($request->file('logo')) {
-            @unlink(public_path('uploads/photo/logo'.$ecole->logo));
+            @unlink(public_path('uploads/photo/logo/'.$ecole->logo));
             $ecoleImage = $request->file('logo');
             $ecoleName  = date('d-m-Y') . '.' . uniqid() . '.' . $ecoleImage->getClientOriginalName();
             $ecolePath  = public_path('uploads/photo/logo');
@@ -98,7 +98,7 @@ class EcoleController extends Controller
             $ecole->disciplines()->sync(request('disciplines'));
         }
 
-        return redirect()->route('ecole.dashboard')->with('message', 'Ecole modifiée avec succès!');
+        return redirect()->route('ecole.dashboard')->with('success', 'Profil modifié avec succès!');
     }
 
     public function updateFormation(Request $request, $id)
