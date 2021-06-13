@@ -31,7 +31,7 @@ class AnnonceController extends Controller
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
         $langues = Langue::all();
-        $annonces = Annonce::where('date_expiration', '>=', Carbon::today()->toDateString())->get();
+        $annonces = Annonce::where('affiche', '=', 1)->get();
         $ecole = Ecole::find(Auth::user()->id);
         $langs = $ecole->langues;
         $inters = $ecole->interventions;
@@ -202,7 +202,7 @@ class AnnonceController extends Controller
         }
 
         
-        return redirect()->route('annonces.index')->with('message', 'Annonce créée avec succès!');
+        return redirect()->route('annonces.index')->with('success', 'Annonce créée avec succès!');
     }
 
     /**
@@ -213,13 +213,17 @@ class AnnonceController extends Controller
      */
     public function destroy($id)
     {
-        $annonce = Annonce::findOrFail($id);
-        if(\File::exists(public_path('uploads/image/annonce/'.$annonce->image))){
-            \File::delete(public_path('uploads/image/annonce/'.$annonce->image));
-        }else{
+        //$annonce = Annonce::findOrFail($id);
+        //if(\File::exists(public_path('uploads/image/annonce/'.$annonce->image))){
+        //    \File::delete(public_path('uploads/image/annonce/'.$annonce->image));
+        //}else{
             //dd('File does not exists.');
-        }
-        $annonce->delete();
+        //}
+        $annonce = Annonce::find($id);
+        $annonce->affiche = false;
+        $annonce->save();
+
+        //$annonce->delete();
         //Storage::delete('uploads/image/annonce'.$annonce->image);
         return redirect()->route('annonces.index')->with('success', 'Annonce supprimée avec succès');
     }

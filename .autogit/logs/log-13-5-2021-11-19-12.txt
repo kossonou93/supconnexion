@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jun 13 2021 11:19:12 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Intervenant/IntervenantController.php
+
+
+Created files:
+* .autogit/logs/log-13-5-2021-0-6-54.txt
+* "public/uploads/photo/profil/13-06-2021.60c5e888cc0f6.Kossonou Koffi Martin_M2_SIGL_2019_2020.pdf"
+* "public/uploads/photo/profil/13-06-2021.60c5e8ded507d.Kossonou Koffi Martin_M2_SIGL_2019_2020.pdf"
+
+
+Deleted files:
+* "public/uploads/photo/profil/19-11-2020.5fb68b4274498.MARTIN KOSSONOU.JPG"
+
+
+Renamed files:

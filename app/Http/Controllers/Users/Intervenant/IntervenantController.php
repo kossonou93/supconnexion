@@ -171,7 +171,7 @@ class IntervenantController extends Controller
         }
 
         if ($request->file('cv')) {
-            @unlink(public_path('uploads/cv'.$inter->cv));
+            @unlink(public_path('uploads/cv/'.$inter->cv));
             $cvImage = $request->file('cv');
             $cvName  = date('d-m-Y') . '.' . uniqid() . '.' . $cvImage->getClientOriginalName();
             $cvPath  = public_path('uploads/cv');
@@ -229,7 +229,7 @@ class IntervenantController extends Controller
         //$inter->contrats()->attach(request('contrats'));
        
 
-        return redirect()->route('intervenant.dashboard')->with('success', 'Intervenant modifiée avec succès!');
+        return redirect()->route('intervenant.dashboard')->with('success', 'Profil modifié avec succès!');
     }
 
     public function updateFormation(Request $request, $id)
@@ -245,7 +245,7 @@ class IntervenantController extends Controller
             $inter->formations()->sync(request('formations'));
         }
 
-        return redirect()->route('intervenant.dashboard')->with('success', "Type d'école ajouté avec succès!");
+        return redirect()->route('intervenant.dashboard')->with('success', "Type d'école modifié avec succès!");
     }
     
     public function updateEcole(Request $request, $id)
