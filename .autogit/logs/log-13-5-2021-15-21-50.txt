@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jun 13 2021 15:21:50 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* public/users/annonce/css/style.css
+
+
+Created files:
+* .autogit/logs/log-13-5-2021-14-51-34.txt
+
+
+Deleted files:
+
+
+Renamed files:
