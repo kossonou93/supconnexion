@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jun 13 2021 13:20:28 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/ecole/sidebar.blade.php
+* resources/views/admin/user/intervenant/sidebar.blade.php
+* resources/views/ecole.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-13-5-2021-12-50-10.txt
+
+
+Deleted files:
+
+
+Renamed files:
