@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jun 13 2021 14:21:07 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Ecole/AnnonceController.php
+
+
+Created files:
+* .autogit/logs/log-13-5-2021-13-50-49.txt
+* "public/uploads/photo/profil/13-06-2021.60c60e112c7db.MARTIN KOSSONOU 2.jpeg"
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]
