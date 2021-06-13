@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jun 13 2021 13:50:49 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Intervenant/IntervenantController.php
+
+
+Created files:
+* .autogit/logs/log-13-5-2021-13-20-28.txt
+
+
+Deleted files:
+* "public/uploads/photo/profil/13-06-2021.60c5ead6f38d3.MARTIN KOSSONOU 2.jpeg"
+
+
+Renamed files:

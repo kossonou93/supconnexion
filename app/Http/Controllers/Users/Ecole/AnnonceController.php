@@ -83,7 +83,7 @@ class AnnonceController extends Controller
         $annonce->image = $input['image'];
 
         if ($request->file('image')) {
-            @unlink(public_path('uploads/image/annonce'.$annonce->image));
+            @unlink(public_path('uploads/image/annonce/'.$annonce->image));
             $annonceImage = $request->file('image');
             $annonceName  = date('d-m-Y') . '.' . uniqid() . '.' . $annonceImage->getClientOriginalName();
             $annoncePath  = public_path('uploads/image/annonce');
@@ -169,17 +169,11 @@ class AnnonceController extends Controller
         $annonce->dossier = $input['dossier'];
         $annonce->adresse = $input['adresse'];
         $annonce->ecole_id = $input['ecole_id'];
-        if(\File::exists(public_path('uploads/image/annonce/'.$annonce->image))){
-            \File::delete(public_path('uploads/image/annonce/'.$annonce->image));
-        }else{
-            //dd('uploads/image/annonce/'.$annonce->image);
-        }
         $annonce->image = $input['image'];
 
 
         if ($request->file('image')) {
-            //@unlink(public_path('uploads/image/annonce'.$annonce->image));
-            
+            @unlink(public_path('uploads/image/annonce/'.$annonce->image));
             $annonceImage = $request->file('image');
             $annonceName  = date('d-m-Y') . '.' . uniqid() . '.' . $annonceImage->getClientOriginalName();
             $annoncePath  = public_path('uploads/image/annonce');
