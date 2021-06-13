@@ -33,7 +33,8 @@
         left: 0; }
       .owl-carousel .owl-nav .owl-next {
         right: 0; }
-    /*.owl-carousel .owl-dots {
+    
+    .owl-carousel .owl-dots {
       text-align: center;
       margin-top: 20px; }
       .owl-carousel .owl-dots .owl-dot {
@@ -46,7 +47,8 @@
         .owl-carousel .owl-dots .owl-dot:hover, .owl-carousel .owl-dots .owl-dot:focus {
           outline: none !important; }
         .owl-carousel .owl-dots .owl-dot.active {
-          background: #ff487e; }*/
+          background: #ff487e; }
+          
     .owl-carousel:hover .owl-nav .owl-prev,
     .owl-carousel:hover .owl-nav .owl-next {
       opacity: 1; }
