@@ -155,9 +155,14 @@ class IntervenantController extends Controller
         $inter->ville_id = $input['ville_id'];
         $inter->pays_id = $input['pays_id'];
         $inter->competence = $input['competence'];
-        
+
+        if(\File::exists(public_path('uploads/photo/profil/'.$inter->photo))){
+            \File::delete(public_path('uploads/photo/profil/'.$inter->photo));
+        }else{
+            //dd('uploads/image/annonce/'.$annonce->image);
+        }
         if ($request->file('photo')) {
-            @unlink(public_path('uploads/photo/profil'.$inter->photo));
+            //@unlink(public_path('uploads/photo/profil'.$inter->photo));
             $interImage = $request->file('photo');
             $interName  = date('d-m-Y') . '.' . uniqid() . '.' . $interImage->getClientOriginalName();
             $interPath  = public_path('uploads/photo/profil');
@@ -224,7 +229,7 @@ class IntervenantController extends Controller
         //$inter->contrats()->attach(request('contrats'));
        
 
-        return redirect()->route('intervenant.dashboard')->with('message', 'Intervenant modifiée avec succès!');
+        return redirect()->route('intervenant.dashboard')->with('success', 'Intervenant modifiée avec succès!');
     }
 
     public function updateFormation(Request $request, $id)
@@ -240,7 +245,7 @@ class IntervenantController extends Controller
             $inter->formations()->sync(request('formations'));
         }
 
-        return redirect()->route('intervenant.dashboard')->with('message', "Type d'école ajouté avec succès!");
+        return redirect()->route('intervenant.dashboard')->with('success', "Type d'école ajouté avec succès!");
     }
     
     public function updateEcole(Request $request, $id)
