@@ -163,7 +163,7 @@
 																				<div class="col-md-6">
 																					<div class="form-group form-group-default bordr">
 																						<label>Ajoutez votre Curriculum Vitae, à jour</label>
-																						<input type="file" name="cv" class="form-control-file input" value="{{ Auth::user()->cv }}" placeholder="{{ Auth::user()->cv }}">
+																						<input type="file" name="cv" class="form-control-file" value="{{ Auth::user()->cv }}" placeholder="{{ Auth::user()->cv }}"><span for="cv" class="form-control-file input">{{ Auth::user()->cv }}</span>
 																					</div>
 																				</div>
 																			</div>
@@ -185,7 +185,7 @@
 																				<div class="form-group form-group-default bordr" style="border-radius: 10px; border: 3px solid #ccc;">
 																					<label for="exampleFormControlFile1">Photo de Profil</label>
 																					<br>
-																					<input type="file" name="photo" class="form-control-file input" placeholder="{{ Auth::user()->photo }}" value="{{ Auth::user()->photo }}">
+																					<input type="file" name="photo" class="form-control-file" placeholder="{{ Auth::user()->photo }}" value="{{ Auth::user()->photo }}"><span for="photo" class="form-control-file input">{{ Auth::user()->photo }}</span>
 																				</div>
 																			</div>
 																		</div>
@@ -407,7 +407,12 @@
 																<div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
 																	<div class="profile-picture">
 																		<div class="avatar avatar-xxl">
-																			<img src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
+																			<img @if (Auth::user()->photo == NULL)
+																				src="{{ asset('uploads/photo/profil/Placeholder.png') }}"
+																			@else
+																				src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}"
+																			@endif
+																		 alt="" class="avatar-img rounded-circle">
 																		</div>
 																	</div>
 																</div>

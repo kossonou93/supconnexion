@@ -212,7 +212,12 @@
 															<div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
 																<div class="profile-picture">
 																	<div class="avatar avatar-xxl">
-																		<img src="{{ asset('uploads/photo/logo/'.Auth::user()->logo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
+																		<img @if (Auth::user()->logo == NULL)
+																				src="{{ asset('uploads/photo/profil/Placeholder.png') }}"
+																			@else
+																				src="{{ asset('uploads/photo/logo/'.Auth::user()->logo) }}"
+																			@endif
+																		 alt="" class="avatar-img rounded-circle">
 																	</div>
 																</div>
 															</div>

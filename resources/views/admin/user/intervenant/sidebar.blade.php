@@ -5,7 +5,12 @@
 		<div class="sidebar-content">
 			<div class="user">
 				<div class="avatar-sm float-left mr-2">
-					<img src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}" alt="" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" class="avatar-img rounded-circle">
+					<img @if (Auth::user()->photo == NULL)
+																				src="{{ asset('uploads/photo/profil/Placeholder.png') }}"
+																			@else
+																				src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}"
+																			@endif
+																		 alt="" class="avatar-img rounded-circle">
 				</div>
 				<div class="info">
 					<a data-toggle="collapse" href="#collapseExample" aria-expanded="true">
