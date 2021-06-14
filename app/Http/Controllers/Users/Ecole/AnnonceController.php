@@ -52,6 +52,14 @@ class AnnonceController extends Controller
         return view('admin.user.ecole.annonce.add', compact('disciplines', 'langues', 'interventions'));
     }
 
+    public function creer()
+    {
+        $disciplines = Discipline::all();
+        $interventions = Intervention::all();
+        $langues = Langue::all();
+        return view('admin.user.ecole.annonce.add', compact('disciplines', 'langues', 'interventions'));
+    }
+
     /**
      * Store a newly created resource in storage.
      *

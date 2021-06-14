@@ -91,6 +91,7 @@ Route::prefix('ecole')->group(function(){
     Route::get('/temoignages', 'Users\Ecole\EcoleController@indexTemoignage')->name('temoignage.ecole');
     Route::post('/temoignages', 'Users\Ecole\EcoleController@storeTemoignage')->name('temoignage.ecole.submit');
     Route::resource('/annonces', 'Users\Ecole\AnnonceController');
+    Route::get('/annonce/create/{post}', 'Users\Ecole\AnnonceController@creer')->name('annonce.creer');
     Route::get('/choix_annonces', 'Users\Ecole\EcoleController@choixannonces')->name('choix.annonces');
     Route::get('/annonce/paiements', 'Users\Ecole\EcoleController@paiement')->name('paiement.annonces');
     Route::get('/annonce/paiements/{post}', 'Users\Ecole\EcoleController@show')->name('paiement.annonces.show');
