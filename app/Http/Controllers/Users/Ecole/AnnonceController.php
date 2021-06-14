@@ -52,8 +52,10 @@ class AnnonceController extends Controller
         return view('admin.user.ecole.annonce.add', compact('disciplines', 'langues', 'interventions'));
     }
 
-    public function creer()
+    public function creer($post)
     {
+        $decryt = Crypt::decrypt($post);
+        dd($decryt);
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
         $langues = Langue::all();

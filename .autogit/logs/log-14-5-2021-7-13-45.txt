@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 14 2021 07:13:45 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-14-5-2021-6-43-27.txt
+
+
+Deleted files:
+
+
+Renamed files:
