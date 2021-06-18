@@ -54,7 +54,7 @@ class AnnonceController extends Controller
 
     public function creer($id)
     {
-        $decryt = \Crypt::encrypt($id);
+        $decryt = \Crypt::decrypt($id);
         dd($decryt);
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
