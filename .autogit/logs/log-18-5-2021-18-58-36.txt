@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 18 2021 18:58:36 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/part/head.blade.php
+* resources/views/admin/part/mainheader.blade.php
+* resources/views/admin/user/mainheader.blade.php
+
+
+Created files:
+* .autogit/logs/log-18-5-2021-18-28-13.txt
+
+
+Deleted files:
+
+
+Renamed files:
