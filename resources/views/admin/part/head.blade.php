@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="csrf-token" content="{{ csrf_token() }}" />
-	<title>Sup'Connexion Dashboard</title>
+	<title>Sup'Connexion</title>
 	<link href="{{ asset('admini/styles/multiselect.css') }}" rel="stylesheet"/>
 
 	<script src="{{ asset('admini/scripts/multiselect.min.js') }}"></script>
