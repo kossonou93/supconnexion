@@ -30,7 +30,7 @@ class OffreController extends Controller
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
         $langues = Langue::all();
-        $annonces = Annonce::all();
+        $annonces = Annonce::where('affiche', '=', 1)->get();
         $ecoles = Ecole::all();
         $inters = $inter->interventions;
         $discips = $inter->disciplines;

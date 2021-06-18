@@ -25,7 +25,7 @@
 										<div class="row row-nav-line">
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
+													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
 														EDITER ANNONCE
 													</a>
 												</li>
@@ -35,7 +35,7 @@
 
 									<div class="tab-content" id="myTabContent">
 									<div class="tab-pane fade active show" id="home" role="tabpanel" aria-labelledby="home-tab">
-										<div class="card bordr-card">	
+										<div class="card bordr-card bordr-card">	
 											<div class="card-body">
 												<form action="{{ route('annonces.update',$annonce->id) }}" method="post" enctype="multipart/form-data">
 													{{ csrf_field() }}

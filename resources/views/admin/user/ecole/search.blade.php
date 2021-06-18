@@ -21,11 +21,11 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card card-with-nav">
-									<div class="card-header">
+									<div class="card-header bordr-card">
 										<div class="row row-nav-line">
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
+													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
 														INTERVENANTS
 													</a>
 												</li>
@@ -35,54 +35,56 @@
 
 									<div class="tab-content">
 										<div class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
-											<div class="card-body">
-												<br>
-												<table id="add-row" class="display table table-striped table-hover" >
-													<thead>
-														<tr>
-															<th>Offre num. </th>
-															<th>Nom</th>
-															<th>Fonction</th>
-															<th>Voir CV</th>
-															<th>En savoir plus</th>
-														</tr>
-													</thead>
-													<tbody>
-														<?php
-															$i=1;
-														?>
-														@foreach ( $intervenants as $intervenant )
+											<div class="card bordr-card">	
+												<div class="card-body">
+													<br>
+													<table id="add-row" class="display table table-striped table-hover" >
+														<thead>
 															<tr>
-																<td>
-																	<?php
-																		echo $i;
-																		++$i;
-																	?>
-																</td>		
-																<td>
-																	{{$intervenant->name}}
-																</td>
-																<td>
-																	{{$intervenant->fonction}}
-																</td>
-																<td>
-																	<a class="btn btn" href="{{ asset('uploads/cv/'.$intervenant->cv) }}" role="button"><i class="flaticon-file"></i></a>
-																</td>
-																<td>
-                                                                    <a class="btn btn" href="{{ route('details.intervenant',$intervenant->id)}}" role="button">voir plus</a>
-																</td>
+																<th>Offre num. </th>
+																<th>Nom</th>
+																<th>Fonction</th>
+																<th>Voir CV</th>
+																<th>En savoir plus</th>
 															</tr>
-														@endforeach
-													</tbody>
-												</table>
-												<div class="row mt-3">
-													<div class="col-md-12">
-														<div class="text-white text-center rgba-stylish-strong py-1 px-4">
-															<ul class="specification-list">
-																<li>
-																	<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">Pour retrouver tous les INTERVENANTS <a href="{{route('choix.paiements')}}" class="btn btn-danger btn-rounded">Cliquez-ici </a></h3>
-																</li>
-															</ul> 
+														</thead>
+														<tbody>
+															<?php
+																$i=1;
+															?>
+															@foreach ( $intervenants as $intervenant )
+																<tr>
+																	<td>
+																		<?php
+																			echo $i;
+																			++$i;
+																		?>
+																	</td>		
+																	<td>
+																		{{$intervenant->name}}
+																	</td>
+																	<td>
+																		{{$intervenant->fonction}}
+																	</td>
+																	<td>
+																		<a class="btn btn" href="{{ asset('uploads/cv/'.$intervenant->cv) }}" role="button"><i class="flaticon-file"></i></a>
+																	</td>
+																	<td>
+																		<a class="btn btn" href="{{ route('details.intervenant',$intervenant->id)}}" role="button">voir plus</a>
+																	</td>
+																</tr>
+															@endforeach
+														</tbody>
+													</table>
+													<div class="row mt-3">
+														<div class="col-md-12">
+															<div class="text-white text-center rgba-stylish-strong py-1 px-4">
+																<ul class="specification-list">
+																	<li>
+																		<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">Pour retrouver tous les INTERVENANTS <a href="{{route('choix.paiements')}}" class="btn btn-danger btn-rounded">Cliquez-ici </a></h3>
+																	</li>
+																</ul> 
+															</div>
 														</div>
 													</div>
 												</div>

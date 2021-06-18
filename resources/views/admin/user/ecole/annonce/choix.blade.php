@@ -22,12 +22,12 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card card-with-nav">
-									<div class="card-header">
+									<div class="card-header bordr-card">
 										<div class="row row-nav-line">
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														AJOUTER UNE ANNONCE
+													<a class="nav-link" style="font-size: 20px; font-weight: 900; color: #371F57;" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
+														CHOIX FORFAIT
 													</a>
 												</li>
 											</ul>
@@ -36,8 +36,10 @@
 
 									<div class="tab-content">
 										<div class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
-											<div class="card-body">
-												<br>
+											<div class="card-body bordr-card">
+                                                <br>
+                                                <h3 style='font-weight: bold; color:blue; text-align: center; font-family: "Comic Sans MS"'>Souscrivez au forfait qui vous convient et ajoutez votre annonce. Votre annonce restera sur notre plateforme selon le temps qui est mentionné dans le forfait.</h3>
+												<br><br><br>
 												<div class="demo">
                                                     <div class="container">
                                                         <div class="row">
@@ -46,10 +48,10 @@
                                                                     <div class="pricingTable-header">
                                                                         <h3 class="title">Standard</h3>
                                                                     </div>
-                                                                    <div class="price-value">10,00 $</div>
+                                                                    <div class="price-value">10 000 FCFA</div>
                                                                     <ul class="pricing-content">
-                                                                        <li style="color:black; font-family: 'Comic Sans MS'">1 mois d'autorisation pour faire passer votre annonce</li>
-                                                                        <li>NB: Vous avez la possiblité de rénouveler votre offre</li>
+                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">1 mois </span><span style="color:red">d'autorisation pour faire passer votre annonce</span></li>
+                                                                        <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre offre</li>
                                                                         <!--<li class="disable">50GB Bandwidth</li>
                                                                         <li>Maintenance</li>
                                                                         <li class="disable">15 Subdomains</li>-->
@@ -64,10 +66,10 @@
                                                                     <div class="pricingTable-header">
                                                                         <h3 class="title">Business</h3>
                                                                     </div>
-                                                                    <div class="price-value">20,00 $</div>
+                                                                    <div class="price-value">20 000 FCFA</div>
                                                                     <ul class="pricing-content">
-                                                                        <li style="color:black; font-family: 'Comic Sans MS'">3 mois d'autorisation pour faire passer votre annonce</li>
-                                                                        <li>NB: Vous avez la possiblité de rénouveler votre offre</li>
+                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">3 mois </span><span style="color:red">d'autorisation pour faire passer votre annonce</span></li>
+                                                                        <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre offre</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
                                                                         <a href="{{ route('checkout.credit',2)}}">Souscrire</a>
@@ -79,10 +81,10 @@
                                                                     <div class="pricingTable-header">
                                                                         <h3 class="title">Premium</h3>
                                                                     </div>
-                                                                    <div class="price-value">30,00 $</div>
+                                                                    <div class="price-value">30 000 FCFA</div>
                                                                     <ul class="pricing-content">
-                                                                        <li style="color:black; font-family: 'Comic Sans MS'">6 mois d'autorisation pour faire passer votre annonce</li>
-                                                                        <li>NB: Vous avez la possiblité de rénouveler votre offre</li>
+                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">6 mois </span><span style="color:red">d'autorisation pour faire passer votre annonce</span></li>
+                                                                        <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre offre</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
                                                                         <a href="{{ route('checkout.credit',3)}}">Souscrire</a>

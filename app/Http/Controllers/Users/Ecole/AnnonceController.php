@@ -52,7 +52,7 @@ class AnnonceController extends Controller
         return view('admin.user.ecole.annonce.add', compact('disciplines', 'langues', 'interventions'));
     }
 
-    public function creer($post)
+    /*public function creer($post)
     {
         $decryt = Crypt::decrypt($post);
         dd($decryt);
@@ -61,7 +61,7 @@ class AnnonceController extends Controller
         $langues = Langue::all();
         return view('admin.user.ecole.annonce.add', compact('disciplines', 'langues', 'interventions'));
     }
-
+    */
     /**
      * Store a newly created resource in storage.
      *

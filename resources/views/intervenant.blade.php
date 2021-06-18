@@ -25,25 +25,25 @@
 										<div class="row row-nav-line">
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link active show" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
+													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link active show" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
 														<i class="fas fa-user-cog"></i>
 														Profil
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" id="profile-tab" href="#profile" role="tab" aria-selected="false">
+													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="profile-tab" href="#profile" role="tab" aria-selected="false">
 													<i class="fas fa-graduation-cap"></i>
 													Diplômes
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" id="experience-tab" href="#experience" role="tab" aria-selected="false">
-													<i class="fas fa-graduation-cap"></i>
+													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="experience-tab" href="#experience" role="tab" aria-selected="false">
+													<i class="fas fa-award"></i>
 													Expériences
 													</a>
 												</li>
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" id="contact-tab" href="#contact" role="tab" aria-selected="false">
+													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="contact-tab" href="#contact" role="tab" aria-selected="false">
 													<i class="fas fa-school"></i>
 													Types d'écoles
 													</a>
@@ -60,6 +60,7 @@
 														<div class="col-md-8">
 															<div class="card">
 																<div class="card-body">
+																	<br>
 																	<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Renseignez mes informations personnelles</h3>
 																	<br>
 																	<form action="{{ route('intervenant.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">

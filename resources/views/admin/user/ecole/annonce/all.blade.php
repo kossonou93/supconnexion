@@ -21,11 +21,11 @@
 						<div class="row">
 							<div class="col-md-12">
 								<div class="card card-with-nav">
-									<div class="card-header">
+									<div class="card-header bordr-card">
 										<div class="row row-nav-line">
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
-													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
+													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
 														MES ANNONCES
 													</a>
 												</li>
@@ -35,7 +35,7 @@
 
 									<div class="tab-content">
 										<div class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
-											<div class="card-body">
+											<div class="card-body bordr-card">
 											<br>
 											<h4></h4>
 												<br><br>

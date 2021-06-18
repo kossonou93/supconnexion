@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 14 2021 07:44:06 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Ecole/AnnonceController.php
+* resources/views/admin/user/ecole/sidebar.blade.php
+* resources/views/checkout/credit-card.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-14-5-2021-7-13-45.txt
+
+
+Deleted files:
+
+
+Renamed files:

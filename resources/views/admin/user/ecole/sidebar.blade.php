@@ -31,7 +31,7 @@
 				<li class="nav-item active">
 					<a href="{{route('ecole.dashboard')}}">
 						<i class="flaticon-profile"></i>
-						<p>Profil Ecole</p>
+						<p>Profil Etablissement</p>
 					</a>
 				</li>
 				<li class="nav-item">
