@@ -61,6 +61,6 @@ class CheckoutController extends Controller
     public function afterPayment()
     {
         //echo 'Payment Has been Received';
-        return redirect()->route('annonces.create')->with('success', 'Paiement éffectué avec succès!');
+        return redirect()->route('annonce.creer')->with('success', 'Paiement éffectué avec succès!');
     }
 }

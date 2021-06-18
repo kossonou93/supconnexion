@@ -53,7 +53,7 @@
 															<h2 id="heading2" class="text-danger">Méthode de Paiement</h2>
 														</div>
 														<div class="card">
-															<form action="{{route('checkout.credit-card', Crypt::encrypt(Auth::user()->id) )}}"  method="post" id="payment-form">
+															<form action="{{route('checkout.credit-card')}}"  method="post" id="payment-form">
 																@csrf                    
 																<div class="form-group">
 																	<div class="card-header">

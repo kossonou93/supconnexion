@@ -1,0 +1,31 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 18 2021 16:26:53 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/CheckoutController.php
+* app/Http/Controllers/Users/Ecole/AnnonceController.php
+* app/Http/Controllers/Users/Intervenant/OffreController.php
+* public/admini/assets/css/style.css
+* resources/views/admin/user/ecole/annonce/add.blade.php
+* resources/views/admin/user/ecole/annonce/all.blade.php
+* resources/views/admin/user/ecole/annonce/choix.blade.php
+* resources/views/admin/user/ecole/annonce/edit.blade.php
+* resources/views/admin/user/ecole/choix_paiement.blade.php
+* resources/views/admin/user/ecole/detailsintervenant.blade.php
+* resources/views/admin/user/ecole/paiement.blade.php
+* resources/views/admin/user/ecole/search.blade.php
+* resources/views/admin/user/ecole/sidebar.blade.php
+* resources/views/admin/user/intervenant/offre/add.blade.php
+* resources/views/ecole.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-14-5-2021-7-44-6.txt
+
+
+Deleted files:
+
+
+Renamed files:
