@@ -55,11 +55,15 @@ class AnnonceController extends Controller
     public function creer($id)
     {
         $decryt = \Crypt::decrypt($id);
-        dd($decryt);
-        $disciplines = Discipline::all();
-        $interventions = Intervention::all();
-        $langues = Langue::all();
-        return view('admin.user.ecole.annonce.add', compact('disciplines', 'langues', 'interventions'));
+        //dd($decryt);
+        if ($decryt == Auth::user()->id) {
+            $disciplines = Discipline::all();
+            $interventions = Intervention::all();
+            $langues = Langue::all();
+            return view('admin.user.ecole.annonce.add', compact('disciplines', 'langues', 'interventions'));
+        } else {
+            return redirect()->route('checkout.credit')->with('errors', 'erreur de paiement');
+        }
     }
     
     /**

@@ -15,10 +15,6 @@ Route::get('/', 'Users\HomeController@index')->name('home');
 Route::get('/annonces', 'Users\HomeController@annonces')->name('annonces');
 Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.details');
 Route::resource('/contacts', 'ContactController');
-
-Route::get('/checkout/{post}','CheckoutController@checkout')->name('checkout.credit');
-//->name('checkout.credit');
-Route::post('checkout/{post}','CheckoutController@afterpayment')->name('checkout.credit-card');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
 Route::post('/interv/password', 'Auth\IntervenantPasswordController@show')->name('interv.password.submit');
@@ -93,7 +89,7 @@ Route::prefix('ecole')->group(function(){
     Route::post('/temoignages', 'Users\Ecole\EcoleController@storeTemoignage')->name('temoignage.ecole.submit');
     Route::resource('/annonces', 'Users\Ecole\AnnonceController');
     Route::get('/annonce/create/{post}', 'Users\Ecole\AnnonceController@creer')->name('annonce.creer');
-    Route::get('/choix_annonces', 'Users\Ecole\EcoleController@choixannonces')->name('choix.annonces');
+    Route::get('/choix_forfait', 'Users\Ecole\EcoleController@choixannonces')->name('choix.annonces');
     Route::get('/annonce/paiements', 'Users\Ecole\EcoleController@paiement')->name('paiement.annonces');
     Route::get('/annonce/paiements/{post}', 'Users\Ecole\EcoleController@show')->name('paiement.annonces.show');
     Route::get('/intervenants', 'Users\Ecole\EcoleController@intervenants')->name('search.intervenants');
@@ -102,7 +98,9 @@ Route::prefix('ecole')->group(function(){
     Route::get('/paiements', 'Users\Ecole\PaiementController@index')->name('paiement.intervenants');
     Route::get('/paiements/{post}', 'Users\Ecole\PaiementController@show')->name('paiement.intervenants.show');
     Route::post('/paiements', 'Users\Ecole\PaiementController@store')->name('paiement.intervenants.store');
+    Route::get('/checkout/{post}','CheckoutController@checkout')->name('checkout.credit');
 
+    Route::post('checkout/{post}','CheckoutController@afterpayment')->name('checkout.credit-card');
     Route::post('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('eco.logout');
 });
 
