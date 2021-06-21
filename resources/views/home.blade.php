@@ -20,40 +20,6 @@
     @include('parts/carousel')
 
     @include('parts/card')
-
-    <!-- Our Achievments Area -->
-    <section class="our_achievments_area" data-stellar-background-ratio="0.3">
-        <div class="container">
-            <div class="tittle wow fadeInUp">
-                <h2>NOS RÉALISATIONS</h2>
-                <h4></h4>
-            </div>
-            <div class="achievments_row row">
-                <div class="col-md-3 col-sm-6 p0 completed">
-                    <i class="fa fa-info" aria-hidden="true"></i>
-                    <span class="counter">{{$nbannonce}}</span>
-                    <h6>ANNONCES</h6>
-                </div>
-                <div class="col-md-3 col-sm-6 p0 completed">
-                    <i class="fa fa-university" aria-hidden="true"></i>
-                    <span class="counter">{{$nbecole}}</span>
-                    <h6>ETABLISSEMENTS</h6>
-                </div>
-                <div class="col-md-3 col-sm-6 p0 completed">
-                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                    <span class="counter">{{$nbintervenant}}</span>
-                    <h6>INTERVENANTS</h6>
-                </div>
-                <div class="col-md-3 col-sm-6 p0 completed">
-                    <i class="fa fa-user-plus" aria-hidden="true"></i>
-                    <span class="counter">{{$nbpartenaire}}</span>
-                    <h6>PARTENAIRES</h6>
-                </div>>
-            </div>
-        </div>
-    </section>
-    <!-- End Our Achievments Area -->
-    
     
     <section class="our_team_area">
         <div class="container">
@@ -132,11 +98,7 @@
     </section>
     <!-- End Our testimonial Area -->
 
-    <!-- Our Featured Works Area -->
-
-    <!-- End Our Featured Works Area -->
-
-    <!-- Our Latest Blog Area -->
+<!-- Our Latest Blog Area -->
     <section class="latest_blog_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
@@ -156,6 +118,39 @@
         </div>
     </section>
     <!-- End Our Latest Blog Area -->
+    
+    <!-- Our Achievments Area -->
+    <section class="our_achievments_area" data-stellar-background-ratio="0.3">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>NOS RÉALISATIONS</h2>
+                <h4></h4>
+            </div>
+            <div class="achievments_row row">
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-info" aria-hidden="true"></i>
+                    <span class="counter">{{$nbannonce}}</span>
+                    <h6>ANNONCES</h6>
+                </div>
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-university" aria-hidden="true"></i>
+                    <span class="counter">{{$nbecole}}</span>
+                    <h6>ETABLISSEMENTS</h6>
+                </div>
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                    <span class="counter">{{$nbintervenant}}</span>
+                    <h6>INTERVENANTS</h6>
+                </div>
+                <div class="col-md-3 col-sm-6 p0 completed">
+                    <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    <span class="counter">{{$nbpartenaire}}</span>
+                    <h6>PARTENAIRES</h6>
+                </div>>
+            </div>
+        </div>
+    </section>
+    <!-- End Our Achievments Area -->
 
     <!-- Our Partners Area -->
     <section class="our_partners_area">

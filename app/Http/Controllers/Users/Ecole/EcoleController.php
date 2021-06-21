@@ -138,7 +138,7 @@ class EcoleController extends Controller
 
     public function intervenants()
     {
-        $intervenants = Intervenant::all();
+        $intervenants = Intervenant::take(5)->get();
         return view('admin.user.ecole.search', compact('intervenants'));
     }
 

@@ -44,7 +44,7 @@
 						<ul class="nav nav-collapse">
 							<li>
 								<a class="nav-link" href="{{route('search.intervenants')}}">
-									<span class="sub-item">Intervenants</span>
+									<span class="sub-item">Recherche Intervenant</span>
 								</a>
 							</li>
 							

@@ -54,7 +54,7 @@
 														<div class="card">
 															<div class="card-body">
 																<br>
-																<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Renseignez les informations de votre établissament</h3>
+																<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Renseignez ou Modifiez les informations de votre établissament</h3>
 																<br>
 																<form action="{{ route('ecole.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 																	{{ csrf_field() }}
