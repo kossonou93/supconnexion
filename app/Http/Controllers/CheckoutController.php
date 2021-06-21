@@ -54,7 +54,7 @@ class CheckoutController extends Controller
 		]);
 		$intent = $payment_intent->client_secret;
 
-		return view('checkout.credit-card',compact('intent', 'pays', 'offre', 'ecole'));
+		return view('admin.user.ecole.annonce.checkout.credit-card',compact('intent', 'pays', 'offre', 'ecole'));
 
     }
 
@@ -62,5 +62,49 @@ class CheckoutController extends Controller
     {
         //echo 'Payment Has been Received';
         return redirect('/ecole/annonce/create/'.$id)->with('success', 'Paiement éffectué avec succès!');
+    }
+
+    public function checkoutIntervenant($id)
+    {   
+        // Enter Your Stripe Secret
+        \Stripe\Stripe::setApiKey('sk_test_51Euv4QKIuiqzi53Po7l1ns7jKAsAsPZ9LWiqb1ZIhHBGh3IYea6Zf5frlb3dGXTuvUEYtlwukTw8DFJGtslkv0Pw00b1jq3EiP');
+        $ecole = Ecole::find(Auth::user()->id);
+        $pays = Pays::find($ecole->pays_id);
+        $offre = $id;
+        
+        switch ($id) {
+            case 1:
+                $offre = 100;
+                break;
+            case 2:
+                $offre = 200;
+                
+                break;
+            case 3:
+                $offre = 300;
+                
+                break;
+            
+            default:
+                $offre = 100;
+                
+                break;
+        }
+
+		$amount = $offre;
+		$amount *= 100;
+        $amount = (int) $amount;
+        
+        $payment_intent = \Stripe\PaymentIntent::create([
+			'description' => 'Stripe Test Payment',
+			'amount' => $amount,
+			'currency' => 'XOF',
+			'description' => 'Payment From Codehunger',
+			'payment_method_types' => ['card'],
+		]);
+		$intent = $payment_intent->client_secret;
+
+		return view('admin.user.ecole.paiement',compact('intent', 'pays', 'offre', 'ecole'));
+
     }
 }

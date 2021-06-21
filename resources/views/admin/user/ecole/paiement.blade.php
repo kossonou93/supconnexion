@@ -92,22 +92,30 @@
 																		<div class="card rounded-0 border-0 card2" id="paypage">
 																			<div class="form-card">
 																				<h2 id="heading2" class="text-danger">Méthode de Paiement</h2>
-																				<form action="{{ route('paiement.intervenants.store', ['post' => $offre]) }}" method="post" enctype="multipart/form-data">
-																					@csrf
-																					<div class="radio-group">
-																						<div class='radio' data-value="credit"><img src="https://i.imgur.com/28akQFX.jpg" width="200px" height="60px"></div>
-																						<div class='radio' data-value="paypal"><img src="https://i.imgur.com/5QFsx7K.jpg" width="200px" height="60px"></div> <br>
-																					</div> <label class="pay">Name on Card</label> <input type="text" name="holdername" placeholder="John Smith">
-																					<div class="row">
-																						<div class="col-8 col-md-6"> <label class="pay">Card Number</label> <input type="text" name="cardno" id="cr_no" placeholder="0000-0000-0000-0000" minlength="19" maxlength="19"> </div>
-																						<div class="col-4 col-md-6"> <label class="pay">CVV</label> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> </div>
+																				<form action="{{route('checkout.intervenant', \Crypt::encrypt(Auth::user()->id))}}"  method="post" id="payment-form">
+																					@csrf                    
+																					<div class="form-group">
+																						<div class="card-header">
+																							<label for="card-element">
+																								Entrez les informations de votre carte de crédit
+																							</label>
+																						</div>
+																						<div class="card-body">
+																							<div id="card-element">
+																							<!-- A Stripe Element will be inserted here. -->
+																							</div>
+																							<!-- Used to display form errors. -->
+																							<div id="card-errors" role="alert"></div>
+																							<input type="hidden" name="plan" value="" />
+																						</div>
 																					</div>
-																					<div class="row">
-																						<div class="col-md-12"> <label class="pay">Expiration Date</label> </div>
-																						<div class="col-md-12"> <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> </div>
-																					</div>
-																					<div class="row">
-																						<div class="col-md-6"> <input type="submit" value="EFFECTUER PAIEMENT &nbsp; &#xf178;" class="btn btn-info placeicon"> </div>
+																					<div class="card-footer">
+																					<button
+																					id="card-button"
+																					class="btn btn-dark"
+																					type="submit"
+																					data-secret="{{ $intent }}"
+																					> EFFECTUER PAIEMENT </button>
 																					</div>
 																				</form>
 																			</div>
@@ -130,5 +138,69 @@
 		</div>
 	</div>
 	
+	<script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Custom styling can be passed to options when creating an Element.
+        // (Note that this demo uses a wider set of styles than the guide below.)
+
+        var style = {
+            base: {
+                color: '#32325d',
+                lineHeight: '18px',
+                fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+                fontSmoothing: 'antialiased',
+                fontSize: '16px',
+                '::placeholder': {
+                    color: '#aab7c4'
+                }
+            },
+            invalid: {
+                color: '#fa755a',
+                iconColor: '#fa755a'
+            }
+        };
+    
+        const stripe = Stripe('{{ $stripe_key }}', { locale: 'en' }); // Create a Stripe client.
+        const elements = stripe.elements(); // Create an instance of Elements.
+        const cardElement = elements.create('card', { style: style }); // Create an instance of the card Element.
+        const cardButton = document.getElementById('card-button');
+        const clientSecret = cardButton.dataset.secret;
+    
+        cardElement.mount('#card-element'); // Add an instance of the card Element into the `card-element` <div>.
+    
+        // Handle real-time validation errors from the card Element.
+        cardElement.addEventListener('change', function(event) {
+            var displayError = document.getElementById('card-errors');
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = '';
+            }
+        });
+    
+        // Handle form submission.
+        var form = document.getElementById('payment-form');
+    
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+        stripe.handleCardPayment(clientSecret, cardElement, {
+                payment_method_data: {
+                    //billing_details: { name: cardHolderName.value }
+                }
+            })
+            .then(function(result) {
+                console.log(result);
+                if (result.error) {
+                    // Inform the user if there was an error.
+                    var errorElement = document.getElementById('card-errors');
+                    errorElement.textContent = result.error.message;
+                } else {
+                    console.log(result);
+                    form.submit();
+                }
+            });
+        });
+    </script>
 <!--   Core JS Files   -->
 @include('admin/part/footer')

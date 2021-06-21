@@ -98,9 +98,9 @@ Route::prefix('ecole')->group(function(){
     Route::get('/paiements', 'Users\Ecole\PaiementController@index')->name('paiement.intervenants');
     Route::get('/paiements/{post}', 'Users\Ecole\PaiementController@show')->name('paiement.intervenants.show');
     Route::post('/paiements', 'Users\Ecole\PaiementController@store')->name('paiement.intervenants.store');
-    Route::get('/checkout/{post}','CheckoutController@checkout')->name('checkout.credit');
-
-    Route::post('checkout/{post}','CheckoutController@afterpayment')->name('checkout.credit-card');
+    Route::get('/annonce/checkout/{post}','CheckoutController@checkout')->name('checkout.credit');
+    Route::post('/annonce/checkout/{post}','CheckoutController@afterpayment')->name('checkout.credit-card');
+    Route::get('/checkout/intervenant/{post}','CheckoutController@checkoutIntervenant')->name('checkout.intervenant');
     Route::post('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('eco.logout');
 });
 

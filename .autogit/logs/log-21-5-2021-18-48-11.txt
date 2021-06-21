@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 21 2021 18:48:11 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Ecole/EcoleController.php
+* resources/views/admin/user/ecole/sidebar.blade.php
+* resources/views/ecole.blade.php
+* resources/views/home.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-18-5-2021-22-16-15.txt
+
+
+Deleted files:
+
+
+Renamed files:
