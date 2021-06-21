@@ -107,4 +107,9 @@ class CheckoutController extends Controller
 		return view('admin.user.ecole.paiement',compact('intent', 'pays', 'offre', 'ecole'));
 
     }
+
+    public function afterPaymentIntervenant($id)
+    {
+        return redirect('/ecole/intervenant/all/'.$id)->with('success', 'Paiement éffectué avec succès!');
+    }
 }

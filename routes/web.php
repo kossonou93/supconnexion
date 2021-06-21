@@ -101,7 +101,10 @@ Route::prefix('ecole')->group(function(){
     Route::get('/annonce/checkout/{post}','CheckoutController@checkout')->name('checkout.credit');
     Route::post('/annonce/checkout/{post}','CheckoutController@afterpayment')->name('checkout.credit-card');
     Route::get('/checkout/intervenant/{post}','CheckoutController@checkoutIntervenant')->name('checkout.intervenant');
+    Route::post('/checkout/intervenant/{post}','CheckoutController@afterpaymentIntervenant')->name('checkout.intervenant-card');
+    Route::get('/intervenant/all/{post}', 'Users\Ecole\EcoleController@intervenantAll')->name('ecole.intervenant.all');
     Route::post('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('eco.logout');
+
 });
 
 // Intervenant routes

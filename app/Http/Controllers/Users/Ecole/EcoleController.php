@@ -236,4 +236,10 @@ class EcoleController extends Controller
         
     }
 
+    public function intervenantAll()
+    {
+        $intervenants = Intervenant::all();
+        return view('admin.user.ecole.intervenant.all', compact('intervenants'));
+    }
+
 }
