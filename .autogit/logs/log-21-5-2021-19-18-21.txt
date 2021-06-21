@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 21 2021 19:18:21 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/CheckoutController.php
+* resources/views/admin/user/ecole/paiement.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-21-5-2021-18-48-11.txt
+
+
+Deleted files:
+* resources/views/admin/user/ecole/checkout/credit-card.blade.php
+
+
+Renamed files:
+* [object Object]

@@ -1,5 +1,8 @@
 @include('admin/part/head')
 <body>
+	@php
+        $stripe_key = 'pk_test_25jwDLCJXdMgDWlc8JnE8ShD006Yp8Nvds';
+    @endphp
 <!--	<div class="contenu">-->
 		<div class="loader_bg">
 			<div class="loader"></div>
@@ -36,8 +39,6 @@
 									<div class="tab-content">
 										<div class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
 											<div class="card-body bordr-card">
-                                                
-												
 												<div class="container-fluid">
 													<div class="row justify-content-center">
 														<div class="col-12 col-lg-11">

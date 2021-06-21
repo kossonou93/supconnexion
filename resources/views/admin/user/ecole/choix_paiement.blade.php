@@ -56,7 +56,7 @@
                                                                         <li class="disable">15 Subdomains</li>-->
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('paiement.intervenants.show',1)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.intervenant',1)}}">Souscrire</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -71,7 +71,7 @@
                                                                         <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre forfait</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('paiement.intervenants.show',2)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.intervenant',2)}}">Souscrire</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -86,7 +86,7 @@
                                                                         <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre forfait</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('paiement.intervenants.show',3)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.intervenant',3)}}">Souscrire</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
