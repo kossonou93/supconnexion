@@ -88,7 +88,7 @@
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#actualite">
 								<i class="fas fa-book-open"></i>
-								<p>Disciplines</p>
+								<p>Actualités</p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="actualite">
@@ -96,21 +96,6 @@
 									<li>
 										<a href="{{route('actualites.create')}}">
 											<span class="sub-item">Ajouter</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
 										</a>
 									</li>
 									<li>
@@ -135,21 +120,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
-										</a>
-									</li>
-									<li>
 										<a href="{{route('disciplines.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
@@ -168,21 +138,6 @@
 									<li>
 										<a href="{{route('formations.create')}}">
 											<span class="sub-item">Ajouter</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
 										</a>
 									</li>
 									<li>
@@ -207,21 +162,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
-										</a>
-									</li>
-									<li>
 										<a href="{{route('langues.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
@@ -240,21 +180,6 @@
 									<li>
 										<a href="{{route('contrats.create')}}">
 											<span class="sub-item">Ajouter</span>
-										</a>
-									</li>
-									<li>
-										<a href="maps/fullscreenmaps.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="maps/jqvmap.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="maps/jqvmap.html">
-											<span class="sub-item">Rechercher</span>
 										</a>
 									</li>
 									<li>
@@ -279,21 +204,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="charts/sparkline.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="charts/sparkline.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="charts/sparkline.html">
-											<span class="sub-item">Rechercher</span>
-										</a>
-									</li>
-									<li>
 										<a href="{{route('disponibilites.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
@@ -312,21 +222,6 @@
 									<li>
 										<a href="{{route('durees.create')}}">
 											<span class="sub-item">Ajouter</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
 										</a>
 									</li>
 									<li>
@@ -351,21 +246,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
-										</a>
-									</li>
-									<li>
 										<a href="{{route('horaires.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
@@ -376,7 +256,7 @@
 						<li class="nav-item">
 							<a data-toggle="collapse" href="#modalites">
 								<i class="fa fa-money-check-alt"></i>
-								<p>Modalités de paye</p>
+								<p>Modalités de payement</p>
 								<span class="caret"></span>
 							</a>
 							<div class="collapse" id="modalites">
@@ -384,21 +264,6 @@
 									<li>
 										<a href="{{route('modalites.create')}}">
 											<span class="sub-item">Ajouter</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
 										</a>
 									</li>
 									<li>
@@ -423,21 +288,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
-										</a>
-									</li>
-									<li>
 										<a href="{{route('interventions.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
@@ -456,21 +306,6 @@
 									<li>
 										<a href="{{route('remunerations.create')}}">
 											<span class="sub-item">Ajouter</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
 										</a>
 									</li>
 									<li>
@@ -495,21 +330,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
-										</a>
-									</li>
-									<li>
 										<a href="{{route('responsabilites.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
@@ -531,21 +351,6 @@
 										</a>
 									</li>
 									<li>
-										<a href="components/buttons.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/gridsystem.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="components/panels.html">
-											<span class="sub-item">Rechercher</span>
-										</a>
-									</li>
-									<li>
 										<a href="{{route('typeexperiences.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
@@ -564,21 +369,6 @@
 									<li>
 										<a href="{{route('pays.create')}}">
 											<span class="sub-item">Ajouter</span>
-										</a>
-									</li>
-									<li>
-										<a href="maps/fullscreenmaps.html">
-											<span class="sub-item">Modifier</span>
-										</a>
-									</li>
-									<li>
-										<a href="maps/jqvmap.html">
-											<span class="sub-item">Supprimer</span>
-										</a>
-									</li>
-									<li>
-										<a href="maps/jqvmap.html">
-											<span class="sub-item">Rechercher</span>
 										</a>
 									</li>
 									<li>

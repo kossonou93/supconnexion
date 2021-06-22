@@ -23,24 +23,14 @@
                     <h4>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h4>
                 </div>
                 <div class="row latest_blog">
-                    <div class="col-md-4 col-sm-6 blog_content">
-                        <img src="images/blog/lb-1.jpg" alt="">
-                        <a href="#" class="blog_heading">Our Latest Project</a>
-                        <h4><small>by  </small><a href="#">Emran Khan</a><span>/</span><small>ON </small> October 15, 2016</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna. Sed sollicitudin at nisi sed accumsan... <a href="#">Read More</a></p>
-                    </div>
-                    <div class="col-md-4 col-sm-6 blog_content">
-                        <img src="images/blog/lb-2.jpg" alt="">
-                        <a href="#" class="blog_heading">Our Latest Project</a>
-                        <h4><small>by  </small><a href="#">Prodip Ghosh</a><span>/</span><small>ON </small> October 15, 2016</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna. Sed sollicitudin at nisi sed accumsan... <a href="#">Read More</a></p>
-                    </div>
-                    <div class="col-md-4 col-sm-6 blog_content">
-                        <img src="images/blog/lb-3.jpg" alt="">
-                        <a href="#" class="blog_heading">Our Latest Project</a>
-                        <h4><small>by  </small><a href="#">Prodip Ghosh</a><span>/</span><small>ON </small> October 15, 2016</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam sagittis iaculis velit in tristique. Curabitur ac urna urna. Sed sollicitudin at nisi sed accumsan... <a href="#">Read More</a></p>
-                    </div>
+                    @foreach ($actualites as $actualite)
+                        <div class="col-md-4 col-sm-6 blog_content">
+                            <img src="{{ asset('uploads/photo/actualite/'.$actualite->photo) }}" alt="">
+                            <a href="#" class="blog_heading">{{($actualite->titre) }}</a>
+                            <h4><small>Par  </small><a href="#">{{($actualite->auteur) }}</a><span>/</span><small>ON </small> October 15, 2016</h4>
+                            <p>{{ Illuminate\Support\Str::limit($actualite->texte, 80) }}... <a href="#">Lire la suite</a></p>
+                        </div>
+                    @endforeach
                 </div>
             </div>
         </section>

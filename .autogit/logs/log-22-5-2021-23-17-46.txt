@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jun 22 2021 23:17:46 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Admin/ActualiteController.php
+* app/Http/Controllers/Users/Admin/PartenaireController.php
+* resources/views/admin/actualite/edit.blade.php
+* resources/views/admin/part/sidebar.blade.php
+* resources/views/user/actualites.blade.php
+
+
+Created files:
+* .autogit/logs/log-22-5-2021-22-47-25.txt
+
+
+Deleted files:
+
+
+Renamed files:

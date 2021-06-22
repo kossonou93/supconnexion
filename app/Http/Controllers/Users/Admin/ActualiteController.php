@@ -18,7 +18,7 @@ class ActualiteController extends Controller
     {
 
         $actualites = Actualite::all();
-        return view('admin.actualite.all', compact('carousels'));
+        return view('admin.actualite.all', compact('actualites'));
     }
 
     /**
