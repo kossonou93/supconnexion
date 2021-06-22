@@ -32,9 +32,9 @@
 					</div>
 					<ul class="nav">
 						<li class="nav-item active">
-							<a href="index.html">
+							<a href="{{route('admin.dashboard')}}">
 								<i class="fas fa-home"></i>
-								<p>Dashboard</p>
+								<p>Home</p>
 							</a>
 						</li>
 						<li class="nav-section">
@@ -79,6 +79,42 @@
 									</li>
 									<li>
 										<a href="{{route('admin.ecole.all')}}">
+											<span class="sub-item">Voir tous</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
+							<a data-toggle="collapse" href="#actualite">
+								<i class="fas fa-book-open"></i>
+								<p>Disciplines</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="actualite">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="{{route('actualites.create')}}">
+											<span class="sub-item">Ajouter</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/buttons.html">
+											<span class="sub-item">Modifier</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/gridsystem.html">
+											<span class="sub-item">Supprimer</span>
+										</a>
+									</li>
+									<li>
+										<a href="components/panels.html">
+											<span class="sub-item">Rechercher</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{route('actualites.index')}}">
 											<span class="sub-item">Voir tous</span>
 										</a>
 									</li>

@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jun 22 2021 22:47:25 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/parts/menu.blade.php
+* resources/views/user/actualites.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-22-5-2021-21-30-23.txt
+
+
+Deleted files:
+
+
+Renamed files:

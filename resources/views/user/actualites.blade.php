@@ -12,7 +12,7 @@
             <h2>ACTUALITES</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('actualite.index')}}" class="active">Annonces</a></li>
+                <li><a href="{{route('actualite.index')}}" class="active">Actualités</a></li>
             </ol>
         </section>
         

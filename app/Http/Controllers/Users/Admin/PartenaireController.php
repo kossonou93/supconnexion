@@ -102,7 +102,7 @@ class PartenaireController extends Controller
         $partenaire->texte = $input['texte'];
 
         if ($request->file('photo')) {
-            @unlink(public_path('uploads/photo/partenaire'.$partenaire->photo));
+            @unlink(public_path('uploads/photo/partenaire/'.$partenaire->photo));
             $partenaireImage = $request->file('photo');
             $partenaireName  = date('d-m-Y') . '.' . uniqid() . '.' . $partenaireImage->getClientOriginalName();
             $partenairePath  = public_path('uploads/photo/partenaire');
