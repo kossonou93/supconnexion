@@ -15,6 +15,7 @@ Route::get('/', 'Users\HomeController@index')->name('home');
 Route::get('/annonces', 'Users\HomeController@annonces')->name('annonces');
 Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.details');
 Route::resource('/contacts', 'ContactController');
+Route::get('/actualites', 'Users\HomeController@actualites')->name('actualites.index');
 Route::get('/projet', 'Users\HomeController@leprojet')->name('leprojet');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');

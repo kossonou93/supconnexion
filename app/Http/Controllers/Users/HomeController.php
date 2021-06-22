@@ -92,14 +92,13 @@ class HomeController extends Controller
 
     public function leprojet()
     {
-        $intervenants = Intervenant::take(4)->get();
-        $carousels = Carousel::all();
-        $partenaires = Partenaire::all();
-        $temoignages = Temoignage::all();
-        $annonces = Annonce::where('date_expiration', '>=', Carbon::today()->toDateString())->get();
-        $ecoles = Ecole::all();
-        $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
-        return view('user.projet', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
+        return view('user.projet');
+    }
+
+    public function actualites()
+    {
+        $actualites = Actualite::all();
+        return view('user.actualites', compact('actualites'));
     }
     
 }
