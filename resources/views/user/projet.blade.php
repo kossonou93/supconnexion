@@ -26,7 +26,7 @@
                     <span style="color: blue">Ce Portail aura plusieurs fonctionnalités dont :  </span>
                     </p>
                     <p class="text-justify">
-                        <ul class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold; font-size: 15px">
+                        <ul class="text-justify" style="list-style-type: decimal;font-family: 'Comic Sans MS'; font-weight: bold; font-size: 15px">
                             <li>Donnez de la visibilité  aux besoins de recrutements de votre établissement d’enseignement supérieur ; postez vos annonces, vos besoins en vacation, CDD, CDI. Les établissements d’enseignement supérieur peut donc s’inscrire et s’ouvrir un compte.</li>
                             <br>
                             <li>Trouvez les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin.</li>
