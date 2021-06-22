@@ -214,9 +214,9 @@
 																<div class="profile-picture">
 																	<div class="avatar avatar-xxl">
 																		<img @if (Auth::user()->logo == NULL)
-																				src="{{ asset('uploads/photo/profil/Placeholder.png') }}"
+																				src="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}"
 																			@else
-																				src="{{ asset('uploads/photo/logo/'.Auth::user()->logo) }}"
+																				src="{{ asset('supconnexion/public/uploads/photo/logo/'.Auth::user()->logo) }}"
 																			@endif
 																		 alt="" class="avatar-img rounded-circle">
 																	</div>

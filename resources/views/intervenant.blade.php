@@ -177,7 +177,7 @@
 																			
 																				<div class="col-md-6">
 																					<div class="form-group form-group-default bordr">
-																						<a class="btn btn-primary" href="{{ route('downloadfile', 'uploads/cv/'.Auth::user()->cv) }}" role="button">Télécharger mon cv </a>
+																						<a class="btn btn-primary" href="{{ route('downloadfile', 'supconnexion/public/uploads/cv/'.Auth::user()->cv) }}" role="button">Télécharger mon cv </a>
 																					</div>
 																				</div>
 																			</div>
@@ -409,9 +409,9 @@
 																	<div class="profile-picture">
 																		<div class="avatar avatar-xxl">
 																			<img @if (Auth::user()->photo == NULL)
-																				src="{{ asset('uploads/photo/profil/Placeholder.png') }}"
+																				src="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}"
 																			@else
-																				src="{{ asset('uploads/photo/profil/'.Auth::user()->photo) }}"
+																				src="{{ asset('supconnexion/public/uploads/photo/profil/'.Auth::user()->photo) }}"
 																			@endif
 																		 alt="" class="avatar-img rounded-circle">
 																		</div>

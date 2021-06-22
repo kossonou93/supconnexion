@@ -45,7 +45,7 @@
 						<li class="nav-item dropdown hidden-caret">
 							<a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#" aria-expanded="false">
 								<div class="avatar-sm">
-									<img src="{{ asset('uploads/photo/profil/Placeholder.png') }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
+									<img src="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}" data-placeholder="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
 								</div>
 							</a>
 							

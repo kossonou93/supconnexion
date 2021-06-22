@@ -283,7 +283,7 @@
                                                                 <div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
                                                                     <div class="profile-picture">
                                                                         <div class="avatar avatar-xxl">
-                                                                            <img src="{{ asset('uploads/photo/profil/'.$intervenant->photo) }}" data-placeholder="{{ asset('uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
+                                                                            <img src="{{ asset('supconnexion/public/uploads/photo/profil/'.$intervenant->photo) }}" data-placeholder="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}" alt="" class="avatar-img rounded-circle">
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -301,7 +301,7 @@
                                                                                 <div class="col-md-2"></div>
                                                                                 <div class="col-md-5 form-group form-group-default">
                                                                                     <h5>Voir CV</h5>
-                                                                                    <a class="btn btn-info btn-linkedin btn-sm btn-link" href="{{ asset('uploads/cv/'.$intervenant->cv) }}"> 
+                                                                                    <a class="btn btn-info btn-linkedin btn-sm btn-link" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}"> 
                                                                                         <span class="btn-label just-icon"><i class="flaticon-file"></i></span>
                                                                                     </a>
                                                                                 </div>

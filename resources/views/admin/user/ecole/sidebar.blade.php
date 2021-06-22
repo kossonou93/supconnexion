@@ -6,9 +6,9 @@
 			<div class="user">
 				<div class="avatar-sm float-left mr-2">
 					<img @if (Auth::user()->logo == NULL)
-						src="{{ asset('uploads/photo/profil/Placeholder.png') }}"
+						src="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}"
 					@else
-						src="{{ asset('uploads/photo/logo/'.Auth::user()->logo) }}"
+						src="{{ asset('supconnexion/public/uploads/photo/logo/'.Auth::user()->logo) }}"
 					@endif
 					alt="" class="avatar-img rounded-circle">
 				</div>

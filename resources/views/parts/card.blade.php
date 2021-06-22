@@ -12,7 +12,7 @@
                         <div class="item {{ $loop->first ? 'active' : ''}}">
                             <div class="carousel-col">
                                 <div class="team_membar">
-                                <img src="{{ asset('uploads/photo/profil/'.$intervenant->photo) }}" alt="">
+                                <img src="{{ asset('supconnexion/public/uploads/photo/profil/'.$intervenant->photo) }}" alt="">
                                     <div class="team_content">
                                         <ul>
                                             <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -59,7 +59,7 @@
                     @foreach ($annonces as $annonce)
                         <div class="item {{ $loop->first ? 'active' : ''}} e-border">
                             <div class="blog-entry">
-                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('{{ asset('uploads/image/annonce/'.$annonce->image) }}');">
+                                <a href="#" class="block-20 d-flex align-items-start" style="background-image: url('{{ asset('supconnexion/public/uploads/image/annonce/'.$annonce->image) }}');">
                                     <div class="meta-date text-center p-2">
                                         <span class="yr">
                                             <?php

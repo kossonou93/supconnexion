@@ -30,7 +30,7 @@
                 @foreach ($intervenants as $intervenant)
                     <div class="col-md-3 col-sm-6 wow fadeInUp">
                         <div class="team_membar">
-                                <img src="{{ asset('uploads/photo/profil/'.$intervenant->photo) }}" alt="">
+                                <img src="{{ asset('supconnexion/public/uploads/photo/profil/'.$intervenant->photo) }}" alt="">
                                 <div class="team_content">
                                     <ul>
                                         <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -160,7 +160,7 @@
             </div>
             <div class="partners">
                 @foreach ($partenaires as $partenaire)
-                    <div class="item"><img src="{{ asset('uploads/photo/partenaire/'.$partenaire->photo) }}" alt=""></div>
+                    <div class="item"><img src="{{ asset('supconnexion/public/uploads/photo/partenaire/'.$partenaire->photo) }}" alt=""></div>
                  @endforeach
             </div>
         </div>
