@@ -97,27 +97,6 @@
         </div>
     </section>
     <!-- End Our testimonial Area -->
-
-<!-- Our Latest Blog Area -->
-    <section class="latest_blog_area">
-        <div class="container">
-            <div class="tittle wow fadeInUp">
-                <h2>Nos Actualités</h2>
-            </div>
-            <div class="row latest_blog">
-             @foreach ($actualites as $actualite)
-                <div class="col-md-4 col-sm-6 blog_content">
-                    <img src="images/blog/lb-1.jpg" alt="">
-                    <a href="#" class="blog_heading">{{ $actualite->titre }}</a>
-                    <h4><small>par  </small><a href="#">{{ $actualite->auteur }} ...</a><span>/</span><small> </small> {{ $actualite->created_at }}</h4>
-                    <p>{{ $actualite->soustitre }}</p>
-                    <p><a class="button_all" href="#">Voir plus</a></p>
-                </div>
-            @endforeach
-            </div>
-        </div>
-    </section>
-    <!-- End Our Latest Blog Area -->
     
     <!-- Our Achievments Area -->
     <section class="our_achievments_area" data-stellar-background-ratio="0.3">

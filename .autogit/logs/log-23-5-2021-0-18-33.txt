@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 23 2021 00:18:33 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* resources/views/user/actualites.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-22-5-2021-23-48-14.txt
+* resources/views/user/actualite.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

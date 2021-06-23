@@ -11,5 +11,5 @@ class Actualite extends Model
 
     protected $table = 'actualites';
 
-    protected $fillable = ['photo', 'titre', 'auteur', 'soustitre', 'texte'];
+    protected $fillable = ['photo', 'titre', 'auteur', 'soustitre', 'texte', 'date_pub'];
 }

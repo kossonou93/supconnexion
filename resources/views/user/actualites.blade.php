@@ -29,7 +29,7 @@
                             <a href="#" class="blog_heading text-justify">{{($actualite->titre) }}</a>
                             <h4><small>Par  </small><a style="color: blue; font-weight: bold;" href="#">{{($actualite->auteur) }}</a><span>/</span><small style="color: #f6b60b; font-weight: bold;"> <i class="fa fa-calendar" aria-hidden="true"></i>
                             <?php
-                                echo date("d F, Y", strtotime(" $actualite->created_at "));
+                                echo date("d F, Y", strtotime(" $actualite->date_pub "));
                             ?></small></h4>
                             <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($actualite->texte, 200) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">Lire la suite<span></a></p>
                         </div>
