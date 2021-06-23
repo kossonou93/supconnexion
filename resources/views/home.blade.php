@@ -47,14 +47,6 @@
         </div>
     </section>
 
-    <!-- Our Team Area -->
-    
-    <!-- End Our Team Area -->
-
-    <!-- Our Achievments Area -->
-
-    <!-- End Our Achievments Area -->
-
     <!-- Our Testimonial Area -->
     <section class="testimonial_area row">
         <div class="container">
@@ -97,7 +89,27 @@
         </div>
     </section>
     <!-- End Our testimonial Area -->
-    
+    <section class="latest_blog_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Les Actualités dans l'Enseignement Supérieur</h2>
+                
+            </div>
+            <div class="row latest_blog">
+                @foreach ($actualites as $actualite)
+                    <div class="col-md-4 col-sm-6 blog_content">
+                        <img style="height: 200px; width: 360px" src="{{ asset('uploads/photo/actualite/'.$actualite->photo) }}" alt="">
+                        <a href="#" class="blog_heading text-justify">{{($actualite->titre) }}</a>
+                        <h4><small>Par  </small><a style="color: blue; font-weight: bold;" href="#">{{($actualite->auteur) }}</a><span>/</span><small style="color: #f6b60b; font-weight: bold;"> <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <?php
+                            echo date("d F, Y", strtotime(" $actualite->date_pub "));
+                        ?></small></h4>
+                        <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($actualite->texte, 200) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">Lire la suite<span></a></p>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
     <!-- Our Achievments Area -->
     <section class="our_achievments_area" data-stellar-background-ratio="0.3">
         <div class="container">
