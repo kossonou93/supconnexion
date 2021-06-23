@@ -100,5 +100,11 @@ class HomeController extends Controller
         $actualites = Actualite::all();
         return view('user.actualites', compact('actualites'));
     }
+
+    public function actualite($id)
+    {
+        $actualite = Actualite::find($id);
+        return view('user.actualite', compact('actualite'));
+    }
     
 }
