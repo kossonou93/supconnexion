@@ -34,20 +34,20 @@
       .owl-carousel .owl-nav .owl-next {
         right: 0; }
     
-    .owl-carousel .owl-dots {
-      text-align: center;
-      margin-top: 20px; }
-      .owl-carousel .owl-dots .owl-dot {
-        width: 10px;
-        height: 10px;
-        margin: 5px;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.1);
-        position: relative; }
-        .owl-carousel .owl-dots .owl-dot:hover, .owl-carousel .owl-dots .owl-dot:focus {
-          outline: none !important; }
-        .owl-carousel .owl-dots .owl-dot.active {
-          background: #ff487e; }
+        .owl-carousel .owl-dots {
+          text-align: center;
+          margin-top: 20px; }
+          .owl-carousel .owl-dots .owl-dot {
+            width: 10px;
+            height: 10px;
+            margin: 5px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.1);
+            position: relative; }
+            .owl-carousel .owl-dots .owl-dot:hover, .owl-carousel .owl-dots .owl-dot:focus {
+              outline: none !important; }
+            .owl-carousel .owl-dots .owl-dot.active {
+              background: #ff487e; }
           
     .owl-carousel:hover .owl-nav .owl-prev,
     .owl-carousel:hover .owl-nav .owl-next {
