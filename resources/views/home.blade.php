@@ -21,7 +21,7 @@
 
     @include('parts/card')
     
-    <section class="our_team_area">
+    <!--<section class="our_team_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>Exemples de Profils</h2>
@@ -43,6 +43,56 @@
                         </div>
                     </div>
                 @endforeach
+            </div>
+        </div>
+    </section> -->
+
+    <section class="our_team_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Exemples de Profils</h2>
+            </div>
+            
+            <div class="row team_row">
+                <div class="col-xs-11 col-md-12 col-centered wow fadeInUp" data-wow-delay="0.2s">
+                    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="7500">
+                        <div class="carousel-inner">
+                        @foreach ($intervenants as $intervenant)
+                            <div class="item {{ $loop->first ? 'active' : ''}}">
+                                <div class="carousel-col">
+                                    <div class="team_membar">
+                                    <img src="{{ asset('uploads/photo/profil/'.$intervenant->photo) }}" alt="">
+                                        <div class="team_content">
+                                            <ul>
+                                                <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                                <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+                                            </ul>
+                                            <a href="#" class="name">{{ $intervenant->name }}</a>
+                                            <h6>{{ $intervenant->fonction }}</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="left carousel-control">
+                            <a href="#carousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </div>
+                        <div class="right carousel-control">
+                            <a href="#carousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
@@ -93,7 +143,6 @@
         <div class="container">
             <div class="tittle wow fadeInUp">
                 <h2>Les Actualités dans l'Enseignement Supérieur</h2>
-                
             </div>
             <div class="row latest_blog">
                 @foreach ($actualites as $actualite)
@@ -107,6 +156,55 @@
                         <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($actualite->texte, 200) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">Lire la suite<span></a></p>
                     </div>
                 @endforeach
+            </div>
+        </div>
+    </section>
+
+    <section class="latest_blog_area">
+        <div class="container">
+            <div class="tittle wow fadeInUp">
+                <h2>Les Actualités dans l'Enseignement Supérieur</h2>
+            </div>
+            
+            <div class="row latest_blog ">
+                <div class="col-xs-11 col-md-12 col-centered wow fadeInUp" data-wow-delay="0.2s">
+                    <div id="carousel" class="carousel slide" data-ride="carousel" data-type="multi" data-interval="2500">
+                        <div class="carousel-inner">
+                            <div class="row latest_blog">
+                                @foreach ($actualites as $actualite)
+                                    <div class="item {{ $loop->first ? 'active' : ''}}">
+                                        <div class="carousel-col">
+                                            <div class="col-md-12 col-sm-12 blog_content">
+                                                <img style="height: 200px; width: 360px" src="{{ asset('uploads/photo/actualite/'.$actualite->photo) }}" alt="">
+                                                <a href="#" class="blog_heading text-justify">{{($actualite->titre) }}</a>
+                                                <h4><small>Par  </small><a style="color: blue; font-weight: bold;" href="#">{{($actualite->auteur) }}</a><span>/</span><small style="color: #f6b60b; font-weight: bold;"> <i class="fa fa-calendar" aria-hidden="true"></i>
+                                                <?php
+                                                    echo date("d F, Y", strtotime(" $actualite->date_pub "));
+                                                ?></small></h4>
+                                                <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($actualite->texte, 200) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">Lire la suite<span></a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </div>
+                        </div>
+
+                        <!-- Controls -->
+                        <div class="left carousel-control">
+                            <a href="#carousel2" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                        </div>
+                        <div class="right carousel-control">
+                            <a href="#carousel2" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
         </div>
     </section>
