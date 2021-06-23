@@ -52,6 +52,8 @@ class ActualiteController extends Controller
 
         $actualite = new Actualite();
         $actualite->titre = $request->titre;
+        $actualite->auteur = $request->auteur;
+        $actualite->date_pub = $request->date_pub;
         $actualite->photo = $actualiteName;
         $actualite->texte = $request->texte;
         $actualite->soustitre = $request->soustitre;
@@ -99,6 +101,8 @@ class ActualiteController extends Controller
 
         $actualite = Actualite::find($id);
         $actualite->titre = $input['titre'];
+        $actualite->auteur = $input['auteur'];
+        $actualite->date_pub = $input['date_pub'];
         $actualite->soustitre = $input['soustitre'];
         $actualite->texte = $input['texte'];
 

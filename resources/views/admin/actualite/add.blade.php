@@ -19,7 +19,7 @@
 									<div class="row mt-3">
 										<div class="col-md-12">
 											<div class="form-group form-group-default">
-												<label>Titre</label>
+												<label>Titre*</label>
 												<input type="text" class="form-control" name="titre" required>
 											</div>
 										</div>
@@ -46,6 +46,12 @@
 												<label>Ajouter Image</label>
 												<br>
 												<input type="file" name="photo" class="form-control-file">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group form-group-default">
+												<label>Date de Publication</label>
+												<input type="datetime-local" class="form-control" name="date_pub">
 											</div>
 										</div>
                                     </div>

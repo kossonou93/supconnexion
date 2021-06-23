@@ -21,7 +21,7 @@
 										<div class="row mt-3">
 											<div class="col-md-12">
 												<div class="form-group form-group-default">
-													<label>Titre</label>
+													<label>Titre*</label>
 													<input type="text" class="form-control" value="{{ $actualite->titre }}" name="titre" required>
 												</div>
 											</div>
@@ -47,7 +47,13 @@
 												<div class="form-group form-group-default">
 													<label>Image</label>
 													<br>
-													<input type="file" name="photo" value="{{ $actualite->photo }}" class="form-control-file" required>
+													<input type="file" name="photo" value="{{ $actualite->photo }}" class="form-control-file"><span for="photo" class="form-control-file input">{{ $actualite->photo }}</span>
+												</div>
+											</div>
+											<div class="col-md-12">
+												<div class="form-group form-group-default">
+													<label>Date de Publication</label>
+													<input type="datetime-local" class="form-control" name="date_pub" value="{{ $actualite->date_pub }}">
 												</div>
 											</div>
 										</div>
