@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 23 2021 07:02:48 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* public/users/annonce/css/style.css
+* resources/views/home.blade.php
+
+
+Created files:
+* .autogit/logs/log-23-5-2021-6-32-22.txt
+* public/uploads/photo/actualite/23-06-2021.60d2d66987c9e.actu.PNG
+* public/uploads/photo/actualite/23-06-2021.60d2d6e1aaefa.14640171867_10a68af3aa_o-1050x525.jpg
+
+
+Deleted files:
+
+
+Renamed files:

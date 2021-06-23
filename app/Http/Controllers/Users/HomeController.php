@@ -63,7 +63,7 @@ class HomeController extends Controller
         $nbpartenaire = $partenaires->count();
         //Carousel $carousel;
         //$carousel->visists()->increment();
-        $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
+        $actualites = Actualite::take(3)->orderBy('date_pub', 'DESC')->get();
         return view('home', compact('nbpartenaire', 'nbecole', 'nbannonce', 'nbintervenant', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
