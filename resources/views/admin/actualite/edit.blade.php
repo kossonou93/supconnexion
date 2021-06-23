@@ -53,7 +53,7 @@
 											<div class="col-md-12">
 												<div class="form-group form-group-default">
 													<label>Date de Publication</label>
-													<input type="datetime-local" class="form-control" name="date_pub" value="{{ $actualite->date_pub }}">
+													<input type="datetime-local" class="form-control" name="date_pub" value="{{ $actualite->date_pub }}"><span class="form-control-file input">{{ $actualite->date_pub }}</span>
 												</div>
 											</div>
 										</div>
