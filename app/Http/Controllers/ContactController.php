@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -50,6 +51,7 @@ class ContactController extends Controller
         $contact->site = $request->site;
         $contact->texte = $request->texte;
         $contact->save();
+        Mail::to($contact->email)->send(new ContactMail($contact));
         return redirect()->route('contacts.index')->with('success', 'Message envoyé avec succès!');
     }
 

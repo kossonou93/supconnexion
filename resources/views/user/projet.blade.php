@@ -21,12 +21,12 @@
         <div class="container">
             <div class="row contact_row">
                 <div class="col-sm-12 contact_info">
-                    <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-family: 'Comic Sans MS'; color: blue">Le projet est  un Portail dédié </span>
+                    <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-family: 'Comic Sans MS'; color: blue; font-size: 17px">Le projet est  un Portail dédié </span>
                     <span style="color: red; font-size: 20px">AUX BESOINS ET OPPORTUNITES DANS LE SUPERIEUR EN AFRIQUE, AINSI QUE DES INTERVENANTS - SPECIALISTES INTERNATIONAUX AFRICAINS DANS LE SECTEUR. </span>
-                    <span style="color: blue">Ce Portail aura plusieurs fonctionnalités dont :  </span>
+                    <span style="color: blue; font-size: 17px">Ce Portail aura plusieurs fonctionnalités dont :  </span>
                     </p>
                     <p class="text-justify">
-                        <ul class="text-justify" style="list-style-type: decimal;font-family: 'Comic Sans MS'; font-weight: bold; font-size: 15px">
+                        <ul class="text-justify" style="list-style-type: decimal;font-family: 'Comic Sans MS'; font-weight: bold; font-size: 17px">
                             <li>Donnez de la visibilité  aux besoins de recrutements de votre établissement d’enseignement supérieur ; postez vos annonces, vos besoins en vacation, CDD, CDI. Les établissements d’enseignement supérieur peut donc s’inscrire et s’ouvrir un compte.</li>
                             <br>
                             <li>Trouvez les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin.</li>
