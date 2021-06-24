@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 24 2021 14:49:33 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ContactController.php
+* resources/views/user/projet.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-5-2021-14-19-11.txt
+* app/Mail/ContactMail.php
+* resources/views/mail/contact-email.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
