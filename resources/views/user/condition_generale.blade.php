@@ -21,15 +21,15 @@
         <div class="container">
             <div class="row contact_row">
                 <div class="col-sm-12 contact_info">
-                    <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: black">Cette page contient les Conditions générales qui régissent les relations entre Sup’Connexion et ses parties prenantes concernant l’utilisation de son Portail. Veuillez lire attentivement les présentes Conditions générales avant toute utilisation du Portail. Vous devez comprendre qu’en utilisant le Portail de Sup’Connexion, vous acceptez d’être lié par les présentes Conditions Générales. </span>
+                    <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: blue">Cette page contient les Conditions générales qui régissent les relations entre Sup’Connexion et ses parties prenantes concernant l’utilisation de son Portail. Veuillez lire attentivement les présentes Conditions générales avant toute utilisation du Portail. Vous devez comprendre qu’en utilisant le Portail de Sup’Connexion, vous acceptez d’être lié par les présentes Conditions Générales. </span>
                     </p>
                     <p class="text-justify">
                         <ul class="text-justify" style="list-style-type: decimal;font-family: 'Comic Sans MS'; font-weight: bold; font-size: 18px; color: #f6b60b">
                             <li>Services
-                                <ul style="color: #371F57; font-size: 15px">
+                                <ul style="color: #371F57; font-size: 17px">
                                     <li>
                                         Le projet Sup'Connexion est un Portail dédié à l'expertise internationale africaine dans le supérieur et aux besoins des établissements. Il porte en effet sur Les BESOINS ET OPPORTUNITES DANS LE SUPERIEUR EN AFRIQUE, AINSI QUE SUR LES INTERVENANTS - SPECIALISTES INTERNATIONAUX AFRICAINS DANS LE SECTEUR. Le Portail a plusieurs fonctionnalités et fournit ainsi plusieurs services dont : 
-                                        <ul style="color: black; font-size: 13px">
+                                        <ul style="color: black; font-size: 16px">
                                             <li>
                                                 Donner de la visibilité aux besoins de recrutements de votre établissement d’enseignement supérieur ; vous permet de poster vos annonces, vos besoins en vacation, CDD, CDI. Les établissements d’enseignement supérieur peuvent donc s’inscrire et s’ouvrir un compte,
                                             </li>
@@ -51,6 +51,10 @@
                                         </ul>
                                     </li>
                                     <br>
+                                    <span style="color: blue; font-size: 17px">
+                                        Le Portail Sup’Connexion sera utilisé exclusivement à ces fins ci-dessus et conformément aux présentes Conditions Générales ainsi qu’à toutes les lois nationales et internationales applicables.
+                                    </span>
+                                    <br><br>
                                     <li>
                                         Les parties prenantes de Sup’Connexion sont tenues de traiter toutes les données personnelles d’un candidat ou candidate ou établissement accessibles par le Portail comme strictement confidentielles. Ces données ne doivent pas être utilisées ou traitées à d’autres fins que celles mentionnées ci-dessus,
                                     </li>
