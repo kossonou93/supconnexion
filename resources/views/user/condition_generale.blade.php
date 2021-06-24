@@ -73,13 +73,35 @@
                                 </ul>
                             </li>
                             <br>
-                            <li>Formalisation de notre collaboration</li>
+                            <li>Formalisation de notre collaboration <br>
+                                <span style="color: #371F57; font-size: 17px">
+                                    Toute formalisation d’un contrat de collaboration est subordonnée au paiement intégral du service ou des services souhaités conformément aux CGV. 
+                                </span>
+                            </li>
                             <br>
-                            <li>Facturation de nos services et paiement</li>
+                            <li>Facturation de nos services et paiement <br>
+                                <span style="color: #371F57; font-size: 17px">
+                                    Les prix de nos Services sont indiqués ci-dessous et peuvent occasionnellement être modifiés sans préavis. Ces prix s’entendent hors TVA. Le paiement de nos Services sera effectué en Euros dans les trente (30) jours suivant la date de la facture. En cas de non-paiement dans les trente (30) jours suivant la date de la facture, l’accès à nos Services vous sera refusé. Toutes les ventes sont fermes et non remboursables. Le prix d’une annonce présentée dans la liste de prix est le prix concernant une information précise donnée. Dans le cas de publier de nombreuses informations dans une annonce, le prix total de cette annonce sera spécifié et basé sur le nombre d’informations à faire passer.
+                                </span>
+                            </li>
                             <br>
-                            <li>Nos différentes responsabilité inhérentes à l’activité</li>
+                            <li>Nos différentes responsabilité inhérentes à l’activité <br>
+                                <ul style="color: #371F57; font-size: 17px">
+                                   <li>
+                                        Bien que nous déployons tous les efforts raisonnables pour rendre notre Portail performant, nous déclinons toute responsabilité en cas de dysfonctionnements du Portail causé par des circonstances indépendantes de notre volonté raisonnable, y compris, sans s’y limiter, toute panne ou dysfonctionnement de tout logiciel informatique, équipement, installations ou services de télécommunications et autres,
+                                   </li>
+                                   <br>
+                                   <li>
+                                        En outre, nous n’acceptons aucune responsabilité découlant de toute inexactitude ou omission dans l’une des informations sur ce site fournies par vous, tout autre utilisateur du site ou toute autre personne.
+                                   </li>
+                                </ul>
+                            </li>
                             <br>
-                            <li>Modifications des CGV</li>
+                            <li>Modifications des CGV <br>
+                                <span style="color: #371F57; font-size: 17px">
+                                    Nous pouvons réviser nos CGV à tout moment sans préavis. Vous devez consulter cette page de temps en temps et vous assurer que vous êtes au courant de ces changements. 
+                                </span>
+                            </li>
                         </ul>
                     </p>
                 </div>

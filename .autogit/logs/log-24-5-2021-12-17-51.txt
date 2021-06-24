@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jun 24 2021 12:17:51 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* resources/views/user/condition_generale.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-5-2021-10-7-52.txt
+
+
+Deleted files:
+
+
+Renamed files:
