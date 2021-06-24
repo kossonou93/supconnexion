@@ -83,36 +83,78 @@
                                 <span style="color: #371F57; font-size: 17px">
                                     Les prix de nos Services sont indiqués ci-dessous et peuvent occasionnellement être modifiés sans préavis. Ces prix s’entendent hors TVA. Le paiement de nos Services sera effectué en Euros dans les trente (30) jours suivant la date de la facture. En cas de non-paiement dans les trente (30) jours suivant la date de la facture, l’accès à nos Services vous sera refusé. Toutes les ventes sont fermes et non remboursables. <br><br>Le prix d’une annonce présentée dans la liste de prix est le prix concernant une information précise donnée. Dans le cas de publier de nombreuses informations dans une annonce, le prix total de cette annonce sera spécifié et basé sur le nombre d’informations à faire passer.
                                 </span>
-                                <br>
+                                <br><br>
                                 <table class="table table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+                                    <thead>
+                                        <tr class="row">
+                                        <th class="col-md-4">Produit</th>
+                                        <th scope="col-md-5">description</th>
+                                        <th scope="col-md-3">Prix net en €</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">Publication pendant 1 mois</th>
+                                            <td>Postez sur le Portail et Donnez de la visibilité à vos besoins de recrutements afin d'atirer les meilleurs profils (vacation, CDD, CDI)</td>
+                                            <td>500 €</td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row">Publication pendant 3 mois</th>
+                                            <td>Postez sur le Portail et Donnez de la visibilité à vos besoins de recrutements afin d'atirer les meilleurs profils (vacation, CDD, CDI)</td>
+                                            <td>1 600 €</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Accès à la base de données des intervenants</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Accès au profil complet d'un intervenant</th>
+                                            <td>CV ; Trouver l'intervenant spécialistes et qualifié dont votre établissement supérieur a besoin</td>
+                                            <td>100 €</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Accès pendant 3 mois</th>
+                                            <td>Accès profil complet des intervenants; Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin</td>
+                                            <td>3 500 €</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Accès pendant 6 mois</th>
+                                            <td>Accès profil complet des intervenants; Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin</td>
+                                            <td>6 500 €</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Accès pendant 12 mois</th>
+                                            <td>Accès profil complet des intervenants; Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin</td>
+                                            <td>12 500 €</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Service de recrutements</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Service de recrutement</th>
+                                            <td>Sup'Connexion se charge de trouver le profil recherché par l'établissement</td>
+                                            <td>5 000 €</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Service de publicités</th>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Service de publicités pour 1 mois</th>
+                                            <td>Les partenaires ont l'opportunité de faire leur promotion, la promotion de leurs programmes à travers des publicités et des annonces (une bannière sur notre page d'accueil + un lien vers votre site web)</td>
+                                            <td>5 000 €</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">Service de publicités pour 3 mois</th>
+                                            <td>Les partenaires ont l'opportunité de faire leur promotion, la promotion de leurs programmes à travers des publicités et des annonces (une bannière sur notre page d'accueil + un lien vers votre site web)</td>
+                                            <td>10 000 €</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
                             </li>
                             <br>
                             <li>Nos différentes responsabilité inhérentes à l’activité <br>
