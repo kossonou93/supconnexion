@@ -81,8 +81,38 @@
                             <br>
                             <li>Facturation de nos services et paiement <br>
                                 <span style="color: #371F57; font-size: 17px">
-                                    Les prix de nos Services sont indiqués ci-dessous et peuvent occasionnellement être modifiés sans préavis. Ces prix s’entendent hors TVA. Le paiement de nos Services sera effectué en Euros dans les trente (30) jours suivant la date de la facture. En cas de non-paiement dans les trente (30) jours suivant la date de la facture, l’accès à nos Services vous sera refusé. Toutes les ventes sont fermes et non remboursables. Le prix d’une annonce présentée dans la liste de prix est le prix concernant une information précise donnée. Dans le cas de publier de nombreuses informations dans une annonce, le prix total de cette annonce sera spécifié et basé sur le nombre d’informations à faire passer.
+                                    Les prix de nos Services sont indiqués ci-dessous et peuvent occasionnellement être modifiés sans préavis. Ces prix s’entendent hors TVA. Le paiement de nos Services sera effectué en Euros dans les trente (30) jours suivant la date de la facture. En cas de non-paiement dans les trente (30) jours suivant la date de la facture, l’accès à nos Services vous sera refusé. Toutes les ventes sont fermes et non remboursables. <br><br>Le prix d’une annonce présentée dans la liste de prix est le prix concernant une information précise donnée. Dans le cas de publier de nombreuses informations dans une annonce, le prix total de cette annonce sera spécifié et basé sur le nombre d’informations à faire passer.
                                 </span>
+                                <br>
+                                <table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
                             </li>
                             <br>
                             <li>Nos différentes responsabilité inhérentes à l’activité <br>
