@@ -70,7 +70,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">A Propos</a>
                           	<ul class="dropdown-menu">
                               <li><a href="{{route('leprojet')}}">Le projet Sup'Connexion</a></li>
-                              <li><a href="#">Conditions générales de ventes</a></li>
+                              <li><a href="{{route('condition.generale')}}">Conditions générales de ventes</a></li>
                               <li><a href="#">Charte utilisateurs</a></li>
                               <li><a href="#">Protection des données</a></li>
                               <li><a href="{{route('actualite.index')}}">Actualités dans le Supérieur</a></li>

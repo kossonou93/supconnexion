@@ -106,5 +106,10 @@ class HomeController extends Controller
         $actualite = Actualite::find($id);
         return view('user.actualite', compact('actualite'));
     }
+
+    public function conditiongenerale()
+    {
+        return view('user.condition_generale');
+    }
     
 }

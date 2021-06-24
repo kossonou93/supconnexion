@@ -18,6 +18,7 @@ Route::resource('/contacts', 'ContactController');
 Route::get('/actualites', 'Users\HomeController@actualites')->name('actualite.index');
 Route::get('/actualite/{post}', 'Users\HomeController@actualite')->name('actualite.details');
 Route::get('/projet', 'Users\HomeController@leprojet')->name('leprojet');
+Route::get('/condition_generale', 'Users\HomeController@conditiongenerale')->name('condition.generale');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
 Route::post('/interv/password', 'Auth\IntervenantPasswordController@show')->name('interv.password.submit');
