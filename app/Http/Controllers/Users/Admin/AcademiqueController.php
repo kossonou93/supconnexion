@@ -1,14 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Users\Admin;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Validator;
-use App\Models\Contact;
-use App\Mail\ContactMail;
-use Illuminate\Support\Facades\Mail;
 
-class ContactController extends Controller
+class AcademiqueController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,7 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        return view('user.contact');
+        //
     }
 
     /**
@@ -27,7 +24,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        return view('user.contact');
+        //
     }
 
     /**
@@ -38,23 +35,7 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'first_name' => 'required',
-            //'last_name' => 'required',
-            'email' => 'required',
-            'texte' => 'required',
-        ]);
-
-        $contact = new Contact();
-        $contact->first_name = $request->first_name;
-        $contact->last_name = $request->last_name;
-        $contact->email = $request->email;
-        $contact->sujet = $request->sujet;
-        $contact->site = $request->site;
-        $contact->texte = $request->texte;
-        $contact->save();
-        Mail::to("contact@sup-connexion.com")->send(new ContactMail($contact));
-        return redirect()->route('contacts.index')->with('success', 'Message envoyé avec succès!');
+        //
     }
 
     /**

@@ -29,7 +29,7 @@
                             <a href="#">email</a>
                         </div>
                         <div class="address">
-                            <a href="#">contact@supconnexion.com</a>
+                            <a href="#">contact@sup-connexion.com</a>
                         </div>
                     </div>
                 </div>

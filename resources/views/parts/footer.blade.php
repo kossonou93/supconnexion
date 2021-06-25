@@ -23,7 +23,7 @@
                 <h2>CONTACTEZ-NOUS</h2>
                 <address>
                     <ul class="my_address">
-                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>contact@supconnexion.com</a></li>
+                        <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>contact@sup-connexion.com</a></li>
                         <!--<li><a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i><span></span></a></li>-->
                     </ul>
                 </address>
