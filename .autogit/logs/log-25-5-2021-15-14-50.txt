@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 25 2021 15:14:50 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Admin/AcademiqueController.php
+* app/Http/Controllers/Users/HomeController.php
+* app/Models/Academique.php
+* resources/views/admin/academique/all.blade.php
+* resources/views/admin/academique/edit.blade.php
+* resources/views/admin/part/sidebar.blade.php
+* resources/views/parts/menu.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-25-5-2021-14-44-30.txt
+* public/uploads/photo/academique/25-06-2021.60d5f1460779b.muhammadtaha-ibrahim-ma-aji-z9mq3SP9uy4-unsplash-1024x683.jpg
+* public/uploads/photo/academique/25-06-2021.60d5f16755a93.muhammadtaha-ibrahim-ma-aji-z9mq3SP9uy4-unsplash-1024x683.jpg
+
+
+Deleted files:
+
+
+Renamed files:

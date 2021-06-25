@@ -25,7 +25,7 @@
                 <div class="row latest_blog">
                     @foreach ($academiques as $academique)
                         <div class="col-md-4 col-sm-6 blog_content">
-                            <img src="{{ asset('uploads/photo/actualite/'.$academique->photo) }}" alt="">
+                            <img src="{{ asset('supconnexion/public/uploads/photo/actualite/'.$academique->photo) }}" alt="">
                             <a href="#" class="blog_heading text-justify">{{($academique->titre) }}</a>
                             <h4><small>Par  </small><a style="color: blue; font-weight: bold;" href="#">{{($academique->auteur) }}</a><span>/</span><small style="color: #f6b60b; font-weight: bold;"> <i class="fa fa-calendar" aria-hidden="true"></i>
                             <?php

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Users\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Academique;
+use Illuminate\Support\Facades\Validator;
 
 class AcademiqueController extends Controller
 {
@@ -113,7 +114,7 @@ class AcademiqueController extends Controller
             $academique->photo = $academiqueName;
         }
   
-        $actualite->save();
+        $academique->save();
   
         return redirect()->route('admin.dashboard')
                         ->with('success','projet academique modifié avec succès');
