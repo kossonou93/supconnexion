@@ -1,0 +1,26 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 25 2021 14:14:14 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ContactController.php
+* app/Mail/ContactMail.php
+* resources/views/mail/contact-email.blade.php
+* resources/views/parts/footer.blade.php
+* resources/views/parts/menu.blade.php
+* resources/views/user/contact.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-5-2021-15-19-52.txt
+* app/Http/Controllers/Users/Admin/AcademiqueController.php
+* app/Models/Academique.php
+* resources/views/admin/academique/add.blade.php
+* resources/views/admin/academique/all.blade.php
+* resources/views/admin/academique/edit.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

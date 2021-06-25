@@ -15,10 +15,10 @@
 							<div class="card">
 								<div class="card-header">
 									<div class="d-flex align-items-center">
-										<h4 class="card-title">Toutes les Actualités</h4>
+										<h4 class="card-title">Tous les Projets Académiques</h4>
 										<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
 											<i class="fa fa-plus"></i>
-											Ajouter Actualité
+											Ajouter un Projet Académique
 										</button>
 									</div>
 								</div>
@@ -30,16 +30,16 @@
 												<div class="modal-header no-bd">
 													<h5 class="modal-title">
 														<span class="fw-mediumbold">
-														Nouvelle</span> 
+														Nouveaux</span> 
 														<span class="fw-light">
-															Actualité
+															Projet Académique
 														</span>
 													</h5>
 													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 														<span aria-hidden="true">&times;</span>
 													</button>
 												</div>
-												 <form action="{{ route('actualites.store') }}" method="post" enctype="multipart/form-data">
+												 <form action="{{ route('academiques.store') }}" method="post" enctype="multipart/form-data">
 													@csrf
 													<div class="card card-with-nav">
 														<div class="card-body">

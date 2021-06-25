@@ -9,10 +9,10 @@
 		<div class="main-panel">
 			<div class="content">
 				<div class="page-inner">
-                    <h4 class="page-title">Ajouter une Actualité</h4>
+                    <h4 class="page-title">Ajouter un Projet Academique</h4>
 					<div class="row">
 						<div class="col-md-12">
-                        <form action="{{ route('actualites.store') }}" method="post" enctype="multipart/form-data">
+                        <form action="{{ route('academiques.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
 							<div class="card card-with-nav">
 								<div class="card-body">

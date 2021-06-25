@@ -71,6 +71,7 @@ Route::prefix('admin')->group(function(){
     Route::resource('/carousels', 'Users\Admin\CarouselController');
     Route::resource('/partenaires', 'Users\Admin\PartenaireController');
     Route::resource('/actualites', 'Users\Admin\ActualiteController');
+    Route::resource('/projet_academiques', 'Users\Admin\AcademiqueController');
     Route::resource('/villes', 'Users\Admin\VilleController');
     Route::resource('/pays', 'Users\Admin\PaysController');
     

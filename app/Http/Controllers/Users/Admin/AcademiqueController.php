@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Users\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Academique;
 
 class AcademiqueController extends Controller
 {
@@ -14,7 +15,8 @@ class AcademiqueController extends Controller
      */
     public function index()
     {
-        //
+        $academiques = Academique::all();
+        return view('admin.academique.all', compact('academiques'));
     }
 
     /**
@@ -24,7 +26,7 @@ class AcademiqueController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.academique.add');
     }
 
     /**
@@ -35,7 +37,26 @@ class AcademiqueController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'titre' => 'required',
+        ]);
+
+        if ($request->file('photo')) {
+            $academiqueImage = $request->file('photo');
+            $academiqueName  = date('d-m-Y') . '.' . uniqid() . '.' . $academiqueImage->getClientOriginalName();
+            $academiquePath  = public_path('uploads/photo/academique');
+            $academiqueImage->move($academiquePath, $academiqueName);
+        }
+
+        $academique = new Academique();
+        $academique->titre = $request->titre;
+        $academique->auteur = $request->auteur;
+        $academique->date_pub = $request->date_pub;
+        $academique->photo = $actualiteName;
+        $academique->texte = $request->texte;
+        $academique->soustitre = $request->soustitre;
+        $academique->save();
+        return redirect('projet_academiques/')->with('success', 'projet academique enregistré avec succès!');
     }
 
     /**
@@ -46,7 +67,8 @@ class AcademiqueController extends Controller
      */
     public function show($id)
     {
-        //
+        $academique = Academique::find($id);
+        return view('admin.academique.edit', compact('academique'));
     }
 
     /**
@@ -69,7 +91,32 @@ class AcademiqueController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $input = $request->all();
+   
+        $validator = Validator::make($input, [
+            'titre' => 'required',
+        ]);
+
+        $academique = Academique::find($id);
+        $academique->titre = $input['titre'];
+        $academique->auteur = $input['auteur'];
+        $academique->date_pub = $input['date_pub'];
+        $academique->soustitre = $input['soustitre'];
+        $academique->texte = $input['texte'];
+
+        if ($request->file('photo')) {
+            @unlink(public_path('uploads/photo/academique/'.$academique->photo));
+            $academiqueImage = $request->file('photo');
+            $academiqueName  = date('d-m-Y') . '.' . uniqid() . '.' . $academiqueImage->getClientOriginalName();
+            $academiquePath  = public_path('uploads/photo/academique');
+            $academiqueImage->move($academiquePath, $partenaireName);
+            $academique->photo = $academiqueName;
+        }
+  
+        $actualite->save();
+  
+        return redirect()->route('admin.dashboard')
+                        ->with('success','projet academique modifié avec succès');
     }
 
     /**
@@ -80,6 +127,14 @@ class AcademiqueController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $academique = Academique::find($id);
+        @unlink(public_path('uploads/photo/academique/' . $academique->photo));
+        $academique->delete();
+        $notification = array(
+            'message'    => 'Image projet academique supprimée avec succès',
+            'alert-type' => 'success',
+        );
+        return redirect()->route('admin.dashboard')
+                        ->with($notification);
     }
 }

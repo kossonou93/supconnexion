@@ -118,7 +118,7 @@ class ActualiteController extends Controller
         $actualite->save();
   
         return redirect()->route('admin.dashboard')
-                        ->with('success','partenaire modifié avec succès');
+                        ->with('success','actualité modifiée avec succès');
     }
 
     /**
