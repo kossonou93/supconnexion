@@ -52,11 +52,11 @@ class AcademiqueController extends Controller
         $academique->titre = $request->titre;
         $academique->auteur = $request->auteur;
         $academique->date_pub = $request->date_pub;
-        $academique->photo = $actualiteName;
+        $academique->photo = $academiqueName;
         $academique->texte = $request->texte;
         $academique->soustitre = $request->soustitre;
         $academique->save();
-        return redirect('projet_academiques/')->with('success', 'projet academique enregistré avec succès!');
+        return redirect()->route('academiques.index')->with('success', 'projet academique enregistré avec succès!');
     }
 
     /**

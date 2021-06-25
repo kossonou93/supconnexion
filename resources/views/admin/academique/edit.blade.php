@@ -13,7 +13,7 @@
                     <h4 class="page-title">Editer Projet Académique</h4>
 					<div class="row">
 						<div class="col-md-12">
-							<form action="{{ route('academiques.update',$academiques->id) }}" method="post" enctype="multipart/form-data">
+							<form action="{{ route('academiques.update',$academique->id) }}" method="post" enctype="multipart/form-data">
 								@csrf
 								@method('PUT')
 								<div class="card card-with-nav">

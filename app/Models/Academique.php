@@ -11,5 +11,5 @@ class Academique extends Model
 
     protected $table = 'academiques';
 
-    protected $fillable = ['photo', 'titre', 'auteur', 'soustitre', 'texte', 'date_pub']
+    protected $fillable = ['photo', 'titre', 'auteur', 'soustitre', 'texte', 'date_pub'];
 }

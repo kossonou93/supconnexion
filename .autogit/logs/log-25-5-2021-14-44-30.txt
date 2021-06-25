@@ -1,0 +1,23 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jun 25 2021 14:44:30 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Admin/AcademiqueController.php
+* app/Http/Controllers/Users/Admin/ActualiteController.php
+* resources/views/admin/academique/add.blade.php
+* resources/views/admin/academique/all.blade.php
+* resources/views/admin/academique/edit.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-25-5-2021-14-14-14.txt
+* resources/views/user/academique.blade.php
+* resources/views/user/academiques.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

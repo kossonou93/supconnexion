@@ -78,7 +78,7 @@
                               <li><a href="{{route('contacts.index')}}">Contact</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">Projets académiques</a></li>
+                        <li><a href="{{route('academique.index')}}">Projets académiques</a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>

@@ -104,19 +104,19 @@
 												</tr>
 											</thead>
 											<tbody>
-												@foreach ( $actualites as $actualite )
+												@foreach ( $academiques as $academique )
 													<tr>		
-														<td>{{ $actualite->titre }}</td>
+														<td>{{ $academique->titre }}</td>
 														<td>
 															<div class="form-button-action">
-																<a href="{{ route('actualites.show',$actualite->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Actualite">
+																<a href="{{ route('academiques.show',$academique->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Projet Académique">
 																	<i class="fa fa-edit"></i>
 																</a>
 															</div>
 														</td>
 														<td>
 															<div class="form-button-action">
-																<form action="{{ route('actualites.destroy', $actualite->id)}}" method="post" style="display: inline-block">
+																<form action="{{ route('academiques.destroy', $academique->id)}}" method="post" style="display: inline-block">
 																	@csrf
 																	@method('DELETE')
 																	<button class="btn btn-danger btn-sm" type="submit" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-times"></i></button>

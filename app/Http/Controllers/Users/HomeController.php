@@ -27,6 +27,7 @@ use Illuminate\Http\Request;
 use App\Models\Annonce;
 use Carbon\Carbon;
 use App\Ecole;
+use App\Models\Academique;
 
 class HomeController extends Controller
 {
@@ -105,6 +106,18 @@ class HomeController extends Controller
     {
         $actualite = Actualite::find($id);
         return view('user.actualite', compact('actualite'));
+    }
+
+    public function academiques()
+    {
+        $academiques = Academique::all();
+        return view('user.academiques', compact('academiques'));
+    }
+
+    public function academique($id)
+    {
+        $academique = Academique::find($id);
+        return view('user.academique', compact('academique'));
     }
 
     public function conditiongenerale()

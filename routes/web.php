@@ -17,6 +17,8 @@ Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.det
 Route::resource('/contacts', 'ContactController');
 Route::get('/actualites', 'Users\HomeController@actualites')->name('actualite.index');
 Route::get('/actualite/{post}', 'Users\HomeController@actualite')->name('actualite.details');
+Route::get('/projet_academiques', 'Users\HomeController@academiques')->name('academique.index');
+Route::get('/projet_academique/{post}', 'Users\HomeController@academique')->name('academique.details');
 Route::get('/projet', 'Users\HomeController@leprojet')->name('leprojet');
 Route::get('/condition_generale', 'Users\HomeController@conditiongenerale')->name('condition.generale');
 // Send mail
@@ -71,7 +73,7 @@ Route::prefix('admin')->group(function(){
     Route::resource('/carousels', 'Users\Admin\CarouselController');
     Route::resource('/partenaires', 'Users\Admin\PartenaireController');
     Route::resource('/actualites', 'Users\Admin\ActualiteController');
-    Route::resource('/projet_academiques', 'Users\Admin\AcademiqueController');
+    Route::resource('/academiques', 'Users\Admin\AcademiqueController');
     Route::resource('/villes', 'Users\Admin\VilleController');
     Route::resource('/pays', 'Users\Admin\PaysController');
     

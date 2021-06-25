@@ -107,6 +107,27 @@
 							</div>
 						</li>
 						<li class="nav-item">
+							<a data-toggle="collapse" href="#academique">
+								<i class="fas fa-book-open"></i>
+								<p>Projets Académiques</p>
+								<span class="caret"></span>
+							</a>
+							<div class="collapse" id="academique">
+								<ul class="nav nav-collapse">
+									<li>
+										<a href="{{route('academiques.create')}}">
+											<span class="sub-item">Ajouter</span>
+										</a>
+									</li>
+									<li>
+										<a href="{{route('academiques.index')}}">
+											<span class="sub-item">Voir tous</span>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li class="nav-item">
 							<a data-toggle="collapse" href="#base">
 								<i class="fas fa-book-open"></i>
 								<p>Disciplines</p>
