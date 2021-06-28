@@ -120,6 +120,18 @@ class AdminController extends Controller
         //session()->flash('message', 'Directeur(trice) supprimé(e) avec succès!');
         return redirect()->route('admin.all.discipline');
   
+    }
+
+  public function destroyIntervenant($id)
+  {
+    DB::table('intervenants')->where('id', $id)->delete();
+    return redirect()->route('admin.all.intervenant')->with('success', 'Intervenant supprimé avec succès!');
+  }
+
+  public function destroyIntervenant($id)
+  {
+    DB::table('ecoles')->where('id', $id)->delete();
+    return redirect()->route('admin.all.ecole')->with('success', 'Intervenant supprimé avec succès!');
   }
 
     public function allIntervenants()

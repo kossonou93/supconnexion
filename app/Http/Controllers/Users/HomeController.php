@@ -50,6 +50,7 @@ class HomeController extends Controller
     public function index()
     {
         $intervenants = Intervenant::take(4)->get();
+        $intervs = Intervenant::where('email_verified_at', '!=', 'NULL')->get();
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
         $temoignages = Temoignage::all();
@@ -57,10 +58,10 @@ class HomeController extends Controller
         //$mytime = new \DateTime("now");
         //dd($mytime);
         $annonces = Annonce::where('date_expiration', '>=', Carbon::today()->toDateString())->get();
-        $ecoles = Ecole::all();
+        $ecoles = Ecole::where('email_verified_at', '!=', 'NULL')->get();
         $nbecole = $ecoles->count();
         $nbannonce = $annonces->count();
-        $nbintervenant = $intervenants->count();
+        $nbintervenant = $intervs->count();
         $nbpartenaire = $partenaires->count();
         //Carousel $carousel;
         //$carousel->visists()->increment();
