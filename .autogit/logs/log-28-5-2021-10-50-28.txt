@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 28 2021 10:50:28 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Admin/AdminController.php
+* resources/views/admin/ecole/all.blade.php
+* resources/views/admin/intervenant/all.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-28-5-2021-10-20-0.txt
+
+
+Deleted files:
+
+
+Renamed files:
