@@ -41,7 +41,7 @@
 														<td>{{ $ecole->address }}</td>
 														<td>
 															<div class="form-button-action">
-																<form action="#" method="post" style="display: inline-block">
+																<form action="{{ route('admin.ecole.destroy', $ecole->id)}}" method="post" style="display: inline-block">
 																	@csrf
 																	@method('DELETE')
 																	<button class="btn btn-danger btn-sm" type="submit" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-times"></i></button>

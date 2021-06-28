@@ -124,14 +124,18 @@ class AdminController extends Controller
 
   public function destroyIntervenant($id)
   {
-    DB::table('intervenants')->where('id', $id)->delete();
-    return redirect()->route('admin.all.intervenant')->with('success', 'Intervenant supprimé avec succès!');
+    $intervenant = Intervenant::findOrFail($id);
+    $intervenant->delete();
+    //DB::table('intervenants')->where('id', $id)->delete();
+    return redirect()->route('admin.intervenant.all')->with('success', 'Intervenant supprimé avec succès!');
   }
 
-  public function destroyIntervenant($id)
+  public function destroyEcole($id)
   {
-    DB::table('ecoles')->where('id', $id)->delete();
-    return redirect()->route('admin.all.ecole')->with('success', 'Intervenant supprimé avec succès!');
+    $ecole = Ecole::findOrFail($id);
+    $ecole->delete();
+    //DB::table('ecoles')->where('id', $id)->delete();
+    return redirect()->route('admin.ecole.all')->with('success', 'Etablissement supprimé avec succès!');
   }
 
     public function allIntervenants()

@@ -54,9 +54,10 @@ Route::prefix('admin')->group(function(){
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
     Route::get('/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
     Route::post('/register', 'Auth\AdminRegisterController@register')->name('admin.register.submit');
-
     Route::get('/intervenant-all', 'Users\Admin\AdminController@allIntervenants')->name('admin.intervenant.all');
+    Route::delete('/intervenant-destroy/{post}', 'Users\Admin\AdminController@destroyIntervenant')->name('admin.intervenant.destroy');
     Route::get('/ecole-all', 'Users\Admin\AdminController@allEcoles')->name('admin.ecole.all');
+    Route::delete('/ecole-destroy/{post}', 'Users\Admin\AdminController@destroyEcole')->name('admin.ecole.destroy');
 
     Route::resource('/disciplines', 'Users\Admin\DisciplineController');
     Route::resource('/langues', 'Users\Admin\LangueController');
