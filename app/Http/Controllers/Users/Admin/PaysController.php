@@ -50,7 +50,7 @@ class PaysController extends Controller
 
         $pays = new Pays();
         $pays->name = $request->name;
-        $pays->flag = $paysName;
+        $pays->flag = $request->flag;
         $pays->code = $request->code;
 
         $pays->save();
