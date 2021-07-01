@@ -30,39 +30,37 @@ Route::post('/interv/password', [Auth\IntervenantPasswordController::class, 'sho
 Route::get('/interv/password', [Auth\IntervenantPasswordController::class, 'index'])->name('interv.password');
 Route::put('/interv/password/send', [Auth\IntervenantPasswordController::class, 'modifyPassword'])->name('interv.password.send.submit');
 Route::get('/interv/password/send', [Auth\IntervenantPasswordController::class, 'sendPassword'])->name('interv.password.send');
-Route::get('/interv/verify/{token}', 'MailController@verifyPasswordIntervenant')->name('interv.verify.password');
+Route::get('/interv/verify/{token}', [MailController::class, 'verifyPasswordIntervenant'])->name('interv.verify.password');
 
-Route::post('/ecol/password', 'Auth\EcolePasswordController@show')->name('ecol.password.submit');
-Route::get('/ecol/password', 'Auth\EcolePasswordController@index')->name('ecol.password');
-Route::put('/ecol/password/send', 'Auth\EcolePasswordController@modifyPassword')->name('ecol.password.send.submit');
-Route::get('/ecol/password/send', 'Auth\EcolePasswordController@sendPassword')->name('ecol.password.send');
-Route::get('/ecol/verify/{token}', 'MailController@verifyPasswordEcole')->name('ecol.verify.password');
-
-//Route::get('/formlogin', 'HomeController@form')->name('form');
-Route::get('/user/verify/{token}', 'MailController@verifyEmail')->name('user.verify');
-Route::get('/ecole/verify/{token}', 'MailController@verifyEmailEcole')->name('ecole.verify');
+Route::post('/ecol/password', [Auth\EcolePasswordController::class, 'show'])->name('ecol.password.submit');
+Route::get('/ecol/password', [Auth\EcolePasswordController::class, 'index'])->name('ecol.password');
+Route::put('/ecol/password/send', [Auth\EcolePasswordController::class, 'modifyPassword'])->name('ecol.password.send.submit');
+Route::get('/ecol/password/send', [Auth\EcolePasswordController::class, 'sendPassword'])->name('ecol.password.send');
+Route::get('/ecol/verify/{token}', [MailController::class, 'verifyPasswordEcole'])->name('ecol.verify.password');
+Route::get('/user/verify/{token}', [MailController::class, 'verifyEmail'])->name('user.verify');
+Route::get('/ecole/verify/{token}', [MailController::class, 'verifyEmailEcole'])->name('ecole.verify');
 
 Auth::routes();
 
-Route::get('auth/google', 'Auth\GoogleController@redirectToGoogle');
-Route::get('auth/google/callback', 'Auth\GoogleController@handleGoogleCallback');
+Route::get('auth/google', [Auth\GoogleController::class, 'redirectToGoogle']);
+Route::get('auth/google/callback', [Auth\GoogleController::class, 'handleGoogleCallback']);
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('auth/facebook', 'Auth\FacebookController@redirectToFacebook');
-Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCallback');
+Route::get('auth/facebook', [Auth\FacebookController::class, 'redirectToFacebook']);
+Route::get('auth/facebook/callback', [Auth\FacebookController::class, 'handleFacebookCallback']);
 
 // Admin routes
 Route::prefix('admin')->group(function(){
-    Route::get('/', 'Users\Admin\AdminController@index')->name('admin.dashboard');
-    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
-    Route::post('/register', 'Auth\AdminRegisterController@register')->name('admin.register.submit');
-    Route::get('/intervenant-all', 'Users\Admin\AdminController@allIntervenants')->name('admin.intervenant.all');
-    Route::delete('/intervenant-destroy/{post}', 'Users\Admin\AdminController@destroyIntervenant')->name('admin.intervenant.destroy');
-    Route::get('/ecole-all', 'Users\Admin\AdminController@allEcoles')->name('admin.ecole.all');
-    Route::delete('/ecole-destroy/{post}', 'Users\Admin\AdminController@destroyEcole')->name('admin.ecole.destroy');
+    Route::get('/', [Users\Admin\AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/login', [Auth\AdminLoginController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/login', [Auth\AdminLoginController::class, 'login'])->name('admin.login.submit');
+    Route::get('/register', [Auth\AdminRegisterController::class, 'showRegisterForm'])->name('admin.register');
+    Route::post('/register', [Auth\AdminRegisterController::class, 'register'])->name('admin.register.submit');
+    Route::get('/intervenant-all', [Users\Admin\AdminController::class, 'allIntervenants'])->name('admin.intervenant.all');
+    Route::delete('/intervenant-destroy/{post}', [Users\Admin\AdminController::class, 'destroyIntervenant'])->name('admin.intervenant.destroy');
+    Route::get('/ecole-all', [Users\Admin\AdminController::class, 'allEcoles'])->name('admin.ecole.all');
+    Route::delete('/ecole-destroy/{post}', [Users\Admin\AdminController::class, 'destroyEcole'])->name('admin.ecole.destroy');
 
-    Route::resource('/disciplines', 'Users\Admin\DisciplineController');
+    Route::resource('/disciplines', Users\Admin\DisciplineController::class);
     Route::resource('/langues', 'Users\Admin\LangueController');
     Route::resource('/contrats', 'Users\Admin\ContratController');
     Route::resource('/disponibilites', 'Users\Admin\DisponibiliteController');
