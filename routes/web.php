@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
+use App\Http\Controllers\Users;
+use App\Http\Controllers\Auth;
+use App\Http\Controllers;
 //use Illuminate\Support\Facades\Crypt;
 
 
@@ -10,23 +13,23 @@ use RealRashid\SweetAlert\Facades\Alert;
 //Route::get('/', function () {
  //   return view('home');
 //})->name('home');
-Route::get('laporan-pdf',[PdfController::class, 'generatePDF']);
+//Route::get('laporan-pdf', [PdfController::class, 'generatePDF']);
 Route::get('/', [Users\HomeController::class, 'index'])->name('home');
-Route::get('/annonces', 'Users\HomeController@annonces')->name('annonces');
-Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.details');
-Route::resource('/contacts', 'ContactController');
-Route::get('/actualites', 'Users\HomeController@actualites')->name('actualite.index');
-Route::get('/actualite/{post}', 'Users\HomeController@actualite')->name('actualite.details');
-Route::get('/projet_academiques', 'Users\HomeController@academiques')->name('academique.index');
-Route::get('/projet_academique/{post}', 'Users\HomeController@academique')->name('academique.details');
-Route::get('/projet', 'Users\HomeController@leprojet')->name('leprojet');
-Route::get('/condition_generale', 'Users\HomeController@conditiongenerale')->name('condition.generale');
+Route::get('/annonces', [Users\HomeController::class, 'annonces'])->name('annonces');
+Route::get('/annonce/{post}', [Users\HomeController::class, 'annonce'])->name('annonce.details');
+Route::resource('/contacts', ContactController::class);
+Route::get('/actualites', [Users\HomeController::class, 'actualites'])->name('actualite.index');
+Route::get('/actualite/{post}', [Users\HomeController::class, 'actualite'])->name('actualite.details');
+Route::get('/projet_academiques', [Users\HomeController::class, 'academiques'])->name('academique.index');
+Route::get('/projet_academique/{post}', [Users\HomeController::class, 'academique'])->name('academique.details');
+Route::get('/projet', [Users\HomeController::class, 'leprojet'])->name('leprojet');
+Route::get('/condition_generale', [Users\HomeController::class, 'conditiongenerale'])->name('condition.generale');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
-Route::post('/interv/password', 'Auth\IntervenantPasswordController@show')->name('interv.password.submit');
-Route::get('/interv/password', 'Auth\IntervenantPasswordController@index')->name('interv.password');
-Route::put('/interv/password/send', 'Auth\IntervenantPasswordController@modifyPassword')->name('interv.password.send.submit');
-Route::get('/interv/password/send', 'Auth\IntervenantPasswordController@sendPassword')->name('interv.password.send');
+Route::post('/interv/password', [Auth\IntervenantPasswordController::class, 'show'])->name('interv.password.submit');
+Route::get('/interv/password', [Auth\IntervenantPasswordController::class, 'index'])->name('interv.password');
+Route::put('/interv/password/send', [Auth\IntervenantPasswordController::class, 'modifyPassword'])->name('interv.password.send.submit');
+Route::get('/interv/password/send', [Auth\IntervenantPasswordController::class, 'sendPassword'])->name('interv.password.send');
 Route::get('/interv/verify/{token}', 'MailController@verifyPasswordIntervenant')->name('interv.verify.password');
 
 Route::post('/ecol/password', 'Auth\EcolePasswordController@show')->name('ecol.password.submit');
