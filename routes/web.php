@@ -61,23 +61,23 @@ Route::prefix('admin')->group(function(){
     Route::delete('/ecole-destroy/{post}', [Users\Admin\AdminController::class, 'destroyEcole'])->name('admin.ecole.destroy');
 
     Route::resource('/disciplines', Users\Admin\DisciplineController::class);
-    Route::resource('/langues', 'Users\Admin\LangueController');
-    Route::resource('/contrats', 'Users\Admin\ContratController');
-    Route::resource('/disponibilites', 'Users\Admin\DisponibiliteController');
-    Route::resource('/durees', 'Users\Admin\DureeController');
-    Route::resource('/formations', 'Users\Admin\FormationController');
-    Route::resource('/horaires', 'Users\Admin\HoraireController');
-    Route::resource('/interventions', 'Users\Admin\InterventionController');
-    Route::resource('/modalites', 'Users\Admin\ModaliteController');
-    Route::resource('/remunerations', 'Users\Admin\RemunerationController');
-    Route::resource('/responsabilites', 'Users\Admin\ResponsabiliteController');
-    Route::resource('/typeexperiences', 'Users\Admin\TypeExperienceController');
-    Route::resource('/carousels', 'Users\Admin\CarouselController');
-    Route::resource('/partenaires', 'Users\Admin\PartenaireController');
-    Route::resource('/actualites', 'Users\Admin\ActualiteController');
-    Route::resource('/academiques', 'Users\Admin\AcademiqueController');
-    Route::resource('/villes', 'Users\Admin\VilleController');
-    Route::resource('/pays', 'Users\Admin\PaysController');
+    Route::resource('/langues', Users\Admin\LangueController::class);
+    Route::resource('/contrats', Users\Admin\ContratController::class);
+    Route::resource('/disponibilites', Users\Admin\DisponibiliteController::class);
+    Route::resource('/durees', Users\Admin\DureeController::class);
+    Route::resource('/formations', Users\Admin\FormationController::class);
+    Route::resource('/horaires', Users\Admin\HoraireController::class);
+    Route::resource('/interventions', Users\Admin\InterventionController::class);
+    Route::resource('/modalites', Users\Admin\ModaliteController::class);
+    Route::resource('/remunerations', Users\Admin\RemunerationController::class);
+    Route::resource('/responsabilites', Users\Admin\ResponsabiliteController::class);
+    Route::resource('/typeexperiences', Users\Admin\TypeExperienceController::class);
+    Route::resource('/carousels', Users\Admin\CarouselController::class);
+    Route::resource('/partenaires', Users\Admin\PartenaireController::class);
+    Route::resource('/actualites', Users\Admin\ActualiteController::class);
+    Route::resource('/academiques', Users\Admin\AcademiqueController::class);
+    Route::resource('/villes', Users\Admin\VilleController::class);
+    Route::resource('/pays', Users\Admin\PaysController::class);
     
     
 
@@ -86,55 +86,55 @@ Route::prefix('admin')->group(function(){
 
 // Ecole routes
 Route::prefix('ecole')->group(function(){
-    Route::get('/', 'Users\Ecole\EcoleController@index')->name('ecole.dashboard');
-    Route::get('/login', 'Auth\EcoleLoginController@showLoginForm')->name('ecole.login');
-    Route::post('/login', 'Auth\EcoleLoginController@login')->name('ecole.login.submit');
-    Route::get('/register', 'Auth\EcoleRegisterController@showRegisterForm')->name('ecole.register');
-    Route::post('/register', 'Auth\EcoleRegisterController@register')->name('ecole.register.submit');
-    Route::put('/edit/{post}', 'Users\Ecole\EcoleController@update')->name('ecole.update.submit');
-    Route::put('/edit_discipline/{post}', 'Users\Ecole\EcoleController@updateDiscipline')->name('ecole.discipline.update.submit');
-    Route::put('/edit_formation/{post}', 'Users\Ecole\EcoleController@updateFormation')->name('ecole.formation.update.submit');
-    Route::get('/temoignages', 'Users\Ecole\EcoleController@indexTemoignage')->name('temoignage.ecole');
-    Route::post('/temoignages', 'Users\Ecole\EcoleController@storeTemoignage')->name('temoignage.ecole.submit');
-    Route::resource('/annonces', 'Users\Ecole\AnnonceController');
-    Route::get('/annonce/create/{post}', 'Users\Ecole\AnnonceController@creer')->name('annonce.creer');
-    Route::get('/choix_forfait', 'Users\Ecole\EcoleController@choixannonces')->name('choix.annonces');
-    Route::get('/annonce/paiements', 'Users\Ecole\EcoleController@paiement')->name('paiement.annonces');
-    Route::get('/annonce/paiements/{post}', 'Users\Ecole\EcoleController@show')->name('paiement.annonces.show');
-    Route::get('/intervenants', 'Users\Ecole\EcoleController@intervenants')->name('search.intervenants');
-    Route::get('/intervenant/{post}', 'Users\Ecole\EcoleController@detailsintervenant')->name('details.intervenant');
-    Route::get('/choix_paiements', 'Users\Ecole\EcoleController@choixpaiements')->name('choix.paiements');
-    Route::get('/paiements', 'Users\Ecole\PaiementController@index')->name('paiement.intervenants');
-    Route::get('/paiements/{post}', 'Users\Ecole\PaiementController@show')->name('paiement.intervenants.show');
-    Route::post('/paiements', 'Users\Ecole\PaiementController@store')->name('paiement.intervenants.store');
-    Route::get('/annonce/checkout/{post}','CheckoutController@checkout')->name('checkout.credit');
-    Route::post('/annonce/checkout/{post}','CheckoutController@afterpayment')->name('checkout.credit-card');
-    Route::get('/checkout/intervenant/{post}','CheckoutController@checkoutIntervenant')->name('checkout.intervenant');
-    Route::post('/checkout/intervenant/{post}','CheckoutController@afterpaymentIntervenant')->name('checkout.intervenant-card');
-    Route::get('/intervenant/all/{post}', 'Users\Ecole\EcoleController@intervenantAll')->name('ecole.intervenant.all');
-    Route::post('/logout', 'Auth\EcoleLoginController@logoutEcole')->name('eco.logout');
+    Route::get('/', [Users\Ecole\EcoleController::class, 'index'])->name('ecole.dashboard');
+    Route::get('/login', [Auth\EcoleLoginController::class, 'showLoginForm'])->name('ecole.login');
+    Route::post('/login', [Auth\EcoleLoginController::class, 'login'])->name('ecole.login.submit');
+    Route::get('/register', [Auth\EcoleRegisterController::class, 'showRegisterForm'])->name('ecole.register');
+    Route::post('/register', [Auth\EcoleRegisterController::class, 'register'])->name('ecole.register.submit');
+    Route::put('/edit/{post}', [Users\Ecole\EcoleController::class, 'update'])->name('ecole.update.submit');
+    Route::put('/edit_discipline/{post}', [Users\Ecole\EcoleController::class, 'updateDiscipline'])->name('ecole.discipline.update.submit');
+    Route::put('/edit_formation/{post}', [Users\Ecole\EcoleController::class, 'updateFormation'])->name('ecole.formation.update.submit');
+    Route::get('/temoignages', [Users\Ecole\EcoleController::class, 'indexTemoignage'])->name('temoignage.ecole');
+    Route::post('/temoignages', [Users\Ecole\EcoleController::class, 'storeTemoignage'])->name('temoignage.ecole.submit');
+    Route::resource('/annonces', Users\Ecole\AnnonceController::class);
+    Route::get('/annonce/create/{post}', [Users\Ecole\AnnonceController::class, 'creer'])->name('annonce.creer');
+    Route::get('/choix_forfait', [Users\Ecole\EcoleController::class, 'choixannonces'])->name('choix.annonces');
+    Route::get('/annonce/paiements', [Users\Ecole\EcoleController::class, 'paiement'])->name('paiement.annonces');
+    Route::get('/annonce/paiements/{post}', [Users\Ecole\EcoleController::class, 'show'])->name('paiement.annonces.show');
+    Route::get('/intervenants', [Users\Ecole\EcoleController::class, 'intervenants'])->name('search.intervenants');
+    Route::get('/intervenant/{post}', [Users\Ecole\EcoleController::class, 'detailsintervenant'])->name('details.intervenant');
+    Route::get('/choix_paiements', [Users\Ecole\EcoleController::class, 'choixpaiements'])->name('choix.paiements');
+    Route::get('/paiements', [Users\Ecole\PaiementController::class, 'index'])->name('paiement.intervenants');
+    Route::get('/paiements/{post}', [Users\Ecole\PaiementController::class, 'show'])->name('paiement.intervenants.show');
+    Route::post('/paiements', [Users\Ecole\PaiementController::class, 'store'])->name('paiement.intervenants.store');
+    Route::get('/annonce/checkout/{post}', [CheckoutController::class, 'checkout'])->name('checkout.credit');
+    Route::post('/annonce/checkout/{post}', [CheckoutController::class, 'afterpayment'])->name('checkout.credit-card');
+    Route::get('/checkout/intervenant/{post}',[CheckoutController::class, 'checkoutIntervenant'])->name('checkout.intervenant');
+    Route::post('/checkout/intervenant/{post}', [CheckoutController::class, 'afterpaymentIntervenant'])->name('checkout.intervenant-card');
+    Route::get('/intervenant/all/{post}', [Users\Ecole\EcoleController::class, 'intervenantAll'])->name('ecole.intervenant.all');
+    Route::post('/logout', [Auth\EcoleLoginController::class, 'logoutEcole'])->name('eco.logout');
 
 });
 
 // Intervenant routes
 Route::prefix('intervenant')->group(function(){
-    Route::get('/', 'Users\Intervenant\IntervenantController@index')->name('intervenant.dashboard');
-    Route::get('laporan-pdf','Users\Intervenant\IntervenantController@generatePDF')->name('pdf');
-    Route::get('/login', 'Auth\IntervenantLoginController@showLoginForm')->name('intervenant.login');
-    Route::post('/login', 'Auth\IntervenantLoginController@login')->name('intervenant.login.submit');
-    Route::get('/register', 'Auth\IntervenantRegisterController@showRegisterForm')->name('intervenant.register');
-    Route::post('/register', 'Auth\IntervenantRegisterController@register')->name('intervenant.register.submit');
-    Route::put('/edit/{post}', 'Users\Intervenant\IntervenantController@update')->name('intervenant.update.submit');
-    Route::put('/edit_discipline/{post}', 'Users\Intervenant\IntervenantController@updateDiscipline')->name('discipline.update.submit');
+    Route::get('/', [Users\Intervenant\IntervenantController::class, 'index'])->name('intervenant.dashboard');
+    Route::get('laporan-pdf', [Users\Intervenant\IntervenantController::class, 'generatePDF'])->name('pdf');
+    Route::get('/login', [Auth\IntervenantLoginController::class, 'showLoginForm'])->name('intervenant.login');
+    Route::post('/login', [Auth\IntervenantLoginController::class, 'login'])->name('intervenant.login.submit');
+    Route::get('/register', [Auth\IntervenantRegisterController::class, 'showRegisterForm'])->name('intervenant.register');
+    Route::post('/register', [Auth\IntervenantRegisterController::class, 'register'])->name('intervenant.register.submit');
+    Route::put('/edit/{post}', [Users\Intervenant\IntervenantController::class, 'update'])->name('intervenant.update.submit');
+    Route::put('/edit_discipline/{post}', [Users\Intervenant\IntervenantController::class, 'updateDiscipline'])->name('discipline.update.submit');
     Route::put('/edit_formation/{post}', 'Users\Intervenant\IntervenantController@updateFormation')->name('formation.update.submit');
-    Route::post('/', 'Users\Intervenant\IntervenantController@experience')->name('experience.submit');
-    Route::resource('/diplomes', 'Users\Intervenant\DiplomeController');
-    Route::resource('/experiences', 'Users\Intervenant\ExperienceController');
-    Route::get('/temoignages', 'Users\Intervenant\IntervenantController@indexTemoignage')->name('temoignage.intervenant');
-    Route::post('/temoignages', 'Users\Intervenant\IntervenantController@storeTemoignage')->name('temoignage.intervenant.submit');
-    Route::resource('/offres', 'Users\Intervenant\OffreController');
-    Route::post('/logout', 'Auth\IntervenantLoginController@logoutIntervenant')->name('inter.logout');
+    Route::post('/', [Users\Intervenant\IntervenantController::class, 'experience'])->name('experience.submit');
+    Route::resource('/diplomes', Users\Intervenant\DiplomeController::class);
+    Route::resource('/experiences', Users\Intervenant\ExperienceController::class);
+    Route::get('/temoignages', [Users\Intervenant\IntervenantController::class, 'indexTemoignage'])->name('temoignage.intervenant');
+    Route::post('/temoignages', [Users\Intervenant\IntervenantController::class, 'storeTemoignage'])->name('temoignage.intervenant.submit');
+    Route::resource('/offres', Users\Intervenant\OffreController::class);
+    Route::post('/logout', [Auth\IntervenantLoginController::class, 'logoutIntervenant'])->name('inter.logout');
 });
 
-Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');
+Route::get('/{id}', [Users\Intervenant\IntervenantController::class, 'download'])->name('downloadfile');
 
