@@ -10,8 +10,8 @@ use RealRashid\SweetAlert\Facades\Alert;
 //Route::get('/', function () {
  //   return view('home');
 //})->name('home');
-Route::get('laporan-pdf','PdfController@generatePDF');
-Route::get('/', 'Users\HomeController@index')->name('home');
+Route::get('laporan-pdf',[PdfController::class, 'generatePDF']);
+Route::get('/', [Users\HomeController::class, 'index'])->name('home');
 Route::get('/annonces', 'Users\HomeController@annonces')->name('annonces');
 Route::get('/annonce/{post}', 'Users\HomeController@annonce')->name('annonce.details');
 Route::resource('/contacts', 'ContactController');
