@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jul 01 2021 14:42:24 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* public/users/css/style.css
+* resources/views/parts/carousel.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-1-6-2021-14-11-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
