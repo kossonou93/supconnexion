@@ -17,13 +17,9 @@
             <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         </ul>
-        <ul class="nav navbar-nav navbar-right social_nav" style="margin-right: -350px">
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
-            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+        <ul class="nav navbar-nav navbar-right" style="margin-right: -350px">
+            <li><a href="#" class="btn btn-primary" style="height: 5px">FR</a></li>
+            <li><a href="#" class="btn btn-primary">EN</a></li>
         </ul>
     </div>
 </section>

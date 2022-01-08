@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Sat Jan 08 2022 22:17:24 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/views/parts/menu.blade.php
+
+
+Created files:
+* .autogit/logs/log-8-0-2022-21-47-9.txt
+
+
+Deleted files:
+
+
+Renamed files:
