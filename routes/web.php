@@ -24,6 +24,7 @@ Route::get('/projet_academiques', [Users\HomeController::class, 'academiques'])-
 Route::get('/projet_academique/{post}', [Users\HomeController::class, 'academique'])->name('academique.details');
 Route::get('/projet', [Users\HomeController::class, 'leprojet'])->name('leprojet');
 Route::get('/condition_generale', [Users\HomeController::class, 'conditiongenerale'])->name('condition.generale');
+Route::get('/academiciens', [Users\HomeController::class, 'academiciens'])->name('academiciens');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
 Route::post('/interv/password', [Auth\IntervenantPasswordController::class, 'show'])->name('interv.password.submit');
