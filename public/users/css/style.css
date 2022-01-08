@@ -393,7 +393,7 @@ a:focus, a:hover, .btn:focus, .btn:hover, button:focus, button:hover {
 }
 @media (min-width: 768px) {
   .header_aera .navbar-collapse .navbar-nav.navbar-right li.submenu ul {
-    margin-right: -150px;
+    margin-right: -0px;
     display: block;
     transform: rotateX(-90deg);
     transform-origin: top;

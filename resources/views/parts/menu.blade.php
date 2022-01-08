@@ -66,7 +66,7 @@
                             </ul>
                         </li>
                         
-                      <li class="dropdown submenu">
+                      	<li class="dropdown submenu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">A Propos</a>
                           	<ul class="dropdown-menu">
                               <li><a href="{{route('leprojet')}}">Le projet Sup'Connexion</a></li>
@@ -78,7 +78,23 @@
                               <li><a href="{{route('contacts.index')}}">Contact</a></li>
                             </ul>
                         </li>
-                        <li><a href="{{route('academique.index')}}">Projets académiques</a></li>
+                        <li class="dropdown submenu">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projets académiques</a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">Appels d'offre</a></li>
+                              <li><a href="#">Appui technique</a></li>
+                              <li><a href="{{route('academique.index')}}">Projets académiques africains</a></li>
+                           </ul>
+                      	</li>
+                      	<li><a href="#">Académiciens Africains</a></li>
+                          <li class="dropdown submenu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projets académiques</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Appels d'offre</a></li>
+                                <li><a href="#">Appui technique</a></li>
+                                <li><a href="{{route('academique.index')}}">Projets académiques africains</a></li>
+                             </ul>
+                            </li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </div>
