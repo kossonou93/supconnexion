@@ -96,7 +96,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="#">La Conférence annuelle</a></li>
                                 <li><a href="#">Les actes de la conférence</a></li>
-                                <li><a href="#">Projets académiques africains</a></li>
+                                <li><a href="#">Galérie</a></li>
                             </ul>
                         </li>
                     </ul>
