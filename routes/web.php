@@ -7,8 +7,7 @@ use App\Http\Controllers\Users;
 use App\Http\Controllers;
 //use Illuminate\Support\Facades\Crypt;
 
-
-
+ 
 
 //Route::get('/', function () {
  //   return view('home');
@@ -138,4 +137,5 @@ Route::prefix('intervenant')->group(function(){
 });
 
 Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');
+
 
