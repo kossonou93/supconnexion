@@ -87,9 +87,10 @@
                         <li class="dropdown submenu">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projets académiques</a>
                           <ul class="dropdown-menu">
-                              <li><a href="#">Appels d'offre</a></li>
-                              <li><a href="#">Appui technique</a></li>
+                              <li><a href="#">Appels d'offre et AMI</a></li>
+                              <li><a href="#">Appui technique institutions</a></li>
                               <li><a href="{{route('academique.index')}}">Projets académiques africains</a></li>
+                              <li><a href="#">Projets de formation</a></li>
                            </ul>
                       	</li>
                       	<li><a href="#">Académiciens Africains</a></li>
@@ -98,7 +99,7 @@
                             <ul class="dropdown-menu">
                                 <li><a href="#">La Conférence annuelle</a></li>
                                 <li><a href="#">Les actes de la conférence</a></li>
-                                <li><a href="#">Galérie</a></li>
+                                <li><a href="{{route('galeries')}}">Galérie</a></li>
                             </ul>
                         </li>
                     </ul>
