@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sun Jan 09 2022 13:23:14 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* public/users/images/en.png
+* resources/views/parts/menu.blade.php
+
+
+Created files:
+* .autogit/logs/log-9-0-2022-12-52-54.txt
+
+
+Deleted files:
+
+
+Renamed files:
