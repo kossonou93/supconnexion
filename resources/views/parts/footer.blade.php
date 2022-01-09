@@ -82,7 +82,7 @@
       new google.translate.TranslateElement({
           pageLanguage: 'fr',
           includedLanguages: 'en,fr,',
-          autoDisplay: true,
+          autoDisplay: false,
     },
  'google_translate_element'); 
     } 

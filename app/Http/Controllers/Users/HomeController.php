@@ -125,5 +125,10 @@ class HomeController extends Controller
     {
         return view('user.condition_generale');
     }
+
+    public function galeries()
+    {
+        return view('user.galeries');
+    }
     
 }

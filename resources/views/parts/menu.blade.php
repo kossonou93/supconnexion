@@ -1,4 +1,4 @@
-<div id="google_translate_element"></div>
+<div id="google_translate_element" style="display: none"></div>
 
 <section class="top_header_area">
     <div class="container">
