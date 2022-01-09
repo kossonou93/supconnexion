@@ -79,7 +79,11 @@
 <script src="{{ asset('users/js/theme.js') }}"></script>
 <script type="text/javascript"> 
     function googleTranslateElementInit() { 
-      new google.translate.TranslateElement({pageLanguage: 'en'},
+      new google.translate.TranslateElement({
+          pageLanguage: 'fr',
+          includedLanguages: 'en,fr,',
+          autoDisplay: true,
+    },
  'google_translate_element'); 
     } 
 </script>
