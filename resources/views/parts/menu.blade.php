@@ -18,8 +18,8 @@
             <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right" style="margin-right: -350px">
-            <li><a href="#" class="btn btn-primary" style="background-image: url('users/images/fr.png')">FR</a></li>
-            <li><a href="#" class="btn btn-primary">EN</a></li>
+            <li><a type="button" href="#" class="btn-image white-text" style="background-image: url('users/images/fr.png') !important; width: 60px; height: 40px; background-size: cover; bor"></a></li>
+            <li><a type="button" href="#" class="btn-image white-text" style="background-image: url('users/images/en.png') !important; width: 60px; height: 40px; background-size: cover"></a></li>
         </ul>
     </div>
 </section>
