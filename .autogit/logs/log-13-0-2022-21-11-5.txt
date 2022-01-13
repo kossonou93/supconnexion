@@ -1,0 +1,15 @@
+-------------------- Auto-Git Log --------------------
+		Thu Jan 13 2022 21:11:05 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* routes/web.php
+
+
+Created files:
+
+
+Deleted files:
+
+
+Renamed files:
