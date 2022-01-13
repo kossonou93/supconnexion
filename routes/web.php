@@ -5,6 +5,8 @@ use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Users;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers;
+use App\Http\Controllers\Auth\EcoleLoginController;
+use App\Http\Controllers\Users\Ecole\EcoleController;
 //use Illuminate\Support\Facades\Crypt;
 
  
@@ -87,8 +89,8 @@ Route::prefix('admin')->group(function(){
 
 // Ecole routes
 Route::prefix('ecole')->group(function(){
-    Route::get('/', 'Users\Ecole\EcoleController@index')->name('ecole.dashboard');
-    Route::get('/login', 'Auth\EcoleLoginController@showLoginForm')->name('ecole.login');
+    Route::get('/', [EcoleController::class, 'index'])->name('ecole.dashboard');
+    Route::get('/login', [EcoleLoginController::class, 'showLoginForm'])->name('ecole.login');
     Route::post('/login', 'Auth\EcoleLoginController@login')->name('ecole.login.submit');
     Route::get('/register', 'Auth\EcoleRegisterController@showRegisterForm')->name('ecole.register');
     Route::post('/register', 'Auth\EcoleRegisterController@register')->name('ecole.register.submit');
