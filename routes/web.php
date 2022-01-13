@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use RealRashid\SweetAlert\Facades\Alert;
 use App\Http\Controllers\Users;
-//use App\Http\Controllers\Auth;
+use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers;
 //use Illuminate\Support\Facades\Crypt;
 
@@ -51,12 +51,12 @@ Route::get('auth/facebook/callback', 'Auth\FacebookController@handleFacebookCall
 
 // Admin routes
 Route::prefix('admin')->group(function(){
-    Route::get('/', 'Users\Admin\AdminController@index')->name('admin.dashboard');
-    Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
-    Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
-    Route::get('/register', 'Auth\AdminRegisterController@showRegisterForm')->name('admin.register');
-    Route::post('/register', 'Auth\AdminRegisterController@register')->name('admin.register.submit');
-    Route::get('/intervenant-all', 'Users\Admin\AdminController@allIntervenants')->name('admin.intervenant.all');
+    Route::get('/', [Users\Admin\AdminController::class, 'index'])->name('admin.dashboard');
+    Route::get('/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
+    Route::post('/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
+    Route::get('/register', [AdminRegisterController::class, 'showRegisterForm'])->name('admin.register');
+    Route::post('/register', [AdminRegisterController::class, 'register'])->name('admin.register.submit');
+    Route::get('/intervenant-all', [Admin\AdminController::class, 'allIntervenants'])->name('admin.intervenant.all');
     Route::delete('/intervenant-destroy/{post}', 'Users\Admin\AdminController@destroyIntervenant')->name('admin.intervenant.destroy');
     Route::get('/ecole-all', 'Users\Admin\AdminController@allEcoles')->name('admin.ecole.all');
     Route::delete('/ecole-destroy/{post}', 'Users\Admin\AdminController@destroyEcole')->name('admin.ecole.destroy');
