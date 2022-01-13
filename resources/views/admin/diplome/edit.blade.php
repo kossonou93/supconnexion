@@ -7,7 +7,7 @@
 		@include('admin/part/mainheader')
 
 				<!-- Sidebar -->
-		@include('admin/user/sidebar')
+		@include('admin/part/sidebar')
 		<!-- End Sidebar -->
 		<div class="main-panel">
 			<div class="content">
