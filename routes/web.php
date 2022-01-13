@@ -12,8 +12,11 @@ use App\Http\Controllers\Users\Ecole\EcoleController;
 use App\Http\Controllers\Users\Ecole\AnnonceController;
 use App\Http\Controllers\Users\Ecole\PaiementController;
 use App\Http\Controllers\CheckoutController;
-use App\Http\Controllers\ContactController;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\Users\Intervenant\DiplomeController;
+use App\Http\Controllers\Users\Intervenant\ExperienceController;
+use App\Http\Controllers\Users\Intervenant\OffreController;
+use App\Http\Controllers\Users\Intervenant\IntervenantController;
 
 //use Illuminate\Support\Facades\Crypt;EcoleLoginController
 
@@ -71,7 +74,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/ecole-all', [Users\Admin\AdminController::class, 'allEcoles'])->name('admin.ecole.all');
     Route::delete('/ecole-destroy/{post}', [Users\Admin\AdminController::class, 'destroyEcole'])->name('admin.ecole.destroy');
 
-    Route::resource('/disciplines', 'Users\Admin\DisciplineController');
+    Route::resource('/disciplines', DisciplineController::class);
     Route::resource('/langues', 'Users\Admin\LangueController');
     Route::resource('/contrats', 'Users\Admin\ContratController');
     Route::resource('/disponibilites', 'Users\Admin\DisponibiliteController');
@@ -99,9 +102,9 @@ Route::prefix('admin')->group(function(){
 Route::prefix('ecole')->group(function(){
     Route::get('/', [EcoleController::class, 'index'])->name('ecole.dashboard');
     Route::get('/login', [EcoleLoginController::class, 'showLoginForm'])->name('ecole.login');
-    Route::post('/login', [Auth\EcoleLoginController::class, 'login'])->name('ecole.login.submit');
-    Route::get('/register', [Auth\EcoleRegisterController::class, 'showRegisterForm'])->name('ecole.register');
-    Route::post('/register', [Auth\EcoleRegisterController::class, 'register'])->name('ecole.register.submit');
+    Route::post('/login', [EcoleLoginController::class, 'login'])->name('ecole.login.submit');
+    Route::get('/register', [EcoleRegisterController::class, 'showRegisterForm'])->name('ecole.register');
+    Route::post('/register', [EcoleRegisterController::class, 'register'])->name('ecole.register.submit');
     Route::put('/edit/{post}', [EcoleController::class, 'update'])->name('ecole.update.submit');
     Route::put('/edit_discipline/{post}', [EcoleController::class, 'updateDiscipline'])->name('ecole.discipline.update.submit');
     Route::put('/edit_formation/{post}', [EcoleController::class, 'updateFormation'])->name('ecole.formation.update.submit');
