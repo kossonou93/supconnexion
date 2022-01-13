@@ -11,6 +11,8 @@ use App\Http\Controllers\Auth\EcoleRegisterController;
 use App\Http\Controllers\Users\Ecole\EcoleController;
 use App\Http\Controllers\Users\Ecole\AnnonceController;
 use App\Http\Controllers\Users\Ecole\PaiementController;
+use App\Http\Controllers\Auth\IntervenantLoginController;
+use App\Http\Controllers\Auth\IntervenantRegisterController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Users\Intervenant\DiplomeController;
@@ -74,7 +76,7 @@ Route::prefix('admin')->group(function(){
     Route::get('/ecole-all', [Users\Admin\AdminController::class, 'allEcoles'])->name('admin.ecole.all');
     Route::delete('/ecole-destroy/{post}', [Users\Admin\AdminController::class, 'destroyEcole'])->name('admin.ecole.destroy');
 
-    Route::resource('/disciplines', DisciplineController::class);
+    Route::resource('/disciplines', 'Users\Admin\DisciplineController');
     Route::resource('/langues', 'Users\Admin\LangueController');
     Route::resource('/contrats', 'Users\Admin\ContratController');
     Route::resource('/disponibilites', 'Users\Admin\DisponibiliteController');
@@ -132,24 +134,24 @@ Route::prefix('ecole')->group(function(){
 
 // Intervenant routes
 Route::prefix('intervenant')->group(function(){
-    Route::get('/', 'Users\Intervenant\IntervenantController@index')->name('intervenant.dashboard');
-    Route::get('laporan-pdf','Users\Intervenant\IntervenantController@generatePDF')->name('pdf');
-    Route::get('/login', 'Auth\IntervenantLoginController@showLoginForm')->name('intervenant.login');
-    Route::post('/login', 'Auth\IntervenantLoginController@login')->name('intervenant.login.submit');
-    Route::get('/register', 'Auth\IntervenantRegisterController@showRegisterForm')->name('intervenant.register');
-    Route::post('/register', 'Auth\IntervenantRegisterController@register')->name('intervenant.register.submit');
-    Route::put('/edit/{post}', 'Users\Intervenant\IntervenantController@update')->name('intervenant.update.submit');
-    Route::put('/edit_discipline/{post}', 'Users\Intervenant\IntervenantController@updateDiscipline')->name('discipline.update.submit');
-    Route::put('/edit_formation/{post}', 'Users\Intervenant\IntervenantController@updateFormation')->name('formation.update.submit');
-    Route::post('/', 'Users\Intervenant\IntervenantController@experience')->name('experience.submit');
+    Route::get('/', [IntervenantController::class, 'index'])->name('intervenant.dashboard');
+    Route::get('laporan-pdf',[IntervenantController::class, 'generatePDF'])->name('pdf');
+    Route::get('/login', [IntervenantLoginController::class, 'showLoginForm'])->name('intervenant.login');
+    Route::post('/login', [IntervenantLoginController::class, 'login'])->name('intervenant.login.submit');
+    Route::get('/register', [IntervenantRegisterController::class, 'showRegisterForm'])->name('intervenant.register');
+    Route::post('/register', [IntervenantRegisterController::class, 'register'])->name('intervenant.register.submit');
+    Route::put('/edit/{post}', [IntervenantController::class, 'update'])->name('intervenant.update.submit');
+    Route::put('/edit_discipline/{post}', [IntervenantController::class, 'updateDiscipline'])->name('discipline.update.submit');
+    Route::put('/edit_formation/{post}', [IntervenantController::class, 'updateFormation'])->name('formation.update.submit');
+    Route::post('/', [IntervenantController::class, 'experience'])->name('experience.submit');
     Route::resource('/diplomes', 'Users\Intervenant\DiplomeController');
     Route::resource('/experiences', 'Users\Intervenant\ExperienceController');
-    Route::get('/temoignages', 'Users\Intervenant\IntervenantController@indexTemoignage')->name('temoignage.intervenant');
-    Route::post('/temoignages', 'Users\Intervenant\IntervenantController@storeTemoignage')->name('temoignage.intervenant.submit');
+    Route::get('/temoignages', [IntervenantController::class, 'indexTemoignage'])->name('temoignage.intervenant');
+    Route::post('/temoignages', [IntervenantController::class, 'storeTemoignage'])->name('temoignage.intervenant.submit');
     Route::resource('/offres', 'Users\Intervenant\OffreController');
-    Route::post('/logout', 'Auth\IntervenantLoginController@logoutIntervenant')->name('inter.logout');
+    Route::post('/logout', [IntervenantLoginController::class, 'logoutIntervenant'])->name('inter.logout');
 });
 
-Route::get('/{id}', 'Users\Intervenant\IntervenantController@download')->name('downloadfile');
+Route::get('/{id}', [IntervenantController::class, 'download'])->name('downloadfile');
 
 
