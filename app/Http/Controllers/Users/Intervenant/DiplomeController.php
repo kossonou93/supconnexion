@@ -67,7 +67,7 @@ class DiplomeController extends Controller
     public function show($id)
     {
         $diplome = Diplome::find($id);
-        return view('intervenant', compact('diplome'));
+        return view('admin.intervenant.edit_diplome', compact('diplome'));
     }
 
     /**
