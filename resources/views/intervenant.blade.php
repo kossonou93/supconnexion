@@ -782,6 +782,9 @@
 																				<a href="{{ route('experiences.show',$experience->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
 																					<i class="fa fa-edit"></i>
 																				</a>
+																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="Editer Expérience" data-target="#editModalExperience{{$experience->id}}">
+																					<i class="fa fa-edit"></i>
+																				</a>
 																			</div>
 																		</td>
 																		<td>
@@ -795,6 +798,7 @@
 																				</form>
 																			</div>
 																		</td>
+																		@include('admin.intervenant.edit_experience')
 																	</tr>
 																@endforeach
 															</tbody>
