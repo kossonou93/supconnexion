@@ -77,11 +77,9 @@
                                 <select class="form-control" name="modalites[]" >
                                 @foreach ( $modalites as $modalite )
                                     <option
-                                        @foreach ( $modales as $modal )
-                                            @if ($modalite->id == $modal->id)
-                                                selected
-                                            @endif
-                                        @endforeach
+                                        @if ($modalite->experience_id == $modale->id)
+                                            selected
+                                        @endif
                                     >{{ $modalite->type }}</option>
                                 @endforeach 
                                 </select>
