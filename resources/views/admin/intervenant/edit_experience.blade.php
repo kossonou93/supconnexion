@@ -58,7 +58,7 @@
                         <label class="col-sm-4 col-form-label">Type d'intervention</label>
                         <div class="col-sm-8">
                             <div class="md-form mt-0">
-                                <input type="text" name="type_intervention" class="form-control">
+                                <input type="text" name="type_intervention" value="{{$experience->type_intervention}}" class="form-control">
                             </div>
                         </div>
                     </div>
@@ -77,7 +77,10 @@
                                 <select class="form-control" name="modalites[]" >
                                 @foreach ( $modalites as $modalite )
                                     <option
-                                        
+                                        @foreach ( $discips as $discip )
+                                            @if ($discipline->id == $discip->id)
+                                                selected
+                                            @endif
                                     >{{ $modalite->type }}</option>
                                 @endforeach 
                                 </select>
