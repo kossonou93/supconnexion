@@ -558,6 +558,10 @@
 																				<a href="{{ route('diplomes.show',$diplome->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
 																					<i class="fa fa-edit"></i>
 																				</a>
+																				<a class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#editRowModal{{$diplome->id}}">
+																					<i class="fa fa-plus"></i>
+																					Editer Diplôme
+																				</a>
 																			</div>
 																		</td>
 																		<td>
@@ -571,6 +575,7 @@
 																				</form>
 																			</div>
 																		</td>
+																		@include('admin.intervenant.edit_diplome')
 																	</tr>
 																@endforeach
 															</tbody>
