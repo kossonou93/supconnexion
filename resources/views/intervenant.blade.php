@@ -607,7 +607,7 @@
 																										</div>
 																										<div class="form-group form-group-default">
 																											<label>Titre</label>
-																											<input type="text" value="{{$diplome->titre}}" class="form-control" name="titre" placeholder="Entrez le titre votre diplome" required>
+																											<input type="text" value="{{$diplome->ecole}}" class="form-control" name="titre" placeholder="Entrez le titre votre diplome" required>
 																										</div>
 																										<div class="form-group form-group-default" style="display:none">
 																											<label>Titre</label>

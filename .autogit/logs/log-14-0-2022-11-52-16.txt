@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Fri Jan 14 2022 11:52:16 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Intervenant/DiplomeController.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-14-0-2022-11-21-55.txt
+
+
+Deleted files:
+
+
+Renamed files:
