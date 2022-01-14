@@ -1,4 +1,4 @@
-<div class="modal fade" id="editRowModal" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade" id="editRowModal{{$diplome->id}}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header no-bd">
@@ -25,7 +25,7 @@
                             </div>
                             <div class="form-group form-group-default">
                                 <label>Grade</label>
-                                <select class="form-control" name="grade">
+                                <select class="form-control" name="grade" value="{{$diplome->grade}}">
                                     <option>BAC</option>
                                     <option>BAC+1 </option>
                                     <option>BAC+2 </option>
@@ -42,11 +42,11 @@
                             </div>
                             <div class="form-group form-group-default">
                                 <label>Titre</label>
-                                <input type="text" class="form-control" name="titre" placeholder="Entrez le titre votre diplome" required>
+                                <input type="text" value="{{$diplome->titre}}" class="form-control" name="titre" placeholder="Entrez le titre votre diplome" required>
                             </div>
                             <div class="form-group form-group-default" style="display:none">
                                 <label>Titre</label>
-                                <input type="text" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="Entrez le titre votre diplome">
+                                <input type="text" value="{{$diplome->titre}}" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="Entrez le titre votre diplome">
                             </div>
                         </div>
                     </div>
