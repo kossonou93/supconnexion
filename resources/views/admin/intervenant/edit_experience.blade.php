@@ -77,7 +77,7 @@
                                 <select class="form-control" name="modalites[]" >
                                 @foreach ( $modalites as $modalite )
                                     <option
-                                        @if ($modalite->experience_id == $modale->id)
+                                        @if ($modalite->experience_id == $experience->id)
                                             selected
                                         @endif
                                     >{{ $modalite->type }}</option>
@@ -101,7 +101,9 @@
                                 <select class="form-control" name="responsabilites[]" >
                                 @foreach ( $responsabilites as $responsabilite )
                                     <option
-                                        
+                                        @if ($responsabilite->experience_id == $experience->id)
+                                            selected
+                                        @endif
                                     >{{ $responsabilite->type }}</option>
                                 @endforeach 
                                 </select>
