@@ -84,9 +84,9 @@ class ExperienceController extends Controller
         $modalites = Modalite::all();
         $responsabilites = Responsabilite::all();
         $exp = Experience::find($id);
-        $modals = $exp->modalites;
+        $modales = $exp->modalites;
         $respos = $exp->responsabilites;
-        return view('admin.intervenant.edit_experience', compact('experience', 'modalites', 'responsabilites', 'modals', 'respos'));
+        return view('admin.intervenant.edit_experience', compact('experience', 'modalites', 'responsabilites', 'modales', 'respos'));
     }
 
     /**
