@@ -555,12 +555,8 @@
 																		<td>{{ $diplome->titre }}</td>
 																		<td>
 																			<div class="form-button-action">
-																				<a href="{{ route('diplomes.show',$diplome->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
+																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="Editer Diplome" data-target="#editRowModal{{$diplome->id}}">
 																					<i class="fa fa-edit"></i>
-																				</a>
-																				<a class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#editRowModal{{$diplome->id}}">
-																					<i class="fa fa-plus"></i>
-																					Editer Diplôme
 																				</a>
 																			</div>
 																		</td>

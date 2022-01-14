@@ -26,6 +26,7 @@
                             <div class="form-group form-group-default">
                                 <label>Grade</label>
                                 <select class="form-control" name="grade" value="{{$diplome->grade}}">
+                                    <option>{{$diplome->grade}}</option>
                                     <option>BAC</option>
                                     <option>BAC+1 </option>
                                     <option>BAC+2 </option>
@@ -52,7 +53,7 @@
                     </div>
                 </div>
                 <div class="modal-footer no-bd">
-                    <button class="btn btn-primary">Ajouter</button>
+                    <button class="btn btn-success">Valider</button>
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
                 </div>
             </form>
