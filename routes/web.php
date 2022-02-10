@@ -29,6 +29,7 @@ use App\Http\Controllers\Users\Intervenant\IntervenantController;
 //})->name('home');
 //Route::get('laporan-pdf', [PdfController::class, 'generatePDF']);
 Route::get('/', [Users\HomeController::class, 'index'])->name('home');
+Route::get('locale/{lange}', [LocalizationController::class, 'setLang']);
 Route::get('/annonces', [Users\HomeController::class, 'annonces'])->name('annonces');
 Route::get('/annonce/{post}', [Users\HomeController::class, 'annonce'])->name('annonce.details');
 Route::resource('/contacts', ContactController::class);
