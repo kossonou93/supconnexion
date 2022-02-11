@@ -19,6 +19,7 @@ use App\Http\Controllers\Users\Intervenant\DiplomeController;
 use App\Http\Controllers\Users\Intervenant\ExperienceController;
 use App\Http\Controllers\Users\Intervenant\OffreController;
 use App\Http\Controllers\Users\Intervenant\IntervenantController;
+use App\Http\Controllers\LocalizationController;
 
 //use Illuminate\Support\Facades\Crypt;EcoleLoginController
 
