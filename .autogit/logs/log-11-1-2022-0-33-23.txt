@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Fri Feb 11 2022 00:33:23 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/LocalizationController.php
+* app/Http/Kernel.php
+* app/Http/Middleware/LocalizationMiddleware.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-11-1-2022-0-3-5.txt
+* resources/views/admin/lang/en/public.php
+
+
+Deleted files:
+
+
+Renamed files:
