@@ -18,6 +18,25 @@
             <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-pinterest-p" aria-hidden="true"></i></a></li>
             <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <div class="collapse in" id="collapseExample">
+                <ul class="nav">
+                    <li>
+                        <a href="#profile">
+                            <span class="link-collapse">My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#edit">
+                            <span class="link-collapse">Edit Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#settings">
+                            <span class="link-collapse">Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </ul>
         <ul class="nav navbar-nav navbar-right" style="margin-right: -350px">
             <li><a type="button" href="locale/fr" class="btn-image white-text" style="background-image: url('users/images/fr.png') !important; width: 60px; height: 20px; background-size: cover; margin-top: 10px; margin-right: 5px"></a></li>
@@ -85,7 +104,7 @@
                             </ul>
                         </li>
                         <li class="dropdown submenu">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projets académiques</a>
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('public.projetAc')</a>
                           <ul class="dropdown-menu">
                               <li><a href="#">Appels d'offre et AMI</a></li>
                               <li><a href="#">Appui technique institutions</a></li>

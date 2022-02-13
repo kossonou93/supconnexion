@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 13 2022 18:03:32 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/LocalizationController.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-13-1-2022-1-19-53.txt
+* resources/views/index.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]
+* [object Object]

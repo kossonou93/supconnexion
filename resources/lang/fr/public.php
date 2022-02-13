@@ -1,5 +1,8 @@
 <?php
 return [
+    'nom' => 'Nom',
+    'ecole' => 'Ecole',
+    'intervenant' => 'Intervenant',
     'inscription' => 'Inscription',
     'connexion' => 'Connexion',
     'apropos' => 'A Propos',
