@@ -28,6 +28,7 @@ use App\Models\Annonce;
 use Carbon\Carbon;
 use App\Ecole;
 use App\Models\Academique;
+use Stichoza\GoogleTranslate\GoogleTranslate;
 
 class HomeController extends Controller
 {
@@ -49,6 +50,9 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $tr = new GoogleTranslate();
+        $tr->setSource('fr'); // Translate from English
+        $tr->setTarget('fr'); // Translate to French
         $intervenants = Intervenant::take(4)->get();
         $intervs = Intervenant::where('email_verified_at', '!=', 'NULL')->get();
         $carousels = Carousel::all();
@@ -66,7 +70,7 @@ class HomeController extends Controller
         //Carousel $carousel;
         //$carousel->visists()->increment();
         $actualites = Actualite::take(3)->orderBy('date_pub', 'DESC')->get();
-        return view('home', compact('nbpartenaire', 'nbecole', 'nbannonce', 'nbintervenant', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
+        return view('home', compact('tr','nbpartenaire', 'nbecole', 'nbannonce', 'nbintervenant', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
     public function annonces()
