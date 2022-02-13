@@ -12,7 +12,21 @@ return [
     'projetAc' => 'Projet Académique',
     'projetSup' => "Le projet Sup'Connexion",
     'conditionGle' => "Conditions générales de ventes",
+    'charteUt' => "Charte utilisateurs",
+    'protectionData' => "Protection des données",
+    'actualiteSup' => "Actualités dans le Supérieur",
+    'alerteOp' => "Alertes opportunités",
+    'appelOf' => "Appels d'offre et AMI",
+    'appuiTec' => "Appui technique institutions",
+    'projetAcAfr' => "Projets académiques africains",
+    'projetFor' => "Projets de formation",
+    'academiciensAfr' => "Académiciens Africains",
+    'confAn' => "Conférence annuelle",
+    'laConfAn' => "La Conférence annuelle",
+    'acteConf' => "Les actes de la conférence",
+    'galerie' => "Galérie",
     'academiciens' => 'Académiciens Africains',
     'conference' => 'Conférence Annuelle',
-]
-?>
+
+    'exempleProfil' => 'Exemples de Profils',
+    '

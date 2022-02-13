@@ -79,29 +79,29 @@
                           	<ul class="dropdown-menu">
                               <li><a href="{{route('leprojet')}}">@lang('public.projetSup')</a></li>
                               <li><a href="{{route('condition.generale')}}">@lang('public.conditionGle')</a></li>
-                              <li><a href="#">Charte utilisateurs</a></li>
-                              <li><a href="#">Protection des données</a></li>
-                              <li><a href="{{route('actualite.index')}}">Actualités dans le Supérieur</a></li>
-                              <li><a href="{{route('annonces')}}">Alertes opportunités</a></li>
+                              <li><a href="#">@lang('public.charteUt')</a></li>
+                              <li><a href="#">@lang('public.protectionData')</a></li>
+                              <li><a href="{{route('actualite.index')}}">@lang('public.actualiteSup')</a></li>
+                              <li><a href="{{route('annonces')}}">@lang('public.alerteOp')</a></li>
                               <li><a href="{{route('contacts.index')}}">Contact</a></li>
                             </ul>
                         </li>
                         <li class="dropdown submenu">
                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('public.projetAc')</a>
                           <ul class="dropdown-menu">
-                              <li><a href="#">Appels d'offre et AMI</a></li>
-                              <li><a href="#">Appui technique institutions</a></li>
-                              <li><a href="{{route('academique.index')}}">Projets académiques africains</a></li>
-                              <li><a href="#">Projets de formation</a></li>
+                              <li><a href="#">@lang('public.appelOf')</a></li>
+                              <li><a href="#">@lang('public.appuiTec')</a></li>
+                              <li><a href="{{route('academique.index')}}">@lang('public.appuiTec')</a></li>
+                              <li><a href="#">@lang('public.projetAcAfr')</a></li>
                            </ul>
                       	</li>
-                      	<li><a href="#">Académiciens Africains</a></li>
+                      	<li><a href="#">@lang('public.academiciensAfr')</a></li>
                         <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Conférence annuelle</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('public.confAn')</a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">La Conférence annuelle</a></li>
-                                <li><a href="#">Les actes de la conférence</a></li>
-                                <li><a href="{{route('galeries')}}">Galérie</a></li>
+                                <li><a href="#">@lang('public.laConfAn')</a></li>
+                                <li><a href="#">@lang('public.acteConf')</a></li>
+                                <li><a href="{{route('galeries')}}">@lang('public.galerie')</a></li>
                             </ul>
                         </li>
                     </ul>

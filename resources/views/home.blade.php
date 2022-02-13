@@ -50,7 +50,7 @@
     <section class="our_team_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>Exemples de Profils</h2>
+                <h2>@lang('public.exempleProfil')</h2>
             </div>
             
             <div class="row team_row">
