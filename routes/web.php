@@ -31,7 +31,7 @@ use App\Http\Controllers\LocalizationController;
 //Route::get('laporan-pdf', [PdfController::class, 'generatePDF']);
 Route::get('/', [Users\HomeController::class, 'index'])->name('home');
 Route::get('/locale/{lang}', function ($lang){
-    return view('home');
+    return view('index');
 });
 //Route::get('locale/{lang}', [LocalizationController::class, 'setLang']);
 Route::get('/annonces', [Users\HomeController::class, 'annonces'])->name('annonces');
