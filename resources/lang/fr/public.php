@@ -2,6 +2,11 @@
 return [
     'nom' => 'Nom',
     'ecole' => 'Ecole',
+    'etablissements' => 'ETABLISSEMENTS',
+    'intervenants' => 'INTERVENANTS',
+    'partenanires' => 'PARTENAIRES',
+    'nosPartenanires' => 'Nos Partenaires',
+    'contactezNous' => 'Contactez-Nous',
     'intervenant' => 'Intervenant',
     'inscription' => 'Inscription',
     'inscriptionEts' => 'Inscription Etablissement',
@@ -27,6 +32,15 @@ return [
     'galerie' => "Galérie",
     'academiciens' => 'Académiciens Africains',
     'conference' => 'Conférence Annuelle',
-
     'exempleProfil' => 'Exemples de Profils',
-    '
+    'temoignage' => 'TEMOIGNAGES',
+    'actualiteEns' => "Les Actualités dans l'Enseignement Supérieur",
+    'nosRealisation' => 'NOS RÉALISATIONS',
+    'annonce' => 'ANNONCES',
+    'aproposNous' => 'A PROPOS DE NOUS',
+    'nosLiens' => 'NOS LIENS',
+    'contactNous' => 'CONTACTEZ-NOUS',
+
+    
+]
+?>

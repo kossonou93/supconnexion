@@ -101,7 +101,7 @@
     <section class="testimonial_area row">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>TEMOIGNAGES</h2>
+                <h2>@lang('public.temoignage')</h2>
             </div>
             <div class="testimonial_carosel">
             
@@ -142,7 +142,7 @@
     <section class="latest_blog_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>Les Actualités dans l'Enseignement Supérieur</h2>
+                <h2>@lang('public.actualiteEns')</h2>
             </div>
             <div class="row latest_blog">
                 @foreach ($actualites as $actualite)
@@ -164,29 +164,29 @@
     <section class="our_achievments_area" data-stellar-background-ratio="0.3">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>NOS RÉALISATIONS</h2>
+                <h2>@lang('public.nosRealisation')</h2>
                 <h4></h4>
             </div>
             <div class="achievments_row row">
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-info" aria-hidden="true"></i>
                     <span class="counter">{{$nbannonce}}</span>
-                    <h6>ANNONCES</h6>
+                    <h6>@lang('public.annonce')</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-university" aria-hidden="true"></i>
                     <span class="counter">{{$nbecole}}</span>
-                    <h6>ETABLISSEMENTS</h6>
+                    <h6>@lang('public.etablissements')</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-graduation-cap" aria-hidden="true"></i>
                     <span class="counter">{{$nbintervenant}}</span>
-                    <h6>INTERVENANTS</h6>
+                    <h6>@lang('public.intervenants')</h6>
                 </div>
                 <div class="col-md-3 col-sm-6 p0 completed">
                     <i class="fa fa-user-plus" aria-hidden="true"></i>
                     <span class="counter">{{$nbpartenaire}}</span>
-                    <h6>PARTENAIRES</h6>
+                    <h6>@lang('public.partenanires')</h6>
                 </div>>
             </div>
         </div>
@@ -197,7 +197,7 @@
     <section class="our_partners_area">
         <div class="container">
             <div class="tittle wow fadeInUp">
-                <h2>Nos Partenaires</h2>
+                <h2>@lang('public.nosPartenanires')</h2>
             </div>
             <div class="partners">
                 @foreach ($partenaires as $partenaire)
@@ -211,7 +211,7 @@
                     <div class="col-md-10 booking_text">
                     </div>
                     <div class="col-md-2 p0 book_bottun">
-                        <a href="{{route('contacts.index')}}" class="button_all">Contactez-Nous</a>
+                        <a href="{{route('contacts.index')}}" class="button_all">@lang('public.contactezNous')</a>
                     </div>
                 </div>
             </div>

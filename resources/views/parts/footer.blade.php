@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer_row row">
             <div class="col-md-4 col-sm-8 footer_about">
-                <h2>A PROPOS DE NOUS</h2>
+                <h2>@lang('public.aproposNous')</h2>
                 <img src="users/images/logo-footer.png" alt="">
                 <ul class="socail_icon">
                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
@@ -12,7 +12,7 @@
                 </ul>
             </div>
             <div class="col-md-4 col-sm-8 footer_about quick">
-                <h2>NOS LIENS</h2>
+                <h2>@lang('public.nosLiens')</h2>
                 <ul class="quick_link">
                    <!-- <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
                     <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>-->
@@ -20,7 +20,7 @@
                 </ul>
             </div>
             <div class="col-md-4 col-sm-8 footer_about">
-                <h2>CONTACTEZ-NOUS</h2>
+                <h2>@lang('public.contactNous')</h2>
                 <address>
                     <ul class="my_address">
                         <li><a href="#"><i class="fa fa-envelope" aria-hidden="true"></i>contact@sup-connexion.com</a></li>
