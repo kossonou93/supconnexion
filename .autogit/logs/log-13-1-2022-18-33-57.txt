@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 13 2022 18:33:57 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+* resources/views/parts/menu.blade.php
+* resources/views/user/inscription_ecole.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-13-1-2022-18-3-32.txt
+* resources/lang/fr/auth.php
+* resources/lang/fr/pagination.php
+* resources/lang/fr/passwords.php
+* resources/lang/fr/validation.php
+
+
+Deleted files:
+
+
+Renamed files:
