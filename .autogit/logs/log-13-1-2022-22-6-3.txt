@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 13 2022 22:06:03 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* composer.lock
+* resources/views/home.blade.php
+
+
+Created files:
+* .autogit/logs/log-13-1-2022-21-35-45.txt
+
+
+Deleted files:
+
+
+Renamed files:

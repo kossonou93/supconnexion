@@ -11,7 +11,6 @@ class LocalizationController extends Controller
     public function setLang($locale){
         App::setlocale($locale);
         Session::put("locale", $locale);
-        //return view('home');
         return redirect()->back();
     }
 }

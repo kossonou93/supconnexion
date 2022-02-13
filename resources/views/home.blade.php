@@ -69,7 +69,7 @@
                                                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                             </ul>
                                             <a href="#" class="name">{{ $intervenant->name }}</a>
-                                            <h6>{{ $intervenant->fonction }}</h6>
+                                            <h6>{{ $tr->translate($intervenant->fonction) }}</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -114,10 +114,10 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Dr Denis Gnanzou</h4>
-                            <h6>Docteur en Sciences de gestion</h6>
+                            <h6>{{$tr->translate("Docteur en Sciences de gestion")}}</h6>
                         </div>
                     </div>
-                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>Grâce à Sup'Connexion, j'interviens dans trois différentes écoles<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>{{$tr->translate("Grâce à Sup'Connexion, j'interviens dans trois différentes écoles")}}<i class="fa fa-quote-left" aria-hidden="true"></i></p>
                 </div>
 
                 <div class="item">
@@ -129,10 +129,10 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Martin Kossonou</h4>
-                            <h6>Ingénieur Génie Logiciel</h6>
+                            <h6>{{$tr->translate('Ingénieur Génie Logiciel')}}</h6>
                         </div>
                     </div>
-                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>Avec Sup'Connexion, j'ai pu obtenir un emploi et j'interviens dans plusieurs écoles<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>{{$tr->translate("Avec Sup'Connexion, j'ai pu obtenir un emploi et j'interviens dans plusieurs écoles")}}<i class="fa fa-quote-left" aria-hidden="true"></i></p>
                 </div>
             
             </div>
@@ -149,11 +149,11 @@
                     <div class="col-md-4 col-sm-6 blog_content">
                         <img style="height: 200px; width: 360px" src="{{ asset('uploads/photo/actualite/'.$actualite->photo) }}" alt="">
                         <a href="#" class="blog_heading text-justify">{{($tr->translate($actualite->titre)) }}</a>
-                        <h4><small>Par  </small><a style="color: blue; font-weight: bold;" href="#">{{($actualite->auteur) }}</a><span>/</span><small style="color: #f6b60b; font-weight: bold;"> <i class="fa fa-calendar" aria-hidden="true"></i>
+                        <h4><small>{{$tr->translate('Par')}}  </small><a style="color: blue; font-weight: bold;" href="#">{{($actualite->auteur) }}</a><span>/</span><small style="color: #f6b60b; font-weight: bold;"> <i class="fa fa-calendar" aria-hidden="true"></i>
                         <?php
                             echo date("d F, Y", strtotime(" $actualite->date_pub "));
                         ?></small></h4>
-                        <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($tr->translate($actualite->texte, 200)) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">Lire la suite<span></a></p>
+                        <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($tr->translate($actualite->texte, 200)) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">{{$tr->translate('Lire la suite')}}<span></a></p>
                     </div>
                 @endforeach
             </div>
