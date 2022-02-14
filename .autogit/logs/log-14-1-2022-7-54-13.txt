@@ -1,0 +1,29 @@
+-------------------- Auto-Git Log --------------------
+		Mon Feb 14 2022 07:54:13 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Auth/EcoleRegisterController.php
+* app/Http/Controllers/CheckoutController.php
+* app/Http/Controllers/ContactController.php
+* app/Http/Controllers/MailController.php
+* app/Http/Controllers/Users/Ecole/AnnonceController.php
+* app/Http/Controllers/Users/Ecole/EcoleController.php
+* app/Http/Controllers/Users/Ecole/PaiementController.php
+* app/Http/Controllers/Users/Intervenant/DiplomeController.php
+* app/Http/Controllers/Users/Intervenant/ExperienceController.php
+* app/Http/Controllers/Users/Intervenant/IntervenantController.php
+* app/Http/Controllers/Users/Intervenant/OffreController.php
+* app/Http/Controllers/Users/TemoignageController.php
+* resources/lang/fr/public.php
+* resources/views/user/inscription_ecole.blade.php
+
+
+Created files:
+* .autogit/logs/log-14-1-2022-7-24-0.txt
+
+
+Deleted files:
+
+
+Renamed files:
