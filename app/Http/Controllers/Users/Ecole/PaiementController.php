@@ -9,6 +9,9 @@ use App\Models\Transaction;
 use App\Ecole;
 use Auth;
 use App\Models\Pays;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class PaiementController extends Controller
 {

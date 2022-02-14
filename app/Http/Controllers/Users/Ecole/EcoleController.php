@@ -26,6 +26,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class EcoleController extends Controller
 {

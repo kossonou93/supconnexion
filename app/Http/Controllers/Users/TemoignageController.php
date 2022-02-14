@@ -8,6 +8,9 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Temoignage;
 use App\Intervenant;
 use App\Http\Controllers\Controller;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class TemoignageController extends Controller
 {

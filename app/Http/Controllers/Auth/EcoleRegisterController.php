@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Validator;
 use App\Intervenant;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class EcoleRegisterController extends Controller
 {
@@ -23,8 +26,11 @@ class EcoleRegisterController extends Controller
 
     public function showRegisterForm()
     {
-        //return view('auth.ecole-register');
-        return view('user.inscription_ecole');
+        $local = Session::get("locale");
+        $tr = new GoogleTranslate();
+        $tr->setSource('fr'); // Translate from English
+        $tr->setTarget($local); // Translate to French
+        return view('user.inscription_ecole', compact('tr'));
     }
 
     public function register(Request $request)

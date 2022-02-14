@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Validator;
 use App\Models\Contact;
 use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Mail;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class ContactController extends Controller
 {

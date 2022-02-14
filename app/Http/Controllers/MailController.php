@@ -9,6 +9,9 @@ use App\Models\VerifyUser;
 use App\Intervenant;
 use App\Ecole;
 use Carbon\Carbon;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class MailController extends Controller
 {

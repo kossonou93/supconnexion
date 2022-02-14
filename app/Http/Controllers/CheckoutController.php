@@ -6,6 +6,9 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Models\Pays;
 use App\Ecole;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class CheckoutController extends Controller
 {

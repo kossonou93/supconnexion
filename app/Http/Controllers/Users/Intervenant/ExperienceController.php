@@ -7,6 +7,9 @@ use App\Models\Experience;
 use App\Models\Modalite;
 use App\Models\Responsabilite;
 use Auth;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class ExperienceController extends Controller
 {

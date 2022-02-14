@@ -41,6 +41,6 @@ return [
     'nosLiens' => 'NOS LIENS',
     'contactNous' => 'CONTACTEZ-NOUS',
 
-    
+
 ]
 ?>

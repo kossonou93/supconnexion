@@ -10,6 +10,9 @@ use App\Models\Intervention;
 use App\Models\Langue;
 use App\Models\Annonce;
 use Auth;
+use Stichoza\GoogleTranslate\GoogleTranslate;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Session;
 
 class OffreController extends Controller
 {
