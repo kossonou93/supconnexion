@@ -1,6 +1,10 @@
 <?php
 return [
     'nom' => 'Nom',
+    'prenom' => 'Prénom',
+    'sujet' => 'Sujet',
+    'siteWeb' => 'Votre Site Web',
+    'envoyez' => 'Envoyez',
     'ecole' => 'Ecole',
     'etablissements' => 'ETABLISSEMENTS',
     'intervenants' => 'INTERVENANTS',
@@ -42,7 +46,10 @@ return [
     'contactNous' => 'CONTACTEZ-NOUS',
     'seConnecterAvec' => 'Se connecter avec',
     'seSouvenirMoi' => 'Se Souvenir de Moi',
-    'motPasseOublier' => 'Mot de Passe oublié?'
+    'motPasseOublier' => 'Mot de Passe oublié?',
+    'envoiMessage' => 'Envoyez-Nous un Message',
+    'projetPortailDedie' => 'Le projet est  un Portail dédié',
+    'besoinEtOpportunite' => 'AUX BESOINS ET OPPORTUNITES DANS LE SUPERIEUR EN AFRIQUE, AINSI QUE DES INTERVENANTS - SPECIALISTES INTERNATIONAUX AFRICAINS DANS LE SECTEUR.'
 
 
 ]

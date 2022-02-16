@@ -1,6 +1,10 @@
 <?php
 return [
     'nom' => 'Name',
+    'prenom' => 'First name',
+    'sujet' => 'Subject',
+    'siteWeb' => 'Your WebSite',
+    'envoyez' => 'Send',
     'ecole' => 'School',
     'etablissements' => 'ESTABLISHMENTS',
     'intervenants' => 'SPEAKERS',
@@ -15,7 +19,7 @@ return [
     'connexionInt' => 'Speaker Login',
     'apropos' => 'About us',
     'projetAc' => 'Academic Project',
-    'projetSup' => "The Sup'Connection project",
+    'projetSup' => "The Sup'Connexion project",
     'conditionGle' => "Terms and conditions",
     'charteUt' => "User charter",
     'protectionData' => "Data protection",
@@ -42,6 +46,9 @@ return [
     'contactNous' => 'CONTACT US',
     'seConnecterAvec' => 'Login with',
     'seSouvenirMoi' => 'Remember Me',
-    'motPasseOublier' => 'Forgot your password?'
+    'motPasseOublier' => 'Forgot your password?',
+    'envoiMessage' => 'Send Us Message',
+    'projetPortailDedie' => 'The project is a dedicated Portal',
+    'besoinEtOpportunite' => 'TO NEEDS AND OPPORTUNITIES IN HIGHER AFRICA, AS WELL AS INTERVENERS - AFRICAN INTERNATIONAL SPECIALISTS IN THE SECTOR.'
 ]
 ?>

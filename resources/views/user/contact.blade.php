@@ -9,10 +9,10 @@
 	@include('parts/menu')
     <!-- Banner area -->
         <section class="banner_area" data-stellar-background-ratio="0.5">
-            <h2>Contactez-Nous</h2>
+            <h2>@lang('public.contactNous')</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('contacts.index')}}" class="active">Contactez-Nous</a></li>
+                <li><a href="{{route('contacts.index')}}" class="active">@lang('public.contactezNous')</a></li>
             </ol>
         </section>
         <!-- End Banner area -->
@@ -34,16 +34,16 @@
                     </div>
                 </div>
                 <div class="col-sm-6 contact_info send_message">
-                    <h2>Envoyez-Nous un Message</h2>
+                    <h2>@lang('public.envoiMessage')</h2>
                     <form action="{{ route('contacts.store') }}" method="post" enctype="multipart/form-data" class="form-inline contact_box">
                         @csrf
-                        <input type="text" name="first_name" class="form-control input_box" placeholder="Nom *" required>
-                        <input type="text" name="last_name" class="form-control input_box" placeholder="Prénom *">
+                        <input type="text" name="first_name" class="form-control input_box" placeholder="@lang('public.nom') *" required>
+                        <input type="text" name="last_name" class="form-control input_box" placeholder="@lang('public.prenom') *">
                         <input type="email" name="email" class="form-control input_box" placeholder="Email *" required>
-                        <input type="text" name="sujet" class="form-control input_box" placeholder="Sujet">
-                        <input type="text" name="site" class="form-control input_box" placeholder="Votre Site Web">
+                        <input type="text" name="sujet" class="form-control input_box" placeholder="@lang('public.sujet')">
+                        <input type="text" name="site" class="form-control input_box" placeholder="@lang('public.siteWeb')">
                         <textarea type="text" name="texte" class="form-control input_box" placeholder="Message *" required></textarea>
-                        <button type="submit" class="btn btn-default">Envoyez</button>
+                        <button type="submit" class="btn btn-default">@lang('public.envoyez')</button>
                     </form>
                 </div>
             </div>
