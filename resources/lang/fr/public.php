@@ -40,6 +40,9 @@ return [
     'aproposNous' => 'A PROPOS DE NOUS',
     'nosLiens' => 'NOS LIENS',
     'contactNous' => 'CONTACTEZ-NOUS',
+    'seConnecterAvec' => 'Se connecter avec',
+    'seSouvenirMoi' => 'Se Souvenir de Moi',
+    'motPasseOublier' => 'Mot de Passe oublié?'
 
 
 ]

@@ -6,7 +6,7 @@
     </div>
 
 	<!-- Top Header_Area -->
-	@include('parts/menu')
+	@include('parts/menu_home')
    <!-- <div class="row">
         <div class="col-sm-12 col-md-12">
             @if ($message = Session::get('success'))

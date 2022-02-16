@@ -37,7 +37,7 @@
 			<form class="login100-form validate-form" method="POST" action="{{ route('intervenant.login.submit') }}">
                 {{csrf_field()}}
 				<span class="login100-form-title p-b-37">
-					Login Intervenant
+					@lang('public.connexionInt')
 				</span>
 
 				<div class="wrap-input100 validate-input m-b-20" data-validate="Entrez email">
@@ -64,7 +64,7 @@
 					<input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                     <label class="form-check-label" for="remember">
-                        {{ __('Remember Me') }}
+                        @lang('public.seSouvenirMoi')
                     </label>
 				</div>
 
@@ -74,14 +74,14 @@
 					</button>
                     @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('interv.password') }}">
-                            {{ __('Mot de Passe oublié?') }}
+                            @lang('public.motPasseOublier')
                         </a>
                     @endif
 				</div>
 
 				<div class="text-center p-t-57 p-b-20">
 					<span class="txt1">
-						Se connecter avec 
+						@lang('public.seConnecterAvec')
 					</span>
 				</div>
 

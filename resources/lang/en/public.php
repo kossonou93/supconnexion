@@ -40,5 +40,8 @@ return [
     'aproposNous' => 'ABOUT US',
     'nosLiens' => 'OUR LINKS',
     'contactNous' => 'CONTACT US',
+    'seConnecterAvec' => 'Login with',
+    'seSouvenirMoi' => 'Remember Me',
+    'motPasseOublier' => 'Forgot your password?'
 ]
 ?>

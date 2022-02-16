@@ -11,6 +11,10 @@
                     </a>
                 </li>
             </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="locale/fr" style="color: #f6b60b; font-weight: bold">FRENCH</a></li>
+                <li><a href="locale/en" style="color: #f6b60b; font-weight: bold">ENGLISH</a></li>
+            </ul>
         </div>
     </section>
 
