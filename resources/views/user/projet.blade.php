@@ -23,19 +23,19 @@
                 <div class="col-sm-12 contact_info">
                     <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-family: 'Comic Sans MS'; color: blue; font-size: 17px">@lang('public.projetPortailDedie') </span>
                     <span style="color: red; font-size: 20px">@lang('public.besoinEtOpportunite') </span>
-                    <span style="color: blue; font-size: 17px">Ce Portail aura plusieurs fonctionnalités dont :  </span>
+                    <span style="color: blue; font-size: 17px">@lang('public.cePortail')  </span>
                     </p>
                     <p class="text-justify">
                         <ul class="text-justify" style="list-style-type: decimal;font-family: 'Comic Sans MS'; font-weight: bold; font-size: 17px">
-                            <li>Donnez de la visibilité  aux besoins de recrutements de votre établissement d’enseignement supérieur ; postez vos annonces, vos besoins en vacation, CDD, CDI. Les établissements d’enseignement supérieur peut donc s’inscrire et s’ouvrir un compte.</li>
+                            <li>@lang('public.donnezVisibilite')</li>
                             <br>
-                            <li>Trouvez les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin.</li>
+                            <li>@lang('public.trouvezIntervenant')</li>
                             <br>
-                            <li>Donnez de la visibilité à vos domaines d’expertise et de qualification en matière d’enseignement dans le supérieur ; référencez votre CV, votre parcours de formation, votre expérience en tant qu’intervenant dans le supérieur. Les intervenants sont donc invités également à s’inscrire et à s’ouvrir un compte.</li>
+                            <li>@lang('public.donnezVisibiliteDomaine')</li>
                             <br>
-                            <li>Trouver des opportunités d’intervention dans le supérieur en tant que spécialiste</li>
+                            <li>@lang('public.trouvezOpportunite')</li>
                             <br>
-                            <li>Donnez de la visibilité à vos opportunités de grands projets à réaliser dans le supérieur en tant que partenaire dans l’éducation et l’enseignement supérieur. Ils peuvent donc poster leurs annonces – projets ; leurs appels d’offre ; leurs appels à manifestation d’intérêt.</li>
+                            <li>@lang('public.donnezVisibiliteOpportunite')</li>
                         </ul>
                     </p>
                 </div>

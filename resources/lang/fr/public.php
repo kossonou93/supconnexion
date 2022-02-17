@@ -49,8 +49,13 @@ return [
     'motPasseOublier' => 'Mot de Passe oublié?',
     'envoiMessage' => 'Envoyez-Nous un Message',
     'projetPortailDedie' => 'Le projet est  un Portail dédié',
-    'besoinEtOpportunite' => 'AUX BESOINS ET OPPORTUNITES DANS LE SUPERIEUR EN AFRIQUE, AINSI QUE DES INTERVENANTS - SPECIALISTES INTERNATIONAUX AFRICAINS DANS LE SECTEUR.'
-
+    'besoinEtOpportunite' => 'AUX BESOINS ET OPPORTUNITES DANS LE SUPERIEUR EN AFRIQUE, AINSI QUE DES INTERVENANTS - SPECIALISTES INTERNATIONAUX AFRICAINS DANS LE SECTEUR.',
+    'cePortail' => 'Ce Portail aura plusieurs fonctionnalités dont :',
+    'donnezVisibilite' => 'Donnez de la visibilité  aux besoins de recrutements de votre établissement d’enseignement supérieur ; postez vos annonces, vos besoins en vacation, CDD, CDI. Les établissements d’enseignement supérieur peut donc s’inscrire et s’ouvrir un compte.',
+    'trouvezIntervenant' => 'Trouvez les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin.',
+    'donnezVisibiliteDomaine' => 'Donnez de la visibilité à vos domaines d’expertise et de qualification en matière d’enseignement dans le supérieur ; référencez votre CV, votre parcours de formation, votre expérience en tant qu’intervenant dans le supérieur. Les intervenants sont donc invités également à s’inscrire et à s’ouvrir un compte.',
+    'trouvezOpportunite' => 'Trouver des opportunités d’intervention dans le supérieur en tant que spécialiste',
+    'donnezVisibiliteOpportunite' => 'Donnez de la visibilité à vos opportunités de grands projets à réaliser dans le supérieur en tant que partenaire dans l’éducation et l’enseignement supérieur. Ils peuvent donc poster leurs annonces – projets ; leurs appels d’offre ; leurs appels à manifestation d’intérêt.',
 
 ]
 ?>
