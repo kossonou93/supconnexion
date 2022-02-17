@@ -53,9 +53,11 @@ return [
     'cePortail' => 'This Portal will have several functionalities including:',
     'donnezVisibilite' => 'Give visibility to the recruitment needs of your higher education institution; post your ads, your vacation needs, CDD, CDI. Higher education institutions can therefore register and open an account.',
     'trouvezIntervenant' => 'Find the specialist and qualified speakers that your higher education institution needs.',
-    'donnezVisibiliteDomaine' => 'Give visibility to your areas of expertise and qualifications in higher education; reference your CV, your training course, your experience as a speaker in higher education. Stakeholders are therefore also invited to register and open an account.',
+    'donnezVisibiliteDomaine' => 'Give visibility to your areas of expertise and qualifications in higher education; reference your CV, your training course, your experience as a speaker in higher education. Stakeholders are therefore also invited to register and open an account',
     'trouvezOpportunite' => 'Find opportunities for intervention in higher education as a specialist',
-    'donnezVisibiliteOpportunite' => 'Give visibility to your opportunities for major projects to be carried out in higher education as a partner in education and higher education. They can therefore post their announcements – projects; their tenders; their calls for expressions of interest.',
+    'donnezVisibiliteOpportunite' => 'Give visibility to your opportunities for major projects to be carried out in higher education as a partner in education and higher education. They can therefore post their announcements – projects; their tenders; their calls for expressions of interest',
     'projetPortailDedieExpertise' => "The Sup'Connexion project is a Portal dedicated to African international expertise in higher education and to the needs of establishments. It focuses on THE NEEDS AND OPPORTUNITIES IN HIGHER AFRICA, AS WELL AS ON THE INTERVENERS - AFRICAN INTERNATIONAL SPECIALISTS IN THE SECTOR. The Portal has several functionalities and thus provides several services including: ",
+    'donnezVisibiliteBesoin' => "Give visibility to the recruitment needs of your higher education institution; allows you to post your ads, your vacation needs, CDD, CDI. Higher education institutions can therefore register and open an account,",
+    'trouvezIntervenantSpecialiste' => "Find the specialist and qualified speakers that your higher education institution needs,",
 ]
 ?>

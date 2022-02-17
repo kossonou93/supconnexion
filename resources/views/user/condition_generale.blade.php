@@ -31,19 +31,19 @@
                                         @lang('public.projetPortailDedieExpertise')
                                         <ul style="color: black; font-size: 16px">
                                             <li>
-                                                Donner de la visibilité aux besoins de recrutements de votre établissement d’enseignement supérieur ; vous permet de poster vos annonces, vos besoins en vacation, CDD, CDI. Les établissements d’enseignement supérieur peuvent donc s’inscrire et s’ouvrir un compte,
+                                                @lang('public.donnezVisibiliteBesoin')
                                             </li>
                                             <li>
-                                                Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin,
+                                                @lang('public.trouvezIntervenantSpecialiste') 
                                             </li>
                                             <li>
-                                                Donner de la visibilité à vos domaines d’expertise et de qualification en matière d’enseignement dans le supérieur ; vous permet référencez votre CV, votre parcours de formation, votre expérience en tant qu’intervenant dans le supérieur. Les intervenants sont donc invités également à s’inscrire et à s’ouvrir un compte,
+                                                @lang('public.donnezVisibiliteDomaine'),
                                             </li>
                                             <li>
-                                                Trouver des opportunités d’intervention dans le supérieur en tant que spécialiste,
+                                                @lang('public.trouvezOpportunite'),
                                             </li>
                                             <li>
-                                                Donner de la visibilité à vos opportunités de grands projets à réaliser dans le supérieur en tant que partenaires dans l’éducation et l’enseignement supérieur. Les partenaires peuvent donc poster leurs annonces – projets ; leurs appels d’offre ; leurs appels à manifestation d’intérêt,
+                                                @lang('public.donnezVisibiliteOpportunite'),
                                             </li>
                                             <li>
                                                 Donner aussi l’opportunité aux établissements d’enseignement supérieur, universités comme grandes écoles, de faire leur promotion, la promotion de leurs programmes à travers des publicités et des annonces, (…).
