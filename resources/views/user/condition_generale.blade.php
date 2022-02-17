@@ -81,13 +81,13 @@
                             <br>
                             <li>@lang('public.facturation')  <br>
                                 <span style="color: #371F57; font-size: 17px">
-                                    @lang('public.prixService') 
+                                    @lang('public.prixService')<br><br>  @lang('public.prixAnnonce')
                                 </span>
                                 <br><br>
                                 <table class="table table-bordered" style="text-align: center;">
                                     <thead>
                                         <tr class="bg-primary">
-                                            <th class="col-md-4">@lang('public.prixService')</th>
+                                            <th class="col-md-4">@lang('public.produit')</th>
                                             <th class="col-md-6">description</th>
                                             <th class="col-md-2">@lang('public.prix')</th>
                                         </tr>
@@ -99,17 +99,17 @@
                                             <td></td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row">Publication pendant 1 mois</th>
-                                            <td>Postez sur le Portail et Donnez de la visibilité à vos besoins de recrutements afin d'atirer les meilleurs profils (vacation, CDD, CDI)</td>
+                                            <th scope="row">@lang('public.publicationUnMois')</th>
+                                            <td>@lang('public.postezPublication')</td>
                                             <td>500 €</td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row" style="color: black;">Publication pendant 3 mois</th>
-                                            <td>Postez sur le Portail et Donnez de la visibilité à vos besoins de recrutements afin d'atirer les meilleurs profils (vacation, CDD, CDI)</td>
+                                            <th scope="row" style="color: black;">@lang('public.publicationTroisMois')</th>
+                                            <td>@lang('public.postezPublication')</td>
                                             <td>1 600 €</td>
                                         </tr>
                                         <tr style="color: red;" class="bg-info">
-                                            <th scope="row">Accès à la base de données des intervenants</th>
+                                            <th scope="row"></th>
                                             <td></td>
                                             <td></td>
                                         </tr>
