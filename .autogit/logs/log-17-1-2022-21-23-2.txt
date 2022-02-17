@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Thu Feb 17 2022 21:23:02 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+* resources/views/user/projet.blade.php
+
+
+Created files:
+* .autogit/logs/log-17-1-2022-20-52-37.txt
+
+
+Deleted files:
+
+
+Renamed files:

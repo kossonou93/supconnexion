@@ -56,6 +56,7 @@ return [
     'donnezVisibiliteDomaine' => 'Donnez de la visibilité à vos domaines d’expertise et de qualification en matière d’enseignement dans le supérieur ; référencez votre CV, votre parcours de formation, votre expérience en tant qu’intervenant dans le supérieur. Les intervenants sont donc invités également à s’inscrire et à s’ouvrir un compte.',
     'trouvezOpportunite' => 'Trouver des opportunités d’intervention dans le supérieur en tant que spécialiste',
     'donnezVisibiliteOpportunite' => 'Donnez de la visibilité à vos opportunités de grands projets à réaliser dans le supérieur en tant que partenaire dans l’éducation et l’enseignement supérieur. Ils peuvent donc poster leurs annonces – projets ; leurs appels d’offre ; leurs appels à manifestation d’intérêt.',
+    'projetPortailDedieExpertise' => "Le projet Sup'Connexion est un Portail dédié à l'expertise internationale africaine dans le supérieur et aux besoins des établissements. Il porte en effet sur Les BESOINS ET OPPORTUNITES DANS LE SUPERIEUR EN AFRIQUE, AINSI QUE SUR LES INTERVENANTS - SPECIALISTES INTERNATIONAUX AFRICAINS DANS LE SECTEUR. Le Portail a plusieurs fonctionnalités et fournit ainsi plusieurs services dont : ",
 
 ]
 ?>

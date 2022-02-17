@@ -12,7 +12,7 @@
             <h2>Conditions Générales de Ventes</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('condition.generale')}}" class="active">Conditions Générales de Ventes</a></li>
+                <li><a href="{{route('condition.generale')}}" class="active">@lang('public.conditionGle')</a></li>
             </ol>
         </section>
         <!-- End Banner area -->
@@ -28,7 +28,7 @@
                             <li>Services
                                 <ul style="color: #371F57; font-size: 17px">
                                     <li>
-                                        Le projet Sup'Connexion est un Portail dédié à l'expertise internationale africaine dans le supérieur et aux besoins des établissements. Il porte en effet sur Les BESOINS ET OPPORTUNITES DANS LE SUPERIEUR EN AFRIQUE, AINSI QUE SUR LES INTERVENANTS - SPECIALISTES INTERNATIONAUX AFRICAINS DANS LE SECTEUR. Le Portail a plusieurs fonctionnalités et fournit ainsi plusieurs services dont : 
+                                        @lang('public.projetPortailDedieExpertise')
                                         <ul style="color: black; font-size: 16px">
                                             <li>
                                                 Donner de la visibilité aux besoins de recrutements de votre établissement d’enseignement supérieur ; vous permet de poster vos annonces, vos besoins en vacation, CDD, CDI. Les établissements d’enseignement supérieur peuvent donc s’inscrire et s’ouvrir un compte,
