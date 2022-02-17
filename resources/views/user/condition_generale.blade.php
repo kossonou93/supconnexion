@@ -46,55 +46,55 @@
                                                 @lang('public.donnezVisibiliteOpportunite'),
                                             </li>
                                             <li>
-                                                Donner aussi l’opportunité aux établissements d’enseignement supérieur, universités comme grandes écoles, de faire leur promotion, la promotion de leurs programmes à travers des publicités et des annonces, (…).
+                                                @lang('public.donnerOpportunite')
                                             </li>
                                         </ul>
                                     </li>
                                     <br>
                                     <span style="color: black; font-size: 17px">
-                                        Le Portail Sup’Connexion sera utilisé exclusivement à ces fins ci-dessus et conformément aux présentes Conditions Générales ainsi qu’à toutes les lois nationales et internationales applicables.
+                                        @lang('public.portailUtiliser')
                                     </span>
                                     <br><br>
                                     <li>
-                                        Les parties prenantes de Sup’Connexion sont tenues de traiter toutes les données personnelles d’un candidat ou candidate ou établissement accessibles par le Portail comme strictement confidentielles. Ces données ne doivent pas être utilisées ou traitées à d’autres fins que celles mentionnées ci-dessus,
+                                        @lang('public.partiePrenante') 
                                     </li>
                                     <br>
                                     <li>
-                                        Comme le nom l’indique, Sup’Connexion vise essentiellement à connecter les Etablissements du supérieur en Afrique (Employeurs) et les Intervenants (spécialistes internationaux africains), ainsi qu’à donner l’opportunité aux partenaires du monde académique de pouvoir publier des annonces sur des projets dans le supérieur et de recruter les compétences disponibles. Nous n’assumons aucune responsabilité quant au niveau de succès de l’utilisation de nos Services,
+                                        @lang('public.commeIndique') 
                                     </li>
                                     <br>
                                     <li>
-                                        Tout intervenant ou tout établissement du supérieur est libre de collaborer avec Sup’Connexion, mais aucun remboursement ne sera accordé en cas d’exploitation insuffisance et inefficace de nos bases de données pour atteindre les résultats que vous souhaiteriez,
+                                        @lang('public.toutIntervenant')
                                     </li>
                                     <br>
                                     <li>
-                                        Tout établissement enregistré sur notre portail accorde à Sup’Connexion une autorisation mondiale, sans redevances et non exclusive d’utiliser, d’adapter et d’afficher publiquement son logo d’entreprise sur le Portail et d’incorporer ce contenu dans d’autres réalisations sur tout format ou support connu actuellement ou développé ultérieurement uniquement dans le but de promouvoir le Portail.
+                                        @lang('public.toutEtablissement')
                                     </li>
                                 </ul>
                             </li>
                             <br>
-                            <li>Formalisation de notre collaboration <br>
+                            <li>@lang('public.formalisation')<br>
                                 <span style="color: #371F57; font-size: 17px">
-                                    Toute formalisation d’un contrat de collaboration est subordonnée au paiement intégral du service ou des services souhaités conformément aux CGV. 
+                                    @lang('public.touteFormalisation')  
                                 </span>
                             </li>
                             <br>
-                            <li>Facturation de nos services et paiement <br>
+                            <li>@lang('public.facturation')  <br>
                                 <span style="color: #371F57; font-size: 17px">
-                                    Les prix de nos Services sont indiqués ci-dessous et peuvent occasionnellement être modifiés sans préavis. Ces prix s’entendent hors TVA. Le paiement de nos Services sera effectué en Euros dans les trente (30) jours suivant la date de la facture. En cas de non-paiement dans les trente (30) jours suivant la date de la facture, l’accès à nos Services vous sera refusé. Toutes les ventes sont fermes et non remboursables. <br><br>Le prix d’une annonce présentée dans la liste de prix est le prix concernant une information précise donnée. Dans le cas de publier de nombreuses informations dans une annonce, le prix total de cette annonce sera spécifié et basé sur le nombre d’informations à faire passer.
+                                    @lang('public.prixService') 
                                 </span>
                                 <br><br>
                                 <table class="table table-bordered" style="text-align: center;">
                                     <thead>
                                         <tr class="bg-primary">
-                                            <th class="col-md-4">Produit</th>
+                                            <th class="col-md-4">@lang('public.prixService')</th>
                                             <th class="col-md-6">description</th>
-                                            <th class="col-md-2">Prix net en €</th>
+                                            <th class="col-md-2">@lang('public.prix')</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr style="color: red;" class="bg-info">
-                                            <th scope="row">Publication d'une annonce - besoins de recrutement </th>
+                                            <th scope="row">@lang('public.publicationAnnonce')</th>
                                             <td></td>
                                             <td></td>
                                         </tr>
