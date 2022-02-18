@@ -77,17 +77,5 @@
 <script src="{{ asset('users/vendors/stellar/jquery.stellar.js') }}"></script>
 <!-- Theme JS -->
 <script src="{{ asset('users/js/theme.js') }}"></script>
-<script type="text/javascript"> 
-    function googleTranslateElementInit() { 
-      new google.translate.TranslateElement({
-          pageLanguage: 'fr',
-          includedLanguages: 'en,fr,',
-          autoDisplay: false,
-    },
- 'google_translate_element'); 
-    } 
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 </body>
 </html>

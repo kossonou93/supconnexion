@@ -94,8 +94,8 @@ return [
     'acceptonsRespo' => "En outre, nous n’acceptons aucune responsabilité découlant de toute inexactitude ou omission dans l’une des informations sur ce site fournies par vous, tout autre utilisateur du site ou toute autre personne.",
     'modifCGV' => "Modifications des CGV",
     'reviserCGV' => "Nous pouvons réviser nos CGV à tout moment sans préavis. Vous devez consulter cette page de temps en temps et vous assurer que vous êtes au courant de ces changements.",
-    'nosLiens' => "Cette page contient les Conditions générales qui régissent les relations entre Sup’Connexion et ses parties prenantes concernant l’utilisation de son Portail. Veuillez lire attentivement les présentes Conditions générales avant toute utilisation du Portail. Vous devez comprendre qu’en utilisant le Portail de Sup’Connexion, vous acceptez d’être lié par les présentes Conditions Générales.",
-    'nosLiens' => "",
-    'nosLiens' => "",
+    'pageContient' => "Cette page contient les Conditions générales qui régissent les relations entre Sup’Connexion et ses parties prenantes concernant l’utilisation de son Portail. Veuillez lire attentivement les présentes Conditions générales avant toute utilisation du Portail. Vous devez comprendre qu’en utilisant le Portail de Sup’Connexion, vous acceptez d’être lié par les présentes Conditions Générales.",
+    //'nosLiens' => "",
+    //'nosLiens' => "",
 ]
 ?>
