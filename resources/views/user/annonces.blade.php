@@ -9,10 +9,10 @@
 	@include('parts/menu')
     <!-- Banner area -->
         <section class="banner_area" data-stellar-background-ratio="0.5">
-            <h2>ANNONCES</h2>
+            <h2>@lang('public.annonce')S</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('annonces')}}" class="active">Annonces</a></li>
+                <li><a href="{{route('annonces')}}" class="active">@lang('public.annonce')S</a></li>
             </ol>
         </section>
         
@@ -25,7 +25,7 @@
                                 <img src="{{ asset('uploads/image/annonce/'.$annonce->image) }}" alt="">
                                 <div class="renovation_content">
                                     <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                                    <a style="text-align:center" class="tittle" href="#">{{ Illuminate\Support\Str::limit($annonce->intitule, 30) }}</a>
+                                    <a style="text-align:center" class="tittle" href="#">{{ Illuminate\Support\Str::limit($tr->translate($annonce->intitule), 30) }}</a>
                                     <div class="date_comment" style="text-align:center">
                                         <a href="#">Publication : <i class="fa fa-calendar" aria-hidden="true"></i>
                                             <?php
@@ -33,7 +33,7 @@
                                             ?>
                                         </a>
                                     </div>
-                                    <p style="text-align:center">{{ Illuminate\Support\Str::limit($annonce->description, 80) }}</p>
+                                    <p style="text-align:center">{{ Illuminate\Support\Str::limit($tr->translate($annonce->description), 80) }}</p>
                                     <p class="ml-auto meta2 mb-0" style="text-align:center; margin-top: 5px">
                                         <a href="#" class="mr-2" style="text-align:center; font-family: 'Comic Sans MS'; font-weight: bold; color: #371F57;">
                                             @foreach ($ecoles as $ecole)
@@ -43,7 +43,7 @@
                                             @endforeach
                                         </a>
                                     </p>
-                                    <p class="mb-0" style="margin-top: 5px; text-align:center"><a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">En savoir plus <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                    <p class="mb-0" style="margin-top: 5px; text-align:center"><a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">{{$tr->translate('En savoir plus')}} <span class="ion-ios-arrow-round-forward"></span></a></p>
                                 </div>
                             </div>
                         </div>

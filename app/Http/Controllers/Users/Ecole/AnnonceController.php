@@ -31,6 +31,10 @@ class AnnonceController extends Controller
 
     public function index()
     {
+        $local = Session::get("locale");
+        $tr = new GoogleTranslate();
+        $tr->setSource('fr'); // Translate from English
+        $tr->setTarget($local); // Translate to French
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
         $langues = Langue::all();
@@ -39,7 +43,7 @@ class AnnonceController extends Controller
         $langs = $ecole->langues;
         $inters = $ecole->interventions;
         $discips = $ecole->langues;
-        return view('admin.user.ecole.annonce.all', compact('disciplines', 'langues', 'interventions', 'annonces', 'inters', 'discips', 'langs'));
+        return view('admin.user.ecole.annonce.all', compact('tr','disciplines', 'langues', 'interventions', 'annonces', 'inters', 'discips', 'langs'));
     }
 
     /**

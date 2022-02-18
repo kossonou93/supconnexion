@@ -79,6 +79,10 @@ class HomeController extends Controller
 
     public function annonces()
     {
+        $local = Session::get("locale");
+        $tr = new GoogleTranslate();
+        $tr->setSource('fr'); // Translate from English
+        $tr->setTarget($local); // Translate to French
         $intervenants = Intervenant::take(4)->get();
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
@@ -86,7 +90,7 @@ class HomeController extends Controller
         $annonces = Annonce::where('date_expiration', '>=', Carbon::today()->toDateString())->get();
         $ecoles = Ecole::all();
         $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
-        return view('user.annonces', compact('ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
+        return view('user.annonces', compact('tr', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
     public function annonce($id)
