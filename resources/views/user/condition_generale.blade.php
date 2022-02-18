@@ -9,7 +9,7 @@
 	@include('parts/menu')
     <!-- Banner area -->
         <section class="banner_area" data-stellar-background-ratio="0.5">
-            <h2>Conditions Générales de Ventes</h2>
+            <h2>@lang('public.conditionGle')</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
                 <li><a href="{{route('condition.generale')}}" class="active">@lang('public.conditionGle')</a></li>
@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row contact_row">
                 <div class="col-sm-12 contact_info">
-                    <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: black">Cette page contient les Conditions générales qui régissent les relations entre Sup’Connexion et ses parties prenantes concernant l’utilisation de son Portail. Veuillez lire attentivement les présentes Conditions générales avant toute utilisation du Portail. Vous devez comprendre qu’en utilisant le Portail de Sup’Connexion, vous acceptez d’être lié par les présentes Conditions Générales. </span>
+                    <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: black"> </span>
                     </p>
                     <p class="text-justify">
                         <ul class="text-justify" style="list-style-type: decimal;font-family: 'Comic Sans MS'; font-weight: bold; font-size: 18px; color: #f6b60b">
@@ -119,64 +119,64 @@
                                             <td>100 €</td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row" style="color: black;"></th>
-                                            <td>Accès profil complet des intervenants; Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin</td>
+                                            <th scope="row" style="color: black;">@lang('public.acces3Mois')</th>
+                                            <td>@lang('public.accesProfilComplet')</td>
                                             <td>3 500 €</td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row">Accès pendant 6 mois</th>
-                                            <td>Accès profil complet des intervenants; Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin</td>
+                                            <th scope="row">@lang('public.acces6Mois')</th>
+                                            <td>@lang('public.accesProfilComplet')</td>
                                             <td>6 500 €</td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row">Accès pendant 12 mois</th>
-                                            <td>Accès profil complet des intervenants; Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin</td>
+                                            <th scope="row">@lang('public.acces12Mois')</th>
+                                            <td>@lang('public.accesProfilComplet')</td>
                                             <td>12 500 €</td>
                                         </tr>
                                         <tr style="color: red;" class="bg-info">
-                                            <th scope="row">Service de recrutements</th>
+                                            <th scope="row">@lang('public.serviceRecrutement')</th>
                                             <td></td>
                                             <td></td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row">Service de recrutement</th>
-                                            <td>Sup'Connexion se charge de trouver le profil recherché par l'établissement</td>
+                                            <th scope="row">@lang('public.serviceRecrutement')</th>
+                                            <td>@lang('public.trouverProfilRechercher')</td>
                                             <td>5 000 €</td>
                                         </tr>
                                         <tr class="bg-info" style="color: red;">
-                                            <th scope="row">Service de publicités</th>
+                                            <th scope="row">@lang('public.servicePub')</th>
                                             <td></td>
                                             <td></td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row">Service de publicités pour 1 mois</th>
-                                            <td>Les partenaires ont l'opportunité de faire leur promotion, la promotion de leurs programmes à travers des publicités et des annonces (une bannière sur notre page d'accueil + un lien vers votre site web)</td>
+                                            <th scope="row">@lang('public.servicePub1Mois')</th>
+                                            <td>@lang('public.partenaireOpportunite')</td>
                                             <td>5 000 €</td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row">Service de publicités pour 3 mois</th>
-                                            <td>Les partenaires ont l'opportunité de faire leur promotion, la promotion de leurs programmes à travers des publicités et des annonces (une bannière sur notre page d'accueil + un lien vers votre site web)</td>
+                                            <th scope="row">@lang('public.servicePub3Mois')</th>
+                                            <td>@lang('public.partenaireOpportunite')</td>
                                             <td>10 000 €</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </li>
                             <br>
-                            <li>Nos différentes responsabilité inhérentes à l’activité <br>
+                            <li>@lang('public.differentResp') <br>
                                 <ul style="color: #371F57; font-size: 17px">
                                    <li>
-                                        Bien que nous déployons tous les efforts raisonnables pour rendre notre Portail performant, nous déclinons toute responsabilité en cas de dysfonctionnements du Portail causé par des circonstances indépendantes de notre volonté raisonnable, y compris, sans s’y limiter, toute panne ou dysfonctionnement de tout logiciel informatique, équipement, installations ou services de télécommunications et autres,
+                                        @lang('public.deployonsEffort') 
                                    </li>
                                    <br>
                                    <li>
-                                        En outre, nous n’acceptons aucune responsabilité découlant de toute inexactitude ou omission dans l’une des informations sur ce site fournies par vous, tout autre utilisateur du site ou toute autre personne.
+                                        @lang('public.acceptonsRespo')
                                    </li>
                                 </ul>
                             </li>
                             <br>
-                            <li>Modifications des CGV <br>
+                            <li>@lang('public.modifCGV') <br>
                                 <span style="color: #371F57; font-size: 17px">
-                                    Nous pouvons réviser nos CGV à tout moment sans préavis. Vous devez consulter cette page de temps en temps et vous assurer que vous êtes au courant de ces changements. 
+                                    @lang('public.reviserCGV')
                                 </span>
                             </li>
                         </ul>
