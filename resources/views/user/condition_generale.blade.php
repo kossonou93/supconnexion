@@ -109,17 +109,17 @@
                                             <td>1 600 €</td>
                                         </tr>
                                         <tr style="color: red;" class="bg-info">
-                                            <th scope="row"></th>
+                                            <th scope="row">@lang('public.accesIllimite')</th>
                                             <td></td>
                                             <td></td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row">Accès au profil complet d'un intervenant</th>
-                                            <td>CV ; Trouver l'intervenant spécialistes et qualifié dont votre établissement supérieur a besoin</td>
+                                            <th scope="row">@lang('public.accesProfil')</th>
+                                            <td>@lang('public.resume')</td>
                                             <td>100 €</td>
                                         </tr>
                                         <tr style="color: black;">
-                                            <th scope="row" style="color: black;">Accès pendant 3 mois</th>
+                                            <th scope="row" style="color: black;"></th>
                                             <td>Accès profil complet des intervenants; Trouver les intervenants spécialistes et qualifiés dont votre établissement supérieur a besoin</td>
                                             <td>3 500 €</td>
                                         </tr>
