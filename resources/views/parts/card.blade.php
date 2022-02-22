@@ -21,7 +21,7 @@
                                     </div>
                                 </a>
                                 <div class="text border border-top-0 p-4 border-margin">
-                                    <h3 class="heading"><a href="#">{{ Illuminate\Support\Str::limit($annonce->intitule, 30) }}</a></h3>
+                                    <h3 class="heading"><a href="#">{{ Illuminate\Support\Str::limit($annonce->intitule_({{$local}}), 30) }}</a></h3>
                                     <p maxlength="100">{{ Illuminate\Support\Str::limit($annonce->description, 80) }}</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <p class="mb-0" style="margin-top: 10px"><a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">@lang('public.enSavoirPlus') <span class="ion-ios-arrow-round-forward"></span></a></p>
