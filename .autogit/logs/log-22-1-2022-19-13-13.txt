@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Tue Feb 22 2022 19:13:13 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Annonce.php
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+* resources/views/home.blade.php
+* resources/views/parts/card.blade.php
+
+
+Created files:
+* .autogit/logs/log-22-1-2022-18-42-57.txt
+
+
+Deleted files:
+
+
+Renamed files:
