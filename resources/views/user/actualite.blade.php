@@ -9,10 +9,10 @@
 	@include('parts/menu')
     <!-- Banner area -->
         <section class="banner_area" data-stellar-background-ratio="0.5">
-            <h2>ACTUALITE</h2>
+            <h2>@lang('public.actualite')</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('actualite.index')}}" class="active">Actualités</a></li>
+                <li><a href="{{route('actualite.index')}}" class="active">@lang('public.actualite')</a></li>
             </ol>
         </section>
         
@@ -41,9 +41,9 @@
                        </div>
                     </div>
                     <div class="col-xs-11 blog_content">
-                        <a class="blog_heading" href="#">{{ $actualite->titre }}</a>
+                        <a class="blog_heading" href="#">{{ $actualite->{'titre_'.$local} }}</a>
                         
-                        <p>{{ $actualite->texte }}</p>
+                        <p>{{ $actualite->{'texte_'.$local} }}</p>
                         <div class="tag">
                             <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;"></h4>
                             

@@ -127,7 +127,7 @@
                         <?php
                             echo date("d F, Y", strtotime(" $actualite->date_pub "));
                         ?></small></h4>
-                        <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($actualite->texte, 200) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">@lang('public.enSavoirPlus')<span></a></p>
+                        <p class="text-justify" style="font-family: 'Comic Sans MS'; font-weight: bold;">{{ Illuminate\Support\Str::limit($actualite->{'texte_'.$local}, 200) }}... <a href="{{ route('actualite.details',$actualite->id)}}"><span style="color: red; font-weight: bold;">@lang('public.enSavoirPlus')<span></a></p>
                     </div>
                 @endforeach
             </div>

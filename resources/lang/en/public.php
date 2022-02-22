@@ -97,6 +97,8 @@ return [
     'pageContient' => "This page contains the General Conditions which govern the relations between Sup'Connexion and its stakeholders concerning the use of its Portal. Please read these Terms and Conditions carefully before using the Portal. You must understand that by using the Sup'Connexion Portal, you agree to be bound by these General Conditions.",
     'enSavoirPlus' => "Learn More",
     'par' => "By",
+    'actualite' => "NEW",
+    'actualitesEnSup' => "News in Higher Education",
     //'nosLiens' => "",
 
 

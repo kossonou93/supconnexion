@@ -104,14 +104,16 @@ class HomeController extends Controller
 
     public function actualites()
     {
+        $local = Session::get("locale");
         $actualites = Actualite::all();
-        return view('user.actualites', compact('actualites'));
+        return view('user.actualites', compact('local', 'actualites'));
     }
 
     public function actualite($id)
     {
+        $local = Session::get("locale");
         $actualite = Actualite::find($id);
-        return view('user.actualite', compact('actualite'));
+        return view('user.actualite', compact('local', 'actualite'));
     }
 
     public function academiques()
