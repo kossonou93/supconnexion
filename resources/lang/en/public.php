@@ -99,6 +99,7 @@ return [
     'par' => "By",
     'actualite' => "NEW",
     'actualitesEnSup' => "News in Higher Education",
+    'actualite' => "NEW",
     //'nosLiens' => "",
 
 

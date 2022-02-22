@@ -9,10 +9,10 @@
 	@include('parts/menu')
     <!-- Banner area -->
         <section class="banner_area" data-stellar-background-ratio="0.5">
-            <h2>@lang('public.actualite')</h2>
+            <h2>@lang('public.actualite')S</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('actualite.index')}}" class="active">@lang('public.actualite')</a></li>
+                <li><a href="{{route('actualite.index')}}" class="active">@lang('public.actualite')S</a></li>
             </ol>
         </section>
         

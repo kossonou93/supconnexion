@@ -9,10 +9,10 @@
 	@include('parts/menu')
     <!-- Banner area -->
         <section class="banner_area" data-stellar-background-ratio="0.5">
-            <h2>@lang('public.annonce')S</h2>
+            <h2>@lang('public.annonce')</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
-                <li><a href="{{route('annonces')}}" class="active">@lang('public.annonce')S</a></li>
+                <li><a href="{{route('annonces')}}" class="active">@lang('public.annonce')</a></li>
             </ol>
         </section>
         
@@ -25,7 +25,7 @@
                                 <img src="{{ asset('uploads/image/annonce/'.$annonce->image) }}" alt="">
                                 <div class="renovation_content">
                                     <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
-                                    <a style="text-align:center" class="tittle" href="#">{{ Illuminate\Support\Str::limit($annonce->intitule, 30) }}</a>
+                                    <a style="text-align:center" class="tittle" href="#">{{ Illuminate\Support\Str::limit($annonce->{'intitule_'.$local}, 30) }}</a>
                                     <div class="date_comment" style="text-align:center">
                                         <a href="#">Publication : <i class="fa fa-calendar" aria-hidden="true"></i>
                                             <?php
