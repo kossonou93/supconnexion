@@ -99,6 +99,12 @@ return [
     'par' => "Par",
     'actualite' => "ACTUALITE",
     'actualitesEnSup' => "Les Actualités dans l'Enseignement Supérieur",
+    'interventionLang' => "Langue d'intervention",
+    'interventionDomaine' => "Domaine(s) d'intervention",
+    'interventionType' => "Type(s) d'intervention",
+    'dateLimite' => "Date Limite",
+    'dossierCandidature' => "Dossier(s) de candidature",
+    'adresse' => "Adresse",
     //'nosLiens' => "",
 ]
 ?>

@@ -99,7 +99,12 @@ return [
     'par' => "By",
     'actualite' => "NEW",
     'actualitesEnSup' => "News in Higher Education",
-    'actualite' => "NEW",
+    'interventionLang' => "Intervention language",
+    'interventionDomaine' => "Areas of intervention",
+    'interventionType' => "Type(s) of intervention",
+    'dateLimite' => "Deadline",
+    'dossierCandidature' => "Application file(s)",
+    'adresse' => "Address",
     //'nosLiens' => "",
 
 
