@@ -43,7 +43,7 @@
                                                 <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
                                             </ul>
                                             <a href="#" class="name">{{ $intervenant->name }}</a>
-                                            <h6>{{ $tr->translate($intervenant->fonction) }}</h6>
+                                            <h6>{{ $intervenant->fonction }}</h6>
                                         </div>
                                     </div>
                                 </div>
@@ -88,10 +88,10 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Dr Denis Gnanzou</h4>
-                            <h6>{{$tr->translate("Docteur en Sciences de gestion")}}</h6>
+                            <h6>Docteur en Sciences de gestion</h6>
                         </div>
                     </div>
-                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>{{$tr->translate("Grâce à Sup'Connexion, j'interviens dans trois différentes écoles")}}<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>Grâce à Sup'Connexion, j'interviens dans trois différentes écoles<i class="fa fa-quote-left" aria-hidden="true"></i></p>
                 </div>
 
                 <div class="item">
@@ -103,10 +103,10 @@
                         </div>
                         <div class="media-body">
                             <h4 class="media-heading">Martin Kossonou</h4>
-                            <h6>{{$tr->translate('Ingénieur Génie Logiciel')}}</h6>
+                            <h6>Ingénieur Génie Logiciel</h6>
                         </div>
                     </div>
-                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>{{$tr->translate("Avec Sup'Connexion, j'ai pu obtenir un emploi et j'interviens dans plusieurs écoles")}}<i class="fa fa-quote-left" aria-hidden="true"></i></p>
+                    <p><i class="fa fa-quote-right" aria-hidden="true"></i>Avec Sup'Connexion, j'ai pu obtenir un emploi et j'interviens dans plusieurs écoles<i class="fa fa-quote-left" aria-hidden="true"></i></p>
                 </div>
             
             </div>

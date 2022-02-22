@@ -95,7 +95,7 @@ return [
     'modifCGV' => "Modifications des CGV",
     'reviserCGV' => "Nous pouvons réviser nos CGV à tout moment sans préavis. Vous devez consulter cette page de temps en temps et vous assurer que vous êtes au courant de ces changements.",
     'pageContient' => "Cette page contient les Conditions générales qui régissent les relations entre Sup’Connexion et ses parties prenantes concernant l’utilisation de son Portail. Veuillez lire attentivement les présentes Conditions générales avant toute utilisation du Portail. Vous devez comprendre qu’en utilisant le Portail de Sup’Connexion, vous acceptez d’être lié par les présentes Conditions Générales.",
-    //'nosLiens' => "",
+    'enSavoirPlus' => "En savoir plus",
     //'nosLiens' => "",
 ]
 ?>

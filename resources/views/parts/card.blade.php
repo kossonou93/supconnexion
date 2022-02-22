@@ -2,7 +2,7 @@
 <section class="ftco-section our_team_area">
     <div class="container">
         <div class="tittle wow fadeInUp">
-            <h2>{{$tr->translate('Annonces')}}</h2>
+            <h2>@lang('public.annonce')</h2>
         </div>
         <div class="row team_row">
             <div class="col-md-12">
@@ -21,10 +21,10 @@
                                     </div>
                                 </a>
                                 <div class="text border border-top-0 p-4 border-margin">
-                                    <h3 class="heading"><a href="#">{{ Illuminate\Support\Str::limit($tr->translate($annonce->intitule), 30) }}</a></h3>
-                                    <p maxlength="100">{{ Illuminate\Support\Str::limit($tr->translate($annonce->description), 80) }}</p>
+                                    <h3 class="heading"><a href="#">{{ Illuminate\Support\Str::limit($annonce->intitule, 30) }}</a></h3>
+                                    <p maxlength="100">{{ Illuminate\Support\Str::limit($annonce->description, 80) }}</p>
                                     <div class="d-flex align-items-center mt-4">
-                                        <p class="mb-0" style="margin-top: 10px"><a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">{{$tr->translate('En savoir plus')}} <span class="ion-ios-arrow-round-forward"></span></a></p>
+                                        <p class="mb-0" style="margin-top: 10px"><a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">@lang('public.enSavoirPlus') <span class="ion-ios-arrow-round-forward"></span></a></p>
                                         <p class="ml-auto meta2 mb-0" style="margin-top: 20px">
                                             <a href="#" class="mr-2" style="font-family: 'Comic Sans MS'; font-weight: bold; color: #371F57;">
                                                 @foreach ($ecoles as $ecole)

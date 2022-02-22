@@ -28,8 +28,6 @@ use App\Models\Annonce;
 use Carbon\Carbon;
 use App\Ecole;
 use App\Models\Academique;
-use Stichoza\GoogleTranslate\GoogleTranslate;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 
 class HomeController extends Controller
@@ -53,9 +51,6 @@ class HomeController extends Controller
     public function index()
     {
         $local = Session::get("locale");
-        $tr = new GoogleTranslate();
-        $tr->setSource('fr'); // Translate from English
-        $tr->setTarget($local); // Translate to French
         $intervenants = Intervenant::take(4)->get();
         $intervs = Intervenant::where('email_verified_at', '!=', 'NULL')->get();
         $carousels = Carousel::all();
@@ -74,15 +69,12 @@ class HomeController extends Controller
         //$carousel->visists()->increment();
         $actualites = Actualite::take(3)->orderBy('date_pub', 'DESC')->get();
         //return var_dump($local);
-        return view('home', compact('tr','nbpartenaire', 'nbecole', 'nbannonce', 'nbintervenant', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
+        return view('home', compact('local','nbpartenaire', 'nbecole', 'nbannonce', 'nbintervenant', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
     public function annonces()
     {
         $local = Session::get("locale");
-        $tr = new GoogleTranslate();
-        $tr->setSource('fr'); // Translate from English
-        $tr->setTarget($local); // Translate to French
         $intervenants = Intervenant::take(4)->get();
         $carousels = Carousel::all();
         $partenaires = Partenaire::all();
@@ -90,7 +82,7 @@ class HomeController extends Controller
         $annonces = Annonce::where('date_expiration', '>=', Carbon::today()->toDateString())->get();
         $ecoles = Ecole::all();
         $actualites = Actualite::take(3)->orderBy('id', 'DESC')->get();
-        return view('user.annonces', compact('tr', 'ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
+        return view('user.annonces', compact('local','ecoles', 'intervenants', 'carousels', 'partenaires','temoignages', 'actualites', 'annonces'));
     }
 
     public function annonce($id)
