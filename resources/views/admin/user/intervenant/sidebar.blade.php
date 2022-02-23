@@ -30,13 +30,13 @@
 				<li class="nav-item">
 					<a href="{{route('intervenant.dashboard')}}">
 						<i class="flaticon-profile"></i>
-						<p>Profil Intervenant</p>
+						<p>@lang('public.profil') @lang('public.intervenant')</p>
 					</a>
 				</li>
 				<li class="nav-item">
 					<a href="{{route('offres.index')}}">
 						<i class="flaticon-present"></i>
-						<p>Mes offres</p>
+						<p>@lang('public.mesOffres')</p>
 					</a>
 				</li>
 				<li class="nav-item">
@@ -44,7 +44,7 @@
 						onclick="event.preventDefault();
 									document.getElementById('logout-form').submit();">
 						<i class="flaticon-power"></i>
-						<p>Se déconnecter</p>
+						<p>@lang('public.seDeconnecter')</p>
 					</a>
 					<form id="logout-form" action="{{ route('inter.logout') }}" method="POST" class="d-none">
 						{{ csrf_field() }}

@@ -38,6 +38,7 @@ class IntervenantController extends Controller
 
     public function index()
     {
+        $local = Session::get("locale");
         $disciplines = Discipline::all();
         $contrats = Contrat::all();
         $inter = Intervenant::find(Auth::user()->id);
@@ -65,7 +66,7 @@ class IntervenantController extends Controller
         $hors = $inter->horaires;
         $conts = $inter->contrats;
         $discips = $inter->disciplines;
-        return view('intervenant', compact('disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
+        return view('intervenant', compact('local', 'disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
     }
 
     public function generatePDF()

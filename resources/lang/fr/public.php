@@ -175,7 +175,7 @@ return [
     'remuneration' => "Rémunération",
     'domaineInter' => "Domaine(s) général(aux) d'intervention",
     'domaineComp' => "PRÉCISEZ VOS DOMAINES DE COMPÉTENCE*",
-    'mois' => "Mois",
+    'mesOffres' => "Mes offres",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",

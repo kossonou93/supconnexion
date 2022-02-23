@@ -315,7 +315,7 @@
 																									selected
 																								@endif
 																							@endforeach
-																						>{{ $langue->name }}</option>
+																						>{{ $langue->{'name_'.$local} }}</option>
 																					@endforeach
 																					</select>
 																				</div>
@@ -333,7 +333,7 @@
 																									selected
 																								@endif
 																							@endforeach
-																						>{{ $horaire->titre }}</option>
+																						>{{ ($horaire->{'titre_'.$local}) }}</option>
 																					@endforeach 
 																					</select>
 																				</div>
@@ -379,7 +379,7 @@
 																		<div class="row mt-3 mb-1">
 																			<div class="col-md-12">
 																				<div class="form-group form-group-default bordr">
-																					<label></label>
+																					<label>@lang('public.domaineComp')</label>
 																					<br>
 																					<textarea class="form-control input" name="competence" placeholder="Séparez les par des virgules (ex: Mathématique, Anglais)" rows="3" value="{{ Auth::user()->competence }}">{{ Auth::user()->competence }}</textarea>
 																				</div>
@@ -391,8 +391,8 @@
 																				<div class="text-white text-center rgba-stylish-strong py-1 px-4">
 																					<div class="py-5">
 																						<h5 class="h5 orange-text">
-																							<button class="btn btn-success btn-rounded">Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																							<button class="btn btn-danger btn-rounded">Annuler</button>
+																							<button class="btn btn-success btn-rounded">@lang('public.envoyez')</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																							<button class="btn btn-danger btn-rounded">@lang('public.annulez')</button>
 																						</h5>
 																					</div>
 																				</div>
