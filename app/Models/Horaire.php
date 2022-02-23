@@ -11,7 +11,7 @@ class Horaire extends Model
 
     protected $table = 'horaires';
 
-    protected $fillable = ['titre'];
+    protected $fillable = ['titre_fr', 'titre_en'];
 
     public function intervenants()
     {

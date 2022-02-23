@@ -192,7 +192,7 @@
 																								selected
 																							@endif
 																						@endforeach
-																					>{{ $horaire->titre }}</option>
+																					>{{ $horaire->{'titre_'.$local} }}</option>
 																				@endforeach 
 																				</select>
 																			</div>

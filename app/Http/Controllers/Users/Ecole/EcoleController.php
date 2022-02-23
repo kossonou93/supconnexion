@@ -26,8 +26,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
-use Stichoza\GoogleTranslate\GoogleTranslate;
-use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
 
 class EcoleController extends Controller
@@ -40,6 +38,7 @@ class EcoleController extends Controller
 
     public function index()
     {
+        $local = Session::get("locale");
         $disciplines = Discipline::all();
         $villes = Ville::all();
         $pays = Pays::all();
@@ -52,7 +51,7 @@ class EcoleController extends Controller
         $hors = $ecol->horaires;
         $horaires = Horaire::all();
         //var_dump($ecole->id == 3);
-        return view('ecole', compact('disciplines', 'villes', 'pays', 'formations', 'horaires', 'ecoles', 'langues', 'discips', 'langs', 'hors'));
+        return view('ecole', compact('local', 'disciplines', 'villes', 'pays', 'formations', 'horaires', 'ecoles', 'langues', 'discips', 'langs', 'hors'));
     }
 
     public function update(Request $request, $id)

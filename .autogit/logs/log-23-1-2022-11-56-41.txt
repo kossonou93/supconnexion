@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Feb 23 2022 11:56:41 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+* resources/views/admin/user/ecole/sidebar.blade.php
+* resources/views/ecole.blade.php
+
+
+Created files:
+* .autogit/logs/log-23-1-2022-10-48-36.txt
+
+
+Deleted files:
+
+
+Renamed files:
