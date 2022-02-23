@@ -437,7 +437,7 @@
 																			</a>
 																		</div>
 																		<div class="view-profile">
-																			<a href="#" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
+																			<a href="#" class="btn btn-secondary btn-block">@lang('public.telechargerProfil')</a>
 																		</div>
 																	</div>
 																</div>
@@ -458,7 +458,7 @@
 														<div class="col-sm-4"> 
 															<button class="btn btn-primary btn-round ml-auto" data-toggle="modal" data-target="#addRowModal">
 																<i class="fa fa-plus"></i>
-																Ajouter Diplôme
+																@lang('public.ajoutDiplome')
 															</button>
 														</div>
 														<div class="col-sm-4">
@@ -471,10 +471,10 @@
 																<div class="modal-header no-bd">
 																	<h5 class="modal-title">
 																		<span class="fw-mediumbold">
-																			Nouveau
+																			@lang('public.nouveau')
 																		</span> 
 																		<span class="fw-light">
-																			Diplome
+																			@lang('public.diplome')
 																		</span>
 																	</h5>
 																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -530,12 +530,12 @@
 														<table id="basic-datatables" class="display table table-striped table-hover" >
 															<thead>
 																<tr>
-																	<th>Diplome Num. </th>
-																	<th>Ecole</th>
+																	<th>@lang('public.diplome') Num. </th>
+																	<th>@lang('public.ecole')</th>
 																	<th>Grade</th>
-																	<th>titre</th>
-																	<th>Editer</th>
-																	<th>Supprimer</th>
+																	<th>@lang('public.titre')</th>
+																	<th>@lang('public.editer')</th>
+																	<th>@lang('public.supprimer')</th>
 																</tr>
 															</thead>
 															<tbody>
@@ -590,7 +590,7 @@
 														<div class="col-sm-4"> 
 															<button type="button" class="btn btn-primary btn-round" data-toggle="modal" data-target=".bd-example-modal-lg">
 																<i class="fa fa-plus"></i>
-																Ajouter Expérience
+																@lang('public.ajoutExp')
 															</button>
 														</div>
 														<div class="col-sm-4">
@@ -602,8 +602,8 @@
 															<div class="modal-content">
 																<div class="modal-header no-bd">
 																	<h5 class="modal-title">
-																		<span class="fw-mediumbold">Nouvelle</span> 
-																		<span class="fw-light">Expérience</span>
+																		<span class="fw-mediumbold">@lang('public.new')</span> 
+																		<span class="fw-light">@lang('public.experience')</span>
 																	</h5>
 																	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 																		<span aria-hidden="true">&times;</span>
@@ -613,7 +613,7 @@
 																	@csrf
 																	<div class="modal-body">
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Intitulé de l'intervention</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.intituleInter')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="text" name="intitule" class="form-control" placeholder="" required>
@@ -621,7 +621,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Etablissement ou entreprise</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.entreprise')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="text" name="etablissement" class="form-control" placeholder="" required>
@@ -629,7 +629,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Date de début d'intervention</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.dateDebutInter')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="date" name="debut" class="form-control" placeholder="">
@@ -637,7 +637,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Date de fin d'intervention / en cours</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.dateFinInter')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="date" name="fin" class="form-control" placeholder="">
@@ -645,7 +645,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Courte description</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.courteDesc')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<textarea class="form-control" name="description" rows="3"></textarea>
@@ -653,7 +653,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Type d'intervention</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.typeInter')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="text" name="type_intervention" class="form-control" placeholder="">
@@ -661,7 +661,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Nombre d'heures d'intervention</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.nbreHInter')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="number" name="heure_intervention" class="form-control" placeholder="">
@@ -669,7 +669,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Modalités</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.modalite')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<select class="form-control" name="modalites[]" >
@@ -683,7 +683,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Niveau des étudiants ou des professionnels</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.niveauEtudiant')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="text" name="niveau_participant" class="form-control" placeholder="">
@@ -691,7 +691,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Niveau de responsabilité</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.niveauResp')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<select class="form-control" name="responsabilites[]" >
@@ -705,7 +705,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Nombre de participants à votre intervention</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.nbreParticipant')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<input type="number" name="nombre_participant" class="form-control" placeholder="">
@@ -713,12 +713,12 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">J'ai créé les supports de l'intervention</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.supportInter')</label>
 																			<div class="col-sm-2">
 																				<div class="md-form mt-0">
 																					<select class="form-control" name="support_intervention">
-																						<option>NON</option>
-																						<option>OUI</option>
+																						<option>@lang('non')</option>
+																						<option>@lang('oui')</option>
 																					</select>
 																				</div>
 																			</div>
@@ -728,7 +728,7 @@
 																			</div>
 																		</div>				
 																		<div class="row mt-3">
-																			<label class="col-sm-4 col-form-label">Autres expériences notables</label>
+																			<label class="col-sm-4 col-form-label">@lang('public.autreExp')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<textarea class="form-control" name="autre" placeholder="" rows="3"></textarea>
