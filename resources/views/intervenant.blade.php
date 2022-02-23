@@ -224,7 +224,7 @@
 																									selected
 																								@endif
 																							@endforeach
-																						>{{ $contrat->type }}</option>
+																						>{{ $contrat->{'type_'.$local} }}</option>
 																					@endforeach
 																					</select>
 																				</div>
@@ -508,12 +508,12 @@
 																					</select>
 																				</div>
 																				<div class="form-group form-group-default">
-																					<label>Titre</label>
+																					<label>@lang('public.titre')</label>
 																					<input type="text" class="form-control" name="titre" placeholder="@lang('public.titreDiplome')" required>
 																				</div>
 																				<div class="form-group form-group-default" style="display:none">
-																					<label>Titre</label>
-																					<input type="text" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="Entrez le titre votre diplome">
+																					<label>@lang('public.titre')</label>
+																					<input type="text" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="@lang('public.titreDiplome')">
 																				</div>
 																			</div>
 																		</div>

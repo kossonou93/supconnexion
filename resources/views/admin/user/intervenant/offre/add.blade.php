@@ -26,7 +26,7 @@
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
 													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														OFFRES
+														@lang('public.offre')s
 													</a>
 												</li>
 											</ul>
@@ -42,12 +42,12 @@
 												<table id="add-row" class="display table table-striped table-hover" >
 													<thead>
 														<tr>
-															<th>Offre num. </th>
-															<th>Intitule</th>
+															<th>@lang('public.offre') num. </th>
+															<th>@lang('public.intitule')</th>
 															<th>Description</th>
-															<th>Etablissement ou entreprise</th>
-															<th>Date Limite</th>
-															<th>En savoir plus</th>
+															<th>@lang('public.entreprise')</th>
+															<th>@lang('public.dateLimite')</th>
+															<th>@lang('public.enSavoirPlus')</th>
 														</tr>
 													</thead>
 													<tbody>
@@ -79,7 +79,7 @@
 																		{{$annonce->date_limite}}
 																	</td>
 																	<td>
-																		<a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">En savoir plus <span class="ion-ios-arrow-round-forward"></span></a>
+																		<a href="{{ route('annonce.details',$annonce->id)}}" class="btn btn-primary">@lang('public.enSavoirPlus') <span class="ion-ios-arrow-round-forward"></span></a>
 																	</td>
 																</tr>
 														@endforeach
