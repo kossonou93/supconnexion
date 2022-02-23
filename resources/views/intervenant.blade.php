@@ -184,7 +184,7 @@
 																		<div class="row mt-3">
 																			<div class="col-md-12">
 																				<div class="form-group form-group-default bordr" style="border-radius: 10px; border: 3px solid #ccc;">
-																					<label for="exampleFormControlFile1">@lang('pu</label>
+																					<label for="exampleFormControlFile1">@lang('public.photoProfil')</label>
 																					<br>
 																					<input type="file" name="photo" class="form-control-file" placeholder="{{ Auth::user()->photo }}" value="{{ Auth::user()->photo }}"><span for="photo" class="form-control-file input">{{ Auth::user()->photo }}</span>
 																				</div>
@@ -193,7 +193,7 @@
 																		<div class="row mt-3 mb-1">
 																			<div class="col-md-12">
 																				<div class="form-group form-group-default bordr">
-																					<label>Intitulé de votre poste actuel et votre entreprise (ex : Directeur financier chez Entreprise X)</label>
+																					<label>@lang('public.exEntreprise')</label>
 																						<br>
 																					<input class="form-control input" type="text" name="fonction" value="{{ Auth::user()->fonction }}">
 																				</div>
@@ -202,7 +202,7 @@
 																		<div class="row mt-3 mb-1">
 																			<div class="col-md-12">
 																				<div class="form-group form-group-default bordr">
-																					<label>Présentation brève de votre parcours et motivations</label>
+																					<label>@lang('public.parcoursMotivation')</label>
 																						<br>
 																						<textarea class="form-control input" name="motivation" placeholder="" rows="3" value="{{ Auth::user()->motivation }}">{{ Auth::user()->motivation }}</textarea>
 																				</div>
@@ -210,10 +210,10 @@
 																		</div>
 																		
 																		<br>
-																		<h2 style='font-weight: bold; color:blue; font-family: "Comic Sans MS"'>VOS CRITÈRES</h2>
+																		<h2 style='font-weight: bold; color:blue; font-family: "Comic Sans MS"'>@lang('public.vosCritere')</h2>
 																		
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Types de contrats acceptés / possibles (si rémunération)</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.typeContrat')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelects' name="contrats[]" multiple class="form-control">
@@ -231,7 +231,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Interventions à distance et déplacements</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.interventionDistant')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelecte' name="interventions[]" multiple class="form-control">
@@ -250,7 +250,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Disponibilités dans l'année</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.disponibiliteAnnee')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelect2' name="disponibilites[]" multiple class="form-control">
@@ -268,7 +268,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Durée d'intervention souhaitée</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.dureeIntervention')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelect3' name="durees[]" multiple class="form-control">
@@ -286,7 +286,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Mes expériences dans l'enseignement et la formation</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.mesExperiences')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelect4' name="texperiences[]" multiple class="form-control">
@@ -304,7 +304,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Langues d'enseignement possibles</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.langueEnsei')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelect5' name="langues[]" multiple class="form-control">
@@ -322,7 +322,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Plages horaires souhaitées</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.plageHoraire')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelect6' name="horaires[]" multiple class="form-control">
@@ -340,7 +340,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Rémunération</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.remuneration')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelect7' name="remunerations[]" multiple class="form-control">
@@ -358,7 +358,7 @@
 																			</div>
 																		</div>
 																		<div class="row mt-3">
-																			<label class="col-sm-7 col-form-label">Domaine(s) général(aux) d'intervention</label>
+																			<label class="col-sm-7 col-form-label">@lang('public.domaineInter')</label>
 																			<div class="col-sm-5">
 																				<div class="md-form mt-0">
 																					<select id='testSelect8' name="disciplines[]" multiple class="form-control">
@@ -379,7 +379,7 @@
 																		<div class="row mt-3 mb-1">
 																			<div class="col-md-12">
 																				<div class="form-group form-group-default bordr">
-																					<label>PRÉCISEZ VOS DOMAINES DE COMPÉTENCE*</label>
+																					<label></label>
 																					<br>
 																					<textarea class="form-control input" name="competence" placeholder="Séparez les par des virgules (ex: Mathématique, Anglais)" rows="3" value="{{ Auth::user()->competence }}">{{ Auth::user()->competence }}</textarea>
 																				</div>
