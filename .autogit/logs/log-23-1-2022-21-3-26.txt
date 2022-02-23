@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Wed Feb 23 2022 21:03:26 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Models/Contrat.php
+* app/Models/Duree.php
+* app/Models/Intervention.php
+* app/Models/TypeExperience.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-23-1-2022-20-33-7.txt
+
+
+Deleted files:
+
+
+Renamed files:
