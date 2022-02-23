@@ -36,7 +36,7 @@
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
 													<a class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														PAIEMENT
+														@lang('public.paiement')
 													</a>
 												</li>
 											</ul>
@@ -50,7 +50,7 @@
 												<div class="row justify-content-center">
 													<div class="col-md-12">
 														<div class="">
-															<h2 id="heading2" class="text-danger">Méthode de Paiement</h2>
+															<h2 id="heading2" class="text-danger">@lang('public.methodePaiement') </h2>
 														</div>
 														<div class="card">
 															<form action="{{route('checkout.credit-card', \Crypt::encrypt(Auth::user()->id) )}}"  method="post" id="payment-form">
@@ -58,7 +58,7 @@
 																<div class="form-group">
 																	<div class="card-header">
 																		<label for="card-element">
-																			Entrez les informations de votre carte de crédit
+																			@lang('public.entrezInfoCarte')
 																		</label>
 																	</div>
 																	<div class="card-body">
@@ -76,7 +76,7 @@
 																class="btn btn-dark"
 																type="submit"
 																data-secret="{{ $intent }}"
-																> EFFECTUER PAIEMENT </button>
+																> @lang('public.effectuerPaiement') </button>
 																</div>
 															</form>
 														</div>

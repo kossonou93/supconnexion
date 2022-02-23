@@ -135,7 +135,15 @@ return [
     'supprimer' => "Remove",
     'pourAjouterAnnonce' => "To add an announcement",
     'choixForfait' => "PACKAGE CHOICE",
-    'souscriptionForfait' => "Subscribe to the package that suits you and add your ad. Your ad will remain on our platform according to the time mentioned in the package."
+    'souscriptionForfait' => "Subscribe to the package that suits you and add your ad. Your ad will remain on our platform according to the time mentioned in the package.",
+    'mois' => "Month",
+    'autorisationAnnonce' => "permission to run your ad",
+    'possibliteRenouv' => "NB: You have the possibility to renew your offer",
+    'Souscrire' => "Subscribe",
+    'paiement' => "PAYMENT",
+    'methodePaiement' => "Method of payment",
+    'entrezInfoCarte' => "Enter your credit card information",
+    'effectuerPaiement' => "MAKE PAYMENT",
     //'nosLiens' => "",
 
 

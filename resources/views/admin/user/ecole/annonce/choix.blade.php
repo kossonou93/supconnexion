@@ -50,14 +50,14 @@
                                                                     </div>
                                                                     <div class="price-value">10 000 FCFA</div>
                                                                     <ul class="pricing-content">
-                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">1 mois </span><span style="color:red">d'autorisation pour faire passer votre annonce</span></li>
-                                                                        <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre offre</li>
+                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">1 @lang('public.mois') </span><span style="color:red">@lang('public.autorisationAnnonce')</span></li>
+                                                                        <li style="color:#371F57">@lang('public.possibliteRenouv')</li>
                                                                         <!--<li class="disable">50GB Bandwidth</li>
                                                                         <li>Maintenance</li>
                                                                         <li class="disable">15 Subdomains</li>-->
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('checkout.credit',1)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.credit',1)}}">@lang('public.souscrire')</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -68,11 +68,11 @@
                                                                     </div>
                                                                     <div class="price-value">20 000 FCFA</div>
                                                                     <ul class="pricing-content">
-                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">3 mois </span><span style="color:red">d'autorisation pour faire passer votre annonce</span></li>
-                                                                        <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre offre</li>
+                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">3 @lang('public.mois') </span><span style="color:red">@lang('public.autorisationAnnonce')</span></li>
+                                                                        <li style="color:#371F57">@lang('public.possibliteRenouv')</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('checkout.credit',2)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.credit',2)}}">@lang('public.souscrire')</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -83,11 +83,11 @@
                                                                     </div>
                                                                     <div class="price-value">30 000 FCFA</div>
                                                                     <ul class="pricing-content">
-                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">6 mois </span><span style="color:red">d'autorisation pour faire passer votre annonce</span></li>
-                                                                        <li style="color:#371F57">NB: Vous avez la possiblité de rénouveler votre offre</li>
+                                                                        <li style="font-family: 'Comic Sans MS'"><span style="color: #f6b60b; font-weight: 900">6 @lang('public.mois') </span><span style="color:red">@lang('public.autorisationAnnonce')</span></li>
+                                                                        <li style="color:#371F57">@lang('public.possibliteRenouv')</li>
                                                                     </ul>
                                                                     <div class="pricingTable-signup">
-                                                                        <a href="{{ route('checkout.credit',3)}}">Souscrire</a>
+                                                                        <a href="{{ route('checkout.credit',3)}}">@lang('public.souscrire')</a>
                                                                     </div>
                                                                 </div>
                                                             </div>

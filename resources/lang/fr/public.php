@@ -136,5 +136,14 @@ return [
     'pourAjouterAnnonce' => "Pour ajouter une annonce",
     'choixForfait' => "CHOIX FORFAIT",
     'souscriptionForfait' => "Souscrivez au forfait qui vous convient et ajoutez votre annonce. Votre annonce restera sur notre plateforme selon le temps qui est mentionné dans le forfait.",
+    'mois' => "Mois",
+    'autorisationAnnonce' => "d'autorisation pour faire passer votre annonce",
+    'possibliteRenouv' => "NB: Vous avez la possiblité de rénouveler votre offre",
+    'souscrire' => "Souscrire",
+    'paiement' => "PAIEMENT",
+    'methodePaiement' => "Méthode de Paiement",
+    'entrezInfoCarte' => "Entrez les informations de votre carte de crédit",
+    'effectuerPaiement' => "EFFECTUER PAIEMENT",
+    
 ]
 ?>
