@@ -98,7 +98,7 @@
 														<div class="text-white text-center rgba-stylish-strong py-1 px-4">
 															<ul class="specification-list">
 																<li>
-																	<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">@lang() <a href="{{route('choix.annonces')}}" class="btn btn-danger btn-rounded">@lang('public.clique') </a></h3>
+																	<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">@lang('public.pourAjouterAnnonce') <a href="{{route('choix.annonces')}}" class="btn btn-danger btn-rounded">@lang('public.cliquez') </a></h3>
 																</li>
 															</ul> 
 														</div>
