@@ -33,7 +33,7 @@
 											<li class="nav-item">
 												<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link active show" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
 													<i class="fas fa-user-cog"></i>
-													Profil
+													@lang('public.profil')
 												</a>
 											</li>
 											<li class="nav-item">
@@ -54,7 +54,7 @@
 														<div class="card">
 															<div class="card-body">
 																<br>
-																<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Renseignez ou Modifiez les informations de votre établissament</h3>
+																<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>@lang('public.renseignezModif')</h3>
 																<br>
 																<form action="{{ route('ecole.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 																	{{ csrf_field() }}
@@ -139,13 +139,13 @@
 																	<div class="row mt-3 mb-1">
 																		<div class="col-md-12">
 																			<div class="form-group form-group-default bordr">
-																				<label></label>
+																				<label>@lang('public.aproposEcole')</label>
 																				<textarea class="form-control input" name="about" placeholder="" rows="3" value="{{ Auth::user()->about }}">{{ Auth::user()->about }}</textarea>
 																			</div>
 																		</div>
 																	</div>
 																	<div class="row mt-3">
-																		<label class="col-sm-7 col-form-label">Filières ou Formations</label>
+																		<label class="col-sm-7 col-form-label">@lang('public.filiereFormation')</label>
 																		<div class="col-sm-5">
 																			<div class="md-form mt-0">
 																				<select id='testSelectc' name="disciplines[]" multiple class="form-control">
@@ -163,7 +163,7 @@
 																		</div>
 																	</div>
 																	<div class="row mt-3">
-																		<label class="col-sm-7 col-form-label">Langues d'enseignement possibles</label>
+																		<label class="col-sm-7 col-form-label">@lang('public.langueEns')</label>
 																		<div class="col-sm-5">
 																			<div class="md-form mt-0">
 																				<select id='testSelecta' name="langues[]" multiple class="form-control">
@@ -181,7 +181,7 @@
 																		</div>
 																	</div>
 																	<div class="row mt-3">
-																		<label class="col-sm-7 col-form-label">Plages horaires souhaitées</label>
+																		<label class="col-sm-7 col-form-label">@lang('public.plageHoraire')</label>
 																		<div class="col-sm-5">
 																			<div class="md-form mt-0">
 																				<select id='testSelectb' name="horaires[]" multiple class="form-control">
@@ -200,8 +200,8 @@
 																	</div>
 																	<br><br><br>
 																	<div class="text-right mt-3 mb-3">
-																		<button class="btn btn-success btn-rounded">Valider</button>
-																		<button class="btn btn-danger btn-rounded">Annuler</button>
+																		<button class="btn btn-success btn-rounded">@lang('public.envoyez')</button>
+																		<button class="btn btn-danger btn-rounded">@lang('public.annulez')</button>
 																	</div>
 																</form>
 															</div>
@@ -242,7 +242,7 @@
 																		</a>
 																	</div>
 																	<div class="view-profile">
-																		<a href="#" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
+																		<a href="#" class="btn btn-secondary btn-block">@lang('public.telechargerProfil')</a>
 																	</div>
 																</div>
 															</div>
@@ -258,7 +258,7 @@
 										<div class="card bordr-card">
 											<div class="card-body">
 												<br>
-												<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Sélectionnez les types d'établissements qui correspondent à la votre</h3>
+												<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>@lang('public.selectionTypeEcole')</h3>
 												<form action="{{ route('ecole.formation.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 													{{ csrf_field() }}
 													{{ method_field('PUT') }}
@@ -284,8 +284,8 @@
 																<div class="text-white text-center rgba-stylish-strong py-1 px-4">
 																	<div class="py-5">
 																		<h5 class="h5 orange-text">
-																			<button class="btn btn-success btn-rounded">Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																			<button class="btn btn-danger btn-rounded">Annuler</button>
+																			<button class="btn btn-success btn-rounded">@lang('public.envoyez')</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																			<button class="btn btn-danger btn-rounded">@lang('public.annulez')</button>
 																		</h5>
 																	</div>
 																</div>
