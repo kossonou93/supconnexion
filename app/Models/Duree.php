@@ -11,7 +11,7 @@ class Duree extends Model
 
     protected $table = 'durees';
 
-    protected $fillable = ['type'];
+    protected $fillable = ['type_fr', 'type_en'];
 
     public function intervenants()
     {

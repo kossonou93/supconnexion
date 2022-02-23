@@ -11,6 +11,6 @@ class Contrat extends Model
 
     protected $table = 'contrats';
 
-    protected $fillable = ['type'];
+    protected $fillable = ['type_fr', 'type_en'];
 
 }

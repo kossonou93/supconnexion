@@ -11,7 +11,7 @@ class Intervention extends Model
 
     protected $table = 'interventions';
 
-    protected $fillable = ['type'];
+    protected $fillable = ['type_fr', 'type_en'];
 
     public function intervenants()
     {

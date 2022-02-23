@@ -242,7 +242,7 @@
 																									selected
 																								@endif
 																							@endforeach
-																							>{{ $intervention->type }}
+																							>{{ $intervention->{'type_'.$local} }}
 																						</option>
 																					@endforeach 
 																					</select>
@@ -261,7 +261,7 @@
 																									selected
 																								@endif
 																							@endforeach
-																						>{{ $disponibilite->titre }}</option>
+																						>{{ $disponibilite->{'titre_'.$local} }}</option>
 																					@endforeach 
 																					</select>
 																				</div>
@@ -279,7 +279,7 @@
 																									selected
 																								@endif
 																							@endforeach
-																						>{{ $duree->type }}</option>
+																						>{{ $duree->{'type_'.$local} }}</option>
 																					@endforeach
 																					</select>
 																				</div>
@@ -297,7 +297,7 @@
 																									selected
 																								@endif
 																							@endforeach
-																						>{{ $texperience->type }}</option>
+																						>{{ $texperience->{'type_'.$local} }}</option>
 																					@endforeach 
 																					</select>
 																				</div>

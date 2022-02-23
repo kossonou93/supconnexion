@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Wed Feb 23 2022 20:33:07 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/intervenant/offre/add.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-23-1-2022-20-2-49.txt
+
+
+Deleted files:
+
+
+Renamed files:
