@@ -144,6 +144,16 @@ return [
     'methodePaiement' => "Méthode de Paiement",
     'entrezInfoCarte' => "Entrez les informations de votre carte de crédit",
     'effectuerPaiement' => "EFFECTUER PAIEMENT",
+    'deconnexion' => "Vous êtes déconnecté!",
+
+    'ceMail' => "Cet email n'est pas enregistré!",
+    'verifierMail' => "Vérifiez votre adresse email pour confirmer votre inscription",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
     
 ]
 ?>

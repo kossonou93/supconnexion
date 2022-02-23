@@ -144,6 +144,16 @@ return [
     'methodePaiement' => "Method of payment",
     'entrezInfoCarte' => "Enter your credit card information",
     'effectuerPaiement' => "MAKE PAYMENT",
+    'deconnexion' => "You are offline!",
+
+    'ceMail' => "This email is not registered!",
+    'verifierMail' => "Check your email address to confirm your registration",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
+    'mois' => "Mois",
     //'nosLiens' => "",
 
 

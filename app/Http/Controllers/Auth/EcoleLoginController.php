@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Ecole;
+use Lang;
 
 class EcoleLoginController extends Controller
 {
@@ -28,12 +29,12 @@ class EcoleLoginController extends Controller
         
         $user = Ecole::where('email',$request->email)->first();
         if ($user === NULL) {
-            return redirect()->route('ecole.login')->with('info', "Cet email n'est pas enregistré!");
+            return redirect()->route('ecole.login')->with('info', Lang::get('public.ceMail'));
         } else {
             if ($user->email_verified_at === NULL) {
                 //Auth::logout();
                 //Mail::to($user->email)->send(new VerifyEmail($user));
-                return redirect()->route('ecole.login')->with('info', 'Vérifiez votre adresse email pour confirmer votre inscription');
+                return redirect()->route('ecole.login')->with('info', Lang::get('public.verifierMail'));
             } else {
                 if(Auth::guard('ecole')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
                 {
@@ -51,6 +52,6 @@ class EcoleLoginController extends Controller
     public function logoutEcole(Request $request)
     {
         Auth::guard('ecole')->logout();
-        return redirect()->route('home')->with('success', 'Vous êtes déconnecté!');
+        return redirect()->route('home')->with('success', Lang::get('public.deconnexion'));
     }
 }

@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Feb 23 2022 16:30:35 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+* resources/views/admin/user/ecole/annonce/checkout/credit-card.blade.php
+* resources/views/admin/user/ecole/annonce/choix.blade.php
+
+
+Created files:
+* .autogit/logs/log-23-1-2022-16-0-15.txt
+
+
+Deleted files:
+
+
+Renamed files:
