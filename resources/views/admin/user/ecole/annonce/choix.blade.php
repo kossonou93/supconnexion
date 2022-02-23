@@ -27,7 +27,7 @@
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
 													<a class="nav-link" style="font-size: 20px; font-weight: 900; color: #371F57;" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														CHOIX FORFAIT
+														@lang('public.choixForfait')
 													</a>
 												</li>
 											</ul>
@@ -38,7 +38,7 @@
 										<div class="tab-pane fade active show" role="tabpanel" aria-labelledby="home-tab">
 											<div class="card-body bordr-card">
                                                 <br>
-                                                <h3 style='font-weight: bold; color:blue; text-align: center; font-family: "Comic Sans MS"'>Souscrivez au forfait qui vous convient et ajoutez votre annonce. Votre annonce restera sur notre plateforme selon le temps qui est mentionné dans le forfait.</h3>
+                                                <h3 style='font-weight: bold; color:blue; text-align: center; font-family: "Comic Sans MS"'>@lang('public.souscriptionForfait') </h3>
 												<br><br><br>
 												<div class="demo">
                                                     <div class="container">

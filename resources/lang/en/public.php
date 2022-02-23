@@ -133,7 +133,9 @@ return [
     'editer' => "Edit",
     'intitule' => "Entitled",
     'supprimer' => "Remove",
-    'pourAjouterAnnonce' => "To add an announcement"
+    'pourAjouterAnnonce' => "To add an announcement",
+    'choixForfait' => "PACKAGE CHOICE",
+    'souscriptionForfait' => "Subscribe to the package that suits you and add your ad. Your ad will remain on our platform according to the time mentioned in the package."
     //'nosLiens' => "",
 
 

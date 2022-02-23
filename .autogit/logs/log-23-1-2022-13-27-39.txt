@@ -1,0 +1,16 @@
+-------------------- Auto-Git Log --------------------
+		Wed Feb 23 2022 13:27:39 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/ecole/annonce/all.blade.php
+
+
+Created files:
+* .autogit/logs/log-23-1-2022-12-57-17.txt
+
+
+Deleted files:
+
+
+Renamed files:
