@@ -106,6 +106,10 @@ return [
     'dateLimite' => "Date Limite",
     'dossierCandidature' => "Dossier(s) de candidature",
     'adresse' => "Adresse",
-    //'nosLiens' => "",
+    'typeEcole' => "Types d'écoles",
+    'pays' => "Pays",
+    'ville' => "Ville",
+    'phone' => "Téléphone",
+    'aproposEcole' => "A propos de l'Ecole",
 ]
 ?>

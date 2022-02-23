@@ -106,6 +106,11 @@ return [
     'dateLimite' => "Deadline",
     'dossierCandidature' => "Application file(s)",
     'adresse' => "Address",
+    'typeEcole' => "Types of schools",
+    'pays' => "Country",
+    'ville' => "City",
+    'phone' => "Phone",
+    'aproposEcole' => "A propos de l'Ecole",
     //'nosLiens' => "",
 
 

@@ -39,7 +39,7 @@
 											<li class="nav-item">
 												<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="contact-tab" href="#contact" role="tab" aria-selected="false">
 												<i class="fas fa-school"></i>
-												Types d'écoles
+												@lang('public.typeEcole')
 												</a>
 											</li>
 										</ul>
@@ -62,7 +62,7 @@
 																	<div class="row mt-3">
 																		<div class="col-md-6">
 																			<div class="form-group form-group-default bordr">
-																				<label>Nom</label>
+																				<label>@lang('public.nom')</label>
 																				<input type="text" class="form-control input" name="name" value="{{ Auth::user()->name }}">
 																			</div>
 																		</div>
@@ -76,7 +76,7 @@
 																	<div class="row mt-3">
 																		<div class="col-md-6">
 																			<div class="form-group form-group-default bordr">
-																				<label>Pays</label>
+																				<label>@lang('public.pays')</label>
 																				<select name="pays_id" class="form-control input" value="{{ Auth::user()->pays_id }}">
 																				@foreach ( $pays as $pay )
 																					<option value='{{ $pay->id }}' 
@@ -91,7 +91,7 @@
 																		</div>
 																		<div class="col-md-6">
 																			<div class="form-group form-group-default bordr">
-																				<label>Ville</label>
+																				<label>@lang('public.ville')</label>
 																				<select name="ville_id" class="form-control input" value="{{ Auth::user()->ville_id }}">
 																				@foreach ( $villes as $ville )
 																					<option value='{{ $ville->id }}' 
@@ -108,7 +108,7 @@
 																	<div class="row mt-3">
 																		<div class="col-md-12">
 																			<div class="form-group form-group-default bordr">
-																				<label>Adresse</label>
+																				<label>@lang('public.adresse')</label>
 																				<input type="text" class="form-control input" value="{{ Auth::user()->address }}" name="address">
 																			</div>
 																		</div>
@@ -116,13 +116,13 @@
 																	<div class="row mt-3">
 																		<div class="col-md-6">
 																			<div class="form-group form-group-default bordr">
-																				<label>Téléphone 1</label>
+																				<label>@lang('public.phone') 1</label>
 																				<input type="number" class="form-control input" value="{{ Auth::user()->phone }}" name="phone" required>
 																			</div>
 																		</div>
 																		<div class="col-md-6">
 																			<div class="form-group form-group-default bordr">
-																				<label>Téléphone 2</label>
+																				<label>@lang('public.phone') 2</label>
 																				<input type="number" class="form-control input" value="{{ Auth::user()->contact }}" name="contact">
 																			</div>
 																		</div>
@@ -139,7 +139,7 @@
 																	<div class="row mt-3 mb-1">
 																		<div class="col-md-12">
 																			<div class="form-group form-group-default bordr">
-																				<label>A propos de l'Ecole</label>
+																				<label></label>
 																				<textarea class="form-control input" name="about" placeholder="" rows="3" value="{{ Auth::user()->about }}">{{ Auth::user()->about }}</textarea>
 																			</div>
 																		</div>

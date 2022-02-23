@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Feb 23 2022 10:18:15 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+* resources/views/user/galeries.blade.php
+
+
+Created files:
+* .autogit/logs/log-22-1-2022-23-45-59.txt
+
+
+Deleted files:
+
+
+Renamed files:
