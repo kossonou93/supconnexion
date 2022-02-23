@@ -488,7 +488,7 @@
 																			<div class="col-sm-12">
 																				<div class="form-group form-group-default">
 																					<label>Ecole</label>
-																					<input type="text" class="form-control" id="ecole" name="ecole" placeholder="Entrez le nom de l'école où vous avez obtenu votre diplome" required>
+																					<input type="text" class="form-control" id="ecole" name="ecole" placeholder="@lang('public.nomEcoleDiplome')" required>
 																				</div>
 																				<div class="form-group form-group-default">
 																					<label>Grade</label>
@@ -509,7 +509,7 @@
 																				</div>
 																				<div class="form-group form-group-default">
 																					<label>Titre</label>
-																					<input type="text" class="form-control" name="titre" placeholder="Entrez le titre votre diplome" required>
+																					<input type="text" class="form-control" name="titre" placeholder="@lang('public.titreDiplome')" required>
 																				</div>
 																				<div class="form-group form-group-default" style="display:none">
 																					<label>Titre</label>
@@ -519,8 +519,8 @@
 																		</div>
 																	</div>
 																	<div class="modal-footer no-bd">
-																		<button class="btn btn-primary">Ajouter</button>
-																		<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+																		<button class="btn btn-primary">@lang('public.envoyez')</button>
+																		<button type="button" class="btn btn-danger" data-dismiss="modal">@lang('public.annulez')</button>
 																	</div>
 																</form>
 															</div>
@@ -745,8 +745,8 @@
 																		</div>
 																	</div>
 																	<div class="modal-footer no-bd">
-																		<button class="btn btn-primary">Valider</button>
-																		<button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+																		<button class="btn btn-primary">@lang('public.envoyez')</button>
+																		<button type="button" class="btn btn-danger" data-dismiss="modal">@lang('public.annulez')</button>
 																	</div>
 																</form>
 															</div>
@@ -756,11 +756,11 @@
 														<table id="add-row" class="display table table-striped table-hover" >
 															<thead>
 																<tr>
-																	<th>Expérience num. </th>
-																	<th>Intitulé de l'intervention</th>
-																	<th>Etablissement ou entreprise</th>
-																	<th>Editer</th>
-																	<th>Supprimer</th>
+																	<th>@lang('public.experience') num. </th>
+																	<th>@lang('public.intituleInter')</th>
+																	<th>@lang('public.entreprise')</th>
+																	<th>@lang('public.editer')</th>
+																	<th>@lang('public.supprimer')</th>
 																</tr>
 															</thead>
 															<tbody>
@@ -779,10 +779,10 @@
 																		<td>{{ $experience->etablissement }}</td>
 																		<td>
 																			<div class="form-button-action">
-																				<a href="{{ route('experiences.show',$experience->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
+																				<a href="{{ route('experiences.show',$experience->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="@lang('public.editDip')">
 																					<i class="fa fa-edit"></i>
 																				</a>
-																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="Editer Expérience" data-target="#editModalExperience{{$experience->id}}">
+																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="@lang('public.editExp')" data-target="#editModalExperience{{$experience->id}}">
 																					<i class="fa fa-edit"></i>
 																				</a>
 																			</div>
@@ -811,7 +811,7 @@
 											<div class="card bordr-card">
 												<div class="card-body">
 													<br>
-													<h4>Je sélectionne les types d'écoles dans lesquelles je souhaite intervenir</h4>
+													<h4>@lang('public.selectionTypeEcole')</h4>
 												
 													<form action="{{ route('formation.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 														{{ csrf_field() }}
@@ -841,8 +841,8 @@
 																	<div class="text-white text-center rgba-stylish-strong py-1 px-4">
 																		<div class="py-5">
 																			<h5 class="h5 orange-text">
-																				<button class="btn btn-success btn-rounded">Valider</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-																				<button class="btn btn-danger btn-rounded">Annuler</button>
+																				<button class="btn btn-success btn-rounded">@lang('public.envoyez')</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+																				<button class="btn btn-danger btn-rounded">@lang('public.annulez')</button>
 																			</h5>
 																		</div>
 																	</div>
