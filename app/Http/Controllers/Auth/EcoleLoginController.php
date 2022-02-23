@@ -38,9 +38,9 @@ class EcoleLoginController extends Controller
             } else {
                 if(Auth::guard('ecole')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
                 {
-                    return redirect()->route('ecole.dashboard')->with('success', 'Vous êtes connecté!');
+                    return redirect()->route('ecole.dashboard')->with('success', Lang::get('public.connexion'));
                 }else {
-                    return redirect()->route('ecole.login')->with('info', "Email ou Mot de Passe incorrect!");
+                    return redirect()->route('ecole.login')->with('info', Lang::get('public.passwordIncorrect'));
                 }
             }
         }

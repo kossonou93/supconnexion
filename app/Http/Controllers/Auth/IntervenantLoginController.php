@@ -9,6 +9,7 @@ use App\Models\Experience;
 use App\Intervenant;
 use App\Mail\VerifyEmail;
 use Illuminate\Support\Facades\Mail;
+use Lang;
 
 
 class IntervenantLoginController extends Controller
@@ -33,16 +34,16 @@ class IntervenantLoginController extends Controller
 
         $user = Intervenant::where('email',$request->email)->first();
         if ($user === NULL) {
-            return redirect()->route('intervenant.login')->with('info', "Cet email n'est pas enregistré!");
+            return redirect()->route('intervenant.login')->with('info', Lang::get('public.ceMail'));
         } else {
             if ($user->email_verified_at === NULL) {
-                return redirect()->route('intervenant.login')->with('info', 'Vérifiez votre adresse email pour confirmer votre inscription');
+                return redirect()->route('intervenant.login')->with('info', Lang::get('public.verifierMail'));
             } else {
                 if(Auth::guard('intervenant')->attempt(['email' => $request->email, 'password' => $request->password], $request->remember))
                 {
-                    return redirect()->route('intervenant.dashboard')->with('success', 'Vous êtes connecté!');
+                    return redirect()->route('intervenant.dashboard')->with('success', Lang::get('public.connexion'));
                 }else {
-                    return redirect()->route('intervenant.login')->with('info', "Email ou Mot de Passe incorrect!");
+                    return redirect()->route('intervenant.login')->with('info', Lang::get('public.passwordIncorrect'));
                 }
             }
         }
@@ -54,7 +55,7 @@ class IntervenantLoginController extends Controller
     public function logoutIntervenant(Request $request)
     {
         Auth::guard('intervenant')->logout();
-        return redirect()->route('home')->with('success', 'Vous êtes déconnecté!');
+        return redirect()->route('home')->with('success', Lang::get('public.deconnexion'));
     }
     
 }

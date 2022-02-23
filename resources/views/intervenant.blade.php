@@ -27,25 +27,25 @@
 												<li class="nav-item">
 													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link active show" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
 														<i class="fas fa-user-cog"></i>
-														Profil
+														@lang('public.profil')
 													</a>
 												</li>
 												<li class="nav-item">
 													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="profile-tab" href="#profile" role="tab" aria-selected="false">
 													<i class="fas fa-graduation-cap"></i>
-													Diplômes
+													@lang('public.diplome')
 													</a>
 												</li>
 												<li class="nav-item">
 													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="experience-tab" href="#experience" role="tab" aria-selected="false">
 													<i class="fas fa-award"></i>
-													Expériences
+													@lang('public.experience')
 													</a>
 												</li>
 												<li class="nav-item">
 													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="contact-tab" href="#contact" role="tab" aria-selected="false">
 													<i class="fas fa-school"></i>
-													Types d'écoles
+													@lang('public.typeEcole')
 													</a>
 												</li>
 											</ul>
@@ -61,7 +61,7 @@
 															<div class="card">
 																<div class="card-body">
 																	<br>
-																	<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>Renseignez ou Modifiez vos informations</h3>
+																	<h3 style='font-weight: bold; color:#371F57; font-family: "Comic Sans MS"'>@lang('public.renseignModif')</h3>
 																	<br>
 																	<form action="{{ route('intervenant.update.submit', ['post' => Auth::user()->id]) }}" method="post" enctype="multipart/form-data">
 																		{{ csrf_field() }}
@@ -69,14 +69,14 @@
 																		<div class="row mt-3">
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Nom</label>
-																					<input type="text" class="form-control input" name="name" placeholder="Nom" value="{{ Auth::user()->name }}">
+																					<label>@lang('public.nom')</label>
+																					<input type="text" class="form-control input" name="name" placeholder="@lang('public.nom')" value="{{ Auth::user()->name }}">
 																				</div>
 																			</div>
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Prénom</label>
-																					<input type="text" class="form-control input" name="last_name" placeholder="Prénom" value="{{ Auth::user()->last_name }}">
+																					<label>@lang('public.prenom')</label>
+																					<input type="text" class="form-control input" name="last_name" placeholder="@lang('public.prenom')" value="{{ Auth::user()->last_name }}">
 																				</div>
 																			</div>
 																		</div>
@@ -91,16 +91,16 @@
 																		<div class="row mt-3">
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Date de Naissance</label>
+																					<label>@lang('public.dateNais')</label>
 																					<input type="Date" class="form-control input" name="birth_day" value="{{ Auth::user()->birth_day }}" placeholder="1980-01-01">
 																				</div>
 																			</div>
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Sexe</label>
+																					<label>@lang('public.sexe')</label>
 																					<select class="form-control input" value="{{ Auth::user()->sexe }}" name="sexe">
-																						<option>Masculin</option>
-																						<option>Feminin</option>
+																						<option>@lang('public.male')</option>
+																						<option>@lang('public.female')</option>
 																					</select>
 																				</div>
 																			</div>
@@ -108,13 +108,13 @@
 																		<div class="row mt-3">
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Téléphone 1</label>
+																					<label>@lang('public.phone') 1</label>
 																					<input type="number" class="form-control input" value="{{ Auth::user()->phone }}" name="phone" placeholder="Phone" required>
 																				</div>
 																			</div>
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Téléphone 2</label>
+																					<label>@lang('public.phone') 2</label>
 																					<input type="number" class="form-control input" value="{{ Auth::user()->contact }}" name="contact" placeholder="Phone">
 																				</div>
 																			</div>
@@ -122,7 +122,7 @@
 																		<div class="row mt-3">
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Pays</label>
+																					<label>@lang('public.pays')</label>
 																					<select name="pays_id" class="form-control input" value="{{ Auth::user()->pays_id }}">
 																					@foreach ( $pays as $pay )
 																						<option value='{{ $pay->id }}' 
@@ -138,7 +138,7 @@
 																				
 																			<div class="col-md-6">
 																				<div class="form-group form-group-default bordr">
-																					<label>Ville de résidence</label>
+																					<label>@lang('public.villeResidence')</label>
 																					<select name="ville_id" class="form-control input" value="{{ Auth::user()->ville_id }}">
 																					@foreach ( $villes as $ville )
 																						<option value='{{ $ville->id }}' 
@@ -156,14 +156,14 @@
 																			<div class="row mt-3">
 																				<div class="col-md-6">
 																					<div class="form-group form-group-default bordr">
-																						<label>Insérez le lien vers votre profil LinkedIn</label>
+																						<label>@lang('public.lienLinkedin')</label>
 																						<input type="text" class="form-control input" value="{{ Auth::user()->linkdin }}" name="linkdin" placeholder="Linkdin">
 																					</div>
 																				</div>
 																			
 																				<div class="col-md-6">
 																					<div class="form-group form-group-default bordr">
-																						<label>Ajoutez votre Curriculum Vitae, à jour</label>
+																						<label>@lang('public.ajoutCV')</label>
 																						<input type="file" name="cv" class="form-control-file" value="{{ Auth::user()->cv }}" placeholder="{{ Auth::user()->cv }}"><span for="cv" class="form-control-file input">{{ Auth::user()->cv }}</span>
 																					</div>
 																				</div>
@@ -171,20 +171,20 @@
 																			<div class="row mt-3">
 																				<div class="col-md-6">
 																					<div class="form-group form-group-default bordr" style="border-radius: 10px; border: 3px solid #ccc;">
-																						<a class="btn btn-primary" href="{{Auth::user()->linkdin}}" role="button">Visiter mon linkedin</a>
+																						<a class="btn btn-primary" href="{{Auth::user()->linkdin}}" role="button">@lang('public.visiterLinkedin')</a>
 																					</div>
 																				</div>
 																			
 																				<div class="col-md-6">
 																					<div class="form-group form-group-default bordr">
-																						<a class="btn btn-primary" href="{{ route('downloadfile', 'supconnexion/public/uploads/cv/'.Auth::user()->cv) }}" role="button">Télécharger mon cv </a>
+																						<a class="btn btn-primary" href="{{ route('downloadfile', 'supconnexion/public/uploads/cv/'.Auth::user()->cv) }}" role="button">@lang('public.telechargeCV') </a>
 																					</div>
 																				</div>
 																			</div>
 																		<div class="row mt-3">
 																			<div class="col-md-12">
 																				<div class="form-group form-group-default bordr" style="border-radius: 10px; border: 3px solid #ccc;">
-																					<label for="exampleFormControlFile1">Photo de Profil</label>
+																					<label for="exampleFormControlFile1">@lang('pu</label>
 																					<br>
 																					<input type="file" name="photo" class="form-control-file" placeholder="{{ Auth::user()->photo }}" value="{{ Auth::user()->photo }}"><span for="photo" class="form-control-file input">{{ Auth::user()->photo }}</span>
 																				</div>
