@@ -26,7 +26,7 @@
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
 													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														INTERVENANTS
+														@lang('public.intervenants')
 													</a>
 												</li>
 											</ul>
@@ -41,11 +41,11 @@
 													<table id="add-row" class="display table table-striped table-hover" >
 														<thead>
 															<tr>
-																<th>Offre num. </th>
-																<th>Nom</th>
-																<th>Fonction</th>
-																<th>Voir CV</th>
-																<th>En savoir plus</th>
+																<th>@lang('public.offre') num. </th>
+																<th>@lang('public.nom')</th>
+																<th>@lang('public.fonction')</th>
+																<th>@lang('public.voirCV')</th>
+																<th>@lang('public.enSavoirPlus')</th>
 															</tr>
 														</thead>
 														<tbody>
@@ -70,7 +70,7 @@
 																		<a class="btn btn" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}" role="button"><i class="flaticon-file"></i></a>
 																	</td>
 																	<td>
-																		<a class="btn btn" href="{{ route('details.intervenant',$intervenant->id)}}" role="button">voir plus</a>
+																		<a class="btn btn" href="{{ route('details.intervenant',$intervenant->id)}}" role="button">@lang('public.enSavoirPlus')</a>
 																	</td>
 																</tr>
 															@endforeach
@@ -81,7 +81,7 @@
 															<div class="text-white text-center rgba-stylish-strong py-1 px-4">
 																<ul class="specification-list">
 																	<li>
-																		<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">Pour retrouver tous les INTERVENANTS <a href="{{route('choix.paiements')}}" class="btn btn-danger btn-rounded">Cliquez-ici </a></h3>
+																		<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">@lang('public.retrouverTousInter') <a href="{{route('choix.paiements')}}" class="btn btn-danger btn-rounded">@lang('public.cliquez') </a></h3>
 																	</li>
 																</ul> 
 															</div>

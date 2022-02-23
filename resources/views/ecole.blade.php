@@ -174,7 +174,7 @@
 																								selected
 																							@endif
 																						@endforeach
-																					>{{ $langue->name }}</option>
+																					>{{ $langue->{'name_'.$local} }}</option>
 																				@endforeach
 																				</select>
 																			</div>

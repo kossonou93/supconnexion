@@ -31,7 +31,7 @@
 										<i class="fa fa-search search-icon"></i>
 									</button>
 								</div>
-								<input type="text" placeholder="Rechercher ..." class="form-control">
+								<input type="text" placeholder="@lang('public.recherche') ..." class="form-control">
 							</div>
 						</form>
 					</div>

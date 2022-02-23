@@ -125,6 +125,15 @@ return [
     'voirMesAnnonce' => "See my Ads",
     'ajoutAnnonce' => "Add Ads",
     'seDeconnecter' => "Sign out",
+    'retrouverTousInter' => "To find all the SPEAKERS",
+    'cliquez' => "Click here",
+    'fonction' => "Function",
+    'voirCV' => "See resume",
+    'offre' => "Offer",
+    'editer' => "Edit",
+    'intitule' => "Entitled",
+    'supprimer' => "Remove",
+    'pourAjouterAnnonce' => "To add an announcement"
     //'nosLiens' => "",
 
 

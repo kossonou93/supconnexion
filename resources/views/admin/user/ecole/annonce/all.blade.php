@@ -26,7 +26,7 @@
 											<ul class="nav nav-tabs nav-line nav-color-secondary" id="myTab" role="tablist">
 												<li class="nav-item">
 													<a style="font-size: 20px; font-weight: 900; color: #371F57;" class="nav-link" data-toggle="tab" id="home-tab" href="#home" role="tab" aria-selected="true">
-														MES ANNONCES
+														@lang('public.mesAnnonce')
 													</a>
 												</li>
 											</ul>
@@ -42,12 +42,12 @@
 												<table id="add-row" class="display table table-striped table-hover" >
 													<thead>
 														<tr>
-															<th>Offre num. </th>
-															<th>Intitule</th>
+															<th>@lang('public.offre') num. </th>
+															<th>@lang('public.intitule')</th>
 															<th>Description</th>
-															<th>Date Limite</th>
-															<th>Editer</th>
-															<th>Supprimer</th>
+															<th>@lang('public.dateLimite')</th>
+															<th>@lang('public.editer')</th>
+															<th>@lang('public.supprimer')</th>
 														</tr>
 													</thead>
 													<tbody>
@@ -75,7 +75,7 @@
 																<td>
 																	<div class="form-button-action">
 																		<a href="{{ route('annonces.show',$annonce->id)}}" class="btn btn-primary btn-sm" data-original-title="Editer">
-																			Editer
+																			@lang('public.editer')
 																		</a>
 																	</div>
 																</td>
@@ -84,7 +84,7 @@
 																		<form action="{{ route('annonces.destroy', $annonce->id)}}" method="post" style="display: inline-block">
 																			@csrf
 																			@method('DELETE')
-																			<button class="btn btn-danger btn-sm" type="submit">Supprimer</button>
+																			<button class="btn btn-danger btn-sm" type="submit">@lang('public.supprimer')</button>
 																		</form>
 																	</div>
 																</td>
@@ -98,7 +98,7 @@
 														<div class="text-white text-center rgba-stylish-strong py-1 px-4">
 															<ul class="specification-list">
 																<li>
-																	<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">Pour ajouter une annonce <a href="{{route('choix.annonces')}}" class="btn btn-danger btn-rounded">Cliquez-ici </a></h3>
+																	<h3 class="name-specification" style="color:red; font-family: 'Comic Sans MS'">@lang() <a href="{{route('choix.annonces')}}" class="btn btn-danger btn-rounded">@lang('public.clique') </a></h3>
 																</li>
 															</ul> 
 														</div>

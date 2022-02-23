@@ -125,6 +125,14 @@ return [
     'voirMesAnnonce' => "Voir mes Annonces",
     'ajoutAnnonce' => "Ajouter Annonces",
     'seDeconnecter' => "Se déconnecter",
-
+    'retrouverTousInter' => "Pour retrouver tous les INTERVENANTS",
+    'cliquez' => "Cliquez-ici",
+    'fonction' => "Fonction",
+    'voirCV' => "Voir CV",
+    'offre' => "Offre",
+    'editer' => "Editer",
+    'intitule' => "Intitulé",
+    'supprimer' => "Supprimer",
+    'pourAjouterAnnonce' => "Pour ajouter une annonce",
 ]
 ?>
