@@ -34,6 +34,7 @@ return [
     'laConfAn' => "The Annual Conference",
     'acteConf' => "The proceedings of the conference",
     'galerie' => "Gallery",
+    'notreGalerie' => "Our Gallery",
     'academiciens' => 'African Academicians',
     'conference' => 'Annual Conference',
     'exempleProfil' => 'Examples of Profiles',
