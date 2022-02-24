@@ -259,12 +259,14 @@ class IntervenantController extends Controller
         $validator = Validator::make($input, [
             'ecole' => 'required',
             'titre' => 'required',
+            'grade' => 'required',
             //'ville' => 'required',
         ]);
 
         $dip = Diplome::find($id);
         $dip->ecole = $input['ecole'];
         $dip->titre = $input['titre'];
+        $dip->grade = $input['grade'];
 
         $dip->save();
 

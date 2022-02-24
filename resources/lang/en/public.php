@@ -201,7 +201,7 @@ return [
     'selectionTypeEcole' => "I select the types of schools in which I wish to intervene",
     'nomEcoleDiplome' => "Enter the name of the school where you graduated",
     'titreDiplome' => "Enter the title your degree",
-    'mois' => "Mois",
+    'intervenantModifier' => "Intervenant modifiée avec succès!",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",

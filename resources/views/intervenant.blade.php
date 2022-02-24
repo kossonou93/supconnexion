@@ -492,7 +492,7 @@
 																				</div>
 																				<div class="form-group form-group-default">
 																					<label>Grade</label>
-																					<select class="form-control" name="grade">
+																					<select class="form-control" name="grade" required>
 																						<option>BAC</option>
 																						<option>BAC+1 </option>
 																						<option>BAC+2 </option>

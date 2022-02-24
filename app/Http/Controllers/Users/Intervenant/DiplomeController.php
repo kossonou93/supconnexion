@@ -8,6 +8,7 @@ use Auth;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
+use Lang;
 
 class DiplomeController extends Controller
 {
@@ -50,15 +51,17 @@ class DiplomeController extends Controller
         $request->validate([
             'ecole' => 'required',
             'titre' => 'required',
+            'grade' => 'required',
             'intervenant_id' => 'required',
         ]);
         $diplome = new Diplome([
             'ecole' => $request->get('ecole'),
             'titre' => $request->get('titre'),
+            'grade' => $request->get('grade'),
             'intervenant_id' => $request->get('intervenant_id')
         ]);
         $diplome->save();
-        return redirect()->route('intervenant.dashboard')->with('message', 'Intervenant modifiée avec succès!');
+        return redirect()->route('intervenant.dashboard')->with('message', Lang::get('public.intervenantModifier'));
     }
 
     /**

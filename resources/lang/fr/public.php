@@ -202,7 +202,7 @@ return [
     'selectionTypeEcole' => "Je sélectionne les types d'écoles dans lesquelles je souhaite intervenir",
     'nomEcoleDiplome' => "Entrez le nom de l'école où vous avez obtenu votre diplome",
     'titreDiplome' => "Entrez le titre votre diplome",
-    'mois' => "Mois",
+    'intervenantModifier' => "Intervenant modifiée avec succès!",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
