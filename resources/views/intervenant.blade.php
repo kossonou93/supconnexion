@@ -555,7 +555,7 @@
 																		<td>{{ $diplome->titre }}</td>
 																		<td>
 																			<div class="form-button-action">
-																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="Editer Diplome" data-target="#editRowModal{{$diplome->id}}">
+																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="Edite Diplome" data-target="#editRowModal{{$diplome->id}}">
 																					<i class="fa fa-edit"></i>
 																				</a>
 																			</div>

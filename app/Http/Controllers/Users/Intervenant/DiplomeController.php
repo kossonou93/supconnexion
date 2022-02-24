@@ -102,13 +102,14 @@ class DiplomeController extends Controller
         $request->validate([
             'ecole' => 'required',
             'titre' => 'required',
+            'grade' => 'required',
             'intervenant_id' => 'required',
         ]);
   
         $diplome->update($request->all());
   
         return redirect()->route('intervenant.dashboard')
-                        ->with('success','Diplome modifié avec succès');
+                        ->with('success', Lang::get('public.diplomeModifier'));
     }
 
     /**
@@ -122,6 +123,6 @@ class DiplomeController extends Controller
         $diplome = Diplome::findOrFail($id);
         $diplome->delete();
         return redirect()->route('intervenant.dashboard')
-                        ->with('success', 'Diplome supprimé avec succès');
+                        ->with('success', Lang::get('public.diplomeSupprimer'));
     }
 }

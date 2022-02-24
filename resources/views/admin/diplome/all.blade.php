@@ -81,7 +81,7 @@
 														<td>{{ $diplome->titre }}</td>
 														<td>
 															<div class="form-button-action">
-																<a href="{{ route('diplomes.show',$diplome->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Editer Diplome">
+																<a href="{{ route('diplomes.show',$diplome->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="Edite Diplome">
 																	<i class="fa fa-edit"></i>
 																</a>
 															</div>
