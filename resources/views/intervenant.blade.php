@@ -487,7 +487,7 @@
 																		<div class="row">
 																			<div class="col-sm-12">
 																				<div class="form-group form-group-default">
-																					<label>Ecole</label>
+																					<label>@lang('public.ecole')</label>
 																					<input type="text" class="form-control" id="ecole" name="ecole" placeholder="@lang('public.nomEcoleDiplome')" required>
 																				</div>
 																				<div class="form-group form-group-default">
