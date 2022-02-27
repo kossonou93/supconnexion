@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 27 2022 22:31:56 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/intervenant/offre/details.blade.php
+* resources/views/user/annonce.blade.php
+
+
+Created files:
+* .autogit/logs/log-27-1-2022-22-1-33.txt
+
+
+Deleted files:
+
+
+Renamed files:

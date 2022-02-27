@@ -70,7 +70,13 @@ class OffreController extends Controller
      */
     public function show($id)
     {
-        return view('admin.user.intervenant.offre.edit');
+        $local = Session::get("locale");
+        $ecoles = Ecole::all();
+        $annonce = Annonce::find($id);
+        $disciplines = $annonce->disciplines()->where('annonce_id', $id)->get();
+        $langues = $annonce->langues()->where('annonce_id', $id)->get();
+        $interventions = $annonce->interventions()->where('annonce_id', $id)->get();
+        return view('user.intervenant.offre.details', compact('local', 'disciplines', 'langues', 'interventions', 'annonce', 'ecoles'));
     }
 
     /**

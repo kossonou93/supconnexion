@@ -146,10 +146,10 @@
                                                             <div class="card card-profile card-secondary">
                                                                 <div class="card-header" style="background-image: url('admini/assets/img/blogpost.jpg')">
                                                                     <div class="profile-picture">
-                                                                        <img src="{{ asset('supconnexion/public/uploads/image/annonce/'.$annonce->image) }}" data-placeholder="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}" alt="">
+                                                                        <img src="{{ asset('supconnexion/public/uploads/image/annonce/'.$annonce->image) }}" class="card-img-top" alt="Wild Landscape" data-placeholder="{{ asset('supconnexion/public/uploads/photo/profil/Placeholder.png') }}">
                                                                     </div>
                                                                 </div>
-                                                                <div class="card-body" style="margin-top:10px">
+                                                                <div class="card-body">
                                                                     
                                                                 </div>
                                                                 <div class="card-footer">
