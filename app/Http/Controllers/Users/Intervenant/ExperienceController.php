@@ -73,7 +73,7 @@ class ExperienceController extends Controller
         ]);
         $experience->save();
         //$experience->experiences()->attach(Auth::user()->id);
-        return redirect()->route('intervenant.dashboard')->with('success', 'Experience enregistrée avec succès!');
+        return redirect()->route('intervenant.dashboard')->with('success', Lang::get('public.experienceEnregister'));
     }
 
     /**
@@ -142,6 +142,6 @@ class ExperienceController extends Controller
         $experience = Experience::findOrFail($id);
         $experience->delete();
         return redirect()->route('intervenant.dashboard')
-                        ->with('success', 'Experience supprimée avec succès');
+                        ->with('success', Lang::get('public.experienceSupprimer'));
     }
 }

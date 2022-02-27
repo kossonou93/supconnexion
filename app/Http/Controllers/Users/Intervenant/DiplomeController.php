@@ -61,7 +61,7 @@ class DiplomeController extends Controller
             'intervenant_id' => $request->get('intervenant_id')
         ]);
         $diplome->save();
-        return redirect()->route('intervenant.dashboard')->with('message', Lang::get('public.intervenantModifier'));
+        return redirect()->route('intervenant.dashboard')->with('message', Lang::get('public.diplomeEnregister'));
     }
 
     /**
