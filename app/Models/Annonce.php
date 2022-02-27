@@ -13,7 +13,7 @@ class Annonce extends Model
 
     protected $table = 'annonces';
 
-    protected $fillable = ['intitule_fr', 'description_fr','intitule_en', 'description_en', 'date_limite','ecole_id', 'image', 'dossier', 'adresse', 'date_expiration', 'affiche'];
+    protected $fillable = ['intitule_fr', 'description_fr','intitule_en', 'description_en', 'date_limite','ecole_id', 'image', 'dossier_fr', 'dossier_en', 'adresse', 'date_expiration', 'affiche'];
 
     public function disciplines()
     {

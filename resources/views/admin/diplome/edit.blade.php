@@ -46,8 +46,8 @@
 										</div>
                                     </div>
 									<div class="text-center mt-3 mb-3">
-										<button class="btn btn-success">Enregistrer</button>
-										<button class="btn btn-danger">Annuler</button>
+										<button class="btn btn-success">@lang('public.validez')</button>
+										<button class="btn btn-danger">@lang('public.annulez')</button>
 									</div>
 								</div>
                                 

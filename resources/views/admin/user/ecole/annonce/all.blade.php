@@ -64,10 +64,10 @@
 																	?>
 																</td>		
 																<td>
-																	{{$annonce->intitule}}
+																	{{ $annonce->{'intitule_'.$local} }}
 																</td>
 																<td>
-																	{{$annonce->description}}
+																	{{ $annonce->{'description_'.$local} }}
 																</td>
 																<td>
 																	{{$annonce->date_limite}}

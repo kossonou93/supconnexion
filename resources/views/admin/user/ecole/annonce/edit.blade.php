@@ -59,6 +59,14 @@
 													<div class="row mt-3">
 														<div class="col-md-8">
 															<div class="form-group form-group-default bordr">
+																<label>Dossier *</label>
+																<textarea type="text" class="form-control input" name="dossier_{{$local}}" placeholder="" rows="3" value="{{ $annonce->{'dossier_'.$local} }}" required>{{ $annonce->{'dossier_'.$local} }}</textarea>
+															</div>
+														</div>
+													</div>
+													<div class="row mt-3">
+														<div class="col-md-8">
+															<div class="form-group form-group-default bordr">
 																<label>Date limite *</label>
 																<input type="date" class="form-control input" name="date_limite" value="{{ $annonce->date_limite }}" required>
 															</div>
@@ -134,15 +142,16 @@
 															<div class="form-group form-group-default bordr">
 																<label>Ajouter Image</label>
 																<br>
+																{{ Auth::user()->image }}
 																<input type="file" name="image" class="form-control-file input" value="{{ Auth::user()->image }}" placeholder="sélectionnez une image">
 															</div>
 														</div>
 													</div>
 													<br><br><br>
 													<div class="text-left mt-3 mb-3">
-														<button class="btn btn-success">Valider</button>
+														<button class="btn btn-success">@lang('public.envoyez')</button>
 														&nbsp;&nbsp;&nbsp;
-														<button class="btn btn-danger">Annuler</button>
+														<button class="btn btn-danger">@lang('public.annulez')</button>
 													</div>
 												</form>
 											</div>

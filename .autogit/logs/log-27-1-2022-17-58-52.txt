@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 27 2022 17:58:52 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Ecole/AnnonceController.php
+* resources/views/admin/user/ecole/annonce/edit.blade.php
+
+
+Created files:
+* .autogit/logs/log-27-1-2022-17-28-31.txt
+
+
+Deleted files:
+
+
+Renamed files:

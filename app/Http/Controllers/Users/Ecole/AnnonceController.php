@@ -166,13 +166,13 @@ class AnnonceController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $local = Session::get("locale");
         $input = $request->all();
-
         $validator = Validator::make($input, [
             //'intitule_fr' => 'required',
             //'description_fr' => 'required',
             'date_limite' => 'required',
-            'dossier' => 'required',
+            //'dossier' => 'required',
             'adresse' => 'required',
             'disciplines' => 'required',
             //'langues' => 'required',
@@ -180,15 +180,13 @@ class AnnonceController extends Controller
         ]);
 
         $annonce = Annonce::find($id);
-        $annonce->intitule_fr = $input['intitule_fr'];
-        $annonce->intitule_en = $input['intitule_en'];
-        $annonce->description_fr = $input['description_fr'];
-        $annonce->description_en = $input['description_en'];
+        $annonce->{'intitule_'.$local} = $input['intitule_'.$local];
+        $annonce->{'description_'.$local} = $input['description_'.$local];
         $annonce->date_limite = $input['date_limite'];
-        $annonce->dossier = $input['dossier'];
-        $annonce->adresse = $input['adresse'];
+        //$annonce->{'dossier_'.$local} = $input['dossier_'.$local];
+        //$annonce->adresse = $input['adresse'];
         $annonce->ecole_id = $input['ecole_id'];
-        $annonce->image = $input['image'];
+        //$annonce->image = $input['image'];
 
 
         if ($request->file('image')) {
@@ -215,7 +213,7 @@ class AnnonceController extends Controller
         }
 
         
-        return redirect()->route('annonces.index')->with('success', 'Annonce créée avec succès!');
+        return redirect()->route('annonces.index')->with('success', 'Annonce modifiée avec succès!');
     }
 
     /**
