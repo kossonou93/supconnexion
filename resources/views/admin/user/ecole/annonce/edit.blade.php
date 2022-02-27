@@ -52,7 +52,7 @@
 														<div class="col-md-8">
 															<div class="form-group form-group-default bordr">
 																<label>Description *</label>
-																<textarea class="form-control input" name="description" placeholder="" rows="3" value="{{ $annonce->description }}" required>{{ $annonce->description }}</textarea>
+																<textarea class="form-control input" name="description" placeholder="" rows="3" value="{{ $annonce->{'description_'.$local} }}" required>{{ $annonce->description }}</textarea>
 															</div>
 														</div>
 													</div>

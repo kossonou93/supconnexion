@@ -555,7 +555,7 @@
 																		<td>{{ $diplome->titre }}</td>
 																		<td>
 																			<div class="form-button-action">
-																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="Edite Diplome" data-target="#editRowModal{{$diplome->id}}">
+																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="Editer Diplome" data-target="#editRowModal{{$diplome->id}}">
 																					<i class="fa fa-edit"></i>
 																				</a>
 																			</div>
@@ -779,9 +779,9 @@
 																		<td>{{ $experience->etablissement }}</td>
 																		<td>
 																			<div class="form-button-action">
-																				<a href="{{ route('experiences.show',$experience->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="@lang('public.editDip')">
+																				<!--<a href="{{ route('experiences.show',$experience->id)}}" class="btn btn-link btn-primary btn-lg" data-original-title="@lang('public.editDip')">
 																					<i class="fa fa-edit"></i>
-																				</a>
+																				</a>-->
 																				<a class="btn btn-link btn-primary btn-lg" data-toggle="modal" data-original-title="@lang('public.editExp')" data-target="#editModalExperience{{$experience->id}}">
 																					<i class="fa fa-edit"></i>
 																				</a>
