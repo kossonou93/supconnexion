@@ -183,10 +183,10 @@ class AnnonceController extends Controller
         $annonce->{'intitule_'.$local} = $input['intitule_'.$local];
         $annonce->{'description_'.$local} = $input['description_'.$local];
         $annonce->date_limite = $input['date_limite'];
-        //$annonce->{'dossier_'.$local} = $input['dossier_'.$local];
-        //$annonce->adresse = $input['adresse'];
+        $annonce->{'dossier_'.$local} = $input['dossier_'.$local];
+        $annonce->adresse = $input['adresse'];
         $annonce->ecole_id = $input['ecole_id'];
-        //$annonce->image = $input['image'];
+        $annonce->image = $input['image'];
 
 
         if ($request->file('image')) {

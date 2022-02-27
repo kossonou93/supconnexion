@@ -142,8 +142,15 @@
 															<div class="form-group form-group-default bordr">
 																<label>Ajouter Image</label>
 																<br>
-																{{ Auth::user()->image }}
-																<input type="file" name="image" class="form-control-file input" value="{{ Auth::user()->image }}" placeholder="sélectionnez une image">
+																<input type="file" name="image" class="form-control-file input" value="{{ $annonce->image }}" placeholder="sélectionnez une image"><span for="image" class="form-control-file input">{{ $annonce->image }}</span>
+															</div>
+														</div>
+													</div>
+													<div class="row mt-3">
+														<div class="col-md-8">
+															<div class="form-group form-group-default bordr">
+																<label>Adresse</label>
+																<input type="text" class="form-control input" name="adresse" value="{{ $annonce->adresse }}" required>
 															</div>
 														</div>
 													</div>
