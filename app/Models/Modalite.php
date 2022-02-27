@@ -11,7 +11,7 @@ class Modalite extends Model
 
     protected $table = 'modalites';
 
-    protected $fillable = ['type'];
+    protected $fillable = ['type_fr', 'type_en'];
 
     public function experiences()
     {

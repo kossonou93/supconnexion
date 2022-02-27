@@ -157,8 +157,8 @@ class EcoleController extends Controller
 
     public function detailsintervenant($id)
     {
+        $local = Session::get("locale");
         $intervenant = Intervenant::find($id);
-
         $disciplines = Discipline::all();
         $contrats = Contrat::all();
         $disponibilites = Disponibilite::all();
@@ -186,7 +186,7 @@ class EcoleController extends Controller
         $conts = $intervenant->contrats;
         $discips = $intervenant->disciplines;
 
-        return view('admin.user.ecole.detailsintervenant', compact('intervenant', 'disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
+        return view('admin.user.ecole.detailsintervenant', compact('local', 'intervenant', 'disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
     }
 
     public function paiement()

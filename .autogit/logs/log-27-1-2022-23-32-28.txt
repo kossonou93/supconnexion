@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 27 2022 23:32:28 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Intervenant/OffreController.php
+* resources/views/admin/user/ecole/detailsintervenant.blade.php
+* resources/views/admin/user/intervenant/offre/all.blade.php
+* resources/views/admin/user/intervenant/offre/details.blade.php
+
+
+Created files:
+* .autogit/logs/log-27-1-2022-23-2-9.txt
+
+
+Deleted files:
+
+
+Renamed files:

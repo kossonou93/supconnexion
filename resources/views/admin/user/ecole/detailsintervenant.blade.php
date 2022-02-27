@@ -208,7 +208,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $langs as $lang )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $lang->{'name_'} }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $lang->{'name_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -234,7 +234,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $remus as $remu )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $remu->type }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $remu->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>

@@ -11,7 +11,7 @@ class Remuneration extends Model
 
     protected $table = 'remunerations';
 
-    protected $fillable = ['type'];
+    protected $fillable = ['type_fr', 'type_en'];
 
     public function intervenants()
     {
