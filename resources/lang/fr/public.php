@@ -205,6 +205,7 @@ return [
     'intervenantModifier' => "Intervenant modifiée avec succès!",
     'diplomeSupprimer' => "Diplome supprimé avec succès",
     'diplomeModifier' => "Diplome modifié avec succès",
+    'experienceModifier' => "Expérience modifiée avec succès!",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",

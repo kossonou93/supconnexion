@@ -10,6 +10,7 @@ use Auth;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
+use Lang;
 
 class ExperienceController extends Controller
 {
@@ -112,7 +113,7 @@ class ExperienceController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Experience $experience)
+    public function update(Request $request, $id)
     {
         $request->validate([
             'intitule' => 'required',
@@ -122,11 +123,12 @@ class ExperienceController extends Controller
             'intervenant_id' => 'required',
         ]);
         
+        $experience = Experience::find($id);
         $experience->update($request->all());
         $experience->modalites()->sync(request('modalites'));
         $experience->responsabilites()->sync(request('responsabilites'));
   
-        return redirect()->route('intervenant.dashboard')->with('message', 'Intervenant modifiée avec succès!');
+        return redirect()->route('intervenant.dashboard')->with('message', Lang::get('public.experienceModifier'));
     }
 
     /**

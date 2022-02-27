@@ -15,8 +15,8 @@
                 </button>
             </div>
             <form action="{{ route('diplomes.update',$diplome->id) }}" method="post" enctype="multipart/form-data">
-                @csrf
-                @method('PUT')
+                {{ csrf_field() }}
+				{{ method_field('PUT') }}
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">
@@ -48,14 +48,14 @@
                             </div>
                             <div class="form-group form-group-default" style="display:none">
                                 <label>Titre</label>
-                                <input type="text" value="{{$diplome->titre}}" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="Entrez le titre votre diplome">
+                                <input type="text" value="{{ Auth::user()->id }}" class="form-control" name="intervenant_id" value="{{ Auth::user()->id }}" placeholder="Entrez le titre votre diplome">
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="modal-footer no-bd">
-                    <button class="btn btn-success">Valider</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                    <button class="btn btn-success">@lang('public.envoyez')</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">@lang('public.annulez')</button>
                 </div>
             </form>
         </div>

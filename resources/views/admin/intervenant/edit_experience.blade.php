@@ -11,8 +11,9 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="{{ route('experience.submit') }}" method="post" enctype="multipart/form-data">
-                @csrf
+            <form action="{{ route('experiences.update',$experience->id) }}" method="post" enctype="multipart/form-data">
+                {{ csrf_field() }}
+				{{ method_field('PUT') }}
                 <div class="modal-body">
                     <div class="row mt-3">
                         <label class="col-sm-4 col-form-label">Intitulé de l'intervention</label>
@@ -152,8 +153,8 @@
                     </div>
                 </div>
                 <div class="modal-footer no-bd">
-                    <button class="btn btn-primary">Valider</button>
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Annuler</button>
+                    <button class="btn btn-primary">@lang('public.envoyez')</button>
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">@lang('public.annulez')</button>
                 </div>
             </form>
         </div>

@@ -95,7 +95,7 @@ class DiplomeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Diplome $diplome)
+    public function update(Request $request, $id)
     {
         //var_dump($request);
 
@@ -105,7 +105,8 @@ class DiplomeController extends Controller
             'grade' => 'required',
             'intervenant_id' => 'required',
         ]);
-  
+
+        $diplome = Diplome::find($id);
         $diplome->update($request->all());
   
         return redirect()->route('intervenant.dashboard')
