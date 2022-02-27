@@ -133,6 +133,7 @@ class AnnonceController extends Controller
      */
     public function show($id)
     {
+        $local = Session::get("locale");
         $annonce = Annonce::find($id);
         $disciplines = Discipline::all();
         $interventions = Intervention::all();
@@ -142,7 +143,7 @@ class AnnonceController extends Controller
         $langs = $annonce->langues;
         $inters = $annonce->interventions;
         $discips = $annonce->disciplines;
-        return view('admin.user.ecole.annonce.edit', compact('annonce', 'disciplines', 'langues', 'interventions', 'annonces', 'inters', 'discips', 'langs'));
+        return view('admin.user.ecole.annonce.edit', compact('local', 'annonce', 'disciplines', 'langues', 'interventions', 'annonces', 'inters', 'discips', 'langs'));
     }
 
     /**
