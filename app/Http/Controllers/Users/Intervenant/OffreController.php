@@ -76,7 +76,7 @@ class OffreController extends Controller
         $disciplines = $annonce->disciplines()->where('annonce_id', $id)->get();
         $langues = $annonce->langues()->where('annonce_id', $id)->get();
         $interventions = $annonce->interventions()->where('annonce_id', $id)->get();
-        return view('user.intervenant.offre.details', compact('local', 'disciplines', 'langues', 'interventions', 'annonce', 'ecoles'));
+        return view('admin.user.intervenant.offre.details', compact('local', 'disciplines', 'langues', 'interventions', 'annonce', 'ecoles'));
     }
 
     /**

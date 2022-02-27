@@ -143,7 +143,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $conts as $cont )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $cont->type }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $cont->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -156,7 +156,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $inters as $inter )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $inter->type }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $inter->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -169,7 +169,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $dispos as $dispo )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dispo->titre }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dispo->{'titre_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -182,7 +182,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $durs as $dur )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dur->type }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dur->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -195,7 +195,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $texps as $texp )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $texp->type }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $texp->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -208,7 +208,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $langs as $lang )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $lang->name }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $lang->{'name_'} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -221,7 +221,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $hors as $hor )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $hor->titre }}</li></h3>
+                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $hor->{'titre_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>

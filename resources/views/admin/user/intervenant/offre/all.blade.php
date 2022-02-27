@@ -79,7 +79,7 @@
 																		{{$annonce->date_limite}}
 																	</td>
 																	<td>
-																		<a href="{{ route('annonce.details',$annonce->id)}}" target="_blank" class="btn btn-primary">@lang('public.enSavoirPlus') <span class="ion-ios-arrow-round-forward"></span></a>
+																		<a href="{{ route('offres.show',$annonce->id)}}" target="_blank" class="btn btn-primary">@lang('public.enSavoirPlus') <span class="ion-ios-arrow-round-forward"></span></a>
 																	</td>
 																</tr>
 														@endforeach

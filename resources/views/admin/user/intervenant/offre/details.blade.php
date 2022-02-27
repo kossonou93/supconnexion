@@ -42,14 +42,14 @@
                                                     <div class="row">
                                                         <div class="col-md-8">
                                                             <div class="row mt-3">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Intitulé</label>
                                                                         <br>
                                                                         <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $annonce->{'intitule_'.$local} }}</h3>
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Description</label>
                                                                         <br>
@@ -58,7 +58,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row mt-3">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>@lang('public.ecole')</label>
                                                                         <br>
@@ -69,7 +69,7 @@
                                                                         @endforeach
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Langues</label>
                                                                         <br>
@@ -80,7 +80,7 @@
                                                                 </div>
                                                             </div>
                                                             <div class="row mt-3">
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Disciplines</label>
                                                                         <br>
@@ -90,7 +90,7 @@
                                                                         @endforeach 
                                                                     </div>
                                                                 </div>
-                                                                <div class="col-md-6">
+                                                                <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Interventions</label>
                                                                         <br>
@@ -101,15 +101,15 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="col-md-6">
-                                                                <div class="form-group form-group-default bordre">
-                                                                    <label>Dossier</label>
-                                                                    <br>
-                                                                    <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{$annonce->{'dossier_'.$local} }}</h3>
+                                                            <div class="row mt-3">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group form-group-default bordre">
+                                                                        <label>Dossier</label>
+                                                                        <br>
+                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{$annonce->{'dossier_'.$local} }}</h3>
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            <div class="row mt-3 mb-1">
-                                                                <div class="col-md-12">
+                                                                <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Adresse</label>
                                                                         <br>
@@ -127,10 +127,6 @@
                                                                         ?></h3>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                            
-                                                            <br><br>
-                                                            <div class="row mt-3">
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Date de Limite</label>
@@ -141,6 +137,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
+                                                            
+                                                            <br><br>
                                                         </div>
                                                         <div class="col-md-4">
                                                             <div class="card card-profile card-secondary">
