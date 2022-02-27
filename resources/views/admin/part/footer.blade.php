@@ -10,6 +10,27 @@
         $('.loader_bg').fadeToggle();
     }, 1500);
 </script>
+<script type="text/javascript">
+ 
+    $('.show_confirm').click(function(event) {
+         var form =  $(this).closest("form");
+         var name = $(this).data("name");
+         event.preventDefault();
+         swal({
+             title: @lang('public.confirmation'),
+             text: "If you delete this, it will be gone forever.",
+             icon: "warning",
+             buttons: true,
+             dangerMode: true,
+         })
+         .then((willDelete) => {
+           if (willDelete) {
+             form.submit();
+           }
+         });
+     });
+ 
+</script>
 <script src="{{ asset('admini/assets/js/core/popper.min.js') }}"></script>
 <script src="{{ asset('admini/assets/js/paiement.js') }}"></script>
 <script src="{{ asset('admini/assets/js/core/bootstrap.min.js') }}"></script>

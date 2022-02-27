@@ -208,7 +208,7 @@ return [
     'experienceModifier' => "Experience changed successfully!",
     'experienceModifier' => "Experience successfully modified!",
     'experienceSupprimer' => "Experience successfully removed!",
-    'confirmation' => "Are you sure?",
+    'confirmation' => "Are you sure you want to delete this record?",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",

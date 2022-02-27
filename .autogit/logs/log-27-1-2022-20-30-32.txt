@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 27 2022 20:30:32 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Intervenant/DiplomeController.php
+* app/Http/Controllers/Users/Intervenant/ExperienceController.php
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+
+
+Created files:
+* .autogit/logs/log-27-1-2022-20-0-11.txt
+
+
+Deleted files:
+
+
+Renamed files:

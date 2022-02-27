@@ -209,7 +209,7 @@ return [
     'experienceEnregister' => "Expérience enregistrée avec succès!",
     'experienceModifier' => "Expérience modifiée avec succès!",
     'experienceSupprimer' => "Expérience supprimée avec succès!",
-    'confirmation' => "Êtes-vous sûr?",
+    'confirmation' => "Voulez-vous vraiment supprimer cet enregistrement ?",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
