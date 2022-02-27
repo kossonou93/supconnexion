@@ -67,7 +67,7 @@
 																		{{$intervenant->fonction}}
 																	</td>
 																	<td>
-																		<a class="btn btn" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}" role="button"><i class="flaticon-file"></i></a>
+																		<a class="btn btn" target="_blank" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}" role="button"><i class="flaticon-file"></i></a>
 																	</td>
 																	<td>
 																		<a class="btn btn" href="{{ route('details.intervenant',$intervenant->id)}}" role="button">voir plus</a>

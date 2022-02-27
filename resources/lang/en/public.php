@@ -209,7 +209,7 @@ return [
     'experienceModifier' => "Experience successfully modified!",
     'experienceSupprimer' => "Experience successfully removed!",
     'confirmation' => "Are you sure you want to delete this record?",
-    'mois' => "Mois",
+    'avertissement' => "If you delete this, it will be gone forever.",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",

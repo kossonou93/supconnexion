@@ -210,7 +210,7 @@ return [
     'experienceModifier' => "Expérience modifiée avec succès!",
     'experienceSupprimer' => "Expérience supprimée avec succès!",
     'confirmation' => "Voulez-vous vraiment supprimer cet enregistrement ?",
-    'mois' => "Mois",
+    'avertissement' => "Si vous le supprimez, il disparaîtra pour toujours.",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",

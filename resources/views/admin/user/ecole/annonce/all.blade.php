@@ -75,7 +75,7 @@
 																<td>
 																	<div class="form-button-action">
 																		<a href="{{ route('annonces.show',$annonce->id)}}" class="btn btn-primary btn-sm" data-original-title="Editer">
-																			@lang('public.editer')
+																			<i class="fa fa-edit"></i>
 																		</a>
 																	</div>
 																</td>
@@ -84,7 +84,9 @@
 																		<form action="{{ route('annonces.destroy', $annonce->id)}}" method="post" style="display: inline-block">
 																			@csrf
 																			@method('DELETE')
-																			<button class="btn btn-danger btn-sm" type="submit">@lang('public.supprimer')</button>
+																			<button class="btn btn-xs btn-danger btn-flat show_confirm" type="submit" data-toggle="tooltip" title='Delete' data-original-title="Remove">@lang('public.supprimer')
+																				<i class="fa fa-times"></i>
+																			</button>
 																		</form>
 																	</div>
 																</td>
