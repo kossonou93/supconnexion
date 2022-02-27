@@ -186,7 +186,7 @@ class AnnonceController extends Controller
         $annonce->{'dossier_'.$local} = $input['dossier_'.$local];
         $annonce->adresse = $input['adresse'];
         $annonce->ecole_id = $input['ecole_id'];
-        $annonce->image = $input['image'];
+        //$annonce->image = $input['image'];
 
 
         if ($request->file('image')) {

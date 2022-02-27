@@ -14,8 +14,9 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{ route('diplomes.update',$diplome->id) }}" method="post" enctype="multipart/form-data">
                 @csrf
+                @method('PUT')
                 <div class="modal-body">
                     <div class="row">
                         <div class="col-sm-12">

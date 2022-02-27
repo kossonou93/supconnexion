@@ -565,7 +565,7 @@
 																				<form action="{{ route('diplomes.destroy', $diplome->id)}}" method="post" style="display: inline-block">
 																					@csrf
 																					@method('DELETE')
-																					<button type="button" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
+																					<button type="submit" data-toggle="tooltip" title="" class="btn btn-link btn-danger" data-original-title="Remove">
 																						<i class="fa fa-times"></i>
 																					</button>
 																				</form>
