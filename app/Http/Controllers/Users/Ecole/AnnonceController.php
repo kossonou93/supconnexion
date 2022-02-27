@@ -169,19 +169,21 @@ class AnnonceController extends Controller
         $input = $request->all();
 
         $validator = Validator::make($input, [
-            'intitule' => 'required',
-            'description' => 'required',
+            //'intitule_fr' => 'required',
+            //'description_fr' => 'required',
             'date_limite' => 'required',
             'dossier' => 'required',
             'adresse' => 'required',
             'disciplines' => 'required',
-            'langues' => 'required',
-            'interventions' => 'required',
+            //'langues' => 'required',
+            //'interventions' => 'required',
         ]);
 
         $annonce = Annonce::find($id);
-        $annonce->intitule = $input['intitule'];
-        $annonce->description = $input['description'];
+        $annonce->intitule_fr = $input['intitule_fr'];
+        $annonce->intitule_en = $input['intitule_en'];
+        $annonce->description_fr = $input['description_fr'];
+        $annonce->description_en = $input['description_en'];
         $annonce->date_limite = $input['date_limite'];
         $annonce->dossier = $input['dossier'];
         $annonce->adresse = $input['adresse'];
