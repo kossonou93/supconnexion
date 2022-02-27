@@ -57,14 +57,14 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Nom</label>
+                                                                        <label>@lang('public.nom')</label>
                                                                         <br>
                                                                         <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->name }}</h3>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Prénom</label>
+                                                                        <label>@lang('public.prenom')</label>
                                                                         <br>
                                                                         <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->last_name }}</h3>
                                                                     </div>
@@ -80,7 +80,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Téléphone</label>
+                                                                        <label>@lang('public.dateNais')</label>
                                                                         <br>
                                                                         <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->phone }} / {{ $intervenant->contact }}</h3>
                                                                     </div>
@@ -294,20 +294,20 @@
                                                                             <div class="row mt-3">
                                                                                 <div class="col-md-5 form-group form-group-default">
                                                                                     <h5>Profil LinkeDin</h5>
-                                                                                    <a class="btn btn-info btn-linkedin btn-sm btn-link" href="{{ $intervenant->linkdin }}"> 
+                                                                                    <a class="btn btn-info btn-linkedin btn-sm btn-link" target="_blank" href="{{ $intervenant->linkdin }}"> 
                                                                                         <span class="btn-label just-icon"><i class="flaticon-linkedin"></i></span>
                                                                                     </a>
                                                                                 </div>
                                                                                 <div class="col-md-2"></div>
                                                                                 <div class="col-md-5 form-group form-group-default">
                                                                                     <h5>Voir CV</h5>
-                                                                                    <a class="btn btn-info btn-linkedin btn-sm btn-link" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}"> 
+                                                                                    <a class="btn btn-info btn-linkedin btn-sm btn-link" target="_blank" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}"> 
                                                                                         <span class="btn-label just-icon"><i class="flaticon-file"></i></span>
                                                                                     </a>
                                                                                 </div>
                                                                                 <div class="col-md-12" style="margin-top:20px">
                                                                                     <div class="view-profile">
-                                                                                        <a href="#" class="btn btn-secondary btn-block">Télécharger Mon Profil</a>
+                                                                                        <a href="#" class="btn btn-secondary btn-block">Télécharger Son Profil</a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
