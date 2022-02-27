@@ -38,7 +38,7 @@ class OffreController extends Controller
         $inters = $inter->interventions;
         $discips = $inter->disciplines;
         $langs = $inter->langues;
-        return view('admin.user.intervenant.offre.add', compact('annonces', 'ecoles','inters','discips','langs'));
+        return view('admin.user.intervenant.offre.all', compact('annonces', 'ecoles','inters','discips','langs'));
     }
 
     /**

@@ -561,7 +561,6 @@
 																			</div>
 																		</td>
 																		<td>
-																			
 																			<div class="form-button-action">
 																				<form action="{{ route('diplomes.destroy', $diplome->id)}}" method="post" style="display: inline-block">
 																					@csrf
@@ -793,7 +792,7 @@
 																				<form action="{{ route('experiences.destroy', $experience->id)}}" method="post" style="display: inline-block">
 																					@csrf
 																					@method('DELETE')
-																					<button type="submit" class="btn btn-link btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete' data-original-title="Remove">
+																					<button type="submit" class="btn btn-xs btn-danger btn-flat show_confirm" data-toggle="tooltip" title='Delete' data-original-title="Remove">
 																						<i class="fa fa-times"></i>
 																					</button>
 																				</form>

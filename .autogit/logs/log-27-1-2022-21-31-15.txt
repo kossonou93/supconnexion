@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Sun Feb 27 2022 21:31:15 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+* resources/views/admin/part/footer.blade.php
+* resources/views/admin/user/ecole/annonce/all.blade.php
+* resources/views/admin/user/ecole/intervenant/all.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-27-1-2022-21-0-53.txt
+
+
+Deleted files:
+
+
+Renamed files:

@@ -67,10 +67,10 @@
 																		{{$intervenant->fonction}}
 																	</td>
 																	<td>
-																		<a class="btn btn" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}" role="button"><i class="flaticon-file"></i></a>
+																		<a class="btn btn" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}" role="button" target="_blank"><i class="flaticon-file"></i></a>
 																	</td>
 																	<td>
-																		<a class="btn btn" href="{{ route('details.intervenant',$intervenant->id)}}" role="button">@lang('public.enSavoirPlus')</a>
+																		<a class="btn btn" href="{{ route('details.intervenant',$intervenant->id)}}" role="button" target="_blank">@lang('public.enSavoirPlus')</a>
 																	</td>
 																</tr>
 															@endforeach
