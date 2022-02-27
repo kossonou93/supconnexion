@@ -20,7 +20,7 @@
         <div class="container">
             <div class="row m0 blog_row">
                 <div class="col-sm-8 main_blog">
-                    <img src="{{ asset('uploads/image/annonce/'.$annonce->image) }}" alt="">
+                    <img src="{{ asset('supconnexion/public/uploads/image/annonce/'.$annonce->image) }}" alt="">
                     <div class="col-xs-1 p0">
                        <div class="blog_date">
                            <a href="#">
@@ -49,11 +49,11 @@
                                 @endif
                             @endforeach
                         </a>
-                        <p>{{ $annonce->description }}</p>
+                        <p>{{ $annonce->{'description_'.$local} }}</p>
                         <div class="tag">
                             <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">@lang('public.interventionLang')</h4>
                             @foreach ($langues as $langue)
-                                <a href="#">{{$langue->name}}</a>
+                                <a href="#">{{$langue->{'name_'.$local} }}</a>
                             @endforeach
                         </div>
                         <div class="tag">
@@ -66,7 +66,7 @@
                         <div class="tag">
                             <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">@lang('public.interventionType')</h4>
                             @foreach ($interventions as $intervention)
-                                <a href="#">{{$intervention->type}}</a>
+                                <a href="#">{{$intervention->{'type_'.$local} }}</a>
                                 <br><br>
                             @endforeach 
                         </div>
@@ -81,7 +81,7 @@
                         <div class="tag">
                             <h4 style="font-family: 'MV Boli'; font-weight: bold; color: #371F57;">@lang('public.dossierCandidature')</h4>
                             <p style="font-family: 'Comic Sans MS'; font-weight: bold;">
-                                {{$annonce->dossier}}
+                                {{$annonce->{'dossier_'.$local} }}
                             </p>
                         </div>
                         <div class="tag">
