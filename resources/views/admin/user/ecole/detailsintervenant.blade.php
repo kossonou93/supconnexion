@@ -96,7 +96,7 @@
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Résidence</label>
+                                                                        <label>@lang('public.villeResidence')</label>
                                                                         <br>
                                                                         @foreach ( $villes as $ville )
                                                                             <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>
@@ -111,7 +111,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Date de Naissance</label>
+                                                                        <label>@lang('public.dateNais')</label>
                                                                         <br>
                                                                         <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->birth_day }}</h3>
                                                                     </div>
@@ -127,7 +127,7 @@
                                                             <div class="row mt-3 mb-1">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Présentation brève du parcours et motivations</label>
+                                                                        <label>@lang('public.parcoursMotivation')</label>
                                                                         <br>
                                                                         <h2 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->motivation }}</h2>
                                                                     </div>
@@ -139,7 +139,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Types de contrats acceptés / possibles (si rémunération)</label>
+                                                                        <label>@lang('public.typeContrat')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $conts as $cont )
@@ -152,7 +152,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Interventions à distance et déplacements</label>
+                                                                        <label>@lang('public.interventionDistant')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $inters as $inter )
@@ -165,7 +165,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Disponibilités dans l'année</label>
+                                                                        <label>@lang('public.disponibiliteAnnee')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $dispos as $dispo )
@@ -178,7 +178,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Durée d'intervention souhaitée</label>
+                                                                        <label>@lang('public.dureeIntervention')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $durs as $dur )
@@ -191,7 +191,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Mes expériences dans l'enseignement et la formation</label>
+                                                                        <label>@lang('public.mesExperiences')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $texps as $texp )
@@ -204,7 +204,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Langues d'enseignement possibles</label>
+                                                                        <label>@lang('public.langueEnsei')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $langs as $lang )
@@ -217,7 +217,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Plages horaires souhaitées</label>
+                                                                        <label>@lang('public.plageHoraire')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $hors as $hor )
@@ -230,7 +230,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Rémunération</label>
+                                                                        <label>@lang('public.remuneration')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $remus as $remu )
@@ -243,7 +243,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Domaine(s) général(aux) d'intervention</label>
+                                                                        <label>@lang('public.domaineInter')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $discips as $discip )
@@ -256,7 +256,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>Domaines de compétence</label>
+                                                                        <label>@lang('public.domaineComp')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $intervenant->competence }}</li></h3>
@@ -267,7 +267,7 @@
                                                             <div class="row mt-3">
                                                                 <div class="col-md-12">
                                                                     <div class="form-group form-group-default bordre">
-                                                                        <label>les types d'écoles dans lesquelles l'intervenant souhaite intervenir</label>
+                                                                        <label>@lang('public.selectionTypeEcole')</label>
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $formas as $forma ) 
@@ -293,14 +293,14 @@
                                                                         <div class="social-media">
                                                                             <div class="row mt-3">
                                                                                 <div class="col-md-5 form-group form-group-default">
-                                                                                    <h5>Profil LinkeDin</h5>
+                                                                                    <h5>@lang('public.lienLinkedin')</h5>
                                                                                     <a class="btn btn-info btn-linkedin btn-sm btn-link" target="_blank" href="{{ $intervenant->linkdin }}"> 
                                                                                         <span class="btn-label just-icon"><i class="flaticon-linkedin"></i></span>
                                                                                     </a>
                                                                                 </div>
                                                                                 <div class="col-md-2"></div>
                                                                                 <div class="col-md-5 form-group form-group-default">
-                                                                                    <h5>Voir CV</h5>
+                                                                                    <h5>@lang('public.ajoutCV')</h5>
                                                                                     <a class="btn btn-info btn-linkedin btn-sm btn-link" target="_blank" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}"> 
                                                                                         <span class="btn-label just-icon"><i class="flaticon-file"></i></span>
                                                                                     </a>
@@ -330,10 +330,10 @@
                                                         <table id="basic-datatables" class="display table table-striped table-hover" >
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Diplome Num. </th>
-                                                                    <th>Ecole</th>
+                                                                    <th>@lang('public.diplome') Num. </th>
+                                                                    <th>@lang('public.ecole')</th>
                                                                     <th>Grade</th>
-                                                                    <th>titre</th>
+                                                                    <th>@lang('public.titre')</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
@@ -368,9 +368,9 @@
                                                         <table id="add-row" class="display table table-striped table-hover" >
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Expérience num. </th>
-                                                                    <th>Intitulé de l'intervention</th>
-                                                                    <th>Etablissement ou entreprise</th>
+                                                                    <th>@lang('public.experience') Num. </th>
+                                                                    <th>@lang('public.intituleInter')</th>
+                                                                    <th>@lang('public.entreprise')</th>
                                                                 </tr>
                                                             </thead>
                                                             <tbody>

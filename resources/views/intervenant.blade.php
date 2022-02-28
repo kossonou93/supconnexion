@@ -756,7 +756,7 @@
 														<table id="add-row" class="display table table-striped table-hover" >
 															<thead>
 																<tr>
-																	<th>@lang('public.experience') num. </th>
+																	<th>@lang('public.experience') Num. </th>
 																	<th>@lang('public.intituleInter')</th>
 																	<th>@lang('public.entreprise')</th>
 																	<th>@lang('public.editer')</th>
