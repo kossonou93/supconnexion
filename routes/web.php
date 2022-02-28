@@ -12,7 +12,13 @@ use App\Http\Controllers\Users\Ecole\EcoleController;
 use App\Http\Controllers\Users\Ecole\AnnonceController;
 use App\Http\Controllers\Users\Ecole\PaiementController;
 use App\Http\Controllers\Auth\IntervenantLoginController;
+use App\Http\Controllers\Auth\EcolePasswordController;
+use App\Http\Controllers\Auth\IntervenantPasswordController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\IntervenantRegisterController;
+use App\Http\Controllers\Auth\GoogleController;
+use App\Http\Controllers\Auth\FacebookController;
+use App\Http\Controllers\Auth\ConfirmPasswordController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\Users\Intervenant\DiplomeController;
@@ -44,16 +50,16 @@ Route::get('/galeries', [Users\HomeController::class, 'galeries'])->name('galeri
 Route::get('/academiciens', [Users\HomeController::class, 'academiciens'])->name('academiciens');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
-Route::post('/interv/password', [Auth\IntervenantPasswordController::class, 'show'])->name('interv.password.submit');
-Route::get('/interv/password', [Auth\IntervenantPasswordController::class, 'index'])->name('interv.password');
-Route::put('/interv/password/send', [Auth\IntervenantPasswordController::class, 'modifyPassword'])->name('interv.password.send.submit');
-Route::get('/interv/password/send', [Auth\IntervenantPasswordController::class, 'sendPassword'])->name('interv.password.send');
+Route::post('/interv/password', [IntervenantPasswordController::class, 'show'])->name('interv.password.submit');
+Route::get('/interv/password', [IntervenantPasswordController::class, 'index'])->name('interv.password');
+Route::put('/interv/password/send', [IntervenantPasswordController::class, 'modifyPassword'])->name('interv.password.send.submit');
+Route::get('/interv/password/send', [IntervenantPasswordController::class, 'sendPassword'])->name('interv.password.send');
 Route::get('/interv/verify/{token}', [MailController::class, 'verifyPasswordIntervenant'])->name('interv.verify.password');
 
-Route::post('/ecol/password', [Auth\EcolePasswordController::class, 'show'])->name('ecol.password.submit');
-Route::get('/ecol/password', [Auth\EcolePasswordController::class, 'index'])->name('ecol.password');
-Route::put('/ecol/password/send', [Auth\EcolePasswordController::class, 'modifyPassword'])->name('ecol.password.send.submit');
-Route::get('/ecol/password/send', [Auth\EcolePasswordController::class, 'sendPassword'])->name('ecol.password.send');
+Route::post('/ecol/password', [EcolePasswordController::class, 'show'])->name('ecol.password.submit');
+Route::get('/ecol/password', [EcolePasswordController::class, 'index'])->name('ecol.password');
+Route::put('/ecol/password/send', [EcolePasswordController::class, 'modifyPassword'])->name('ecol.password.send.submit');
+Route::get('/ecol/password/send', [EcolePasswordController::class, 'sendPassword'])->name('ecol.password.send');
 Route::get('/ecol/verify/{token}', [MailController::class, 'verifyPasswordEcole'])->name('ecol.verify.password');
 Route::get('/user/verify/{token}', [MailController::class, 'verifyEmail'])->name('user.verify');
 Route::get('/ecole/verify/{token}', [MailController::class, 'verifyEmailEcole'])->name('ecole.verify');

@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Feb 28 2022 13:37:44 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/views/user/actualite.blade.php
+* resources/views/user/actualites.blade.php
+* resources/views/user/annonces.blade.php
+
+
+Created files:
+* .autogit/logs/log-28-1-2022-13-7-1.txt
+
+
+Deleted files:
+
+
+Renamed files:
