@@ -21,7 +21,7 @@ class LocalizationMiddleware
         if (Session::get("locale") !=null) {
             App::setlocale(Session::get("locale"));
         } else {
-            Session::put("locale","en");
+            Session::put("locale","fr");
             App::setlocale(Session::get("locale"));
         }
         

@@ -59,14 +59,14 @@
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>@lang('public.nom')</label>
                                                                         <br>
-                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->name }}</h3>
+                                                                        <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->name }}</h3>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>@lang('public.prenom')</label>
                                                                         <br>
-                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->last_name }}</h3>
+                                                                        <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->last_name }}</h3>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -75,14 +75,14 @@
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Email</label>
                                                                         <br>
-                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->email }}</h3>
+                                                                        <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->email }}</h3>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>@lang('public.dateNais')</label>
                                                                         <br>
-                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->phone }} / {{ $intervenant->contact }}</h3>
+                                                                        <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->phone }} / {{ $intervenant->contact }}</h3>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -91,7 +91,7 @@
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Fonction</label>
                                                                         <br>
-                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->fonction }}</h3>
+                                                                        <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->fonction }}</h3>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
@@ -99,7 +99,7 @@
                                                                         <label>@lang('public.villeResidence')</label>
                                                                         <br>
                                                                         @foreach ( $villes as $ville )
-                                                                            <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>
+                                                                            <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>
                                                                                 @if ($intervenant->ville_id == $ville->id)
                                                                                     {{  $ville->name }}
                                                                                 @endif
@@ -113,14 +113,14 @@
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>@lang('public.dateNais')</label>
                                                                         <br>
-                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->birth_day }}</h3>
+                                                                        <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->birth_day }}</h3>
                                                                     </div>
                                                                 </div>
                                                                 <div class="col-md-6">
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>Sexe</label>
                                                                         <br>
-                                                                        <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->sexe }}</h3>
+                                                                        <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->sexe }}</h3>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -129,7 +129,7 @@
                                                                     <div class="form-group form-group-default bordre">
                                                                         <label>@lang('public.parcoursMotivation')</label>
                                                                         <br>
-                                                                        <h2 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->motivation }}</h2>
+                                                                        <h2 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'>{{ $intervenant->motivation }}</h2>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -143,7 +143,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $conts as $cont )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $cont->{'type_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $cont->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -156,7 +156,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $inters as $inter )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $inter->{'type_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $inter->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -169,7 +169,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $dispos as $dispo )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dispo->{'titre_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dispo->{'titre_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -182,7 +182,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $durs as $dur )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dur->{'type_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $dur->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -195,7 +195,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $texps as $texp )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $texp->{'type_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $texp->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -208,7 +208,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $langs as $lang )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $lang->{'name_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $lang->{'name_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -221,7 +221,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $hors as $hor )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $hor->{'titre_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $hor->{'titre_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -234,7 +234,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $remus as $remu )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $remu->{'type_'.$local} }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $remu->{'type_'.$local} }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -247,7 +247,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $discips as $discip )
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $discip->name }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $discip->name }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -259,7 +259,7 @@
                                                                         <label>@lang('public.domaineComp')</label>
                                                                         <br>
                                                                         <ul class="list-group">
-                                                                            <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $intervenant->competence }}</li></h3>
+                                                                            <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $intervenant->competence }}</li></h3>
                                                                         </ul>
                                                                     </div>
                                                                 </div>
@@ -271,7 +271,7 @@
                                                                         <br>
                                                                         <ul class="list-group">
                                                                             @foreach ( $formas as $forma ) 
-                                                                                <h3 style='color: #f6b60b; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $forma->type }}</li></h3>
+                                                                                <h3 style='color: #371F57; font-family: "Comic Sans MS", Times, serif;'><li class="list-group-item">{{ $forma->type }}</li></h3>
                                                                             @endforeach
                                                                         </ul>
                                                                     </div>
@@ -293,21 +293,21 @@
                                                                         <div class="social-media">
                                                                             <div class="row mt-3">
                                                                                 <div class="col-md-5 form-group form-group-default">
-                                                                                    <h5>@lang('public.lienLinkedin')</h5>
+                                                                                    <h5>@lang('public.cliquez')</h5>
                                                                                     <a class="btn btn-info btn-linkedin btn-sm btn-link" target="_blank" href="{{ $intervenant->linkdin }}"> 
                                                                                         <span class="btn-label just-icon"><i class="flaticon-linkedin"></i></span>
                                                                                     </a>
                                                                                 </div>
                                                                                 <div class="col-md-2"></div>
                                                                                 <div class="col-md-5 form-group form-group-default">
-                                                                                    <h5>@lang('public.ajoutCV')</h5>
+                                                                                    <h5>@lang('public.cliquez')</h5>
                                                                                     <a class="btn btn-info btn-linkedin btn-sm btn-link" target="_blank" href="{{ asset('supconnexion/public/uploads/cv/'.$intervenant->cv) }}"> 
                                                                                         <span class="btn-label just-icon"><i class="flaticon-file"></i></span>
                                                                                     </a>
                                                                                 </div>
                                                                                 <div class="col-md-12" style="margin-top:20px">
                                                                                     <div class="view-profile">
-                                                                                        <a href="#" class="btn btn-secondary btn-block">Télécharger Son Profil</a>
+                                                                                        <a href="#" class="btn btn-secondary btn-block">@lang('public.telechargeCV')</a>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>

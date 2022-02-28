@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Feb 28 2022 10:35:29 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/views/admin/user/ecole/detailsintervenant.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-28-1-2022-0-33-9.txt
+
+
+Deleted files:
+
+
+Renamed files:
