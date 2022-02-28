@@ -22,7 +22,7 @@
                     @foreach ($annonces as $annonce)
                         <div class="col-md-4 col-sm-6">
                             <div class="renovation">
-                                <img src="{{ asset('uploads/image/annonce/'.$annonce->image) }}" alt="">
+                                <img src="{{ asset('supconnexion/public/uploads/image/annonce/'.$annonce->image) }}" alt="">
                                 <div class="renovation_content">
                                     <a class="clipboard" href="#"><i class="fa fa-clipboard" aria-hidden="true"></i></a>
                                     <a style="text-align:center" class="tittle" href="#">{{ Illuminate\Support\Str::limit($annonce->{'intitule_'.$local}, 30) }}</a>

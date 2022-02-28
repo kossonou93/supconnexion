@@ -9,7 +9,7 @@
 	@include('parts/menu')
     <!-- Banner area -->
         <section class="banner_area" data-stellar-background-ratio="0.5">
-            <h2>@lang('public.actualites')</h2>
+            <h2>@lang('public.actualite')s</h2>
             <ol class="breadcrumb">
                 <li><a href="{{route('home')}}">Home</a></li>
                 <li><a href="{{route('actualite.index')}}" class="active">@lang('public.actualite')S</a></li>
@@ -24,7 +24,7 @@
                 <div class="row latest_blog">
                     @foreach ($actualites as $actualite)
                         <div class="col-md-4 col-sm-6 blog_content">
-                            <img src="{{ asset('uploads/photo/actualite/'.$actualite->photo) }}" alt="">
+                            <img src="{{ asset('supconnexion/public/uploads/photo/actualite/'.$actualite->photo) }}" alt="">
                             <a href="#" class="blog_heading text-justify">{{($actualite->{'titre_'.$local}) }}</a>
                             <h4><small>@lang('public.par')  </small><a style="color: blue; font-weight: bold;" href="#">{{($actualite->auteur) }}</a><span>/</span><small style="color: #f6b60b; font-weight: bold;"> <i class="fa fa-calendar" aria-hidden="true"></i>
                             <?php
