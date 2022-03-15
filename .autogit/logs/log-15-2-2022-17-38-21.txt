@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Tue Mar 15 2022 17:38:21 GMT+0100 (heure normale d’Europe centrale)
+------------------------------------------------------
+
+Modified files:
+* resources/views/intervenant.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-28-1-2022-14-7-45.txt
+
+
+Deleted files:
+
+
+Renamed files:
