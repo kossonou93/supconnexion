@@ -351,7 +351,7 @@
 																										selected
 																									@endif
 																								@endforeach
-																							>{{ $remuneration->type }}</option>
+																							>{{ $remuneration->{'type_'.$local} }}</option>
 																						@endforeach 
 																					</select>
 																				</div>

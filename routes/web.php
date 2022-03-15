@@ -26,6 +26,7 @@ use App\Http\Controllers\Users\Intervenant\ExperienceController;
 use App\Http\Controllers\Users\Intervenant\OffreController;
 use App\Http\Controllers\Users\Intervenant\IntervenantController;
 use App\Http\Controllers\LocalizationController;
+use Dompdf\Dompdf;
 
 //use Illuminate\Support\Facades\Crypt;EcoleLoginController
 
