@@ -1,7 +1,8 @@
 <?php
 return [
-    'nom' => 'Name',
-    'prenom' => 'First name',
+    'nom' => 'Full Name',
+    'prenom' => 'First Name',
+    'passwordConfirm' => 'Password confirmation',
     'sujet' => 'Subject',
     'siteWeb' => 'Your WebSite',
     'envoyez' => 'Send',
@@ -210,14 +211,14 @@ return [
     'experienceSupprimer' => "Experience successfully removed!",
     'confirmation' => "Are you sure you want to delete this record?",
     'avertissement' => "If you delete this, it will be gone forever.",
+    /*'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
-    'mois' => "Mois",
-    'mois' => "Mois",
+    'mois' => "Mois",*/
 
 
 

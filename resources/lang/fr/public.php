@@ -1,7 +1,8 @@
 <?php
 return [
-    'nom' => 'Nom',
+    'nom' => 'Nom et Prénom',
     'prenom' => 'Prénom',
+    'passwordConfirm' => 'Confirmation Mot de Passe',
     'sujet' => 'Sujet',
     'siteWeb' => 'Votre Site Web',
     'envoyez' => 'Valider',
@@ -211,14 +212,14 @@ return [
     'experienceSupprimer' => "Expérience supprimée avec succès!",
     'confirmation' => "Voulez-vous vraiment supprimer cet enregistrement ?",
     'avertissement' => "Si vous le supprimez, il disparaîtra pour toujours.",
+    /*'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
     'mois' => "Mois",
-    'mois' => "Mois",
-    'mois' => "Mois",
+    'mois' => "Mois",*/
     
 ]
 ?>
