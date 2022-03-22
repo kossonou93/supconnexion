@@ -29,7 +29,7 @@ use Carbon\Carbon;
 use App\Ecole;
 use App\Models\Academique;
 use Illuminate\Support\Facades\Session;
-use PDF;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller
 {
@@ -139,16 +139,9 @@ class HomeController extends Controller
         return view('user.galeries');
     }
 
-    /*public function createPDF()
+    public function downloadCondG($id)
     {
-        // retreive all records from db
-        $data = Intervenant::all();
-        // share data to view
-        view()->share('inter',$data);
-        //$pdf = PDF::loadView('pdf_view', $data);
-        $pdf = PDF::loadView('user.condition_generale', $data);
-        // download PDF file with download method
-        return $pdf->download('pdf_file.pdf');
-    }*/
+        return Storage::download($id);
+    }
     
 }
