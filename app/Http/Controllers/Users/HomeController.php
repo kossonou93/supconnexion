@@ -139,15 +139,16 @@ class HomeController extends Controller
         return view('user.galeries');
     }
 
-    public function createPDF()
+    /*public function createPDF()
     {
         // retreive all records from db
-        $data = Employee::all();
+        $data = Intervenant::all();
         // share data to view
-        view()->share('employee',$data);
-        $pdf = PDF::loadView('pdf_view', $data);
+        view()->share('inter',$data);
+        //$pdf = PDF::loadView('pdf_view', $data);
+        $pdf = PDF::loadView('user.condition_generale', $data);
         // download PDF file with download method
         return $pdf->download('pdf_file.pdf');
-    }
+    }*/
     
 }

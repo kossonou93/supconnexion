@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Tue Mar 22 2022 19:17:15 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* resources/lang/en/public.php
+* resources/lang/fr/public.php
+
+
+Created files:
+* .autogit/logs/log-22-2-2022-18-46-47.txt
+
+
+Deleted files:
+
+
+Renamed files:
