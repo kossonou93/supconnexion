@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Tue Mar 22 2022 22:58:43 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* resources/views/parts/menu.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-22-2-2022-22-28-19.txt
+* public/uploads/Projet_SupConnexion.pdf
+
+
+Deleted files:
+
+
+Renamed files:

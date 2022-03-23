@@ -67,7 +67,7 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">@lang('public.apropos')</a>
                           	<ul class="dropdown-menu">
                               <li><a href="{{route('leprojet')}}">@lang('public.projetSup')</a></li>
-                              <li><a href="{{route('condition.generale')}}">@lang('public.conditionGle')</a></li>
+                              <li><a href="{{ route('downloadConditionGle') }}">@lang('public.conditionGle')</a></li>
                               <li><a href="#">@lang('public.charteUt')</a></li>
                               <li><a href="#">@lang('public.protectionData')</a></li>
                               <li><a href="{{route('actualite.index')}}">@lang('public.actualiteSup')</a></li>

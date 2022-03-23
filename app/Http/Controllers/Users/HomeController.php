@@ -30,6 +30,7 @@ use App\Ecole;
 use App\Models\Academique;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\Users\Response;
 
 class HomeController extends Controller
 {
@@ -139,9 +140,20 @@ class HomeController extends Controller
         return view('user.galeries');
     }
 
-    public function downloadCondG($id)
+    public function downloadCondG()
     {
-        return Storage::download($id);
+        /*$filename = 'conditionGleFile.pdf';
+        $path = storage_path('public/' . $filename);
+        return Storage::download(path);*/
+
+        //PDF file is stored under project/public/download/info.pdf
+    $file= public_path(). "conditionGleFile.pdf";
+
+    $headers = array(
+              'Content-Type: application/pdf',
+            );
+
+    return Response::download($file, 'filename.pdf', $headers);
     }
     
 }
