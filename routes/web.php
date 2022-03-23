@@ -49,7 +49,7 @@ Route::get('/projet', [Users\HomeController::class, 'leprojet'])->name('leprojet
 Route::get('/condition_generale', [Users\HomeController::class, 'conditiongenerale'])->name('condition.generale');
 Route::get('/galeries', [Users\HomeController::class, 'galeries'])->name('galeries');
 Route::get('/academiciens', [Users\HomeController::class, 'academiciens'])->name('academiciens');
-Route::get('/{id}', [Users\HomeController::class, 'downloadCondG'])->name('downloadConditionGle');
+Route::get('/uploads/{id}', [Users\HomeController::class, 'downloadCondG'])->name('downloadConditionGle');
 // Send mail
 //Route::get('/sendmail', 'MailController@sendEmail')->name('sendmail');
 Route::post('/interv/password', [IntervenantPasswordController::class, 'show'])->name('interv.password.submit');

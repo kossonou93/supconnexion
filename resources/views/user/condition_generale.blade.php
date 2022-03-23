@@ -21,6 +21,11 @@
         <div class="container">
             <div class="row contact_row">
                 <div class="col-sm-12 contact_info">
+                    <p class="text-center" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: black">
+                        @lang('public.cdtGleVente') <br><br>
+                        <i class="fa fa-hand-o-down" aria-hidden="true"></i> <br><br>
+                        <a href="{{ route('downloadConditionGle', 'conditionGleFile.pdf') }}">@lang('public.telechargez')</a>
+                    </p>
                     <!--<p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: black">@lang('public.pageContient') </span>
                     </p>
                     <p class="text-justify">
