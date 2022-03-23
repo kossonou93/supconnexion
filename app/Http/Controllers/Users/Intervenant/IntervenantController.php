@@ -66,7 +66,8 @@ class IntervenantController extends Controller
         $hors = $inter->horaires;
         $conts = $inter->contrats;
         $discips = $inter->disciplines;
-        return view('intervenant', compact('local', 'disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas'));
+        $modals = $inter->modalites;
+        return view('intervenant', compact('local', 'disciplines', 'conts', 'discips', 'langs', 'remus', 'responsabilites', 'texps', 'hors', 'dispos', 'inters', 'durs', 'modalites', 'contrats', 'disponibilites', 'durees', 'formations', 'experiences', 'interventions', 'langues', 'remunerations', 'texperiences', 'horaires','diplomes', 'villes', 'pays', 'formas', 'modals'));
     }
 
     public function generatePDF()

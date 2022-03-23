@@ -188,7 +188,7 @@ return [
     'dateFinInter' => "Date of end of intervention / in progress",
     'courteDesc' => "Short description",
     'typeInter' => "Intervention type",
-    'nbreHInter' => "Number of hours of intervention",
+    'nbreHInter' => "Number of hours of intervention on average / Day",
     'modalite' => "Terms",
     'niveauEtudiant' => "Student or professional level",
     'niveauResp' => "Level of responsibility",

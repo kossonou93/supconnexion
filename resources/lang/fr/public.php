@@ -189,7 +189,7 @@ return [
     'dateFinInter' => "Date de fin d'intervention / en cours",
     'courteDesc' => "Courte description",
     'typeInter' => "Type d'intervention",
-    'nbreHInter' => "Nombre d'heures d'intervention",
+    'nbreHInter' => "Nombre d'heures d'intervention en moyenne / Jour",
     'modalite' => "Modalités",
     'niveauEtudiant' => "Niveau des étudiants ou des professionnels",
     'niveauResp' => "Niveau de responsabilité",
