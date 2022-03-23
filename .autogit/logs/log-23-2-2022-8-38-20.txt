@@ -1,0 +1,21 @@
+-------------------- Auto-Git Log --------------------
+		Wed Mar 23 2022 08:38:20 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/HomeController.php
+* resources/views/parts/menu.blade.php
+* resources/views/parts/menu_home.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-22-2-2022-22-58-43.txt
+* resources/conditionGleFile.pdf
+
+
+Deleted files:
+
+
+Renamed files:
+* [object Object]

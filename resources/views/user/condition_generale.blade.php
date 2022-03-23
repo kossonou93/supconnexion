@@ -21,7 +21,7 @@
         <div class="container">
             <div class="row contact_row">
                 <div class="col-sm-12 contact_info">
-                    <p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: black">@lang('public.pageContient') </span>
+                    <!--<p class="text-justify" style="font-weight: bold; font-family: 'Comic Sans MS';"><span style="font-size: 18px; font-family: 'Comic Sans MS'; color: black">@lang('public.pageContient') </span>
                     </p>
                     <p class="text-justify">
                         <ul class="text-justify" style="list-style-type: decimal;font-family: 'Comic Sans MS'; font-weight: bold; font-size: 18px; color: #f6b60b">
@@ -180,7 +180,7 @@
                                 </span>
                             </li>
                         </ul>
-                    </p>
+                    </p>-->
                 </div>
             </div>
         </div>
