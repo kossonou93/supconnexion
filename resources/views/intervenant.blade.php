@@ -656,8 +656,20 @@
 																			<label class="col-sm-4 col-form-label">@lang('public.typeInter')</label>
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
-																					<input type="text" name="type_intervention" class="form-control" placeholder="">
+																					<select class="form-control" name="interventions[]" >
+																						@foreach ( $interventions as $intervention )
+																							<option value='{{ $intervention->id }}'>
+																								@foreach ($inters as $inter)
+																									
+																								@endforeach
+																								{{ $intervention->{'type_'.$local} }}
+																							</option>
+																						@endforeach 
+																					</select>
 																				</div>
+																				<!--<div class="md-form mt-0">
+																					<input type="text" name="type_intervention" class="form-control" placeholder="">
+																				</div>-->
 																			</div>
 																		</div>
 																		<div class="row mt-3">
@@ -674,9 +686,9 @@
 																				<div class="md-form mt-0">
 																					<select class="form-control" name="modalites[]" >
 																					@foreach ( $modalites as $modalite )
-																						<option
-																							
-																						>{{ $modalite->type }}</option>
+																						<option value='{{ $modalite->id }}'>
+																							{{ $modalite->'type_'.$local }}
+																						</option>
 																					@endforeach 
 																					</select>
 																				</div>
