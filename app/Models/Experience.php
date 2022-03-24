@@ -21,6 +21,11 @@ class Experience extends Model
         return $this->belongsToMany(Modalite::class,'experience_modalites','experience_id','modalite_id')->withTimestamps();
     }
 
+    public function interventions()
+    {
+        return $this->belongsToMany(Intervention::class,'experience_interventions','experience_id','intervention_id')->withTimestamps();
+    }
+
     public function responsabilites()
     {
         return $this->belongsToMany(Responsabilite::class,'experience_respos','experience_id','respo_id')->withTimestamps();

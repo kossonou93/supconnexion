@@ -664,9 +664,6 @@
 																						@endforeach 
 																					</select>
 																				</div>
-																				<!--<div class="md-form mt-0">
-																					<input type="text" name="type_intervention" class="form-control" placeholder="">
-																				</div>-->
 																			</div>
 																		</div>
 																		<div class="row mt-3">
@@ -704,11 +701,10 @@
 																			<div class="col-sm-8">
 																				<div class="md-form mt-0">
 																					<select class="form-control" name="responsabilites[]" >
-																					@foreach ( $responsabilites as $responsabilite )
-																						<option
-																							
-																						>{{ $responsabilite->type }}</option>
-																					@endforeach 
+																						@foreach ( $responsabilites as $responsabilite )
+																							<option
+																							>{{ $responsabilite->{'type_'.$local} }}</option>
+																						@endforeach 
 																					</select>
 																				</div>
 																			</div>

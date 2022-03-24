@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Experience;
 use App\Models\Modalite;
 use App\Models\Responsabilite;
+use App\Models\Intervention;
 use Auth;
 use Stichoza\GoogleTranslate\GoogleTranslate;
 use Illuminate\Support\Facades\App;
@@ -87,11 +88,13 @@ class ExperienceController extends Controller
         $experience = Experience::find($id);
         $modalites = Modalite::all();
         $responsabilites = Responsabilite::all();
+        $interventions = Intervention::all();
         //$exp = Experience::find($id);
         $modales = $experience->modalites;
+        $intervens = $experience->interventions;
         //var_dump($modales);
         $respos = $experience->responsabilites;
-        return view('admin.intervenant.edit_experience', compact('experience', 'modalites', 'responsabilites', 'modales', 'respos'));
+        return view('admin.intervenant.edit_experience', compact('interventions', 'intervens', 'experience', 'modalites', 'responsabilites', 'modales', 'respos'));
     }
 
     /**

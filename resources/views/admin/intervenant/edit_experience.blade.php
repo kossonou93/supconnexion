@@ -59,7 +59,18 @@
                         <label class="col-sm-4 col-form-label">Type d'intervention</label>
                         <div class="col-sm-8">
                             <div class="md-form mt-0">
-                                <input type="text" name="type_intervention" value="{{$experience->type_intervention}}" class="form-control">
+                                <select id='testSelectb' class="form-control" name="interventions[]" >
+                                    @foreach ( $interventions as $intervention )
+                                        <option value='{{ $intervention->id }}'
+                                            @foreach ( $intervens as $interven )
+                                                @if ($intervention->id == $interven->id)
+                                                    selected
+                                                @endif
+                                            @endforeach
+                                            >{{ $intervention->{'type_'.$local} }}
+                                        </option>
+                                    @endforeach 
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -78,7 +89,8 @@
                                 <select class="form-control" name="modalites[]" >
                                 @foreach ( $modalites as $modalite )
                                     <option
-                                        @if ($modalite->experience_id == $experience->id)
+                                    @foreach ( $modals as $modal )
+                                        @if ($modalite->id == $modal->id)
                                             selected
                                         @endif
                                     >{{ $modalite->type }}</option>

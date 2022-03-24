@@ -320,6 +320,9 @@ class IntervenantController extends Controller
         if ($request->interventions != []) {
             $experience->interventions()->sync(request('interventions'));
         }
+        if ($request->responsabilites != []) {
+            $experience->responsabilites()->sync(request('responsabilites'));
+        }
         //$experience->experiences()->attach(Auth::user()->id);
         return redirect()->route('intervenant.dashboard')->with('success', 'Experience enregistrée avec succès!');
     }
