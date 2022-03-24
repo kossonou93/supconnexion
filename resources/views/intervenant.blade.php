@@ -659,11 +659,6 @@
 																					<select id='testSelectb' class="form-control" name="interventions[]" >
 																						@foreach ( $interventions as $intervention )
 																							<option value='{{ $intervention->id }}'
-																								@foreach ($inters as $inter)
-																									@if ($intervention->id == $inter->id)
-																										selected
-																									@endif
-																								@endforeach
 																								>{{ $intervention->{'type_'.$local} }}
 																							</option>
 																						@endforeach 
@@ -682,7 +677,20 @@
 																				</div>
 																			</div>
 																		</div>
-																		
+																		<div class="row mt-3">
+																			<label class="col-sm-4 col-form-label">@lang('public.modalite')</label>
+																			<div class="col-sm-8">
+																				<div class="md-form mt-0">
+																					<select id='testSelecta' class="form-control" name="modalites[]">
+																						@foreach ( $modalites as $modalite )
+																							<option value='{{ $modalite->id }}'
+																								>{{ $modalite->{'type_'.$local} }}
+																							</option>
+																						@endforeach 
+																					</select>
+																				</div>
+																			</div>
+																		</div>
 																		<div class="row mt-3">
 																			<label class="col-sm-4 col-form-label">@lang('public.niveauEtudiant')</label>
 																			<div class="col-sm-8">

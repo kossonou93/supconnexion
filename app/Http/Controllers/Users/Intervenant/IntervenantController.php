@@ -305,7 +305,7 @@ class IntervenantController extends Controller
             'debut' => $request->get('debut'),
             'fin' => $request->get('fin'),
             'description' => $request->get('description'),
-            'type_intervention' => $request->get('type_intervention'),
+            //'type_intervention' => $request->get('type_intervention'),
             'heure_intervention' => $request->get('heure_intervention'),
             'niveau_participant' => $request->get('niveau_participant'),
             'nombre_participant' => $request->get('nombre_participant'),
@@ -314,6 +314,12 @@ class IntervenantController extends Controller
             'intervenant_id' => $request->get('intervenant_id')
         ]);
         $experience->save();
+        if ($request->modalites != []) {
+            $experience->modalites()->sync(request('modalites'));
+        }
+        if ($request->interventions != []) {
+            $experience->interventions()->sync(request('interventions'));
+        }
         //$experience->experiences()->attach(Auth::user()->id);
         return redirect()->route('intervenant.dashboard')->with('success', 'Experience enregistrée avec succès!');
     }
