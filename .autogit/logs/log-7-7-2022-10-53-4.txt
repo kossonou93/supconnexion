@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+Sun Aug 07 2022 10:53:04 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* .autogit/autogit.json
+* resources/views/admin/intervenant/edit_experience.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-2-2022-10-47-19.txt
+
+
+Deleted files:
+
+
+Renamed files:
