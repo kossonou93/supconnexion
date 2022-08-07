@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Thu Mar 24 2022 10:47:19 GMT+0000 (heure moyenne de Greenwich)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/Users/Intervenant/ExperienceController.php
+* app/Http/Controllers/Users/Intervenant/IntervenantController.php
+* app/Models/Experience.php
+* resources/views/admin/intervenant/edit_experience.blade.php
+* resources/views/intervenant.blade.php
+
+
+Created files:
+* .autogit/logs/log-24-2-2022-10-17-2.txt
+
+
+Deleted files:
+
+
+Renamed files:

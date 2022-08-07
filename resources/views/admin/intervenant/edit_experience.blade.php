@@ -62,7 +62,7 @@
                                 <select id='testSelectb' class="form-control" name="interventions[]" >
                                     @foreach ( $interventions as $intervention )
                                         <option value='{{ $intervention->id }}'
-                                            @foreach ( $intervens as $interven )
+                                            @foreach ( $inters as $interven )
                                                 @if ($intervention->id == $interven->id)
                                                     selected
                                                 @endif
@@ -88,11 +88,12 @@
                             <div class="md-form mt-0">
                                 <select class="form-control" name="modalites[]" >
                                 @foreach ( $modalites as $modalite )
-                                    <option
-                                    @foreach ( $modals as $modal )
-                                        @if ($modalite->id == $modal->id)
-                                            selected
-                                        @endif
+                                    <option value="{{ $modalite->id }}"
+                                        @foreach ( $modals as $modal )
+                                            @if ($modalite->id == $modal->id)
+                                                selected
+                                            @endif
+                                        @endforeach
                                     >{{ $modalite->type }}</option>
                                 @endforeach 
                                 </select>
@@ -113,10 +114,12 @@
                             <div class="md-form mt-0">
                                 <select class="form-control" name="responsabilites[]" >
                                 @foreach ( $responsabilites as $responsabilite )
-                                    <option
-                                        @if ($responsabilite->experience_id == $experience->id)
-                                            selected
-                                        @endif
+                                    <option value="{{ $responsabilite->id }}"
+                                        @foreach ( $respos as $respo )
+                                            @if ($responsabilite->id == $respo->id)
+                                                selected
+                                            @endif
+                                        @endforeach
                                     >{{ $responsabilite->type }}</option>
                                 @endforeach 
                                 </select>
