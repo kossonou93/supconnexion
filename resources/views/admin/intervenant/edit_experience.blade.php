@@ -43,7 +43,7 @@
                         <label class="col-sm-4 col-form-label">Date de fin d'intervention / en cours</label>
                         <div class="col-sm-8">
                             <div class="md-form mt-0">
-                                <input type="date" value="{{$experience->fin}}" name="fin" class="form-control">
+                                <input type="date" value="ca" name="fin" class="form-control">
                             </div>
                         </div>
                     </div>
